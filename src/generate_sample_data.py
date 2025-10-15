@@ -324,26 +324,26 @@ def generate_all_sample_data(output_dir='data'):
     
     # Generate data quality report
     print("\n" + "="*60)
-    print("DATA QUALITY ISSUES INJECTED (For Learners to Find):")
+    print("DATA QUALITY ISSUES INJECTED:")
     print("="*60)
     print("\ncirculation_data.csv:")
-    print(f"  ❌ ~{int(CIRCULATION*0.02)} duplicate rows (~2%)")
-    print(f"  ❌ ~{int(CIRCULATION*0.04)} missing ISBNs (~4%)")
-    print(f"  ❌ ~{int(CIRCULATION*0.02)} missing member_ids (~2%)")
-    print(f"  ❌ ~{int(CIRCULATION*0.10)} mixed date formats (~10%)")
-    print(f"  ❌ ~{int(CIRCULATION*0.03)} whitespace issues in branch_id (~3%)")
+    print(f"  ~{int(CIRCULATION*0.02)} duplicate rows (~2%)")
+    print(f"  ~{int(CIRCULATION*0.04)} missing ISBNs (~4%)")
+    print(f"  ~{int(CIRCULATION*0.02)} missing member_ids (~2%)")
+    print(f"  ~{int(CIRCULATION*0.10)} mixed date formats (~10%)")
+    print(f"  ~{int(CIRCULATION*0.03)} whitespace issues in branch_id (~3%)")
     
     print("\nevents_data.json:")
     print("  ⚠️  Nested structure (needs flattening)")
     print("  ⚠️  Branch names don't match branch_id format")
-    print(f"  ❌ ~{int(FEEDBACK*0.10)} missing feedback_scores (~10%)")
+    print(f"  ~{int(FEEDBACK*0.10)} missing feedback_scores (~10%)")
     
     print("\nfeedback.txt:")
     print("  ⚠️  Completely unstructured")
     print("  ⚠️  Requires parsing and sentiment analysis (optional)")
     
     print("\ncatalogue.xlsx:")
-    print(f"  ❌ ~{int(CATALOGUE*0.10)} ISBNs stored as numbers (~10%)")
+    print(f"  ~{int(CATALOGUE*0.10)} ISBNs stored as numbers (~10%)")
     print("  ⚠️  Multiple sheets (only need 'Catalogue')")
     print("  ⚠️  Mixed data types in ISBN column")
 
