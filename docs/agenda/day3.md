@@ -1,4 +1,4 @@
-# Day 3 - CI/CD, Pipelines, and Docker- 
+# Day 3 - Automation & Integration
 
 ## Session 1
 

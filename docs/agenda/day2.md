@@ -1,4 +1,4 @@
-# Day 2 - Pyhon Cleaning & Testing
+# Day 2 - Build & Test Pyhon Package
 
 ## Session 1
 

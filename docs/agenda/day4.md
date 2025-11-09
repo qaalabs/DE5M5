@@ -1,4 +1,4 @@
-# Day 4 - Presentation
+# Day 4 - Polish & Present
 
 ## Session 1
 
