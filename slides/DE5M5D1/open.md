@@ -1,4 +1,4 @@
-### *title*
+### *Module Introduction & Setup*
 
 The aim of day 1 is ...
 
