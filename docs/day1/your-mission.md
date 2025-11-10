@@ -1,10 +1,11 @@
 # Your Mission
 
-This project uses sample data from a fictional library network.
+This project uses sample data from our fictional library network.
 
 ## Your Task
 
 Build a data quality pipeline that:
+
 - ✅ Ingests all data sources
 - ✅ Cleans and validates the data
 - ✅ Produces analysis-ready datasets
