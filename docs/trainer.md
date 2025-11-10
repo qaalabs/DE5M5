@@ -37,15 +37,25 @@
 
 ### Session 1
 
+- **Demo**: Explain function - Data Ingestion
+- **Activity**: Write function - Data Ingestion
 
 ### Session 2
 
+- **Demo**: Explain function - Data Cleaning
+- **Activity**: Write function - Data Cleaning
 
 ### Session 3
 
+- **Demo**: Python Testing
+- **Activity**: Write unit tests
+- **Activity**: Run tests & check coverage
 
 ### Session 4
 
+- **Demo**: Python Test Coverage
+- **Activity**: Achive test coverage
+- **Activity**: Commit & Cleanup VM
 
 ---
 
