@@ -10,6 +10,7 @@ nav:
     - Day 1: agenda/day1.md
 
   - "Day 1 - Foundation & Setup":
+    - "The Scenario": day1/scenario.md
     - "Your Mission": day1/your-mission.md
     - "Review the sample data files": day1/sample-data.md
     - "Design your pipeline architecture": day1/design-pipeline.md

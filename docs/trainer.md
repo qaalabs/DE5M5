@@ -4,7 +4,7 @@
 
 ### Session 1
 
-- The Scenario
+- [The Scenario](day1/scenario.md)
 - [Your Mission](day1/your-mission.md)
 - **Discussion**: What does 'Production-Ready' mean?
 - [Review the sample data files](day1/sample-data.md)

@@ -4,7 +4,7 @@
 
 - `09:30` VM Setup (10 mins)
 - `09:40` Welcome (10 mins)
-- `09:50` The Scenario (10 mins)
+- `09:50` [The Scenario](../day1/scenario.md) (10 mins)
 - `10:00` [Your Mission](../day1/your-mission.md) (10 mins)
 - `10:10` **Discussion**: What does 'Production-Ready' mean? (10 mins)
 - `10:20` [Review the sample data files](../day1/sample-data.md) (20 mins)
