@@ -1,6 +1,6 @@
 # Architecture Design & Documentation
 
-## Learning Objectives:
+## Learning Objectives
 
 - Design a medallion architecture for the project
 - Create clear architecture diagrams
@@ -34,4 +34,4 @@ Consumption (Reports, analysis)
 - What to include: sources, layers, technologies
 - Keep it simple!
 
-## Live demo: Create a simple diagram
+### Live demo: Create a simple diagram

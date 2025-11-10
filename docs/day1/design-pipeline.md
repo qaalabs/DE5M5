@@ -3,7 +3,7 @@
 - Open draw.io or Excalidraw
 - Design your pipeline architecture
 
-## Include:
+### Include:
 
 - Data sources
 - Bronze/Silver/Gold layers

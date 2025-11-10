@@ -1,8 +1,8 @@
-# Scenario
+# The Scenario
 
-## Public Library
+**Newham Public Library Network** manages 15 branches across East London. 
 
-**Newham Public Library Network** manages 15 branches across East London. They collect data from multiple sources:
+They collect data from multiple sources:
 
 ### Circulation system (CSV exports):
 - Book loans
@@ -24,9 +24,9 @@
 
 ## Current Problems:
 
-Data quality issues: duplicates, missing values, inconsistent formats
-Manual consolidation takes 2-3 days per month
-No automated quality checks
+- Data quality issues: duplicates, missing values, inconsistent formats
+- Manual consolidation takes 2-3 days per month
+- No automated quality checks
 
 ### Difficult to answer questions like:
 
@@ -34,11 +34,11 @@ No automated quality checks
 - What's our member retention rate?
 - Which events drive library visits?
 
-**Data analysts spend 60% of time cleaning, 40% analyzing**
+*Data analysts spend 60% of time cleaning, 40% analysing*
 
 ---
 
-## Library's Request:
+## Library's Request
 
 **They want an automated data quality pipeline that:**
 
@@ -48,87 +48,85 @@ No automated quality checks
 - Runs on a schedule
 - Has quality monitoring and alerts
 
-They've heard that modern data engineering practices and CI/CD can help but don't know where to start.
+*They've heard that modern data engineering practices and CI/CD can help but don't know where to start.*
 
 ---
 
 ## Your Task
 
-Design and build a production-ready data quality pipeline that solves the library's problem.
+**Design and build a production-ready data quality pipeline that solves the library's problem.**
 
 ### Phase 1: Planning & Documentation (Day 1)
 
-1. Analyze requirements and identify data quality issues
+1. Analyse requirements and identify data quality issues
 
 2. Design system architecture using medallion pattern:
 
-- Bronze: Raw data ingestion
-- Silver: Cleaned and validated data
-- Gold: Analysis-ready aggregations
+    - Bronze: Raw data ingestion
+    - Silver: Cleaned and validated data
+    - Gold: Analysis-ready aggregations
 
 3. Create documentation:
 
-- Architecture diagrams
-- Data flow documentation
-- ADRs (Architecture Decision Records)
+    - Architecture diagrams
+    - Data flow documentation
+    - ADRs (Architecture Decision Records)
 
 4. Set up Kanban board for sprint planning
 
-- Initialize GitHub repository
+    - Initialise GitHub repository
 
 ### Phase 2: Development (Day 2)
 
-Build Python package for data processing:
+1. Build Python package for data processing:
 
-- Extract data from CSV, JSON, Excel sources (S16)
-- Clean data using Pandas
-- Implement validation rules
-- Handle errors gracefully
+    - Extract data from CSV, JSON, Excel sources (S16)
+    - Clean data using Pandas
+    - Implement validation rules
+    - Handle errors gracefully
 
-Write unit tests for all functions
+2. Write unit tests for all functions
 
-Document your code
+3. Document your code
 
 ### Phase 3: Pipeline & Automation (Day 3)
 
-Build data pipeline in Microsoft Fabric:
+1. Build data pipeline in Microsoft Fabric:
 
-- Ingest from multiple sources
-- Apply your Python package for transformations
-- Implement bronze → silver → gold layers
-- Add data quality checks
+    - Ingest from multiple sources
+    - Apply your Python package for transformations
+    - Implement bronze → silver → gold layers
+    - Add data quality checks
 
-Implement CI/CD:
+2. Implement CI/CD:
 
-- Automated testing on Git push
-- Deploy through dev → test → prod
-- Use Fabric deployment pipelines OR Azure DevOps OR GitHub Actions
+    - Automated testing on Git push
+    - Deploy through dev → test → prod
+    - Use Fabric deployment pipelines OR Azure DevOps OR GitHub Actions
 
 ### Phase 4: Security & Presentation (Day 4 Morning)
 
-Implement security controls:
+1. Implement security controls:
 
-- Row-level security for branch-specific data
-- Access controls for sensitive member data
-- Document security practices
+    - Row-level security for branch-specific data
+    - Access controls for sensitive member data
+    - Document security practices
 
-Create monitoring and alerting
+2. Create monitoring and alerting
 
-Finalize documentation
+3. Finalise documentation
 
 ### Phase 5: Presentation (Day 4 Afternoon)
 
-Present your solution (15 minutes):
+1. Present your solution:
 
-- Business problem and requirements
-- Architecture design and decisions
-- Live demo of the working pipeline
-- Code quality and testing approach
-- CI/CD implementation
-- Security implementation
-- Challenges and learnings
-
----
+    - Business problem and requirements
+    - Architecture design and decisions
+    - Live demo of the working pipeline
+    - Code quality and testing approach
+    - CI/CD implementation
+    - Security implementation
+    - Challenges and learnings
 
 ## Provided Assets
 
