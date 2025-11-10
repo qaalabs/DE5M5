@@ -10,13 +10,21 @@ nav:
     - Day 1: agenda/day1.md
 
   - "Day 1 - Foundation & Setup":
+    - "Your Mission": day1/your-mission.md
     - "Review the sample data files": day1/sample-data.md
+    - "Design your pipeline architecture": day1/design-pipeline.md
+    - "Create a GitHub repository": day1/create-repo.md
+    - "Introduce GitHub Projects": day1/create-project.md
+    - "Set up Kanban board": day1/project-tasks.md
+    - "Write first Python code": day1/write-code.md
 
   - Resources: resources.md
 
 not_in_nav: |
   404.md
   trainer.md
+  day1/create-diagram.md
+  day1/github-template.md
 
 
 # Theme

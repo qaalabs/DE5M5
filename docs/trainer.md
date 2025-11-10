@@ -5,30 +5,30 @@
 ### Session 1
 
 - The Scenario
-- Your Mission
+- [Your Mission](day1/your-mission.md)
 - **Discussion**: What does 'Production-Ready' mean?
 - [Review the sample data files](day1/sample-data.md)
 
 ### Session 2
 
 - Architecture Principles
-- Creating Architecture Diagrams
-- Design your pipeline architecture
+- **Demo**: [Creating Architecture Diagrams](day1/create-diagram.md)
+- **Activity**: [Design your pipeline architecture](day1/design-pipeline.md)
 - Review the diagrams created
 
 ### Session 3
 
-- GitHub Template Setup
-- Create a GitHub repository
-- Introduce GitHub Projects
-- Set up Kanban board
+- **Demo**: [GitHub Template Setup](day1/github-template.md)
+- **Activity**: [Create a GitHub repository](day1/create-repo.md)
+- **Activity**: [Introduce GitHub Projects](day1/create-project.md)
+- **Activity**: [Set up Kanban board](day1/project-tasks.md)
 - Review the GitHub repositories
 
 ### Session 4
 
 - Local development
 - Create local development env
-- Write first Python code
+- **Activity**: [Write first Python code](day1/write-code.md)
 - Write first Pull Request
 
 ---
