@@ -1,4 +1,4 @@
-# Ingestion
+# Data Ingestion Module
 
 ## Learning Objectives
 
@@ -7,7 +7,7 @@
 - Write clean, documented code
 - Test functions locally in Jupyter
 
-## Part 1: Principles
+## Principles
 
 We're building a **Python package**, not just scripts. This means:
 
@@ -17,7 +17,7 @@ We're building a **Python package**, not just scripts. This means:
 - Logging (so we can debug later)
 - Pure functions (don't modify inputs)
 
-## Part 2: Live Coding
+## Part 1: Live Coding
 
 Open `src/data_processing/ingestion.py` and add this code:
 
@@ -127,7 +127,7 @@ def load_json(filepath):
 - Docstring format (Google style)
 
 
-## Part 3: Test in Jupyter
+## Part 2: Test in Jupyter
 
 - Create a `notebooks` folder
 - Create a new Jupyter Notebook in this folder

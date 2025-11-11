@@ -1,4 +1,4 @@
-# Activity: Complete and improve the ingestion function
+# Activity: Complete and improve the Ingestion function
 
 ## Task 1: Complete `ingestion.py`
 

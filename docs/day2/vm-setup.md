@@ -31,6 +31,22 @@ Find the repo you created yesterday from the list and click it
 - Click the dropdown: `Current branch`
 - Select: `origin/day2`
 
-## Step 4: Open your repo in Visual Studio Code
+## Step 4: Create your virtual enviroment
+
+Make sure you are at a prompt in your repo root (`library-pipeline`)
+
+Run the following:
+
+```
+python -m venv venv
+
+.\venv\Scripts\Activate.ps1
+
+pip install -r requirements.txt
+
+pytest tests/ -v
+```
+
+## Step 5: Open your repo in Visual Studio Code
 
 - In GitHub Desktop ~ Click the button: `Open in Visual Studio Code`
