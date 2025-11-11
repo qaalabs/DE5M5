@@ -8,6 +8,7 @@ nav:
 
   - Agenda:
     - Day 1: agenda/day1.md
+    - Day 2: agenda/day2.md
 
   - "Day 1 - Foundation & Setup":
     - "The Scenario": day1/scenario.md
@@ -18,6 +19,17 @@ nav:
     - "Introduce GitHub Projects": day1/create-project.md
     - "Set up Kanban board": day1/project-tasks.md
     - "Write first Python code": day1/write-code.md
+
+  - "Day 2 - Build & Test Pyhon Package":
+    - "VM Setup & Welcome": day2/vm-setup.md
+    - "Explain function - Data Ingestion": day2/ingestion.md
+    - "Write function - Data Ingestion": day2/ingestion-enhancements.md
+    - "Explain function - Data Cleaning": day2/cleaning.md
+    - "Write function - Data Cleaning": day2/cleaning-enhancements.md
+    - "Python Testing": day2/python-testing.md
+    - "Write unit tests": day2/cleaning-tests.md
+    - "Python Test Coverage": day2/coverage.md
+    - "Achive test coverage": day2/coverage-goal.md
 
   - Resources: resources.md
 

@@ -37,24 +37,24 @@
 
 ### Session 1
 
-- **Demo**: Explain function - Data Ingestion
-- **Activity**: Write function - Data Ingestion
+- **Demo**: [Explain function - Data Ingestion](day2/ingestion.md)
+- **Activity**: [Write function - Data Ingestion](day2/ingestion-enhancements.md)
 
 ### Session 2
 
-- **Demo**: Explain function - Data Cleaning
-- **Activity**: Write function - Data Cleaning
+- **Demo**: [Explain function - Data Cleaning](day2/cleaning.md)
+- **Activity**: [Write function - Data Cleaning](day2/cleaning-enhancements.md)
 
 ### Session 3
 
-- **Demo**: Python Testing
-- **Activity**: Write unit tests
+- **Demo**: [Python Testing](day2/python-testing.md)
+- **Activity**: [Write unit tests](day2/cleaning-tests.md)
 - **Activity**: Run tests & check coverage
 
 ### Session 4
 
-- **Demo**: Python Test Coverage
-- **Activity**: Achive test coverage
+- **Demo**: [Python Test Coverage](day2/coverage.md)
+- **Activity**: [Achive test coverage](day2/coverage-goal.md)
 - **Activity**: Commit & Cleanup VM
 
 ---
