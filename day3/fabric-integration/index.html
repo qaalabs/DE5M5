@@ -9,7 +9,7 @@
         <link rel="prev" href="../../labs/01-lakehouse/">
       
       
-        <link rel="next" href="../../resources/">
+        <link rel="next" href="../fabric-gold-layer/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1087,6 +1087,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fabric-gold-layer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Gold Layer Table
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1168,7 +1191,7 @@ Fabric (Cloud Execution):
 <p>Create a workspace</p>
 </li>
 <li>
-<p>Create Lakehouse: "library_pipeline"</p>
+<p>Create Lakehouse: <code>library_pipeline</code></p>
 </li>
 </ol>
 <h2 id="part-3-upload-sample-data">Part 3: Upload Sample Data</h2>
@@ -1182,20 +1205,21 @@ Fabric (Cloud Execution):
 </li>
 <li>
 <p>Upload files to the bronze folder:</p>
-</li>
-<li>
-<p><code>circulation_data.csv</code></p>
-</li>
+<ul>
+<li><code>circulation_data.csv</code></li>
 <li><code>events_data.json</code></li>
-<li>
-<p>(Optional: other files)</p>
+<li>(Optional: other files)</li>
+</ul>
 </li>
 <li>
-<p>Verify they appear in Files/bronze section</p>
+<p>Verify they appear in <code>Files/bronze</code> folder (you may need to refresh)</p>
 </li>
 </ol>
 <h2 id="part-4-create-fabric-notebook">Part 4: Create Fabric Notebook</h2>
-<p>Create a notebook and add these cells:</p>
+<p>Create new Fabric notebook: <code>bronze_to_silver</code></p>
+<div class="admonition note">
+<p class="admonition-title">Run each cell after you add it</p>
+</div>
 <h3 id="cell-1-install-package-from-github">Cell 1: Install package from GitHub</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Cell 1: Install package from GitHub</span>
 <span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="s2">"git+https://github.com/YOUR_USERNAME/library-pipeline.git"</span>
@@ -1222,7 +1246,7 @@ Fabric (Cloud Execution):
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_raw</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df_raw</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </code></pre></div>
-<h3 id="cell-4-apply-your-cleaning-functions-bronze-silver">Cell 4: Apply your cleaning functions (BRONZE → SILVER)</h3>
+<h3 id="cell-4-apply-your-cleaning-functions">Cell 4: Apply your cleaning functions</h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Cell 4: Apply your cleaning functions (BRONZE → SILVER)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Applying data cleaning pipeline..."</span><span class="p">)</span>
 
@@ -1273,10 +1297,10 @@ Fabric (Cloud Execution):
 <hr>
 <h2 id="key-points">Key points:</h2>
 <ul>
-<li>✅ Your local code works in Fabric (same package!)</li>
-<li>✅ Lakehouse Files as data source</li>
-<li>✅ Delta tables for structured storage</li>
-<li>✅ Can query with SQL immediately</li>
+<li>Your local code works in Fabric (same package!)</li>
+<li>Lakehouse Files as data source</li>
+<li>Delta tables for structured storage</li>
+<li>Can query with SQL immediately</li>
 </ul>
 
 
