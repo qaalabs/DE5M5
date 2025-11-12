@@ -35,7 +35,7 @@ nav:
   - "Day 3 - Automation & Integration":
     - "GitHub Actions": day3/github-actions.md
     - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
-    - "Pull Request Workflow": day3/gh-branch.md
+    - "Pull Request Workflow": day3/github-branch.md
     - "Complete Your Own PR Workflow": day3/pull-request.md
 
   - Resources: resources.md

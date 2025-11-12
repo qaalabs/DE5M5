@@ -68,7 +68,7 @@
 
 ### Session 2
 
-- **Demo**: [Pull Request Workflow](day3/gh-branch.md)
+- **Demo**: [Pull Request Workflow](day3/github-branch.md)
 - **Activity**: [Complete Your Own PR Workflow](day3/pull-request.md)
 - RESERVE
 
