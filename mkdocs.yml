@@ -9,6 +9,7 @@ nav:
   - Agenda:
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
+    - Day 3: agenda/day3.md
 
   - "Day 1 - Foundation & Setup":
     - "The Scenario": day1/scenario.md
@@ -31,6 +32,12 @@ nav:
     - "Python Test Coverage": day2/coverage.md
     - "Achive test coverage": day2/coverage-goal.md
 
+  - "Day 3 - Automation & Integration":
+    - "GitHub Actions": day3/github-actions.md
+    - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
+    - "Pull Request Workflow": day3/gh-branch.md
+    - "Complete Your Own PR Workflow": day3/pull-request.md
+
   - Resources: resources.md
 
 not_in_nav: |
@@ -38,6 +45,7 @@ not_in_nav: |
   trainer.md
   day1/create-diagram.md
   day1/github-template.md
+  day3/observation.md
 
 
 # Theme

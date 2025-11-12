@@ -63,15 +63,22 @@
 
 ### Session 1
 
+- [GitHub Actions](day3/github-actions.md)
+- [GitHub Actions ~ Trigger Workflow](day3/github-workflow.md)
 
 ### Session 2
 
+- **Demo**: [Pull Request Workflow](day3/gh-branch.md)
+- **Activity**: [Complete Your Own PR Workflow](day3/pull-request.md)
+- RESERVE
 
 ### Session 3
 
+- MS-FABRIC
 
 ### Session 4
 
+- POWERBI
 
 ---
 
