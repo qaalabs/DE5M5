@@ -31,7 +31,7 @@ Fabric (Cloud Execution):
 
 3. Create a workspace
 
-4. Create Lakehouse: "library_pipeline"
+4. Create Lakehouse: `library_pipeline`
 
 ## Part 3: Upload Sample Data 
 
@@ -43,16 +43,18 @@ Fabric (Cloud Execution):
 
 3. Upload files to the bronze folder:
 
-- `circulation_data.csv`
-- `events_data.json`
-- (Optional: other files)
+    - `circulation_data.csv`
+    - `events_data.json`
+    - (Optional: other files)
 
-4. Verify they appear in Files/bronze section
+4. Verify they appear in `Files/bronze` folder (you may need to refresh)
+
 
 ## Part 4: Create Fabric Notebook
 
-Create a notebook and add these cells:
+Create new Fabric notebook: `bronze_to_silver`
 
+!!! note "Run each cell after you add it"
 
 ### Cell 1: Install package from GitHub
 
@@ -90,7 +92,7 @@ print(f"Loaded {len(df_raw)} rows")
 print(df_raw.head())
 ```
 
-### Cell 4: Apply your cleaning functions (BRONZE → SILVER)
+### Cell 4: Apply your cleaning functions
 
 ```python
 # Cell 4: Apply your cleaning functions (BRONZE → SILVER)
@@ -150,7 +152,7 @@ print("✅ Silver layer ready for analysis!")
 ---
 
 ## Key points:
-- ✅ Your local code works in Fabric (same package!)
-- ✅ Lakehouse Files as data source
-- ✅ Delta tables for structured storage
-- ✅ Can query with SQL immediately
+- Your local code works in Fabric (same package!)
+- Lakehouse Files as data source
+- Delta tables for structured storage
+- Can query with SQL immediately
