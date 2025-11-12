@@ -63,14 +63,24 @@ def validate_isbn(isbn):
     return True
 ```
 
-### 3. Write a test (intentionally add a bug):
+### 3. Write a test (in `tests/test_validation.py`)
+
+**Intentionally add a bug**
 
 ```python
+"""Tests for data validation functions"""
+
+from src.data_processing.validation import (
+    validate_isbn
+)
+
+# Validate the ISBN number
 def test_validate_isbn():
     assert validate_isbn('978-0-123456-78-9') == True
     assert validate_isbn('invalid') == False
     assert validate_isbn('123') == False  # Too short
     assert validate_isbn('') == False
+    assert validate_isbn('ABC0123456789') == False
     assert validate_isbn(None) == True  # ❌ BUG! Should be False
 ```
 
