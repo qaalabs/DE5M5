@@ -26,7 +26,9 @@
 
 ## Session 4
 
-- `14:50` POWERBI (60 mins)
+- `14:50` **Activity**: [Run pipeline in MS Fabric](../day3/fabric-integration.md) (20 mins)
+- `15:10` **Activity**: [Create Gold Layer Table](../day3/fabric-gold-layer.md) (20 mins)
+- `15:30` POWERBI (20 mins)
 
 ## Wrap
 

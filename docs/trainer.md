@@ -79,6 +79,8 @@
 
 ### Session 4
 
+- **Activity**: [Run pipeline in MS Fabric](day3/fabric-integration.md)
+- **Activity**: [Create Gold Layer Table](day3/fabric-gold-layer.md)
 - POWERBI
 
 ---

@@ -39,6 +39,7 @@ nav:
     - "Complete Your Own PR Workflow": day3/pull-request.md
     - "01 Create Fabric Lakehouse": labs/01-lakehouse.md
     - "Run pipeline in MS Fabric": day3/fabric-integration.md
+    - "Create Gold Layer Table": day3/fabric-gold-layer.md
 
   - Resources: resources.md
 
