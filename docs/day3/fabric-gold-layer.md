@@ -11,11 +11,11 @@ For example:
 - How many books are being borrowed per branch per month?
 - Which members are high-value?
 
-*Gold tables are usually aggregated, business focussed, and ready to report on.*
+!!! info "Gold tables are usually aggregated, business focussed, and ready to report on."
 
 ---
 
-## Create a Gold table using SQL
+## Step 1: Create a Gold table using SQL
 
 In the SQL endpoint (or notebook SQL cell):
 
@@ -31,11 +31,12 @@ GROUP BY branch_id, DATE_TRUNC('month', checkout_date)
 ORDER BY month, branch_id;
 ```
 
-*This gives a business summary per branch per month.*
+!!! note "This gives a business summary per branch per month."
 
-## Visualise the results
+## Step 2: Visualise the results
 
-Right-click the gold_circulation_summary table → New report
+- Right-click the `gold_circulation_summary` table
+- ClicK: `New report`
 
 Drag:
 
