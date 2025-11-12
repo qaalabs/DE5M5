@@ -1,4 +1,4 @@
-# Pull Request Workflow
+# Activity: Pull Request Workflow
 
 ## Learning Objectives
 - Understand feature branch workflow
@@ -26,7 +26,7 @@
 
 ---
 
-## Part 2: Live Demo - Complete PR Workflow
+## Part 2: Complete PR Workflow
 
 ### 1. Create feature branch
 

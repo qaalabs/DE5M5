@@ -16,10 +16,11 @@ Morning everyone. Yesterday you wrote and tested your code, and you aimed for 70
 
 Today we’ll take that a step further by automating those tests so they run every time we make a change.
 
-## Learning objective
+### Learning objective
 By the end of this session, you’ll have a GitHub Action that runs your tests automatically and only allows a merge if they pass.
 
 Before we automate this:
+
 - <mark>what could go wrong if we merge code manually without any checks?</mark>
 - Add one word in chat that describes the risk.
 
@@ -54,7 +55,7 @@ Type in chat: SAVE, PR, or BOTH.
 
 ---
 
-### 15 mins – Learner activity (core learning)
+## 15 mins – Learner activity (core learning)
 
 1. Rename the file correctly
 2. Save to File (or push to GitHub if on the VM)
@@ -85,7 +86,7 @@ Follow up with:
 
 ---
 
-### 10 mins – Stretch and challenge
+## 10 mins – Stretch and challenge
 
 You introduce two outcomes:
 
@@ -96,11 +97,12 @@ You introduce two outcomes:
 If your workflow’s already green, great — you’re ready for a challenge.
 
 Choose one of these:
+
 - 1️⃣ Add a status badge,
 - 2️⃣ Edit the trigger, or
 - 3️⃣ Try breaking a test.
 
-Let’s see what happens!”
+Let’s see what happens!
 
 
 Ask *prediction questions* before running:
@@ -114,18 +116,16 @@ Learners test both scenarios.
 Stretch option for fast finishers:
 
 - Add a build status badge to the README.
-- `![CI](https://github.com/<org>/<repo>/actions/workflows/ci.yml/badge.svg)`
 
-They can copy the snippet from their Actions → … → Create status badge menu, or use:
-
+```markdown
 ![CI](https://github.com/<org>/<repo>/actions/workflows/ci.yml/badge.svg)
+```
 
+They can copy the snippet from their Actions → … → Create status badge menu
 
-Explain briefly:
+Explain briefly: That badge updates automatically each time your workflow runs.
 
-“That badge updates automatically each time your workflow runs.”
-
-This reinforces the continuous part of CI/CD and gives an instant visual payoff.
+*This reinforces the continuous part of CI/CD and gives an instant visual payoff.*
 
 ### Option 2 – Explore a different trigger
 
@@ -135,25 +135,24 @@ Ask:
 
 They can comment out or change:
 
+```yaml
 on:
   pull_request:
     branches: [ main ]
+```
 
-
-This shows how the workflow reacts to different events – an excellent deeper-thinking moment.
+*This shows how the workflow reacts to different events – an excellent deeper-thinking moment.*
 
 ### Option 3 – Add an intentional failure
 
 “What happens if one test fails? Try breaking one line of code and running it again.”
 
 
-
-
 **Exceeds:** stretch and challenge.
 
 ---
 
-### 10 mins – Applied connection activity
+## 10 mins – Applied connection activity
 
 Ask:
 
@@ -169,7 +168,7 @@ Encourage examples:
 
 ---
 
-### 10 mins – Second demo (you break stuff)
+## 10 mins – Second demo (you break stuff)
 
 You:
 
@@ -186,7 +185,7 @@ Assessment for learning:
 
 ---
 
-### 5 mins – Quick exit ticket (proof of learning)
+## 5 mins – Quick exit ticket (proof of learning)
 
 In chat:
 
@@ -206,8 +205,6 @@ In chat:
 | Stretch and challenge   | Predict outcomes; badge task; failure demo              |
 | Assessment for learning | Prediction, peer support, exit ticket                   |
 | Applied connections     | Workplace discussion about preventing real failures     |
-
----
 
 ## Quick checklist
 

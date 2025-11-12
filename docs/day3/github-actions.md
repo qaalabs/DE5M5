@@ -6,9 +6,7 @@
 - Set up automated testing workflow
 - Understand the value of automation
 
-## Part 1: What is CI/CD?**
-
-**Visual - Show the problem**:
+## Part 1: What is CI/CD?
 
 ```
 WITHOUT CI/CD:
