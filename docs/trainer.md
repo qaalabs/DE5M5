@@ -70,7 +70,7 @@
 
 - **Demo**: [Pull Request Workflow](day3/github-branch.md)
 - **Activity**: [Complete Your Own PR Workflow](day3/pull-request.md)
-- RESERVE
+- Time Reserve
 
 ### Session 3
 

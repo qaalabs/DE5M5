@@ -13,7 +13,7 @@
 
 - `10:50` **Demo**: [Pull Request Workflow](../day3/github-branch.md) (20 mins)
 - `11:10` **Activity**: [Complete Your Own PR Workflow](../day3/pull-request.md) (60 mins)
-- `12:10` RESERVE (20 mins)
+- `12:10` Time Reserve (20 mins)
 
 ## 🥪🥤 Lunch Break
 
