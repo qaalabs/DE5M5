@@ -6,6 +6,10 @@
       
       
       
+        <link rel="prev" href="../../labs/01-lakehouse/">
+      
+      
+        <link rel="next" href="../../resources/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -13,7 +17,7 @@
     
     
       
-        <title>Day 3 ~ Observation - Module 5 - Data Engineering Product Development</title>
+        <title>Run pipeline in MS Fabric - Module 5 - Data Engineering Product Development</title>
       
     
     
@@ -65,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-3-observation" class="md-skip">
+        <a href="#fabric-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 3 ~ Observation
+              Run pipeline in MS Fabric
             
           </span>
         </div>
@@ -813,18 +817,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -840,7 +846,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Day 3 - Automation &amp; Integration
@@ -939,6 +945,148 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/01-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 Create Fabric Lakehouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Run pipeline in MS Fabric
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run pipeline in MS Fabric
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Objectives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-the-deployment-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1: The Deployment Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-start-fabric-playground" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Start Fabric Playground
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-upload-sample-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Upload Sample Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-create-fabric-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Create Fabric Notebook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key points:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -984,182 +1132,151 @@
 
 
 
-<h1 id="day-3-observation">Day 3 ~ Observation</h1>
-<p><em>Flow for the session (aim for ~60 mins, observer can drop off any time)</em></p>
-<h2 id="learning-objective">Learning objective</h2>
+<h1 id="fabric-integration">Fabric Integration</h1>
+<h2 id="learning-objectives">Learning Objectives</h2>
 <ul>
-<li>Trigger a GitHub Action workflow that runs tests on a pull request and controls whether the branch can merge.</li>
+<li>Deploy Python package to Fabric</li>
+<li>Create Fabric notebook using the package</li>
+<li>Understand local dev → cloud deployment flow</li>
+<li>Build bronze → silver pipeline in Fabric</li>
 </ul>
-<h2 id="5-mins-set-the-scene">5 mins – Set the scene</h2>
-<p><em>Camera on, clean background, confident tone.</em></p>
-<p>Morning everyone. Yesterday you wrote and tested your code, and you aimed for 70 percent coverage.</p>
-<p><strong>Quick recap of yesterday (tests and coverage).</strong></p>
-<p>Today we’ll take that a step further by automating those tests so they run every time we make a change.</p>
-<h3 id="learning-objective_1">Learning objective</h3>
-<p>By the end of this session, you’ll have a GitHub Action that runs your tests automatically and only allows a merge if they pass.</p>
-<p>Before we automate this:</p>
-<ul>
-<li><mark>what could go wrong if we merge code manually without any checks?</mark></li>
-<li>Add one word in chat that describes the risk.</li>
-</ul>
-<p><mark>So instead of running tests by hand, we’ll let GitHub do it for us.</mark></p>
-<p><strong>Exceeds:</strong> applied connections, learner centred (verbal), professional etiquette.</p>
-<hr>
-<h2 id="5-mins-micro-demo">5 mins – Micro-demo</h2>
-<p><strong>You show the CI YAML file</strong></p>
-<ul>
-<li>point out it's <strong>renamed</strong> so GitHub Actions is ignoring it.</li>
-</ul>
-<p><mark>Why do you think the file name matters?</mark></p>
-<p><strong>Exceeds:</strong> questioning techniques, assessment for learning.</p>
-<h3 id="show-the-yaml-structure-briefly">Show the YAML structure briefly</h3>
-<p>Scroll through and point out:</p>
-<ul>
-<li>on: → the trigger (push, pull_request)</li>
-<li>jobs: → what actually runs (tests, coverage)</li>
-</ul>
-<p>GitHub only looks for workflows inside a hidden folder called <code>.github/workflows</code></p>
-<p>Before I rename and push it, quick prediction: when will it run?</p>
-<p>Type in chat: SAVE, PR, or BOTH.</p>
-<hr>
-<h2 id="15-mins-learner-activity-core-learning">15 mins – Learner activity (core learning)</h2>
-<ol>
-<li>Rename the file correctly</li>
-<li>Save to File (or push to GitHub if on the VM)</li>
-<li>Open a PR to merge <code>day2</code> branch</li>
-</ol>
-<p>You circulate and coach by asking <em>scaffold</em> questions:</p>
-<ul>
-<li>“What does the workflow check here?”</li>
-<li>“How will you know it ran?”</li>
-</ul>
-<p>Support different paces:</p>
-<ul>
-<li>If a learner is stuck: prompt with clues</li>
-<li>If ahead: ask them to explain to someone else (peer learning)</li>
-</ul>
-<p>What you say</p>
-<ul>
-<li>Let’s see this working in someone else’s repo.</li>
-<li>Can one of you share your screen and walk us through your Pull Request and the Actions run?</li>
-<li>Tell us what happened step by step.</li>
-</ul>
-<p>Follow up with:</p>
-<ul>
-<li>What shows you that the merge is allowed?</li>
-<li>If the tests had failed, what would you expect to see?</li>
-</ul>
-<p><strong>Exceeds:</strong> learner centred, recognising differences, peer learning, personalised support.</p>
-<hr>
-<h2 id="10-mins-stretch-and-challenge">10 mins – Stretch and challenge</h2>
-<p>You introduce two outcomes:</p>
-<ul>
-<li>Coverage Fail &gt; 70% (✅ allows merge)</li>
-<li>Coverage Fail &lt; 70% (❌ blocks merge)</li>
-</ul>
-<p>If your workflow’s already green, great — you’re ready for a challenge.</p>
-<p>Choose one of these:</p>
-<ul>
-<li>1️⃣ Add a status badge,</li>
-<li>2️⃣ Edit the trigger, or</li>
-<li>3️⃣ Try breaking a test.</li>
-</ul>
-<p>Let’s see what happens!</p>
-<p>Ask <em>prediction questions</em> before running:</p>
-<p><mark>What do you think will happen when we try to merge?</mark></p>
-<p>Learners test both scenarios.</p>
-<p>“Want to show off your passing pipeline? Add a build-status badge to your README.”</p>
-<p>Stretch option for fast finishers:</p>
-<ul>
-<li>Add a build status badge to the README.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>![<span class="nt">CI</span>](<span class="na">https://github.com/&lt;org&gt;/&lt;repo&gt;/actions/workflows/ci.yml/badge.svg</span>)
+<h2 id="part-1-the-deployment-strategy">Part 1: The Deployment Strategy</h2>
+<div class="highlight"><pre><span></span><code>Local Development (VM):
+  ↓
+GitHub (Version Control):
+  ↓
+Fabric (Cloud Execution):
+  - Installs package from GitHub
+  - Runs transformation code
+  - Creates Delta tables
 </code></pre></div>
-<p>They can copy the snippet from their Actions → … → Create status badge menu</p>
-<p>Explain briefly: That badge updates automatically each time your workflow runs.</p>
-<p><em>This reinforces the continuous part of CI/CD and gives an instant visual payoff.</em></p>
-<h3 id="option-2-explore-a-different-trigger">Option 2 – Explore a different trigger</h3>
-<p>Ask:</p>
-<p>“How could we make this only run on pull requests, not on every push? Try editing the on: block.”</p>
-<p>They can comment out or change:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">on</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="p p-Indicator">]</span>
-</code></pre></div>
-<p><em>This shows how the workflow reacts to different events – an excellent deeper-thinking moment.</em></p>
-<h3 id="option-3-add-an-intentional-failure">Option 3 – Add an intentional failure</h3>
-<p>“What happens if one test fails? Try breaking one line of code and running it again.”</p>
-<p><strong>Exceeds:</strong> stretch and challenge.</p>
-<hr>
-<h2 id="10-mins-applied-connection-activity">10 mins – Applied connection activity</h2>
-<p>Ask:</p>
-<p><mark>Where in your workplace would a CI check prevent mistakes?</mark></p>
-<p>Encourage examples:</p>
+<div class="admonition success">
+<p class="admonition-title">Key insight</p>
 <ul>
-<li>“Broken SQL deployed to prod”</li>
-<li>“Accidental deletion”</li>
-<li>“Wrong dataset version”</li>
+<li>We developed locally, but it runs in the cloud. This is the modern way!</li>
 </ul>
-<p><strong>Exceeds:</strong> applied connections, learners sharing real world.</p>
-<hr>
-<h2 id="10-mins-second-demo-you-break-stuff">10 mins – Second demo (you break stuff)</h2>
-<p>You:</p>
+</div>
+<h2 id="part-2-start-fabric-playground">Part 2: Start Fabric Playground</h2>
 <ol>
-<li>Create a new branch</li>
-<li>Add deliberately failing code/tests</li>
-<li>Open a PR</li>
-<li>Let pipeline fail visually</li>
+<li>
+<p>Navigate to Fabric portal</p>
+</li>
+<li>
+<p>Start playground (3-hour window begins)</p>
+</li>
+<li>
+<p>Create a workspace</p>
+</li>
+<li>
+<p>Create Lakehouse: "library_pipeline"</p>
+</li>
 </ol>
-<p>Ask: <mark>What just saved us here?</mark></p>
-<p>Assessment for learning: </p>
-<p><mark>Ask learners to explain the failure in their own words (chat or verbal)</mark></p>
+<h2 id="part-3-upload-sample-data">Part 3: Upload Sample Data</h2>
+<h3 id="in-fabric">In Fabric</h3>
+<ol>
+<li>
+<p>Go to Lakehouse → Files</p>
+</li>
+<li>
+<p>Under <code>Files</code> create a directory called <code>bronze</code></p>
+</li>
+<li>
+<p>Upload files to the bronze folder:</p>
+</li>
+<li>
+<p><code>circulation_data.csv</code></p>
+</li>
+<li><code>events_data.json</code></li>
+<li>
+<p>(Optional: other files)</p>
+</li>
+<li>
+<p>Verify they appear in Files/bronze section</p>
+</li>
+</ol>
+<h2 id="part-4-create-fabric-notebook">Part 4: Create Fabric Notebook</h2>
+<p>Create a notebook and add these cells:</p>
+<h3 id="cell-1-install-package-from-github">Cell 1: Install package from GitHub</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 1: Install package from GitHub</span>
+<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="s2">"git+https://github.com/YOUR_USERNAME/library-pipeline.git"</span>
+</code></pre></div>
+<h3 id="cell-2-import-your-functions">Cell 2: Import your functions</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 2: Import your functions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.ingestion</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_csv</span><span class="p">,</span> <span class="n">load_json</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.cleaning</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">remove_duplicates</span><span class="p">,</span> 
+    <span class="n">handle_missing_values</span><span class="p">,</span> 
+    <span class="n">standardize_dates</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Package installed and imported successfully!"</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="cell-3-load-data-from-lakehouse-files">Cell 3: Load data from Lakehouse Files</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 3: Load data from Lakehouse Files</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Read CSV from Files</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s2">"/lakehouse/default/Files/bronze/circulation_data.csv"</span>
+<span class="n">df_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_raw</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_raw</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<h3 id="cell-4-apply-your-cleaning-functions-bronze-silver">Cell 4: Apply your cleaning functions (BRONZE → SILVER)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 4: Apply your cleaning functions (BRONZE → SILVER)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Applying data cleaning pipeline..."</span><span class="p">)</span>
+
+<span class="c1"># Remove duplicates</span>
+<span class="n">df_clean</span> <span class="o">=</span> <span class="n">remove_duplicates</span><span class="p">(</span><span class="n">df_raw</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">'transaction_id'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"After removing duplicates: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
+
+<span class="c1"># Handle missing values</span>
+<span class="n">df_clean</span> <span class="o">=</span> <span class="n">handle_missing_values</span><span class="p">(</span><span class="n">df_clean</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">'drop'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"After handling missing values: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
+
+<span class="c1"># Standardize dates</span>
+<span class="n">df_clean</span> <span class="o">=</span> <span class="n">standardize_dates</span><span class="p">(</span><span class="n">df_clean</span><span class="p">,</span> <span class="p">[</span><span class="s1">'checkout_date'</span><span class="p">,</span> <span class="s1">'return_date'</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Dates standardized"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">✅ Cleaning complete! </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_raw</span><span class="p">)</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="cell-5-save-as-delta-table-silver-layer">Cell 5: Save as Delta table (SILVER layer)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 5: Save as Delta table (SILVER layer)</span>
+<span class="c1">#from pyspark.sql import SparkSession</span>
+<span class="c1">#spark = SparkSession.builder.getOrCreate()</span>
+
+<span class="c1"># Convert pandas to Spark DataFrame</span>
+<span class="n">df_spark</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span>
+
+<span class="c1"># Write as Delta table</span>
+<span class="n">table_name</span> <span class="o">=</span> <span class="s2">"silver_circulation"</span>
+<span class="n">df_spark</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"delta"</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"✅ Created Delta table: </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="cell-6-query-the-delta-table">Cell 6: Query the Delta table</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 6: Query the Delta table</span>
+<span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">SELECT </span>
+<span class="s2">    COUNT(*) as total_transactions,</span>
+<span class="s2">    COUNT(DISTINCT member_id) as unique_members,</span>
+<span class="s2">    COUNT(DISTINCT isbn) as unique_books,</span>
+<span class="s2">    COUNT(DISTINCT branch_id) as branches</span>
+<span class="s2">FROM </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span>
+<span class="s2">"""</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+<span class="n">result</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Silver layer ready for analysis!"</span><span class="p">)</span>
+</code></pre></div>
 <hr>
-<h2 id="5-mins-quick-exit-ticket-proof-of-learning">5 mins – Quick exit ticket (proof of learning)</h2>
-<p>In chat:</p>
-<p><mark>Type one sentence: what does CI/CD stop from happening?</mark></p>
-<p><strong>Exceeds:</strong> assessment for learning, learner centred.</p>
-<hr>
-<h2 id="how-this-hits-the-exceeds-expectations-rubric">How this hits the “Exceeds Expectations” rubric</h2>
-<table>
-<thead>
-<tr>
-<th>Principle</th>
-<th>Evidence from your session</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Professional etiquette</td>
-<td>Camera on, confident demo, fluent use of GitHub Actions</td>
-</tr>
-<tr>
-<td>Learner centred</td>
-<td>They rename CI file and trigger pipeline themselves</td>
-</tr>
-<tr>
-<td>Recognising differences</td>
-<td>Scaffold prompts + extension badge task</td>
-</tr>
-<tr>
-<td>Stretch and challenge</td>
-<td>Predict outcomes; badge task; failure demo</td>
-</tr>
-<tr>
-<td>Assessment for learning</td>
-<td>Prediction, peer support, exit ticket</td>
-</tr>
-<tr>
-<td>Applied connections</td>
-<td>Workplace discussion about preventing real failures</td>
-</tr>
-</tbody>
-</table>
-<h2 id="quick-checklist">Quick checklist</h2>
+<h2 id="key-points">Key points:</h2>
 <ul>
-<li>Camera on</li>
-<li>Speak slowly and check for understanding often</li>
-<li>Use reactions and chat intentionally</li>
-<li>Ask learners to screen share once (massive evidence)</li>
+<li>✅ Your local code works in Fabric (same package!)</li>
+<li>✅ Lakehouse Files as data source</li>
+<li>✅ Delta tables for structured storage</li>
+<li>✅ Can query with SQL immediately</li>
 </ul>
 
 

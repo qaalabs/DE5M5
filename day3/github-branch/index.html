@@ -1014,6 +1014,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/01-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    01 Create Fabric Lakehouse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fabric-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Run pipeline in MS Fabric
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1115,12 +1161,21 @@
 
     <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div>
-<h3 id="3-write-a-test-intentionally-add-a-bug">3. Write a test (intentionally add a bug):</h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_validate_isbn</span><span class="p">():</span>
+<h3 id="3-write-a-test-in-teststest_validationpy">3. Write a test (in <code>tests/test_validation.py</code>)</h3>
+<p><strong>Intentionally add a bug</strong></p>
+<div class="highlight"><pre><span></span><code><span class="sd">"""Tests for data validation functions"""</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.data_processing.validation</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">validate_isbn</span>
+<span class="p">)</span>
+
+<span class="c1"># Validate the ISBN number</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_validate_isbn</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'978-0-123456-78-9'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
     <span class="k">assert</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'invalid'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
     <span class="k">assert</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'123'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>  <span class="c1"># Too short</span>
     <span class="k">assert</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'ABC0123456789'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
     <span class="k">assert</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>  <span class="c1"># ❌ BUG! Should be False</span>
 </code></pre></div>
 <h3 id="4-commit-and-push">4. Commit and push</h3>
