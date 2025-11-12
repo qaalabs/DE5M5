@@ -1057,18 +1057,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-gold-table-using-sql" class="md-nav__link">
+  <a href="#step-1-create-a-gold-table-using-sql" class="md-nav__link">
     <span class="md-ellipsis">
-      Create a Gold table using SQL
+      Step 1: Create a Gold table using SQL
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#visualise-the-results" class="md-nav__link">
+  <a href="#step-2-visualise-the-results" class="md-nav__link">
     <span class="md-ellipsis">
-      Visualise the results
+      Step 2: Visualise the results
     </span>
   </a>
   
@@ -1140,9 +1140,11 @@
 <li>How many books are being borrowed per branch per month?</li>
 <li>Which members are high-value?</li>
 </ul>
-<p><em>Gold tables are usually aggregated, business focussed, and ready to report on.</em></p>
+<div class="admonition info">
+<p class="admonition-title">Gold tables are usually aggregated, business focussed, and ready to report on.</p>
+</div>
 <hr>
-<h2 id="create-a-gold-table-using-sql">Create a Gold table using SQL</h2>
+<h2 id="step-1-create-a-gold-table-using-sql">Step 1: Create a Gold table using SQL</h2>
 <p>In the SQL endpoint (or notebook SQL cell):</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">gold_circulation_summary</span><span class="w"> </span><span class="k">AS</span>
 <span class="k">SELECT</span>
@@ -1154,9 +1156,14 @@
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">branch_id</span><span class="p">,</span><span class="w"> </span><span class="n">DATE_TRUNC</span><span class="p">(</span><span class="s1">'month'</span><span class="p">,</span><span class="w"> </span><span class="n">checkout_date</span><span class="p">)</span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">month</span><span class="p">,</span><span class="w"> </span><span class="n">branch_id</span><span class="p">;</span>
 </code></pre></div>
-<p><em>This gives a business summary per branch per month.</em></p>
-<h2 id="visualise-the-results">Visualise the results</h2>
-<p>Right-click the gold_circulation_summary table → New report</p>
+<div class="admonition note">
+<p class="admonition-title">This gives a business summary per branch per month.</p>
+</div>
+<h2 id="step-2-visualise-the-results">Step 2: Visualise the results</h2>
+<ul>
+<li>Right-click the <code>gold_circulation_summary</code> table</li>
+<li>ClicK: <code>New report</code></li>
+</ul>
 <p>Drag:</p>
 <ul>
 <li><code>month</code> to X axis</li>
