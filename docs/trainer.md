@@ -74,7 +74,8 @@
 
 ### Session 3
 
-- MS-FABRIC
+- **Practice**: [01 Create Fabric Lakehouse](labs/01-lakehouse.md)
+- **Activity**: [Run pipeline in MS Fabric](day3/fabric-integration.md)
 
 ### Session 4
 

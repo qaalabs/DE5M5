@@ -37,6 +37,8 @@ nav:
     - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
     - "Pull Request Workflow": day3/github-branch.md
     - "Complete Your Own PR Workflow": day3/pull-request.md
+    - "01 Create Fabric Lakehouse": labs/01-lakehouse.md
+    - "Run pipeline in MS Fabric": day3/fabric-integration.md
 
   - Resources: resources.md
 

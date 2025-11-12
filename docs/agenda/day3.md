@@ -19,7 +19,8 @@
 
 ## Session 3
 
-- `13:30` MS-FABRIC (60 mins)
+- `13:30` **Practice**: [01 Create Fabric Lakehouse](../labs/01-lakehouse.md) (40 mins)
+- `14:10` **Activity**: [Run pipeline in MS Fabric](../day3/fabric-integration.md) (20 mins)
 
 ## ☕ Afternoon Break
 
