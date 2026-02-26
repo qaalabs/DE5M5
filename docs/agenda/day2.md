@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` Welcome (10 mins)
+- `09:30` Welcome to Day 2 of DE5 Module 5 (10 mins)
 - `09:40` [VM Setup & Welcome](../day2/vm-setup.md) (10 mins)
 - `09:50` **Demo**: [Explain function - Data Ingestion](../day2/ingestion.md) (20 mins)
 - `10:10` **Activity**: [Write function - Data Ingestion](../day2/ingestion-enhancements.md) (30 mins)
@@ -30,5 +30,5 @@
 - `15:10` **Activity**: [Achive test coverage](../day2/coverage-goal.md) (30 mins)
 - `15:40` **Activity**: Commit & Cleanup VM (10 mins)
 
-## Wrap
+## 🎁 Wrap
 

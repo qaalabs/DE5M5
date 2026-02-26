@@ -1,0 +1,86 @@
+[project]
+site_name = "Module 5 - Data Engineering Product Development"
+dev_addr = "0.0.0.0:8000"
+
+nav = [
+  {"Overview" = "index.md"},
+  {"Agenda" = [
+    {"Day 1" = "agenda/day1.md"},
+    {"Day 2" = "agenda/day2.md"},
+    {"Day 3" = "agenda/day3.md"},
+  ]},
+  {"Day 1 - Foundation & Setup" = [
+    {"The Scenario" = "day1/scenario.md"},
+    {"Your Mission" = "day1/your-mission.md"},
+    {"Review the sample data files" = "day1/sample-data.md"},
+    {"Design your pipeline architecture" = "day1/design-pipeline.md"},
+    {"Create a GitHub repository" = "day1/create-repo.md"},
+    {"Introduce GitHub Projects" = "day1/create-project.md"},
+    {"Set up Kanban board" = "day1/project-tasks.md"},
+    {"Write first Python code" = "day1/write-code.md"},
+  ]},
+  {"Day 2 - Build & Test Pyhon Package" = [
+    {"VM Setup & Welcome" = "day2/vm-setup.md"},
+    {"Explain function - Data Ingestion" = "day2/ingestion.md"},
+    {"Write function - Data Ingestion" = "day2/ingestion-enhancements.md"},
+    {"Explain function - Data Cleaning" = "day2/cleaning.md"},
+    {"Write function - Data Cleaning" = "day2/cleaning-enhancements.md"},
+    {"Python Testing" = "day2/python-testing.md"},
+    {"Write unit tests" = "day2/cleaning-tests.md"},
+    {"Python Test Coverage" = "day2/coverage.md"},
+    {"Achive test coverage" = "day2/coverage-goal.md"},
+  ]},
+  {"Day 3 - Automation & Integration" = [
+    {"GitHub Actions" = "day3/github-actions.md"},
+    {"GitHub Actions ~ Trigger Workflow" = "day3/github-workflow.md"},
+    {"Pull Request Workflow" = "day3/github-branch.md"},
+    {"Complete Your Own PR Workflow" = "day3/pull-request.md"},
+    {"01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},
+    {"Run pipeline in MS Fabric" = "day3/fabric-integration.md"},
+    {"Create Gold Layer Table" = "day3/fabric-gold-layer.md"},
+  ]},
+  {"Resources" = "resources.md"},
+]
+
+
+[project.theme]
+variant = "classic"
+
+features = [
+  "announce.dismiss",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "toc.integrate",
+
+  #"content.action.edit",
+  #"content.action.view",
+  #"header.autohide",
+  #"navigation.expand",
+  #"navigation.footer",
+  #"navigation.instant",
+  #"navigation.instant.prefetch",
+  #"navigation.instant.progress",
+  #"navigation.path",
+  #"navigation.sections",
+  #"navigation.tabs",
+  #"navigation.tabs.sticky",
+  #"navigation.top",
+  #"navigation.tracking",
+  #"search.highlight",
+  #"toc.follow",
+]
+    
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+    
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+    
+[project.theme.icon]
+logo = "material/database"
+    

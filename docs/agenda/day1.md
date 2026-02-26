@@ -3,7 +3,7 @@
 ## Session 1
 
 - `09:30` VM Setup (10 mins)
-- `09:40` Welcome (10 mins)
+- `09:40` Welcome to Day 1 of DE5 Module 5 (10 mins)
 - `09:50` [The Scenario](../day1/scenario.md) (10 mins)
 - `10:00` [Your Mission](../day1/your-mission.md) (10 mins)
 - `10:10` **Discussion**: What does 'Production-Ready' mean? (10 mins)
@@ -37,5 +37,5 @@
 - `15:20` **Activity**: [Write first Python code](../day1/write-code.md) (20 mins)
 - `15:40` Write first Pull Request (10 mins)
 
-## Wrap
+## 🎁 Wrap
 

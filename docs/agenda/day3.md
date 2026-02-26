@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- `09:30` Welcome (10 mins)
+- `09:30` Welcome to Day 3 of DE5 Module 5 (10 mins)
 - `09:40` VM Setup & Welcome (10 mins)
 - `09:50` [GitHub Actions](../day3/github-actions.md) (20 mins)
 - `10:10` [GitHub Actions ~ Trigger Workflow](../day3/github-workflow.md) (20 mins)
@@ -30,5 +30,5 @@
 - `15:10` **Activity**: [Create Gold Layer Table](../day3/fabric-gold-layer.md) (20 mins)
 - `15:30` POWERBI (20 mins)
 
-## Wrap
+## 🎁 Wrap
 
