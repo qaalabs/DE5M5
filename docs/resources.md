@@ -12,6 +12,7 @@
 - https://app.diagrams.net/ ~ was draw.io
 - https://dbdiagram.io/home
 - https://online.visual-paradigm.com/
+- https://excalidraw.com/
 
 ### QA Platform Labs
 
