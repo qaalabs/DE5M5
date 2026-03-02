@@ -15,11 +15,19 @@
 ---
 
 Sources (CSV, JSON, Excel)
-     ↓
+
+↓
+
 BRONZE (Raw ingestion)
-     ↓
+
+↓
+
 SILVER (Cleaned, validated) ← Your Python package does this
-     ↓
+
+↓
+
 GOLD (Business aggregations)
-     ↓
+
+↓
+
 Consumption (Reports, analysis)

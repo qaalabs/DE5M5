@@ -1,11 +1,5 @@
 ## <mark>Allocate a VM to each learner</mark>
 
-<span style="background-color: orange;">This whole class has been allocated LOD</span>
-
-- MS Forms ~ LOD: https://forms.office.com/e/20Gy0s7Ub4
-
----
-
 ### Allocation
 
 - Give them the link to the GoToMyPC MS Form
@@ -18,3 +12,4 @@
 
 - MS Forms ~ GoToMyPC: https://forms.office.com/e/sRCSazTfpq
 - MS Forms ~ LOD: https://forms.office.com/e/20Gy0s7Ub4
+
