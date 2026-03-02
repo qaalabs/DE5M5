@@ -7,19 +7,19 @@ Go to template URL:
 
 "Use this template" → Create repo
 
-Name it: `library-pipeline`
+Name it: `qa-library-pipeline`
 
 ## Clone to VM
 
-- Open terminal
-- Clone repository
-- Navigate into folder
+- Open the program: **Git Bash**
+- Clone your repository
+- Navigate into the repo folder
 - Explore the structure
+- Switch to your dev branch: `git checkout dev`
 
 ## Environment Setup
 
-- Create virtual environment
-- Install dependencies
+- Install dependencies: `pip install -r requirements.txt`
 - Run example test
 - Verify it works
 
@@ -28,3 +28,4 @@ Name it: `library-pipeline`
 - Upload architecture diagram to docs/architecture/
 - Commit and push
 - Verify on GitHub
+

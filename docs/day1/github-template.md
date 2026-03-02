@@ -17,7 +17,7 @@
 
 - Navigate to template repo
 - Click "Use this template"
-- Create repository: library-pipeline
+- Create repository: `qa-library-pipeline`
 - Show the structure
 - Explain what each folder is for
 
