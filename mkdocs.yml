@@ -32,15 +32,6 @@ nav:
     - "Python Test Coverage": day2/coverage.md
     - "Achive test coverage": day2/coverage-goal.md
 
-  - "Day 3 - Automation & Integration":
-    - "GitHub Actions": day3/github-actions.md
-    - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
-    - "Pull Request Workflow": day3/github-branch.md
-    - "Complete Your Own PR Workflow": day3/pull-request.md
-    - "01 Create Fabric Lakehouse": labs/01-lakehouse.md
-    - "Run pipeline in MS Fabric": day3/fabric-integration.md
-    - "Create Gold Layer Table": day3/fabric-gold-layer.md
-
   - Resources: resources.md
 
 not_in_nav: |
