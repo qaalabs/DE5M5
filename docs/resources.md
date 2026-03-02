@@ -2,8 +2,6 @@
 
 ## Links
 
-- Learner reactions ~ [Ticks & Crosses](https://tick.qaalabs.com/de5/m5)
-
 ### GitHub
 
 - [Library Pipeline Template](https://github.com/ingwanelabs/library-pipeline-template)
@@ -18,3 +16,4 @@
 ### QA Platform Labs
 
 - [Microsoft Fabric Playground](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/)
+
