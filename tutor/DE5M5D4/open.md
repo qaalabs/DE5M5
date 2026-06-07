@@ -2,8 +2,6 @@
 
 The aim of day 4 is ...
 
-https://qaalabs.github.io/DE5M5/trainer
-
 ---
 
 ## **Module 5: Day 4 - Polish & Present**
