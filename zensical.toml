@@ -19,8 +19,7 @@ nav = [
     {"Set up Kanban board" = "day1/project-tasks.md"},
     {"Write first Python code" = "day1/write-code.md"},
   ]},
-  {"Day 2 - Build & Test Pyhon Package" = [
-    {"VM Setup & Welcome" = "day2/vm-setup.md"},
+  {"Day 2 - Build & Test Python Package" = [
     {"Explain function - Data Ingestion" = "day2/ingestion.md"},
     {"Write function - Data Ingestion" = "day2/ingestion-enhancements.md"},
     {"Explain function - Data Cleaning" = "day2/cleaning.md"},
