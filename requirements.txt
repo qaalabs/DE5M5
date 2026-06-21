@@ -2,3 +2,4 @@ mkdocs-material
 mkdocs
 mkdocs-glightbox
 zensical
+mkdocs-quiz
