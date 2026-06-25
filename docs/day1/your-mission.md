@@ -28,28 +28,3 @@ These files intentionally contain data quality issues:
 
 **Your task is to build a pipeline that cleans and validates this data.**
 
----
-
-```python
-# In Jupyter notebook 
-import pandas as pd
-
-# Show the messiness
-df = pd.read_csv('data/circulation_data.csv')
-
-print("First few rows:")
-print(df.head())
-
-print("\nData info:")
-print(df.info())
-
-print("\nCheck for issues:")
-print(f"Duplicates: {df.duplicated().sum()}")
-print(f"Missing ISBNs: {df['isbn'].isna().sum()}")
-print(f"Date types: {df['checkout_date'].dtype}")
-
-# Show the problems!
-print("\nSample problematic rows:")
-print(df[df['isbn'].isna()].head())
-```
-

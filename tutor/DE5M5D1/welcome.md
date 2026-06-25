@@ -1,16 +1,9 @@
-## Agenda
+## Welcome to Module 5
 
-- Welcome to Module 5: Building Data Products
-- Quick recap: Module 3 (ETL in Fabric), Module 4 (Planning/Agile)
-- Today's goal: Set up for success
-- Week overview: Build → Test → Deploy → Present
-
-### Format
-
-- Day 1 - Foundation & Setup
-- Day 2 - Build & Test Python Package
-- Day 3 - Automation & Integration
-- Day 4 - Polish & Present
+- M3: built ETL in Fabric. M4: planning, agile, Git. M5: build something *production-ready*
+- "Day 1 plan it, Day 2 build it, Day 3 automate it, Day 4 present it"
+- Key shift: M3 was learning Fabric UI - M5 is software engineering discipline (testing, packaging, deployment)
+- Keep to 10 mins - move straight to scenario
 
 
 
