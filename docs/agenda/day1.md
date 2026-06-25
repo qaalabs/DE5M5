@@ -2,8 +2,8 @@
 
 ## Session 1
 
-- 🖥️ VM Setup
 - 🌅 Welcome to Day 1 of DE5 Module 5
+- 🖥️ VM Setup
 - [The Scenario](../day1/scenario.md)
 - [Your Mission](../day1/your-mission.md)
 - **Discussion**: What does 'Production-Ready' mean?

@@ -48,6 +48,7 @@ not_in_nav: |
   404.md
   trainer.md
   DAY-setup.md
+  day1/prod-ready.md
   day1/create-diagram.md
   day1/github-template.md
   day2/vm-setup.md
