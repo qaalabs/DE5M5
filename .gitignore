@@ -1,6 +1,7 @@
 # This project
 backup/
 zanyana/
+vault/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

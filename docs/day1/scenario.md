@@ -134,8 +134,8 @@ You will receive:
 
 ### Sample datasets:
 
-- `circulation_data.csv` (50,000 rows with quality issues)
-- `events_data.json` (API responses, nested structure)
+- `circulation_data.csv` (5,000 rows with quality issues)
+- `events_data.json` (API responses, community events and attendance)
 - `feedback.txt` (unstructured survey responses)
 - `catalogue.xlsx` (book metadata with formatting issues)
 

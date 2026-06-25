@@ -8,13 +8,13 @@ This folder contains sample data for the library pipeline project.
 
 ## Data Files
 
-### `circulation_data.csv` (50,000 rows)
+### `circulation_data.csv` (5,000 rows)
 - Transaction records from book checkouts
 - Contains quality issues: duplicates, missing values, date format inconsistencies
 
 ### `events_data.json` (500 events)
 - Library events and attendance records
-- Nested JSON structure requiring flattening
+- JSON format, one record per event
 
 ### `feedback.txt` (200 feedback entries)
 - Unstructured member feedback

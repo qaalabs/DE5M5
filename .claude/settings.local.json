@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/ssd/PROJECTS/QAADE5/library-pipeline-template/data/**)"
+    ]
+  }
+}

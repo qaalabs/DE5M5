@@ -75,13 +75,13 @@ def load_csv(filepath, **kwargs):
         raise
 
 def load_json(filepath):
-    """Load JSON file and flatten to DataFrame.
+    """Load JSON file into DataFrame.
     
     Args:
         filepath (str): Path to JSON file
         
     Returns:
-        pd.DataFrame: Flattened data
+        pd.DataFrame: Loaded data
         
     Raises:
         FileNotFoundError: If file doesn't exist
@@ -101,12 +101,7 @@ def load_json(filepath):
         with open(filepath, 'r') as f:
             data = json.load(f)
         
-        # Flatten nested structure
-        # Adjust based on your JSON structure
-        if isinstance(data, dict) and 'events' in data:
-            df = pd.json_normalize(data['events'])
-        else:
-            df = pd.json_normalize(data)
+        df = pd.DataFrame(data)
             
         logger.info(f"Successfully loaded {len(df)} records from {filepath}")
         return df
