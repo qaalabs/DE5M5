@@ -5,6 +5,7 @@ dev_addr: '0.0.0.0:8000'
 # Navigation menu
 nav:
   - Overview: index.md
+  - Module KSBs: ksb.md
 
   - Agenda:
     - Day 1: agenda/day1.md
@@ -109,6 +110,7 @@ markdown_extensions:
 plugins:
   - search
   - glightbox
+  - mkdocs_quiz
 
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
