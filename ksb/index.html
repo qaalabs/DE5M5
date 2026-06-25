@@ -6,25 +6,25 @@
       
       
       
-        <link rel="prev" href="../../labs/01-lakehouse/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../fabric-gold-layer/">
+        <link rel="next" href="../agenda/day1/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Run pipeline in MS Fabric - Module 5 - Data Engineering Product Development</title>
+        <title>Module KSBs - Module 5 - Data Engineering Product Development</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -43,13 +43,13 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fabric-integration" class="md-skip">
+        <a href="#course-de5-module-5" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Module 5 - Data Engineering Product Development" class="md-header__button md-logo" aria-label="Module 5 - Data Engineering Product Development" data-md-component="logo">
+    <a href=".." title="Module 5 - Data Engineering Product Development" class="md-header__button md-logo" aria-label="Module 5 - Data Engineering Product Development" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Run pipeline in MS Fabric
+              Module KSBs
             
           </span>
         </div>
@@ -187,7 +187,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Module 5 - Data Engineering Product Development" class="md-nav__button md-logo" aria-label="Module 5 - Data Engineering Product Development" data-md-component="logo">
+    <a href=".." title="Module 5 - Data Engineering Product Development" class="md-nav__button md-logo" aria-label="Module 5 - Data Engineering Product Development" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"></path></svg>
@@ -205,7 +205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -229,10 +229,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ksb/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module KSBs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -248,6 +275,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knowledge
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skill
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behaviour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behaviour
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -306,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day1/" class="md-nav__link">
+      <a href="../agenda/day1/" class="md-nav__link">
         
   
   
@@ -334,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day2/" class="md-nav__link">
+      <a href="../agenda/day2/" class="md-nav__link">
         
   
   
@@ -362,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
+      <a href="../agenda/day3/" class="md-nav__link">
         
   
   
@@ -390,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../agenda/day4/" class="md-nav__link">
+      <a href="../agenda/day4/" class="md-nav__link">
         
   
   
@@ -472,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/scenario/" class="md-nav__link">
+      <a href="../day1/scenario/" class="md-nav__link">
         
   
   
@@ -500,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/your-mission/" class="md-nav__link">
+      <a href="../day1/your-mission/" class="md-nav__link">
         
   
   
@@ -528,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/sample-data/" class="md-nav__link">
+      <a href="../day1/sample-data/" class="md-nav__link">
         
   
   
@@ -556,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/design-pipeline/" class="md-nav__link">
+      <a href="../day1/design-pipeline/" class="md-nav__link">
         
   
   
@@ -584,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/create-repo/" class="md-nav__link">
+      <a href="../day1/create-repo/" class="md-nav__link">
         
   
   
@@ -612,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/create-project/" class="md-nav__link">
+      <a href="../day1/create-project/" class="md-nav__link">
         
   
   
@@ -640,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/project-tasks/" class="md-nav__link">
+      <a href="../day1/project-tasks/" class="md-nav__link">
         
   
   
@@ -668,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day1/write-code/" class="md-nav__link">
+      <a href="../day1/write-code/" class="md-nav__link">
         
   
   
@@ -750,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/ingestion/" class="md-nav__link">
+      <a href="../day2/ingestion/" class="md-nav__link">
         
   
   
@@ -778,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/ingestion-enhancements/" class="md-nav__link">
+      <a href="../day2/ingestion-enhancements/" class="md-nav__link">
         
   
   
@@ -806,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/cleaning/" class="md-nav__link">
+      <a href="../day2/cleaning/" class="md-nav__link">
         
   
   
@@ -834,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/cleaning-enhancements/" class="md-nav__link">
+      <a href="../day2/cleaning-enhancements/" class="md-nav__link">
         
   
   
@@ -862,7 +942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/python-testing/" class="md-nav__link">
+      <a href="../day2/python-testing/" class="md-nav__link">
         
   
   
@@ -890,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/cleaning-tests/" class="md-nav__link">
+      <a href="../day2/cleaning-tests/" class="md-nav__link">
         
   
   
@@ -918,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/coverage/" class="md-nav__link">
+      <a href="../day2/coverage/" class="md-nav__link">
         
   
   
@@ -946,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../day2/coverage-goal/" class="md-nav__link">
+      <a href="../day2/coverage-goal/" class="md-nav__link">
         
   
   
@@ -978,20 +1058,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1012,7 +1090,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1030,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-actions/" class="md-nav__link">
+      <a href="../day3/github-actions/" class="md-nav__link">
         
   
   
@@ -1058,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-workflow/" class="md-nav__link">
+      <a href="../day3/github-workflow/" class="md-nav__link">
         
   
   
@@ -1086,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-branch/" class="md-nav__link">
+      <a href="../day3/github-branch/" class="md-nav__link">
         
   
   
@@ -1114,7 +1192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pull-request/" class="md-nav__link">
+      <a href="../day3/pull-request/" class="md-nav__link">
         
   
   
@@ -1142,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../labs/01-lakehouse/" class="md-nav__link">
+      <a href="../labs/01-lakehouse/" class="md-nav__link">
         
   
   
@@ -1167,37 +1245,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Run pipeline in MS Fabric
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../day3/fabric-integration/" class="md-nav__link">
         
   
   
@@ -1213,92 +1264,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Learning Objectives
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-1-the-deployment-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 1: The Deployment Strategy
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-2-start-fabric-playground" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 2: Start Fabric Playground
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-3-upload-sample-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 3: Upload Sample Data
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#part-4-create-fabric-notebook" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 4: Create Fabric Notebook
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-points" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key points:
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1311,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fabric-gold-layer/" class="md-nav__link">
+      <a href="../day3/fabric-gold-layer/" class="md-nav__link">
         
   
   
@@ -1346,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resources/" class="md-nav__link">
+      <a href="../resources/" class="md-nav__link">
         
   
   
@@ -1383,153 +1348,47 @@
 
 
 
-<h1 id="fabric-integration">Fabric Integration</h1>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Deploy Python package to Fabric</li>
-<li>Create Fabric notebook using the package</li>
-<li>Understand local dev → cloud deployment flow</li>
-<li>Build bronze → silver pipeline in Fabric</li>
-</ul>
-<h2 id="part-1-the-deployment-strategy">Part 1: The Deployment Strategy</h2>
-<div class="highlight"><pre><span></span><code>Local Development (VM):
-  ↓
-GitHub (Version Control):
-  ↓
-Fabric (Cloud Execution):
-  - Installs package from GitHub
-  - Runs transformation code
-  - Creates Delta tables
-</code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Key insight</p>
-<ul>
-<li>We developed locally, but it runs in the cloud. This is the modern way!</li>
-</ul>
-</div>
-<h2 id="part-2-start-fabric-playground">Part 2: Start Fabric Playground</h2>
-<ol>
-<li>
-<p>Navigate to Fabric portal</p>
-</li>
-<li>
-<p>Start playground (3-hour window begins)</p>
-</li>
-<li>
-<p>Create a workspace</p>
-</li>
-<li>
-<p>Create Lakehouse: <code>library_pipeline</code></p>
-</li>
-</ol>
-<h2 id="part-3-upload-sample-data">Part 3: Upload Sample Data</h2>
-<h3 id="in-fabric">In Fabric</h3>
-<ol>
-<li>
-<p>Go to Lakehouse → Files</p>
-</li>
-<li>
-<p>Under <code>Files</code> create a directory called <code>bronze</code></p>
-</li>
-<li>
-<p>Upload files to the bronze folder:</p>
-<ul>
-<li><code>circulation_data.csv</code></li>
-<li><code>events_data.json</code></li>
-<li>(Optional: other files)</li>
-</ul>
-</li>
-<li>
-<p>Verify they appear in <code>Files/bronze</code> folder (you may need to refresh)</p>
-</li>
-</ol>
-<h2 id="part-4-create-fabric-notebook">Part 4: Create Fabric Notebook</h2>
-<p>Create new Fabric notebook: <code>bronze_to_silver</code></p>
-<div class="admonition note">
-<p class="admonition-title">Run each cell after you add it</p>
-</div>
-<h3 id="cell-1-install-package-from-github">Cell 1: Install package from GitHub</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cell 1: Install package from GitHub</span>
-<span class="o">%</span><span class="n">pip</span> <span class="n">install</span> <span class="s2">"git+https://github.com/YOUR_USERNAME/library-pipeline.git"</span>
-</code></pre></div>
-<h3 id="cell-2-import-your-functions">Cell 2: Import your functions</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cell 2: Import your functions</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.ingestion</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_csv</span><span class="p">,</span> <span class="n">load_json</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.cleaning</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
-    <span class="n">remove_duplicates</span><span class="p">,</span> 
-    <span class="n">handle_missing_values</span><span class="p">,</span> 
-    <span class="n">standardize_dates</span>
-<span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Package installed and imported successfully!"</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="cell-3-load-data-from-lakehouse-files">Cell 3: Load data from Lakehouse Files</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cell 3: Load data from Lakehouse Files</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="c1"># Read CSV from Files</span>
-<span class="n">file_path</span> <span class="o">=</span> <span class="s2">"/lakehouse/default/Files/bronze/circulation_data.csv"</span>
-<span class="n">df_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_raw</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_raw</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</code></pre></div>
-<h3 id="cell-4-apply-your-cleaning-functions">Cell 4: Apply your cleaning functions</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cell 4: Apply your cleaning functions (BRONZE → SILVER)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Applying data cleaning pipeline..."</span><span class="p">)</span>
-
-<span class="c1"># Remove duplicates</span>
-<span class="n">df_clean</span> <span class="o">=</span> <span class="n">remove_duplicates</span><span class="p">(</span><span class="n">df_raw</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">'transaction_id'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"After removing duplicates: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
-
-<span class="c1"># Handle missing values</span>
-<span class="n">df_clean</span> <span class="o">=</span> <span class="n">handle_missing_values</span><span class="p">(</span><span class="n">df_clean</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">'drop'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"After handling missing values: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
-
-<span class="c1"># Standardize dates</span>
-<span class="n">df_clean</span> <span class="o">=</span> <span class="n">standardize_dates</span><span class="p">(</span><span class="n">df_clean</span><span class="p">,</span> <span class="p">[</span><span class="s1">'checkout_date'</span><span class="p">,</span> <span class="s1">'return_date'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Dates standardized"</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">✅ Cleaning complete! </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_raw</span><span class="p">)</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows"</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="cell-5-save-as-delta-table-silver-layer">Cell 5: Save as Delta table (SILVER layer)</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cell 5: Save as Delta table (SILVER layer)</span>
-<span class="c1">#from pyspark.sql import SparkSession</span>
-<span class="c1">#spark = SparkSession.builder.getOrCreate()</span>
-
-<span class="c1"># Convert pandas to Spark DataFrame</span>
-<span class="n">df_spark</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df_clean</span><span class="p">)</span>
-
-<span class="c1"># Write as Delta table</span>
-<span class="n">table_name</span> <span class="o">=</span> <span class="s2">"silver_circulation"</span>
-<span class="n">df_spark</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"delta"</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsTable</span><span class="p">(</span><span class="n">table_name</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"✅ Created Delta table: </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="cell-6-query-the-delta-table">Cell 6: Query the Delta table</h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Cell 6: Query the Delta table</span>
-<span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
-<span class="s2">SELECT </span>
-<span class="s2">    COUNT(*) as total_transactions,</span>
-<span class="s2">    COUNT(DISTINCT member_id) as unique_members,</span>
-<span class="s2">    COUNT(DISTINCT isbn) as unique_books,</span>
-<span class="s2">    COUNT(DISTINCT branch_id) as branches</span>
-<span class="s2">FROM </span><span class="si">{</span><span class="n">table_name</span><span class="si">}</span>
-<span class="s2">"""</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
-<span class="n">result</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Silver layer ready for analysis!"</span><span class="p">)</span>
-</code></pre></div>
-<hr>
-<h2 id="key-points">Key points:</h2>
-<ul>
-<li>Your local code works in Fabric (same package!)</li>
-<li>Lakehouse Files as data source</li>
-<li>Delta tables for structured storage</li>
-<li>Can query with SQL immediately</li>
-</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h1 id="course-de5-module-5">Course: DE5 - Module 5</h1>
+<blockquote>
+<p>Knowledge, Skills, and Behaviours (KSBs) are the core attributes which you need to be competent in, to excel in your profession and to pass the end-point assessment (EPA) as part of this apprenticeship.</p>
+</blockquote>
+<h2 id="knowledge">Knowledge</h2>
+<blockquote>
+<p>Knowledge refers to the learning you acquire whilst on your apprenticeship. It's the information covered in the Discover stage and Practise stage activities. Some of the knowledge will be generic, and some will be more specific to your role.</p>
+</blockquote>
+<p>K21: Policies and strategies to ensure business continuity for operations, particularly in relation to data provision.</p>
+<p>K24: Processes for evaluating prototypes and taking them to implementation within a production environment.</p>
+<p>K26: Data development frameworks and approved organisational architectures.</p>
+<p>K28: Continuous improvement including how to: capture good practice and lessons learned.</p>
+<p>K30: The methods and techniques used to communicate messages to meet the needs of the audience.</p>
+<h2 id="skill">Skill</h2>
+<blockquote>
+<p>Skills refer to how you apply the knowledge you have gained in your job. You will develop your skills as you progress through the modules, utilising your on and off-the-job training.</p>
+</blockquote>
+<p>S1: Collate, evaluate and refine user requirements to design the data product.</p>
+<p>S3: Design a data product to serve multiple needs and with scalability, efficiency, and security in mind.</p>
+<p>S5: Produce and maintain technical documentation explaining the data product, that meets organisational, technical and non-technical user requirements, retaining critical information.</p>
+<p>S8: Identify and troubleshoot issues with data processing pipelines.</p>
+<p>S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks.</p>
+<p>S13: Use data systems securely to meet requirements and in line with organisational procedures and legislation.</p>
+<p>S16: Develop algorithms and processes to extract structured data from unstructured sources.</p>
+<p>S17: Apply and advocate for software development best practice when working with other data professionals throughout the business. Contribute to standards and ways of working that support software development principles.</p>
+<p>S19: Identify and escalate risks with suggested mitigation/resolutions as appropriate.</p>
+<p>S22: Develop, maintain collaborative relationships using adaptive business methodology with stakeholders such as, business users, data scientists, data analysts and business intelligence teams.</p>
+<p>S23: Present, communicate, and disseminate messages about the data product, tailoring the message and medium to the needs of the audience.</p>
+<p>S24: Evaluate the strengths and weaknesses of prototype data products and how these integrate within an organisation’s overarching data infrastructure.</p>
+<p>S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product.</p>
+<p>S27: Selects and apply sustainable solutions to contribute to net zero and environmental strategies across the various stages of product and service delivery.</p>
+<h2 id="behaviour">Behaviour</h2>
+<blockquote>
+<p>Behaviours are the way in which you work, and your mindset. You need to act in a way that is appropriate for your organisation and profession.</p>
+</blockquote>
+<p>B1: Acts proactively and takes accountability adapting positively to changing work priorities, ensuring deadlines are met.</p>
+<p>B2: Works collaboratively with stakeholders and colleagues, developing strong working relationships to achieve common goals. Support an inclusive culture and treat technical and non- technical colleagues and stakeholders with respect.</p>
+<p>B3: Quality focus that promotes continuous improvement utilising peer review techniques, innovation and creativity to the data system development process to improve processes and address business challenges.</p>
+<p>B4: Takes personal responsibility towards net zero and prioritises environmental sustainability outcomes in how they carry out the duties of their role.</p>
+<p>B5: Use initiative and innovation to problem solve and trouble shoot, providing creative solutions.</p>
+<p>B6: Keeps abreast of developments in emerging, contemporary and advanced technologies to optimise sustainable data products and services.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
@@ -3278,10 +3137,10 @@ window.mkdocsQuizConfig = {
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
