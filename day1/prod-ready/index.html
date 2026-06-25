@@ -6,10 +6,6 @@
       
       
       
-        <link rel="prev" href="../scenario/">
-      
-      
-        <link rel="next" href="../sample-data/">
       
       
         
@@ -20,7 +16,7 @@
     
     
       
-        <title>Your Mission - Module 5 - Data Engineering Product Development</title>
+        <title>What does "Production-Ready" Mean? - Module 5 - Data Engineering Product Development</title>
       
     
     
@@ -71,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#your-mission" class="md-skip">
+        <a href="#what-does-production-ready-mean" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Your Mission
+              What does "Production-Ready" Mean?
             
           </span>
         </div>
@@ -422,20 +418,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -456,7 +450,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -499,37 +493,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Your Mission
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../your-mission/" class="md-nav__link">
         
   
   
@@ -545,59 +512,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#your-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Your Task
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#files" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Files
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-quality-issues" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Quality Issues
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1350,53 +1264,52 @@
 
 
 
-<h1 id="your-mission">Your Mission</h1>
-<p>This project uses sample data from our fictional library network.</p>
-<h2 id="your-task">Your Task</h2>
-<p>Build a data quality pipeline that:</p>
-<ul>
-<li>✅ Ingests all data sources</li>
-<li>✅ Cleans and validates the data</li>
-<li>✅ Produces analysis-ready datasets</li>
-<li>✅ Handles errors gracefully</li>
-</ul>
-<h2 id="files">Files</h2>
-<ul>
-<li><code>circulation_data.csv</code> - Book circulation transactions (5,000 rows)</li>
-<li><code>events_data.json</code> - Library events data</li>
-<li><code>feedback.txt</code> - Unstructured member feedback</li>
-<li><code>catalogue.xlsx</code> - Book catalogue with metadata</li>
-</ul>
-<h2 id="data-quality-issues">Data Quality Issues</h2>
-<p>These files intentionally contain data quality issues:</p>
-<ul>
-<li>Duplicate records</li>
-<li>Missing values</li>
-<li>Inconsistent date formats</li>
-</ul>
-<p><strong>Your task is to build a pipeline that cleans and validates this data.</strong></p>
-<hr>
-<div class="highlight"><pre><span></span><code><span class="c1"># In Jupyter notebook </span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-
-<span class="c1"># Show the messiness</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'data/circulation_data.csv'</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"First few rows:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Data info:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Check for issues:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Duplicates: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Missing ISBNs: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">'isbn'</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Date types: </span><span class="si">{</span><span class="n">df</span><span class="p">[</span><span class="s1">'checkout_date'</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-
-<span class="c1"># Show the problems!</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Sample problematic rows:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'isbn'</span><span class="p">]</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</code></pre></div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h1 id="what-does-production-ready-mean">What does "Production-Ready" Mean?</h1>
+<h2 id="how-to-run-this-discussion">How to run this discussion</h2>
+<p>Don't open with a definition. Ask first:</p>
+<blockquote>
+<p>"Before I tell you what I think - what do <em>you</em> think makes code production-ready?"</p>
+</blockquote>
+<p>Take 3-4 answers from the group, acknowledge each one. Then land on the six criteria:</p>
+<h2 id="the-six-criteria">The six criteria</h2>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tested (&gt;70% coverage)</td>
+<td>You know it works now, and you'll know when it breaks later</td>
+</tr>
+<tr>
+<td>Version controlled</td>
+<td>Full history, ability to roll back, team can collaborate</td>
+</tr>
+<tr>
+<td>Documented</td>
+<td>Someone else can understand and run it without you being there</td>
+</tr>
+<tr>
+<td>Automated deployment</td>
+<td>No manual steps between "code merged" and "running in prod"</td>
+</tr>
+<tr>
+<td>Error handling</td>
+<td>Fails gracefully and tells you <em>why</em>, not just crashes silently</td>
+</tr>
+<tr>
+<td>Security considered</td>
+<td>Data access controls, no credentials in code</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assessment-link">Assessment link</h2>
+<p>These aren't just good practice - they're what gets marked. The pipeline being functionally correct is necessary but not sufficient. Point them to the rubric now so they're not surprised on Day 4.</p>
+<h2 id="common-discussion-point">Common discussion point</h2>
+<p>Learners often think "it runs without errors" = production-ready. The counter-question: "How do you know it handles bad data? How do you know it still works after your next change?"</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
