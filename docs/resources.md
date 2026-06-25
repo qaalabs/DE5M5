@@ -4,7 +4,7 @@
 
 ### GitHub
 
-- [Library Pipeline Template](https://github.com/ingwanelabs/library-pipeline-template)
+- [Library Pipeline Template](https://github.com/QAADE5/library-pipeline-template)
 
 ### Drawing tools
 

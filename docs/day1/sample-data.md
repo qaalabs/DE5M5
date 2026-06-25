@@ -4,7 +4,7 @@
 
 This folder contains sample data for the library pipeline project.
 
-- GitHub Link: https://github.com/ingwanelabs/library-pipeline-template/tree/main/data
+- GitHub Link: https://github.com/QAADE5/library-pipeline-template/tree/main/data
 
 ## Data Files
 

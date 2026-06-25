@@ -3,7 +3,7 @@
 ## Create repo from a template
 
 Go to template URL:
-- https://github.com/ingwanelabs/library-pipeline-template
+- https://github.com/QAADE5/library-pipeline-template
 
 "Use this template" → Create repo
 
