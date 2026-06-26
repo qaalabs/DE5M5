@@ -1,31 +1,41 @@
-# Activity: Create Repository
+# Activity: Set Up Your Repository
 
-## Create repo from a template
+Everything in this session happens in GitHub - no cloning yet.
 
-Go to template URL:
+## Step 1: Create your repo
+
+Go to the template:
+
 - https://github.com/QAADE5/library-pipeline-template
 
-"Use this template" → Create repo
+Click **"Use this template"** → **"Create a new repository"**
 
-Name it: `qa-library-pipeline`
+- Owner: your GitHub account
+- Name: `qa-library-pipeline`
+- Visibility: Public
+- Click **"Create repository"**
 
-## Clone to VM
+## Step 2: Explore the structure
 
-- Open the program: **Git Bash**
-- Clone your repository
-- Navigate into the repo folder
-- Explore the structure
-- Switch to your dev branch: `git checkout dev`
+Spend a few minutes clicking around your new repo. Find:
 
-## Environment Setup
+- Where the data files live
+- Where your Python package will go
+- The GitHub Actions workflows already set up
 
-- Install dependencies: `pip install -r requirements.txt`
-- Run example test
-- Verify it works
+## Step 3: Add your architecture diagram
 
-## First Commit
+- Navigate to `docs/architecture/index.md`
+- Click the pencil icon to edit
+- Paste your Mermaid diagram from the design activity
+- Click **"Commit changes"**
+- Go back to the file - check the diagram renders correctly
 
-- Upload architecture diagram to docs/architecture/
-- Commit and push
-- Verify on GitHub
+## Step 4: Add your ADR
 
+- Click **"Add file"** → **"Create new file"**
+- Name it: `docs/decisions/ADR-001.md`
+- Paste your ADR from Notepad
+- Click **"Commit changes"**
+
+You now have two artefacts in your repo - architecture diagram and first decision record.

@@ -1,37 +1,40 @@
-# Architecture Design & Documentation
+# Creating Architecture Diagrams with Mermaid
 
-## Learning Objectives
+Mermaid is built into GitHub - any `.md` file in a repo renders Mermaid diagrams automatically. No tools to install.
 
-- Design a medallion architecture for the project
-- Create clear architecture diagrams
-- Document key decisions
+## Basic syntax
 
-## Architecture Principles
-
-Medallion pattern: Bronze → Silver → Gold
-
-Why this pattern? (separation of concerns, reprocessing)
-
-Where does each transformation happen?
-
-Visual:
-
+````markdown
+```mermaid
+flowchart TD
+    A[Source] --> B[Bronze]
+    B --> C[Silver]
+    C --> D[Gold]
 ```
-Sources (CSV, JSON, Excel)
-     ↓
-BRONZE (Raw ingestion)
-     ↓
-SILVER (Cleaned, validated) ← Your Python package does this
-     ↓
-GOLD (Business aggregations)
-     ↓
-Consumption (Reports, analysis)
+````
+
+## Demo: Library pipeline
+
+Show this rendering in the repo README:
+
+````markdown
+```mermaid
+flowchart TD
+    CSV[circulation_data.csv] --> B[Bronze Layer]
+    JSON[events_data.json] --> B
+    TXT[feedback.txt] --> B
+    XLS[catalogue.xlsx] --> B
+
+    B --> S[Silver Layer\nCleaned & Validated]
+    S --> G[Gold Layer\nAnalysis-Ready]
+
+    G --> R[Reports & Dashboards]
 ```
+````
 
-## Creating Architecture Diagrams
+## Key points
 
-- Use draw.io (in browser, free)
-- What to include: sources, layers, technologies
-- Keep it simple!
-
-### Live demo: Create a simple diagram
+- `TD` = top-down flow. Use `LR` for left-right if it fits better
+- Square brackets `[]` for process steps, `()` for rounded, `{}` for decisions
+- Edit in the repo, preview renders on GitHub instantly
+- They'll add this to their README during the DESIGN activity

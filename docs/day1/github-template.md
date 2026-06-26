@@ -1,47 +1,24 @@
-# GitHub Template Setup
+# GitHub Template Setup (demo)
 
-## Learning Objectives:
+Walk through the template repo before learners create their own. Screen share the template at:
 
-- Use GitHub template to create project repository
-- Clone to VM and set up local environment
-- Understand the project structure
+`https://github.com/QAADE5/library-pipeline-template`
 
----
+## What to show
 
-## GitHub Template Introduction
+**Top level** - point out:
+- `README.md` - has TODO placeholders they'll fill in as they build
+- `data/` - the four source files (already there)
+- `.github/workflows/` - CI is already wired up (they'll see this in action on Day 3)
 
-- What is a template repository?
-- Why use one? (structure, best practices, working CI/CD)
+**`src/data_processing/`** - the Python package they'll be building into
 
-## Live Demo: Create from Template (10 mins)
+**`docs/architecture/`** - where their Mermaid diagram will live
 
-- Navigate to template repo
-- Click "Use this template"
-- Create repository: `qa-library-pipeline`
-- Show the structure
-- Explain what each folder is for
+**`docs/`** - where they'll create a `decisions/` folder for their ADR
 
-## Clone to VM & Setup (10 mins)
+## Key message
 
+> "The structure is already here - CI, package layout, test setup. Your job is to fill it with working code."
 
-```bash
-# Clone this repository
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
-
-# Create virtual environment
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-
-# Confirm the Python 3 version
-python --version
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run tests
-pytest tests/ -v
-
-# Run Python tests with a coverage report
-pytest tests/ -v --cov=src --cov-report=term-missing
-```
+Show the README `## Architecture` section with the TODO placeholder - they'll replace that this afternoon.

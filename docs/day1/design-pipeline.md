@@ -1,15 +1,21 @@
 # Activity: Design your Pipeline Architecture
 
-- Open draw.io or Excalidraw
-- Design your pipeline architecture
+Add a Mermaid diagram to your repository README showing your pipeline architecture.
 
-### Include:
+## Include
 
-- Data sources
-- Bronze/Silver/Gold layers
-- Technologies (Python, Pandas, Fabric, GitHub Actions)
-- Data flow arrows
+- Your four data sources
+- Bronze, Silver and Gold layers
+- The flow between them
 
-**Save as PNG or PDF**
+## Example structure
 
-!!! success "Keep it simple! Don't over-engineer"
+````markdown
+```mermaid
+flowchart TD
+    CSV[circulation_data.csv] --> B[Bronze Layer]
+    ...
+```
+````
+
+!!! success "Keep it simple - sources in, layers through, outputs out. You can add detail later."
