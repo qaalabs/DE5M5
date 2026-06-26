@@ -10,9 +10,8 @@ nav = [
     {"Day 3" = "agenda/day3.md"},
   ]},
   {"Day 1 - Foundation & Setup" = [
-    {"The Scenario" = "day1/scenario.md"},
-    {"Your Mission" = "day1/your-mission.md"},
-    {"Review the sample data files" = "day1/sample-data.md"},
+    {"Library Pipeline Scenario" = "day1/scenario.md"},
+    {"Library Pipeline Sample Data" = "day1/sample-data.md"},
     {"Design your pipeline architecture" = "day1/design-pipeline.md"},
     {"Create a GitHub repository" = "day1/create-repo.md"},
     {"Introduce GitHub Projects" = "day1/create-project.md"},

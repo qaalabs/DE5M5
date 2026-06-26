@@ -4,10 +4,9 @@
 
 ### Session 1
 
-- `10:00` [The Scenario](day1/scenario.md) (10 mins)
-- `10:10` [Your Mission](day1/your-mission.md) (10 mins)
-- `10:20` **Discussion**: [What does 'Production-Ready' mean?](day1/prod-ready.md) (10 mins)
-- `10:30` [Review the sample data files](day1/sample-data.md) (10 mins)
+- `10:00` **Slides**: [Define 'Production Ready'](day1/prod-ready.md) (10 mins)
+- `10:10` [Library Pipeline Scenario](day1/scenario.md) (10 mins)
+- `10:20` **Activity**: [Library Pipeline Sample Data](day1/sample-data.md) (10 mins)
 
 ### Session 2
 
