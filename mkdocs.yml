@@ -16,6 +16,7 @@ nav:
   - "Day 1 - Foundation & Setup":
     - "Library Pipeline Scenario": day1/scenario.md
     - "Library Pipeline Sample Data": day1/sample-data.md
+    - "Your Mission": day1/your-mission.md
     - "Design your pipeline architecture": day1/design-pipeline.md
     - "Create a GitHub repository": day1/create-repo.md
     - "Introduce GitHub Projects": day1/create-project.md

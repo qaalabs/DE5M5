@@ -12,8 +12,8 @@
 
 ## Session 2
 
-- 
-- Architecture Principles
+- [Your Mission](../day1/your-mission.md)
+- **Slides**: Architecture Principles
 - **Demo**: Creating Architecture Diagrams
 - **Activity**: [Design your pipeline architecture](../day1/design-pipeline.md)
 - Review the diagrams created

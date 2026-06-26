@@ -10,7 +10,8 @@
 
 ### Session 2
 
-- `11:00` Architecture Principles (20 mins)
+- `10:50` [Your Mission](day1/your-mission.md) (10 mins)
+- `11:00` **Slides**: Architecture Principles (20 mins)
 - `11:20` **Demo**: [Creating Architecture Diagrams](day1/create-diagram.md) (10 mins)
 - `11:30` **Activity**: [Design your pipeline architecture](day1/design-pipeline.md) (40 mins)
 - `12:10` Review the diagrams created (20 mins)
