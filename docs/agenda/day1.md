@@ -17,11 +17,13 @@
 - **Demo**: Creating Architecture Diagrams
 - **Activity**: [Design your pipeline architecture](../day1/design-pipeline.md)
 - Review the diagrams created
+- Writeup Architecture Decision Record
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
+- 
 - **Demo**: GitHub Template Setup
 - **Activity**: [Create a GitHub repository](../day1/create-repo.md)
 - **Activity**: [Introduce GitHub Projects](../day1/create-project.md)
