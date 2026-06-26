@@ -1,6 +1,6 @@
 ## Your Mission
 
-- Journey: Local dev (VM) → GitHub → CI/CD → Microsoft Fabric
-- Not just "make it work" - make it maintainable
-- Ask: "If you were off sick and a colleague had to run your pipeline, could they?"
-- End product: ingestion + cleaning + gold layer, tested, deployed, presented Day 4
+- Post-break reveal: "here's what you're actually building"
+- Walk through the learner doc - the pipeline journey, not the files
+- Land the flow: Local dev → GitHub → CI/CD → Fabric
+- Close with "now let's design how it's structured" - leads straight into medallion

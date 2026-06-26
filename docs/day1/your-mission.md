@@ -1,30 +1,25 @@
 # Your Mission
 
-This project uses sample data from our fictional library network.
+Build a production-ready data quality pipeline for Newham Public Library.
 
-## Your Task
+## What you're building
 
-Build a data quality pipeline that:
+A pipeline that:
 
-- ✅ Ingests all data sources
-- ✅ Cleans and validates the data
-- ✅ Produces analysis-ready datasets
-- ✅ Handles errors gracefully
+- Ingests data from four sources (CSV, JSON, text, Excel)
+- Cleans and validates it automatically
+- Produces analysis-ready outputs in a gold layer
+- Runs reliably without manual intervention
 
-## Files
+## How you'll build it
 
-- `circulation_data.csv` - Book circulation transactions (5,000 rows)
-- `events_data.json` - Library events data
-- `feedback.txt` - Unstructured member feedback
-- `catalogue.xlsx` - Book catalogue with metadata
+```
+Local dev (VM)  →  GitHub  →  CI/CD  →  Microsoft Fabric
+```
 
-## Data Quality Issues
+Over four days you'll move from writing the first function on your VM to a fully deployed, tested pipeline running in Fabric.
 
-These files intentionally contain data quality issues:
+## What comes next
 
-- Duplicate records
-- Missing values
-- Inconsistent date formats
-
-**Your task is to build a pipeline that cleans and validates this data.**
+Now you know what you're building - the next step is to design how it's structured. That means thinking about the architecture before writing a single line of code.
 
