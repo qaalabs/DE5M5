@@ -19,11 +19,12 @@
 
 ### Session 3
 
-- `13:30` **Demo**: [GitHub Template Setup](day1/github-template.md) (20 mins)
-- `13:50` **Activity**: [Create a GitHub repository](day1/create-repo.md) (10 mins)
-- `14:00` **Activity**: [Introduce GitHub Projects](day1/create-project.md) (10 mins)
-- `14:10` **Activity**: [Set up Kanban board](day1/project-tasks.md) (10 mins)
-- `14:20` Review the GitHub repositories (10 mins)
+- `13:20` **Demo**: [GitHub Template Setup](day1/github-template.md) (10 mins)
+- `13:30` **Activity**: [Create a GitHub repository](day1/create-repo.md) (10 mins)
+- `13:40` **Slides**: What is a Kanban Board? (10 mins)
+- `13:50` **Activity**: [Introduce GitHub Projects](day1/create-project.md) (10 mins)
+- `14:00` **Activity**: [Set up Kanban Board](day1/project-tasks.md) (20 mins)
+- `14:20` Review the GitHub Repositories (10 mins)
 
 ### Session 4
 

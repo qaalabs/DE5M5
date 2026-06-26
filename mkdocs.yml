@@ -20,7 +20,7 @@ nav:
     - "Design your pipeline architecture": day1/design-pipeline.md
     - "Create a GitHub repository": day1/create-repo.md
     - "Introduce GitHub Projects": day1/create-project.md
-    - "Set up Kanban board": day1/project-tasks.md
+    - "Set up Kanban Board": day1/project-tasks.md
     - "Write first Python code": day1/write-code.md
 
   - "Day 2 - Build & Test Python Package":

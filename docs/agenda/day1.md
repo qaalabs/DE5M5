@@ -23,12 +23,12 @@
 
 ## Session 3
 
-- 
 - **Demo**: GitHub Template Setup
 - **Activity**: [Create a GitHub repository](../day1/create-repo.md)
+- **Slides**: What is a Kanban Board?
 - **Activity**: [Introduce GitHub Projects](../day1/create-project.md)
-- **Activity**: [Set up Kanban board](../day1/project-tasks.md)
-- Review the GitHub repositories
+- **Activity**: [Set up Kanban Board](../day1/project-tasks.md)
+- Review the GitHub Repositories
 
 ## ☕ Afternoon Break
 
