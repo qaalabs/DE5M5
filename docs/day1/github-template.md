@@ -7,6 +7,7 @@ Walk through the template repo before learners create their own. Screen share th
 ## What to show
 
 **Top level** - point out:
+
 - `README.md` - has TODO placeholders they'll fill in as they build
 - `data/` - the four source files (already there)
 - `.github/workflows/` - CI is already wired up (they'll see this in action on Day 3)
