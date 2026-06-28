@@ -1,6 +1,7 @@
 ## Mermaid demo
 
-- Mermaid is built into GitHub - no install needed, renders in any `.md` file
-- Show the basic flowchart syntax live in the repo README
-- Demo the library pipeline diagram (see trainer doc)
-- They'll use this in the next activity
+- Open `notes.qaalabs.com` and type live - do not prep a page in advance
+- Five steps: text becomes diagram, direction (LR/TD), labels, one arrow per relationship, quality check branch
+- End with: "What does this show that Bronze -> Silver -> Gold didn't?" - gets them thinking architecturally
+- Mermaid also renders in GitHub `.md` files natively - worth a one-liner before handing over
+- Full demo script in `day1/create-diagram.md`

@@ -1,40 +1,126 @@
 # Creating Architecture Diagrams with Mermaid
 
-Mermaid is built into GitHub - any `.md` file in a repo renders Mermaid diagrams automatically. No tools to install.
+## 1. Mermaid turns text into a diagram 
 
-## Basic syntax
+Show this:
 
-````markdown
+```text
+flowchart LR
+    A --> B
+```
+```mermaid
+flowchart LR
+    A --> B
+```
+
+!!! note "Mermaid is just text. The arrows describe relationships."
+
+
+## 2. Direction matters 
+
+Change `LR` to `TD`:
+
+```text
+flowchart TD
+    A --> B
+```
 ```mermaid
 flowchart TD
-    A[Source] --> B[Bronze]
-    B --> C[Silver]
-    C --> D[Gold]
+    A --> B
 ```
-````
 
-## Demo: Library pipeline
+```text
+LR = left to right
+TD = top down
+```
 
-Show this rendering in the repo README:
+## 3. Nodes need meaningful labels 
 
-````markdown
+```text
+flowchart LR
+    A[Raw data] --> B[Bronze]
+```
 ```mermaid
-flowchart TD
-    CSV[circulation_data.csv] --> B[Bronze Layer]
-    JSON[events_data.json] --> B
-    TXT[feedback.txt] --> B
-    XLS[catalogue.xlsx] --> B
-
-    B --> S[Silver Layer\nCleaned & Validated]
-    S --> G[Gold Layer\nAnalysis-Ready]
-
-    G --> R[Reports & Dashboards]
+flowchart LR
+    A[Raw data] --> B[Bronze]
 ```
-````
 
-## Key points
+```text
+A is the internal name
+[Raw data] is what appears on the diagram
+```
 
-- `TD` = top-down flow. Use `LR` for left-right if it fits better
-- Square brackets `[]` for process steps, `()` for rounded, `{}` for decisions
-- Edit in the repo, preview renders on GitHub instantly
-- They'll add this to their README during the DESIGN activity
+## 4. One arrow per relationship 
+
+```text
+flowchart LR
+    Raw[Raw data] --> Bronze[Bronze]
+    Bronze --> Silver[Silver]
+    Silver --> Gold[Gold]
+```
+```mermaid
+flowchart LR
+    Raw[Raw data] --> Bronze[Bronze]
+    Bronze --> Silver[Silver]
+    Silver --> Gold[Gold]
+```
+
+Avoid shortcuts like `A --> B & C` at this stage.
+
+## 5. Add one architecture decision
+
+```text
+flowchart LR
+    Raw[Raw data] --> Bronze[Bronze]
+    Bronze --> Check{Quality check}
+    Check -->|Pass| Silver[Silver]
+    Check -->|Fail| Quarantine[Quarantine]
+    Silver --> Gold[Gold]
+```
+```mermaid
+flowchart LR
+    Raw[Raw data] --> Bronze[Bronze]
+    Bronze --> Check{Quality check}
+    Check -->|Pass| Silver[Silver]
+    Check -->|Fail| Quarantine[Quarantine]
+    Silver --> Gold[Gold]
+```
+
+!!! question "QUESTION: What does this diagram show that the simple Bronze -> Silver -> Gold diagram did not show?"
+
+---
+
+## Extra: Subgraphs for layers
+
+```text
+flowchart LR
+    subgraph Bronze["Bronze layer"]
+        RawSales[Raw sales]
+        RawProducts[Raw products]
+    end
+
+    subgraph Silver["Silver layer"]
+        CleanSales[Clean sales]
+        CleanProducts[Clean products]
+    end
+
+    RawSales --> CleanSales
+    RawProducts --> CleanProducts
+```
+```mermaid
+flowchart LR
+    subgraph Bronze["Bronze layer"]
+        RawSales[Raw sales]
+        RawProducts[Raw products]
+    end
+
+    subgraph Silver["Silver layer"]
+        CleanSales[Clean sales]
+        CleanProducts[Clean products]
+    end
+
+    RawSales --> CleanSales
+    RawProducts --> CleanProducts
+```
+
+!!! info "Mermaid also renders natively in GitHub `.md` files - and later today you will store your diagram in GitHub."

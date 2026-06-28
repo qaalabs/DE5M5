@@ -1,6 +1,6 @@
 # Activity: Design your Pipeline Architecture
 
-Add a Mermaid diagram to your repository README showing your pipeline architecture.
+Work as a group to create a Mermaid diagram of your pipeline architecture. Your trainer will share a HedgeDoc link for your group.
 
 ## Include
 
@@ -12,9 +12,10 @@ Add a Mermaid diagram to your repository README showing your pipeline architectu
 
 ````markdown
 ```mermaid
-flowchart TD
-    CSV[circulation_data.csv] --> B[Bronze Layer]
-    ...
+flowchart LR
+    Source[Source data] --> Bronze[Bronze layer]
+    Bronze --> Silver[Silver layer]
+    Silver --> Gold[Gold layer]
 ```
 ````
 
