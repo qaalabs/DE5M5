@@ -15,7 +15,7 @@
 - [Your Mission](../day1/your-mission.md)
 - **Slides**: Architecture Principles
 - **Demo**: Creating Architecture Diagrams
-- **Activity**: [Design your pipeline architecture](../day1/design-pipeline.md)
+- **Breakout**: [Design your pipeline architecture](../day1/design-pipeline.md)
 - Review the diagrams created
 - Writeup Architecture Decision Record
 
@@ -34,8 +34,8 @@
 
 ## Session 4
 
-- Local development
-- Create local development env
+- [Local development](../day1/clone-repo.md)
+- [Create local development env](../day1/dev-environment.md)
 - **Activity**: [Write first Python code](../day1/write-code.md)
 - Write first Pull Request
 

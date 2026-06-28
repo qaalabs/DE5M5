@@ -13,9 +13,9 @@
 - `10:50` [Your Mission](day1/your-mission.md) (10 mins)
 - `11:00` **Slides**: Architecture Principles (10 mins)
 - `11:10` **Demo**: [Creating Architecture Diagrams](day1/create-diagram.md) (10 mins)
-- `11:20` **Activity**: [Design your pipeline architecture](day1/design-pipeline.md) (20 mins)
+- `11:20` **Breakout**: [Design your pipeline architecture](day1/design-pipeline.md) (20 mins)
 - `11:40` Review the diagrams created (20 mins)
-- `12:00` Writeup Architecture Decision Record (20 mins)
+- `12:00` [Writeup Architecture Decision Record](day1/adr.md) (20 mins)
 
 ### Session 3
 
@@ -28,9 +28,9 @@
 
 ### Session 4
 
-- `14:50` Local development (20 mins)
-- `15:10` Create local development env (10 mins)
-- `15:20` **Activity**: [Write first Python code](day1/write-code.md) (20 mins)
+- `14:50` [Local development](day1/clone-repo.md) (10 mins)
+- `15:00` [Create local development env](day1/dev-environment.md) (10 mins)
+- `15:10` **Activity**: [Write first Python code](day1/write-code.md) (30 mins)
 - `15:40` Write first Pull Request (10 mins)
 
 ---
