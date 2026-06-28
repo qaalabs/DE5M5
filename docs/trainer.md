@@ -14,7 +14,7 @@
 - `11:00` **Slides**: Architecture Principles (10 mins)
 - `11:10` **Demo**: [Creating Architecture Diagrams](day1/create-diagram.md) (10 mins)
 - `11:20` **Breakout**: [Design your pipeline architecture](day1/design-pipeline.md) (20 mins)
-- `11:40` Review the diagrams created (20 mins)
+- `11:40` [Review the diagrams created](day1/review-diagram.md) (20 mins)
 - `12:00` [Writeup Architecture Decision Record](day1/adr.md) (20 mins)
 
 ### Session 3

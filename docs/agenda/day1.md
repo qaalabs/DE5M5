@@ -14,10 +14,10 @@
 
 - [Your Mission](../day1/your-mission.md)
 - **Slides**: Architecture Principles
-- **Demo**: Creating Architecture Diagrams
+- **Demo**: [Creating Architecture Diagrams](../day1/create-diagram.md)
 - **Breakout**: [Design your pipeline architecture](../day1/design-pipeline.md)
 - Review the diagrams created
-- Writeup Architecture Decision Record
+- [Writeup Architecture Decision Record](../day1/adr.md)
 
 ## 🥪🥤 Lunch Break
 
