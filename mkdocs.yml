@@ -9,9 +9,6 @@ nav:
 
   - Agenda:
     - Day 1: agenda/day1.md
-    - Day 2: agenda/day2.md
-    - Day 3: agenda/day3.md
-    - Day 4: agenda/day4.md
 
   - "Day 1 - Foundation & Setup":
     - "Library Pipeline Scenario": day1/scenario.md
@@ -26,25 +23,6 @@ nav:
     - "Local development": day1/clone-repo.md
     - "Create local development env": day1/dev-environment.md
     - "Write first Python code": day1/write-code.md
-
-  - "Day 2 - Build & Test Python Package":
-    - "Explain function - Data Ingestion": day2/ingestion.md
-    - "Write function - Data Ingestion": day2/ingestion-enhancements.md
-    - "Explain function - Data Cleaning": day2/cleaning.md
-    - "Write function - Data Cleaning": day2/cleaning-enhancements.md
-    - "Python Testing": day2/python-testing.md
-    - "Write unit tests": day2/cleaning-tests.md
-    - "Python Test Coverage": day2/coverage.md
-    - "Achive test coverage": day2/coverage-goal.md
-
-  - "Day 3 - Automation & Integration":
-    - "GitHub Actions": day3/github-actions.md
-    - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
-    - "Pull Request Workflow": day3/github-branch.md
-    - "Complete Your Own PR Workflow": day3/pull-request.md
-    - "01 Create Fabric Lakehouse": labs/01-lakehouse.md
-    - "Run pipeline in MS Fabric": day3/fabric-integration.md
-    - "Create Gold Layer Table": day3/fabric-gold-layer.md
 
   - Resources: resources.md
 
