@@ -6,6 +6,10 @@
       
       
       
+        <link rel="prev" href="../your-mission/">
+      
+      
+        <link rel="next" href="../design-pipeline/">
       
       
         
@@ -16,7 +20,7 @@
     
     
       
-        <title>Architecture Design &amp; Documentation - Module 5 - Data Engineering Product Development</title>
+        <title>Creating Architecture Diagrams - Module 5 - Data Engineering Product Development</title>
       
     
     
@@ -67,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture-design-documentation" class="md-skip">
+        <a href="#creating-architecture-diagrams-with-mermaid" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture Design &amp; Documentation
+              Creating Architecture Diagrams
             
           </span>
         </div>
@@ -323,90 +327,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 2
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day3/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 3
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../agenda/day4/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 4
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -418,18 +338,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -450,7 +372,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -475,7 +397,35 @@
   <span class="md-ellipsis">
     
   
-    The Scenario
+    Library Pipeline Scenario
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library Pipeline Sample Data
   
 
     
@@ -521,17 +471,44 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../sample-data/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating Architecture Diagrams
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    Review the sample data files
+    Creating Architecture Diagrams
   
 
     
@@ -540,6 +517,92 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1-mermaid-turns-text-into-a-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mermaid turns text into a diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-direction-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Direction matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-nodes-need-meaningful-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Nodes need meaningful labels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-one-arrow-per-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. One arrow per relationship
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-add-one-architecture-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Add one architecture decision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-subgraphs-for-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extra: Subgraphs for layers
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -560,6 +623,34 @@
     
   
     Design your pipeline architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Writeup Architecture Decision Record
   
 
     
@@ -643,7 +734,63 @@
   <span class="md-ellipsis">
     
   
-    Set up Kanban board
+    Set up Kanban Board
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clone-repo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Local development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create local development env
   
 
     
@@ -672,534 +819,6 @@
     
   
     Write first Python code
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 2 - Build &amp; Test Python Package
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Day 2 - Build &amp; Test Python Package
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/ingestion/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Explain function - Data Ingestion
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/ingestion-enhancements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Write function - Data Ingestion
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/cleaning/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Explain function - Data Cleaning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/cleaning-enhancements/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Write function - Data Cleaning
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/python-testing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python Testing
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/cleaning-tests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Write unit tests
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/coverage/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python Test Coverage
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day2/coverage-goal/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Achive test coverage
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 3 - Automation &amp; Integration
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Day 3 - Automation &amp; Integration
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/github-actions/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GitHub Actions
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/github-workflow/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GitHub Actions ~ Trigger Workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/github-branch/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pull Request Workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/pull-request/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Complete Your Own PR Workflow
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../labs/01-lakehouse/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    01 Create Fabric Lakehouse
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/fabric-integration/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Run pipeline in MS Fabric
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../day3/fabric-gold-layer/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Create Gold Layer Table
   
 
     
@@ -1264,35 +883,96 @@
 
 
 
-<h1 id="architecture-design-documentation">Architecture Design &amp; Documentation</h1>
-<h2 id="learning-objectives">Learning Objectives</h2>
-<ul>
-<li>Design a medallion architecture for the project</li>
-<li>Create clear architecture diagrams</li>
-<li>Document key decisions</li>
-</ul>
-<h2 id="architecture-principles">Architecture Principles</h2>
-<p>Medallion pattern: Bronze → Silver → Gold</p>
-<p>Why this pattern? (separation of concerns, reprocessing)</p>
-<p>Where does each transformation happen?</p>
-<p>Visual:</p>
-<div class="highlight"><pre><span></span><code>Sources (CSV, JSON, Excel)
-     ↓
-BRONZE (Raw ingestion)
-     ↓
-SILVER (Cleaned, validated) ← Your Python package does this
-     ↓
-GOLD (Business aggregations)
-     ↓
-Consumption (Reports, analysis)
+<h1 id="creating-architecture-diagrams-with-mermaid">Creating Architecture Diagrams with Mermaid</h1>
+<h2 id="1-mermaid-turns-text-into-a-diagram">1. Mermaid turns text into a diagram</h2>
+<p>Show this:</p>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    A --&gt; B
 </code></pre></div>
-<h2 id="creating-architecture-diagrams">Creating Architecture Diagrams</h2>
-<ul>
-<li>Use draw.io (in browser, free)</li>
-<li>What to include: sources, layers, technologies</li>
-<li>Keep it simple!</li>
-</ul>
-<h3 id="live-demo-create-a-simple-diagram">Live demo: Create a simple diagram</h3><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<pre class="mermaid"><code>flowchart LR
+    A --&gt; B</code></pre><p></p>
+<div class="admonition note">
+<p class="admonition-title">Mermaid is just text. The arrows describe relationships.</p>
+</div>
+<h2 id="2-direction-matters">2. Direction matters</h2>
+<p>Change <code>LR</code> to <code>TD</code>:</p>
+<p></p><div class="highlight"><pre><span></span><code>flowchart TD
+    A --&gt; B
+</code></pre></div>
+<pre class="mermaid"><code>flowchart TD
+    A --&gt; B</code></pre><p></p>
+<div class="highlight"><pre><span></span><code>LR = left to right
+TD = top down
+</code></pre></div>
+<h2 id="3-nodes-need-meaningful-labels">3. Nodes need meaningful labels</h2>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    A[Raw data] --&gt; B[Bronze]
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    A[Raw data] --&gt; B[Bronze]</code></pre><p></p>
+<div class="highlight"><pre><span></span><code>A is the internal name
+[Raw data] is what appears on the diagram
+</code></pre></div>
+<h2 id="4-one-arrow-per-relationship">4. One arrow per relationship</h2>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    Raw[Raw data] --&gt; Bronze[Bronze]
+    Bronze --&gt; Silver[Silver]
+    Silver --&gt; Gold[Gold]
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    Raw[Raw data] --&gt; Bronze[Bronze]
+    Bronze --&gt; Silver[Silver]
+    Silver --&gt; Gold[Gold]</code></pre><p></p>
+<p>Avoid shortcuts like <code>A --&gt; B &amp; C</code> at this stage.</p>
+<h2 id="5-add-one-architecture-decision">5. Add one architecture decision</h2>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    Raw[Raw data] --&gt; Bronze[Bronze]
+    Bronze --&gt; Check{Quality check}
+    Check --&gt;|Pass| Silver[Silver]
+    Check --&gt;|Fail| Quarantine[Quarantine]
+    Silver --&gt; Gold[Gold]
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    Raw[Raw data] --&gt; Bronze[Bronze]
+    Bronze --&gt; Check{Quality check}
+    Check --&gt;|Pass| Silver[Silver]
+    Check --&gt;|Fail| Quarantine[Quarantine]
+    Silver --&gt; Gold[Gold]</code></pre><p></p>
+<div class="admonition question">
+<p class="admonition-title">QUESTION: What does this diagram show that the simple Bronze -&gt; Silver -&gt; Gold diagram did not show?</p>
+</div>
+<hr>
+<h2 id="extra-subgraphs-for-layers">Extra: Subgraphs for layers</h2>
+<p></p><div class="highlight"><pre><span></span><code>flowchart LR
+    subgraph Bronze["Bronze layer"]
+        RawSales[Raw sales]
+        RawProducts[Raw products]
+    end
+
+    subgraph Silver["Silver layer"]
+        CleanSales[Clean sales]
+        CleanProducts[Clean products]
+    end
+
+    RawSales --&gt; CleanSales
+    RawProducts --&gt; CleanProducts
+</code></pre></div>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Bronze["Bronze layer"]
+        RawSales[Raw sales]
+        RawProducts[Raw products]
+    end
+
+    subgraph Silver["Silver layer"]
+        CleanSales[Clean sales]
+        CleanProducts[Clean products]
+    end
+
+    RawSales --&gt; CleanSales
+    RawProducts --&gt; CleanProducts</code></pre><p></p>
+<div class="admonition info">
+<p class="admonition-title">Mermaid also renders natively in GitHub <code>.md</code> files - and later today you will store your diagram in GitHub.</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
