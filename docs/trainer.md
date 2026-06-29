@@ -40,23 +40,28 @@
 ### Session 1
 
 - `09:50` [Run Commands to see Status](labs/23-yardstick.md) (10 mins)
-- `10:00` **Demo**: [Explain function - Data Ingestion](day2/ingestion.md) (20 mins)
+- `10:00` **Demo**: [Explain function - Data Ingestion](day2/ingestion.md) (30 mins)
+- `10:30` [Run Commands to see Status](labs/23-yardstick.md) (10 mins)
 
 ### Session 2
 
-- `11:00` **Demo**: [Explain function - Data Cleaning](day2/cleaning.md) (20 mins)
-- `11:20` **Activity**: [Write function - Data Cleaning](day2/cleaning-enhancements.md) (30 mins)
-- `11:50` [VALIDATION](day2/validation.md) (10 mins)
+- `11:00` **Demo**: [Explain function - Data Cleaning](day2/cleaning.md) (30 mins)
+- `11:30` **Activity**: [Write function - Data Cleaning](day2/cleaning-enhancements.md) (20 mins)
+- `11:50` [Validation Function](day2/validation.md) (20 mins)
 
 ### Session 3
 
 - `13:20` **Demo**: [Python Testing](day2/python-testing.md) (30 mins)
-- `13:50` **Activity**: [Write unit tests](day2/cleaning-tests.md) (40 mins)
+- `13:50` **Activity**: [Write unit tests](day2/cleaning-tests.md) (20 mins)
+- `14:10` **Demo**: [Python Test Coverage](day2/coverage.md) (10 mins)
+- `14:20` **Activity**: [Achieve 70% Coverage](day2/coverage-goal.md) (20 mins)
 
 ### Session 4
 
-- `15:00` **Demo**: [Python Test Coverage](day2/coverage.md) (10 mins)
-- `15:10` **Activity**: [Achive test coverage](day2/coverage-goal.md) (30 mins)
+- `15:00` **Activity**: [Achieve 70% Coverage](day2/coverage-goal.md) (20 mins)
+- `15:20` [Fix All Linting Issues](day2/linting-fixes.md) (10 mins)
+- `15:30` [Explain Linting](day2/lintinging.md) (10 mins)
+- `15:40` [Run Commands to see Status](labs/23-yardstick.md) (10 mins)
 
 ---
 
