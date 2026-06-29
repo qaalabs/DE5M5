@@ -54,7 +54,7 @@ First, make sure you're on the `dev` branch - check the branch dropdown shows **
 Stay on the **dev** branch.
 
 - Click **"Add file"** → **"Create new file"**
-- Name it: `docs/decisions/ADR-001.md`
+- Name it: `docs/architecture/ADR-001.md`
 - Paste your ADR from Notepad
 - Click **"Commit changes"** - confirm the branch is **dev**
 
