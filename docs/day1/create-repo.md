@@ -23,19 +23,39 @@ Spend a few minutes clicking around your new repo. Find:
 - Where your Python package will go
 - The GitHub Actions workflows already set up
 
-## Step 3: Add your architecture diagram
+## Step 3: Create a dev branch
+
+- Click the branch dropdown (shows **main**)
+- Type `dev` and click **"Create branch: dev from main"**
+
+This is the branch you'll work on. You'll open a pull request to merge changes back into `main`.
+
+## Step 4: Protect the main branch
+
+- Go to **Settings** → **Branches** → **"Add branch protection rule"**
+- Branch name pattern: `main`
+- Check **"Require a pull request before merging"**
+- Click **"Create"**
+
+This prevents anyone (including you) from pushing directly to `main` - all changes must go through a PR.
+
+## Step 5: Add your architecture diagram
+
+First, make sure you're on the `dev` branch - check the branch dropdown shows **dev**, not **main**.
 
 - Navigate to `docs/architecture/index.md`
 - Click the pencil icon to edit
 - Paste your Mermaid diagram from the design activity
-- Click **"Commit changes"**
+- Click **"Commit changes"** - in the dialog, confirm the branch is **dev**
 - Go back to the file - check the diagram renders correctly
 
-## Step 4: Add your ADR
+## Step 6: Add your ADR
+
+Stay on the **dev** branch.
 
 - Click **"Add file"** → **"Create new file"**
 - Name it: `docs/decisions/ADR-001.md`
 - Paste your ADR from Notepad
-- Click **"Commit changes"**
+- Click **"Commit changes"** - confirm the branch is **dev**
 
 You now have two artefacts in your repo - architecture diagram and first decision record.

@@ -4,7 +4,7 @@ Run all commands from the **repo root**, not the notebooks directory.
 
 ## Part 1 - Explore the data (10 min)
 
-Open `notebooks/sandbox.ipynb` and load each raw file to see what you're working with before writing any production code.
+Create a new notebook at `notebooks/sandbox.ipynb` and load each raw file to see what you're working with before writing any production code.
 
 ```python
 import pandas as pd, json

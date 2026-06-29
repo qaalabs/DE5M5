@@ -18,7 +18,13 @@ cd qa-library-pipeline
 
 Replace `YOUR_USERNAME` with your GitHub username.
 
-## Step 3: Explore the structure
+## Step 3: Switch to the dev branch
+
+```sh
+git checkout dev
+```
+
+## Step 4: Explore the structure
 
 ```sh
 ls -l
