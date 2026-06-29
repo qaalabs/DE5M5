@@ -53,15 +53,11 @@ pytest tests/ --cov=src.data_processing --cov-report=html
 - Write tests for those lines
 - Focus on error handling and edge cases
 
-## Task 4: Document and commit
+## Task 4: Commit your work
 
-```powershell
-# Update README with coverage
-echo "Test Coverage: 75%" >> README.md
+In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
-git add tests/
-git commit -m "Add comprehensive tests - 75% coverage achieved"
-git push
-```
-
-Or make these changes in **Visual Studio Code** and **GitHub Desktop**
+- Click **+** next to the `tests/` folder to stage all test files
+- Type a commit message: `Add tests - 75% coverage achieved`
+- Click **Commit**
+- Click **Sync Changes** to push to GitHub

@@ -28,16 +28,17 @@ Spend a few minutes clicking around your new repo. Find:
 - Click the branch dropdown (shows **main**)
 - Type `dev` and click **"Create branch: dev from main"**
 
-This is the branch you'll work on. You'll open a pull request to merge changes back into `main`.
+This is the branch you'll work on.
 
 ## Step 4: Protect the main branch
 
 - Go to **Settings** → **Branches** → **"Add branch protection rule"**
 - Branch name pattern: `main`
 - Check **"Require a pull request before merging"**
+- Uncheck **"Require approvals"** - the default is on, which means you cannot merge your own PRs
 - Click **"Create"**
 
-This prevents anyone (including you) from pushing directly to `main` - all changes must go through a PR.
+If you accidentally edit a file on `main`, GitHub will create a branch and a PR - that is expected. Close the PR and delete the branch.
 
 ## Step 5: Add your architecture diagram
 

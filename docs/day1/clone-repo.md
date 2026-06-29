@@ -1,6 +1,6 @@
 # Clone your Repository
 
-Open **Git Bash** from the Desktop.
+Open **Terminal** from the Desktop.
 
 ## Step 1: Git config
 
@@ -27,7 +27,7 @@ git checkout dev
 ## Step 4: Explore the structure
 
 ```sh
-ls -l
+dir
 ```
 
 You should see the same folders you explored on GitHub earlier.

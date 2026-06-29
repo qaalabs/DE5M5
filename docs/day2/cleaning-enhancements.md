@@ -37,12 +37,9 @@ print(df_clean.info())
 
 ## Task 2: Commit Your Work
 
-From the command line:
+In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
-```bash
-git add src/data_processing/cleaning.py
-git commit -m "Implement data cleaning functions"
-git push
-```
-
-Or commit using GitHub Desktop
+- Click **+** next to `src/data_processing/cleaning.py` to stage it
+- Type a commit message: `Implement data cleaning functions`
+- Click **Commit**
+- Click **Sync Changes** to push to GitHub

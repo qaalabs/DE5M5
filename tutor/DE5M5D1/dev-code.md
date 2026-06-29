@@ -1,6 +1,13 @@
 ## Write First Python Code
 
-- Open `src/data_processing/ingestion.py` - it's a skeleton, they fill in `load_csv()`
-- Full function code is in the Day 2 ingestion demo - today just get something working
-- They test by running `pytest tests/` in Git Bash
-- Don't get drawn into perfecting it - that's Day 2's job
+### Part 1 - Explore the data (10 min)
+- Create a new notebook at notebooks/sandbox.ipynb 
+- Load each raw file before writing any production code.
+
+### Part 2 - Implement the loaders (15 min)
+- Open src/data_processing/ingestion.py. Two functions need work
+
+### Part 3 - Test and commit (5 min)
+- pytest tests/ -v
+
+

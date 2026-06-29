@@ -1,8 +1,6 @@
-# Activity: Write Your First Functions (30 min)
+# Activity: Write Your First Functions
 
-Run all commands from the **repo root**, not the notebooks directory.
-
-## Part 1 - Explore the data (10 min)
+## Part 1 - Explore the data
 
 Create a new notebook at `notebooks/sandbox.ipynb` and load each raw file to see what you're working with before writing any production code.
 
@@ -24,7 +22,7 @@ pd.read_excel("data/catalogue.xlsx", sheet_name=0).head()
 
 Note the shape, column names, and any obvious issues.
 
-## Part 2 - Implement the loaders (15 min)
+## Part 2 - Implement the loaders
 
 Open `src/data_processing/ingestion.py`. Two functions need work:
 
@@ -33,15 +31,15 @@ Open `src/data_processing/ingestion.py`. Two functions need work:
 
 `load_excel()` is already complete - read it, it shows the standard to follow.
 
-## Part 3 - Test and commit (5 min)
+## Part 3 - Test and commit
 
 ```bash
 pytest tests/ -v
 ```
 
-```bash
-git add src/data_processing/ingestion.py
-git commit -m "implement load_csv and load_json"
-```
+In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
-If the tests pass you're ready for Day 2.
+- Click **+** next to `src/data_processing/ingestion.py` to stage it
+- Type a commit message: `Implement load_csv and load_json`
+- Click **Commit**
+- Click **Sync Changes** to push to GitHub

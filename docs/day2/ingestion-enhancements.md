@@ -17,12 +17,9 @@ def load_excel(filepath, sheet_name=0, **kwargs):
 
 ## Task 2: Commit Your Work
 
-From the command line:
+In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
-```bash
-git add src/data_processing/ingestion.py
-git commit -m "Implement data ingestion functions for CSV, JSON, and Excel"
-git push origin main
-```
-
-Or commit using GitHub Desktop
+- Click **+** next to `src/data_processing/ingestion.py` to stage it
+- Type a commit message: `Implement data ingestion functions`
+- Click **Commit**
+- Click **Sync Changes** to push to GitHub

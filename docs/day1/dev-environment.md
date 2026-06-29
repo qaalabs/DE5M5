@@ -1,6 +1,6 @@
 # Set Up Your Development Environment
 
-Run these commands in **Git Bash** inside your repo folder.
+Run these commands in **Terminal** inside your repo folder.
 
 ## Step 1: Create virtual environment
 
@@ -11,7 +11,7 @@ python -m venv venv
 ## Step 2: Activate the environment
 
 ```sh
-source venv/Scripts/activate
+venv\Scripts\activate
 ```
 
 Your prompt should now show `(venv)`.

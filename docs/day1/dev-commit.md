@@ -44,14 +44,11 @@ def load_json(filepath):
         raise
 ```
 
-## Commit and push
+## Commit
 
-Once the tests pass:
+In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
-```bash
-git add src/data_processing/ingestion.py
-git commit -m "implement load_csv and load_json"
-git push origin main
-```
-
-Then open a pull request on GitHub - base branch `main`, title something like `Implement ingestion loaders`.
+- Click **+** next to `src/data_processing/ingestion.py` to stage it
+- Type a commit message: `Implement load_csv and load_json`
+- Click **Commit**
+- Click **Sync Changes** to push to GitHub
