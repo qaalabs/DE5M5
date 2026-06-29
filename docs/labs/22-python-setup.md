@@ -46,6 +46,10 @@ pip install -r requirements_dev.txt
 pip install -e .
 ```
 
+!!! note "This installs your package in editable mode"
+    - This allows Python to import your code directly from the `src` folder
+    - Any changes you make take effect immediately without reinstalling.
+
 ---
 
 ## Step 5: Open VS Code
