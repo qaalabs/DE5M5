@@ -640,10 +640,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-add-your-architecture-diagram" class="md-nav__link">
+  <a href="#step-3-create-a-dev-branch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Add your architecture diagram
+        Step 3: Create a dev branch
       
     </span>
   </a>
@@ -651,10 +651,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-add-your-adr" class="md-nav__link">
+  <a href="#step-4-protect-the-main-branch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Add your ADR
+        Step 4: Protect the main branch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-your-architecture-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Add your architecture diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-add-your-adr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Add your ADR
       
     </span>
   </a>
@@ -882,20 +904,36 @@
 <li>Where your Python package will go</li>
 <li>The GitHub Actions workflows already set up</li>
 </ul>
-<h2 id="step-3-add-your-architecture-diagram">Step 3: Add your architecture diagram</h2>
+<h2 id="step-3-create-a-dev-branch">Step 3: Create a dev branch</h2>
+<ul>
+<li>Click the branch dropdown (shows <strong>main</strong>)</li>
+<li>Type <code>dev</code> and click <strong>"Create branch: dev from main"</strong></li>
+</ul>
+<p>This is the branch you'll work on. You'll open a pull request to merge changes back into <code>main</code>.</p>
+<h2 id="step-4-protect-the-main-branch">Step 4: Protect the main branch</h2>
+<ul>
+<li>Go to <strong>Settings</strong> → <strong>Branches</strong> → <strong>"Add branch protection rule"</strong></li>
+<li>Branch name pattern: <code>main</code></li>
+<li>Check <strong>"Require a pull request before merging"</strong></li>
+<li>Click <strong>"Create"</strong></li>
+</ul>
+<p>This prevents anyone (including you) from pushing directly to <code>main</code> - all changes must go through a PR.</p>
+<h2 id="step-5-add-your-architecture-diagram">Step 5: Add your architecture diagram</h2>
+<p>First, make sure you're on the <code>dev</code> branch - check the branch dropdown shows <strong>dev</strong>, not <strong>main</strong>.</p>
 <ul>
 <li>Navigate to <code>docs/architecture/index.md</code></li>
 <li>Click the pencil icon to edit</li>
 <li>Paste your Mermaid diagram from the design activity</li>
-<li>Click <strong>"Commit changes"</strong></li>
+<li>Click <strong>"Commit changes"</strong> - in the dialog, confirm the branch is <strong>dev</strong></li>
 <li>Go back to the file - check the diagram renders correctly</li>
 </ul>
-<h2 id="step-4-add-your-adr">Step 4: Add your ADR</h2>
+<h2 id="step-6-add-your-adr">Step 6: Add your ADR</h2>
+<p>Stay on the <strong>dev</strong> branch.</p>
 <ul>
 <li>Click <strong>"Add file"</strong> → <strong>"Create new file"</strong></li>
-<li>Name it: <code>docs/decisions/ADR-001.md</code></li>
+<li>Name it: <code>docs/architecture/ADR-001.md</code></li>
 <li>Paste your ADR from Notepad</li>
-<li>Click <strong>"Commit changes"</strong></li>
+<li>Click <strong>"Commit changes"</strong> - confirm the branch is <strong>dev</strong></li>
 </ul>
 <p>You now have two artefacts in your repo - architecture diagram and first decision record.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->

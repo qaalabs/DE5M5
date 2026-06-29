@@ -6,10 +6,6 @@
       
       
       
-        <link rel="prev" href="../project-tasks/">
-      
-      
-        <link rel="next" href="../dev-environment/">
       
       
         
@@ -20,7 +16,7 @@
     
     
       
-        <title>Local development - Module 5 - Data Engineering Product Development</title>
+        <title>Solution: Ingestion Functions - Module 5 - Data Engineering Product Development</title>
       
     
     
@@ -71,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#clone-your-repository" class="md-skip">
+        <a href="#solution-ingestion-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Local development
+              Solution: Ingestion Functions
             
           </span>
         </div>
@@ -338,20 +334,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -372,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -639,37 +633,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Local development
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../clone-repo/" class="md-nav__link">
         
   
   
@@ -685,70 +652,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#step-1-git-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Git config
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-clone-your-repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Clone your repo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-switch-to-the-dev-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Switch to the dev branch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-explore-the-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Explore the structure
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -861,24 +764,51 @@
 
 
 
-<h1 id="clone-your-repository">Clone your Repository</h1>
-<p>Open <strong>Git Bash</strong> from the Desktop.</p>
-<h2 id="step-1-git-config">Step 1: Git config</h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"you@example.com"</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Your Name"</span>
+<h1 id="solution-ingestion-functions">Solution: Ingestion Functions</h1>
+<p>The pattern to follow is <code>load_excel()</code> - check the file exists, log what you're doing, wrap the read in a try/except, log success with row count.</p>
+<h2 id="load_csv">load_csv</h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">filepath</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"CSV file not found: </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"CSV file not found: </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loading CSV from </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Successfully loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows from </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error loading CSV </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">raise</span>
 </code></pre></div>
-<h2 id="step-2-clone-your-repo">Step 2: Clone your repo</h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YOUR_USERNAME/qa-library-pipeline.git
-<span class="nb">cd</span><span class="w"> </span>qa-library-pipeline
+<h2 id="load_json">load_json</h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_json</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">filepath</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"JSON file not found: </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"JSON file not found: </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loading JSON from </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">json_normalize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Successfully loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2"> rows from </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">df</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error loading JSON </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="k">raise</span>
 </code></pre></div>
-<p>Replace <code>YOUR_USERNAME</code> with your GitHub username.</p>
-<h2 id="step-3-switch-to-the-dev-branch">Step 3: Switch to the dev branch</h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>dev
+<h2 id="commit-and-push">Commit and push</h2>
+<p>Once the tests pass:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>src/data_processing/ingestion.py
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"implement load_csv and load_json"</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
-<h2 id="step-4-explore-the-structure">Step 4: Explore the structure</h2>
-<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l
-</code></pre></div>
-<p>You should see the same folders you explored on GitHub earlier.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Then open a pull request on GitHub - base branch <code>main</code>, title something like <code>Implement ingestion loaders</code>.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
