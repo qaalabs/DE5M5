@@ -59,8 +59,8 @@
 ### Session 4
 
 - `15:00` **Activity**: [Achieve 70% Coverage](day2/coverage-goal.md) (20 mins)
-- `15:20` [Fix All Linting Issues](day2/linting-fixes.md) (10 mins)
-- `15:30` [Explain Linting](day2/linting.md) (10 mins)
+- `15:20` [Explain Linting](day2/linting.md) (10 mins)
+- `15:30` [Fix All Linting Issues](day2/linting-fixes.md) (10 mins)
 - `15:40` [Run Commands to see Status](labs/23-yardstick.md) (10 mins)
 
 ---
