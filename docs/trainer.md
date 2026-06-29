@@ -31,7 +31,7 @@
 - `14:50` [Local development](day1/clone-repo.md) (10 mins)
 - `15:00` [Create local development env](day1/dev-environment.md) (10 mins)
 - `15:10` **Activity**: [Write first Python code](day1/write-code.md) (30 mins)
-- `15:40` Write first Pull Request (10 mins)
+- `15:40` [Write first Pull Request](day1/dev-commit.md) (10 mins)
 
 ---
 
