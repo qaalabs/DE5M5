@@ -1,26 +1,47 @@
-# Activity: Write Your First Function
+# Activity: Write Your First Functions (30 min)
 
-Open `src/data_processing/ingestion.py` in your editor.
+Run all commands from the **repo root**, not the notebooks directory.
 
-Implement `load_csv()`:
+## Part 1 - Explore the data (10 min)
+
+Open `notebooks/sandbox.ipynb` and load each raw file to see what you're working with before writing any production code.
 
 ```python
-import pandas as pd
-from pathlib import Path
+import pandas as pd, json
 
-def load_csv(filepath):
-    filepath = Path(filepath)
-    if not filepath.exists():
-        raise FileNotFoundError(f"File not found: {filepath}")
-    return pd.read_csv(filepath)
+pd.read_csv("data/circulation_data.csv").head()
 ```
 
-## Test it
+```python
+with open("data/events_data.json") as f:
+    data = json.load(f)
+print(type(data), len(data))
+```
 
-Run the tests in Git Bash:
+```python
+pd.read_excel("data/catalogue.xlsx", sheet_name=0).head()
+```
 
-```sh
+Note the shape, column names, and any obvious issues.
+
+## Part 2 - Implement the loaders (15 min)
+
+Open `src/data_processing/ingestion.py`. Two functions need work:
+
+- `load_csv()` - runs but has no error handling or logging. Use `load_excel()` as your model and add the same pattern.
+- `load_json()` - has a basic body but needs the flattening tested. Try `pd.json_normalize()` in your notebook first to see what it produces, then commit to the implementation.
+
+`load_excel()` is already complete - read it, it shows the standard to follow.
+
+## Part 3 - Test and commit (5 min)
+
+```bash
 pytest tests/ -v
 ```
 
-If the tests pass, commit your work - you're ready for Day 2.
+```bash
+git add src/data_processing/ingestion.py
+git commit -m "implement load_csv and load_json"
+```
+
+If the tests pass you're ready for Day 2.
