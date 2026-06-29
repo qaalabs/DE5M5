@@ -28,11 +28,11 @@ Coverage:      70%
 
 ### Full coverage report
 
-`pytest tests/ -v --cov=src.data_processing --cov-report=term-missing`
+`pytest --cov=src`
 
 ### See which lines aren't covered
 
-`pytest tests/ --cov=src.data_processing --cov-report=html`
+`pytest --cov=src --cov-report=html`
 
 Then open `htmlcov/index.html` in a browser.
 
@@ -43,3 +43,6 @@ Then open `htmlcov/index.html` in a browser.
 - **Stretch Goal**: 80% coverage
 - **Acceptable**: 70% coverage
 - **Minimum**: All critical functions tested
+
+Share your tests with the group - if you have a test that works well, others can use it to help everyone reach 70%.
+

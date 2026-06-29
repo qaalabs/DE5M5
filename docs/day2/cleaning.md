@@ -15,19 +15,8 @@ Always **work on a COPY of the DataFrame**. Never modify the input!
 
 Open `src/data_processing/cleaning.py` and add this code
 
+### def remove_duplicates
 ```python
-"""Data cleaning functions for library pipeline.
-
-This module contains functions for cleaning and standardizing data.
-All functions return new DataFrames without modifying the input.
-"""
-
-import pandas as pd
-import logging
-from typing import List, Optional
-
-logger = logging.getLogger(__name__)
-
 def remove_duplicates(df, subset=None):
     """Remove duplicate rows from DataFrame.
     
@@ -52,6 +41,10 @@ def remove_duplicates(df, subset=None):
     
     return df
 
+```
+
+### def handle_missing_values
+```python
 def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
     """Handle missing values in DataFrame.
     
@@ -88,14 +81,17 @@ def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
         logger.info(f"Filled missing values with {fill_value}")
         
     elif strategy == 'forward_fill':
-        df[target_cols] = df[target_cols].fillna(method='ffill')
+        df[target_cols] = df[target_cols].ffill()
         logger.info("Forward filled missing values")
         
     else:
         raise ValueError(f"Unknown strategy: {strategy}")
     
     return df
+```
 
+### def standardize_dates
+```python
 def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
     """Standardize date columns to consistent format.
     
@@ -133,3 +129,4 @@ def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
 - Return new DataFrame
 - Handle edge cases (column doesn't exist)
 - Type hints in docstrings
+

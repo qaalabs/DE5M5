@@ -21,20 +21,9 @@ We're building a **Python package**, not just scripts. This means:
 
 Open `src/data_processing/ingestion.py` and add this code:
 
+### def load_csv
 ```python
-"""Data ingestion functions for library pipeline.
-
-This module handles loading data from various file formats.
-"""
-
 import pandas as pd
-import json
-import logging
-from pathlib import Path
-
-# Set up logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 def load_csv(filepath, **kwargs):
     """Load CSV file into DataFrame.
@@ -73,7 +62,10 @@ def load_csv(filepath, **kwargs):
     except Exception as e:
         logger.error(f"Error loading CSV {filepath}: {e}")
         raise
+```
 
+### def load_json
+```python
 def load_json(filepath):
     """Load JSON file into DataFrame.
     
@@ -124,15 +116,9 @@ def load_json(filepath):
 
 ## Part 2: Test in Jupyter
 
-- Create a `notebooks` folder
-- Create a new Jupyter Notebook in this folder
-- Copy and run the following code:
+Create a new Jupyter notebook in the `notebooks` folder and run:
 
 ```python
-# In Jupyter notebook
-import sys
-sys.path.append('C:\\Users\\Admin\\Documents\\GitHub\\library-pipeline\\src')
-
 from data_processing.ingestion import load_csv, load_json
 
 # Test CSV loading
@@ -145,3 +131,4 @@ df_events = load_json('../data/events_data.json')
 print(f"Loaded {len(df_events)} events")
 print(df_events.head())
 ```
+

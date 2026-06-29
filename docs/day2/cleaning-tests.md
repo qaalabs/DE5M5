@@ -1,24 +1,79 @@
 # Activity: Write Python Tests
 
-## Task 1: Write tests for cleaning module
+Create two test files using the templates below. For each `# TODO` line, write the assertion.
 
-Create `tests/test_cleaning.py` with:
+---
 
-- At least 2 tests for `remove_duplicates()`
-- At least 2 tests for `handle_missing_values()`
-- At least 1 test for `standardize_dates()`
-- Use fixtures for test data
-- Use `pandas.testing.assert_frame_equal()`
+## tests/test_cleaning.py
 
-## Task 2: Run tests and check coverage
+```python
+import pytest
+import pandas as pd
+import pandas.testing as pdt
+from src.data_processing.cleaning import (
+    remove_duplicates,
+    handle_missing_values,
+    standardize_dates
+)
 
-```powershell
-# Run tests
-pytest tests/test_cleaning.py -v
+@pytest.fixture
+def sample_with_duplicates():
+    return pd.DataFrame({
+        'id': [1, 2, 2, 3],
+        'name': ['Alice', 'Bob', 'Bob', 'Charlie']
+    })
 
-# Check coverage
-pytest tests/ --cov=src --cov-report=term-missing
+@pytest.fixture
+def sample_with_missing():
+    return pd.DataFrame({
+        'id': [1, 2, 3],
+        'name': ['Alice', None, 'Charlie'],
+        'value': [10, None, 30]
+    })
 
+def test_remove_duplicates_reduces_rows(sample_with_duplicates):
+    result = remove_duplicates(sample_with_duplicates, subset=['id'])
+    # TODO: assert result has 3 rows
+
+def test_remove_duplicates_ids_are_unique(sample_with_duplicates):
+    result = remove_duplicates(sample_with_duplicates, subset=['id'])
+    # TODO: assert that id values are unique
+
+def test_handle_missing_drop(sample_with_missing):
+    result = handle_missing_values(sample_with_missing, strategy='drop')
+    # TODO: assert result has no missing values
+
+def test_handle_missing_fill(sample_with_missing):
+    result = handle_missing_values(sample_with_missing, strategy='fill', fill_value=0)
+    # TODO: assert result has 3 rows
+
+def test_standardize_dates():
+    df = pd.DataFrame({'date': ['2024-01-01', '2024-06-15']})
+    result = standardize_dates(df, date_columns=['date'])
+    # TODO: assert the date column is datetime type
 ```
 
-!!! success "Aim for 70%+ coverage!"
+---
+
+## tests/test_validation.py
+
+```python
+from src.data_processing.validation import validate_isbn
+
+def test_valid_isbn():
+    # TODO: assert a valid ISBN-13 returns True
+
+def test_invalid_isbn():
+    # TODO: assert a string that is not an ISBN returns False
+
+def test_wrong_length():
+    # TODO: assert a 10-digit number returns False
+```
+
+---
+
+## Run your tests
+
+```
+pytest --cov=src
+```

@@ -2,13 +2,11 @@
 
 ## Task 1: Build `cleaning.py`
 
-Implement these functions:
+Add these functions to `cleaning.py` - all three were shown in the demo:
 
-1. `remove_duplicates()` (already shown)
-2. `handle_missing_values()` (already shown)
-3. `standardize_dates()` (already shown)
-4. **Your own**: `validate_isbn()` - check if ISBN is valid format
-5. **Your own**: `standardize_text()` - trim whitespace, lowercase, etc.
+1. `remove_duplicates()`
+2. `handle_missing_values()`
+3. `standardize_dates()`
 
 ## Task 2: Test in Jupyter
 

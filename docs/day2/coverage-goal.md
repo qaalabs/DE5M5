@@ -1,4 +1,4 @@
-# Activity: Achieve high Test coverage
+# Activity: Achieve High Test coverage
 
 ## Task 1: Test ingestion module
 
@@ -37,15 +37,17 @@ def test_load_json_success():
 
 ## Task 2: Run coverage report
 
-```powershell
-# Full coverage report
-pytest tests/ -v --cov=src.data_processing --cov-report=term-missing
-
-# See which lines aren't covered
-pytest tests/ --cov=src.data_processing --cov-report=html
-
-# Open htmlcov/index.html in browser
 ```
+pytest --cov=src
+```
+
+To see which lines are not covered:
+
+```
+pytest --cov=src --cov-report=html
+```
+
+Open `htmlcov/index.html` in a browser.
 
 ## Task 3: Improve coverage
 
@@ -58,6 +60,7 @@ pytest tests/ --cov=src.data_processing --cov-report=html
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
 - Click **+** next to the `tests/` folder to stage all test files
-- Type a commit message: `Add tests - 75% coverage achieved`
+- Type a commit message: `Add tests - 70% coverage achieved`
 - Click **Commit**
 - Click **Sync Changes** to push to GitHub
+

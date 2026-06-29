@@ -173,13 +173,11 @@ def test_handle_missing_invalid_strategy(sample_df_with_missing):
 
 **Run the tests**:
 ```powershell
-cd C:\Users\Admin\Documents\GitHub\library-pipeline
-
 # Run all tests
 pytest tests/test_cleaning.py -v
 
 # Run with coverage
-pytest tests/test_cleaning.py -v --cov=src.data_processing.cleaning --cov-report=term-missing
+pytest tests/test_cleaning.py -v --cov=src
 ```
 
 ---
