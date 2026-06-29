@@ -31,7 +31,7 @@
 
 - **Activity**: [Achieve 70% Coverage](../day2/coverage-goal.md)
 - [Fix All Linting Issues](../day2/linting-fixes.md)
-- [Explain Linting](../day2/lintinging.md)
+- [Explain Linting](../day2/linting.md)
 - [Run Commands to see Status](../labs/23-yardstick.md)
 
 ## 🎁 Wrap
