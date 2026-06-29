@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activity-write-your-first-function" class="md-skip">
+        <a href="#activity-write-your-first-functions-30-min" class="md-skip">
           Skip to content
         </a>
       
@@ -758,10 +758,32 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#test-it" class="md-nav__link">
+  <a href="#part-1-explore-the-data-10-min" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Test it
+        Part 1 - Explore the data (10 min)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-implement-the-loaders-15-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 - Implement the loaders (15 min)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-test-and-commit-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 - Test and commit (5 min)
       
     </span>
   </a>
@@ -828,23 +850,35 @@
 
 
 
-<h1 id="activity-write-your-first-function">Activity: Write Your First Function</h1>
-<p>Open <code>src/data_processing/ingestion.py</code> in your editor.</p>
-<p>Implement <code>load_csv()</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<h1 id="activity-write-your-first-functions-30-min">Activity: Write Your First Functions (30 min)</h1>
+<p>Run all commands from the <strong>repo root</strong>, not the notebooks directory.</p>
+<h2 id="part-1-explore-the-data-10-min">Part 1 - Explore the data (10 min)</h2>
+<p>Open <code>notebooks/sandbox.ipynb</code> and load each raw file to see what you're working with before writing any production code.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">load_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
-    <span class="n">filepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">filepath</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
-        <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"File not found: </span><span class="si">{</span><span class="n">filepath</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/circulation_data.csv"</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="test-it">Test it</h2>
-<p>Run the tests in Git Bash:</p>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data/events_data.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"data/catalogue.xlsx"</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p>Note the shape, column names, and any obvious issues.</p>
+<h2 id="part-2-implement-the-loaders-15-min">Part 2 - Implement the loaders (15 min)</h2>
+<p>Open <code>src/data_processing/ingestion.py</code>. Two functions need work:</p>
+<ul>
+<li><code>load_csv()</code> - runs but has no error handling or logging. Use <code>load_excel()</code> as your model and add the same pattern.</li>
+<li><code>load_json()</code> - has a basic body but needs the flattening tested. Try <code>pd.json_normalize()</code> in your notebook first to see what it produces, then commit to the implementation.</li>
+</ul>
+<p><code>load_excel()</code> is already complete - read it, it shows the standard to follow.</p>
+<h2 id="part-3-test-and-commit-5-min">Part 3 - Test and commit (5 min)</h2>
 <div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>tests/<span class="w"> </span>-v
 </code></pre></div>
-<p>If the tests pass, commit your work - you're ready for Day 2.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>src/data_processing/ingestion.py
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"implement load_csv and load_json"</span>
+</code></pre></div>
+<p>If the tests pass you're ready for Day 2.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
