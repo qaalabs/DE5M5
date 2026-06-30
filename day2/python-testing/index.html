@@ -1516,13 +1516,6 @@
     <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="n">match</span><span class="o">=</span><span class="s2">"Unknown strategy"</span><span class="p">):</span>
         <span class="n">handle_missing_values</span><span class="p">(</span><span class="n">sample_df_with_missing</span><span class="p">,</span> <span class="n">strategy</span><span class="o">=</span><span class="s1">'invalid'</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Run the tests</strong>:
-</p><div class="highlight"><pre><span></span><code><span class="c"># Run all tests</span>
-<span class="n">pytest</span> <span class="n">tests</span><span class="p">/</span><span class="n">test_cleaning</span><span class="p">.</span><span class="n">py</span> <span class="n">-v</span>
-
-<span class="c"># Run with coverage</span>
-<span class="n">pytest</span> <span class="n">tests</span><span class="p">/</span><span class="n">test_cleaning</span><span class="p">.</span><span class="n">py</span> <span class="n">-v</span> <span class="p">-</span><span class="n">-cov</span><span class="p">=</span><span class="n">src</span>
-</code></pre></div><p></p>
 <hr>
 <h2 id="key-points">Key Points</h2>
 <ul>
@@ -1532,6 +1525,7 @@
 <li>Test edge cases (empty, no changes needed)</li>
 <li>Test error cases with <code>pytest.raises()</code></li>
 <li>Descriptive test names: <code>test_&lt;function&gt;_&lt;scenario&gt;</code></li>
+<li>Use <code>@pytest.mark.skip(reason="not implemented yet")</code> to skip a test you haven't implemented yet - keeps the test suite running cleanly</li>
 </ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
