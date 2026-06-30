@@ -75,20 +75,21 @@
 
 ### Session 2
 
-- `10:50` **Activity**: Run the Pipeline Runner (50 mins)
-- `11:40` Create Database in SSMS (20 mins)
+- `10:50` **Activity**: [Run the Pipeline Runner](day3/pipeline-runner.md) (50 mins)
+- `11:40` [Create Database in SSMS](day3/ssms.md) (20 mins)
 - `12:00` Run PowerBi in the VM (20 mins)
 
 ### Session 3
 
+- `13:20` Start the QA Fabric Playground (10 mins)
 - `13:30` **Practice**: [01 Create Fabric Lakehouse](labs/01-lakehouse.md) (40 mins)
-- `14:10` **Activity**: [Run pipeline in MS Fabric](day3/fabric-integration.md) (20 mins)
+- `14:10` **Activity**: [Run pipeline in MS Fabric](labs/33-library-pipeline.md) (20 mins)
 
 ### Session 4
 
-- `14:50` **Activity**: [Run pipeline in MS Fabric](day3/fabric-integration.md) (20 mins)
-- `15:10` **Activity**: [Create Gold Layer Table](day3/fabric-gold-layer.md) (20 mins)
-- `15:30` POWERBI (20 mins)
+- `14:50` **Activity**: [Run pipeline in MS Fabric](labs/33-library-pipeline.md) (20 mins)
+- `15:10` **Activity**: [Create Gold Layer Table](labs/33-library-pipeline.md) (20 mins)
+- `15:30` Create PowerBi Report in Fabric (20 mins)
 
 ---
 

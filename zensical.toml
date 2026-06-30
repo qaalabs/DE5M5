@@ -44,9 +44,11 @@ nav = [
     {"GitHub Actions" = "day3/github-actions.md"},
     {"GitHub Actions ~ Trigger Workflow" = "day3/github-workflow.md"},
     {"Explore GitHub History & Logs" = "day3/github-explore.md"},
+    {"Run the Pipeline Runner" = "day3/pipeline-runner.md"},
+    {"Create Database in SSMS" = "day3/ssms.md"},
     {"01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},
-    {"Run pipeline in MS Fabric" = "day3/fabric-integration.md"},
-    {"Create Gold Layer Table" = "day3/fabric-gold-layer.md"},
+    {"Run pipeline in MS Fabric" = "labs/33-library-pipeline.md"},
+    {"Create Gold Layer Table" = "labs/33-library-pipeline.md"},
   ]},
   {"Resources" = "resources.md"},
 ]
