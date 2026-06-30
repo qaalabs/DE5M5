@@ -1391,8 +1391,29 @@
     <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span>
     <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span>
 
-<span class="c1"># Add more tests...</span>
+<span class="c1"># Add more tests using tmp_path to create test files on the fly:</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_load_csv_empty_file</span><span class="p">(</span><span class="n">tmp_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Test that an empty CSV raises an error."""</span>
+    <span class="n">empty</span> <span class="o">=</span> <span class="n">tmp_path</span> <span class="o">/</span> <span class="s2">"empty.csv"</span>
+    <span class="n">empty</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">errors</span><span class="o">.</span><span class="n">EmptyDataError</span><span class="p">):</span>
+        <span class="n">load_csv</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">empty</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_load_json_file_not_found</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">"""Test error handling when JSON file doesn't exist."""</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">):</span>
+        <span class="n">load_json</span><span class="p">(</span><span class="s1">'data/nonexistent.json'</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_load_json_invalid</span><span class="p">(</span><span class="n">tmp_path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Test that invalid JSON raises an error."""</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+    <span class="n">bad</span> <span class="o">=</span> <span class="n">tmp_path</span> <span class="o">/</span> <span class="s2">"bad.json"</span>
+    <span class="n">bad</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s2">"not valid json {{{"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">JSONDecodeError</span><span class="p">):</span>
+        <span class="n">load_json</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">bad</span><span class="p">))</span>
 </code></pre></div>
+<p><code>tmp_path</code> is a built-in pytest fixture - it creates a temporary directory for your test files automatically.</p>
 <h2 id="task-2-run-coverage-report">Task 2: Run coverage report</h2>
 <div class="highlight"><pre><span></span><code>pytest --cov=src
 </code></pre></div>
