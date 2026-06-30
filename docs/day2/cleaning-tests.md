@@ -10,7 +10,7 @@ Create two test files using the templates below. For each `# TODO` line, write t
 import pytest
 import pandas as pd
 import pandas.testing as pdt
-from src.data_processing.cleaning import (
+from data_processing.cleaning import (
     remove_duplicates,
     handle_missing_values,
     standardize_dates
@@ -58,16 +58,19 @@ def test_standardize_dates():
 ## tests/test_validation.py
 
 ```python
-from src.data_processing.validation import validate_isbn
+from data_processing.validation import validate_isbn
 
 def test_valid_isbn():
-    # TODO: assert a valid ISBN-13 returns True
+    result = validate_isbn('9780306406157')
+    # TODO: assert result is True
 
 def test_invalid_isbn():
-    # TODO: assert a string that is not an ISBN returns False
+    result = validate_isbn('not-an-isbn')
+    # TODO: assert result is False
 
 def test_wrong_length():
-    # TODO: assert a 10-digit number returns False
+    result = validate_isbn('123456789')
+    # TODO: assert result is False
 ```
 
 ---

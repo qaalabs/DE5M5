@@ -40,8 +40,8 @@ Then open `htmlcov/index.html` in a browser.
 
 ## Guidelines for this project:
 
-- **Stretch Goal**: 80% coverage
-- **Acceptable**: 70% coverage
+- **Stretch Goal**: 70% coverage
+- **Acceptable**: 60% coverage
 - **Minimum**: All critical functions tested
 
 Share your tests with the group - if you have a test that works well, others can use it to help everyone reach 70%.

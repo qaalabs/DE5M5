@@ -114,21 +114,4 @@ def load_json(filepath):
 - Docstring format (Google style)
 
 
-## Part 2: Test in Jupyter
-
-Create a new Jupyter notebook in the `notebooks` folder and run:
-
-```python
-from data_processing.ingestion import load_csv, load_json
-
-# Test CSV loading
-df_circ = load_csv('../data/circulation_data.csv')
-print(f"Loaded {len(df_circ)} circulation records")
-print(df_circ.head())
-
-# Test JSON loading
-df_events = load_json('../data/events_data.json')
-print(f"Loaded {len(df_events)} events")
-print(df_events.head())
-```
 

@@ -2,17 +2,22 @@
 
 These four checks are your measure of production-ready code. Run them now to see where you are, and again after each activity to see progress.
 
-Run all commands in the VS Code terminal.
+*Run all commands either in a Windows Terminal or in a in the VS Code terminal.*
 
 ---
 
 ## Check 1: Tests pass and coverage
 
 ```
+pytest
+```
+All tests should pass. A failing test means broken code.
+
+```
 pytest --cov=src
 ```
 
-All tests should pass and coverage should be above 70%. A failing test means broken code - below 70% means you do not have enough tests to trust the code in production.
+Coverage should be above 70%. Below 70% means you do not have enough tests to trust the code in production.
 
 ---
 
@@ -50,3 +55,4 @@ In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 - Click **Sync Changes**
 
 You can now see the report in GitHub. Each time you run the pipeline and commit, GitHub shows the change - so you can track progress through the day.
+

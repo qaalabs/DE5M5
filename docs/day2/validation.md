@@ -20,18 +20,6 @@ The 13th digit is a check digit calculated from the first 12:
 
 Implement `validate_isbn()` so it returns `True` for a valid ISBN-13 and `False` for anything invalid.
 
-## Test your function
-
-In your notebook, add a new cell:
-
-```python
-from data_processing.validation import validate_isbn
-
-print(validate_isbn('9780306406157'))  # True
-print(validate_isbn('1234567890123'))  # False
-print(validate_isbn('not-an-isbn'))    # False
-```
-
 ## Commit your work
 
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).

@@ -1,4 +1,4 @@
-# Activity: Achieve High Test coverage
+# Activity: Achieve Test Coverage
 
 ## Task 1: Test ingestion module
 
@@ -9,10 +9,8 @@ Create `tests/test_ingestion.py`:
 
 import pytest
 import pandas as pd
-from pathlib import Path
-from src.data_processing.ingestion import load_csv, load_json, load_excel
+from data_processing.ingestion import load_csv, load_json
 
-# Test with actual sample files
 def test_load_csv_success():
     """Test loading real CSV file."""
     df = load_csv('data/circulation_data.csv')
@@ -49,18 +47,32 @@ pytest --cov=src --cov-report=html
 
 Open `htmlcov/index.html` in a browser.
 
-## Task 3: Improve coverage
+## Task 3: Strategies for improving coverage
 
-- Identify uncovered lines
-- Write tests for those lines
-- Focus on error handling and edge cases
+Not all code is equally easy to test. Here are some strategies:
+
+**Test the happy path first** - get the main flow working before edge cases.
+
+**Test error cases** - if a function raises an error, test that it raises it:
+```python
+with pytest.raises(FileNotFoundError):
+    load_csv('data/nonexistent.csv')
+```
+
+**Exclude code you didn't write** - the `load_excel` function was provided for you and has complex error handling that is hard to test. Tell coverage to ignore it by adding `# pragma: no cover` to the function definition:
+
+```python
+def load_excel(filepath, sheet_name=0, **kwargs):  # pragma: no cover
+```
+
+**Target: 60% is good, 70% is excellent** - don't chase 100%. A meaningful 60% is better than meaningless tests written just to hit a number.
 
 ## Task 4: Commit your work
 
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
 - Click **+** next to the `tests/` folder to stage all test files
-- Type a commit message: `Add tests - 70% coverage achieved`
+- Type a commit message: `Add tests - coverage improved`
 - Click **Commit**
 - Click **Sync Changes** to push to GitHub
 

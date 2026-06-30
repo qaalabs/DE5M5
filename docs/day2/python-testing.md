@@ -21,38 +21,22 @@ def remove_duplicates(df):
 
 ## Part 2: The Pandas Testing Problem
 
-Run this in a Jupyter Notebook:
+You can't use `assert` directly with DataFrames - it raises a `ValueError` because `==` returns a DataFrame of booleans, not a single `True` or `False`.
 
 ```python
-import pandas as pd
+# Wrong - raises ValueError
+assert result == expected
 
-result = pd.DataFrame({'col': [1, 2, 3]})
-expected = pd.DataFrame({'col': [1, 2, 3]})
-
-# Try the wrong way
-print("result == expected:")
-print(result == expected)  # DataFrame of bools!
-
-# Try to assert (this will fail)
-try:
-    assert result == expected
-except ValueError as e:
-    print(f"Error: {e}")
-```
-
-### The solution
-
-```python
+# Right
 import pandas.testing as pdt
-
-# The right way
 pdt.assert_frame_equal(result, expected)
-print("✅ Test passed!")
 ```
 
 ## Part 3: Writing Tests
 
-Create `tests/test_cleaning.py`:
+Here is an example of a complete test file. Use this as a reference when completing the activity.
+
+`tests/test_cleaning.py`:
 
 ```python
 """Tests for data cleaning functions.
@@ -63,7 +47,7 @@ This module demonstrates proper testing patterns for Pandas code.
 import pytest
 import pandas as pd
 import pandas.testing as pdt
-from src.data_processing.cleaning import (
+from data_processing.cleaning import (
     remove_duplicates,
     handle_missing_values,
     standardize_dates
