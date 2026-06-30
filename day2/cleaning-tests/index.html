@@ -1359,7 +1359,7 @@
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas.testing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">src.data_processing.cleaning</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.cleaning</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">remove_duplicates</span><span class="p">,</span>
     <span class="n">handle_missing_values</span><span class="p">,</span>
     <span class="n">standardize_dates</span>
@@ -1403,16 +1403,19 @@
 </code></pre></div>
 <hr>
 <h2 id="teststest_validationpy">tests/test_validation.py</h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">src.data_processing.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">validate_isbn</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.validation</span><span class="w"> </span><span class="kn">import</span> <span class="n">validate_isbn</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_valid_isbn</span><span class="p">():</span>
-    <span class="c1"># TODO: assert a valid ISBN-13 returns True</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'9780306406157'</span><span class="p">)</span>
+    <span class="c1"># TODO: assert result is True</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_invalid_isbn</span><span class="p">():</span>
-    <span class="c1"># TODO: assert a string that is not an ISBN returns False</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'not-an-isbn'</span><span class="p">)</span>
+    <span class="c1"># TODO: assert result is False</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_wrong_length</span><span class="p">():</span>
-    <span class="c1"># TODO: assert a 10-digit number returns False</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'123456789'</span><span class="p">)</span>
+    <span class="c1"># TODO: assert result is False</span>
 </code></pre></div>
 <hr>
 <h2 id="run-your-tests">Run your tests</h2>

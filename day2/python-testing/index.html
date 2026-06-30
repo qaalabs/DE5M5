@@ -1390,31 +1390,17 @@
 <p><strong>Without tests</strong>: You won't know until production breaks!</p>
 <p><strong>With tests</strong>: Tests fail immediately!</p>
 <h2 id="part-2-the-pandas-testing-problem">Part 2: The Pandas Testing Problem</h2>
-<p>Run this in a Jupyter Notebook:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<p>You can't use <code>assert</code> directly with DataFrames - it raises a <code>ValueError</code> because <code>==</code> returns a DataFrame of booleans, not a single <code>True</code> or <code>False</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wrong - raises ValueError</span>
+<span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'col'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
-<span class="n">expected</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'col'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]})</span>
-
-<span class="c1"># Try the wrong way</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"result == expected:"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">expected</span><span class="p">)</span>  <span class="c1"># DataFrame of bools!</span>
-
-<span class="c1"># Try to assert (this will fail)</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span>
-<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="the-solution">The solution</h3>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas.testing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdt</span>
-
-<span class="c1"># The right way</span>
+<span class="c1"># Right</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas.testing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdt</span>
 <span class="n">pdt</span><span class="o">.</span><span class="n">assert_frame_equal</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"✅ Test passed!"</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="part-3-writing-tests">Part 3: Writing Tests</h2>
-<p>Create <code>tests/test_cleaning.py</code>:</p>
+<p>Here is an example of a complete test file. Use this as a reference when completing the activity.</p>
+<p><code>tests/test_cleaning.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="sd">"""Tests for data cleaning functions.</span>
 
 <span class="sd">This module demonstrates proper testing patterns for Pandas code.</span>
@@ -1423,7 +1409,7 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas.testing</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pdt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">src.data_processing.cleaning</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.cleaning</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">remove_duplicates</span><span class="p">,</span>
     <span class="n">handle_missing_values</span><span class="p">,</span>
     <span class="n">standardize_dates</span>

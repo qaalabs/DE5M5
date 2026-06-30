@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activity-achieve-high-test-coverage" class="md-skip">
+        <a href="#activity-achieve-test-coverage" class="md-skip">
           Skip to content
         </a>
       
@@ -1198,10 +1198,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#task-3-improve-coverage" class="md-nav__link">
+  <a href="#task-3-strategies-for-improving-coverage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Task 3: Improve coverage
+        Task 3: Strategies for improving coverage
       
     </span>
   </a>
@@ -1363,17 +1363,15 @@
 
 
 
-<h1 id="activity-achieve-high-test-coverage">Activity: Achieve High Test coverage</h1>
+<h1 id="activity-achieve-test-coverage">Activity: Achieve Test Coverage</h1>
 <h2 id="task-1-test-ingestion-module">Task 1: Test ingestion module</h2>
 <p>Create <code>tests/test_ingestion.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="sd">"""Tests for data ingestion functions."""</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">src.data_processing.ingestion</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_csv</span><span class="p">,</span> <span class="n">load_json</span><span class="p">,</span> <span class="n">load_excel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.ingestion</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_csv</span><span class="p">,</span> <span class="n">load_json</span>
 
-<span class="c1"># Test with actual sample files</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_load_csv_success</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">"""Test loading real CSV file."""</span>
     <span class="n">df</span> <span class="o">=</span> <span class="n">load_csv</span><span class="p">(</span><span class="s1">'data/circulation_data.csv'</span><span class="p">)</span>
@@ -1402,17 +1400,22 @@
 <div class="highlight"><pre><span></span><code>pytest --cov=src --cov-report=html
 </code></pre></div>
 <p>Open <code>htmlcov/index.html</code> in a browser.</p>
-<h2 id="task-3-improve-coverage">Task 3: Improve coverage</h2>
-<ul>
-<li>Identify uncovered lines</li>
-<li>Write tests for those lines</li>
-<li>Focus on error handling and edge cases</li>
-</ul>
+<h2 id="task-3-strategies-for-improving-coverage">Task 3: Strategies for improving coverage</h2>
+<p>Not all code is equally easy to test. Here are some strategies:</p>
+<p><strong>Test the happy path first</strong> - get the main flow working before edge cases.</p>
+<p><strong>Test error cases</strong> - if a function raises an error, test that it raises it:
+</p><div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">FileNotFoundError</span><span class="p">):</span>
+    <span class="n">load_csv</span><span class="p">(</span><span class="s1">'data/nonexistent.csv'</span><span class="p">)</span>
+</code></pre></div><p></p>
+<p><strong>Exclude code you didn't write</strong> - the <code>load_excel</code> function was provided for you and has complex error handling that is hard to test. Tell coverage to ignore it by adding <code># pragma: no cover</code> to the function definition:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">load_excel</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+</code></pre></div>
+<p><strong>Target: 60% is good, 70% is excellent</strong> - don't chase 100%. A meaningful 60% is better than meaningless tests written just to hit a number.</p>
 <h2 id="task-4-commit-your-work">Task 4: Commit your work</h2>
 <p>In VS Code open the <strong>Source Control</strong> panel (<code>Ctrl+Shift+G</code>).</p>
 <ul>
 <li>Click <strong>+</strong> next to the <code>tests/</code> folder to stage all test files</li>
-<li>Type a commit message: <code>Add tests - 70% coverage achieved</code></li>
+<li>Type a commit message: <code>Add tests - coverage improved</code></li>
 <li>Click <strong>Commit</strong></li>
 <li>Click <strong>Sync Changes</strong> to push to GitHub</li>
 </ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">

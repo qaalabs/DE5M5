@@ -984,17 +984,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#part-2-test-in-jupyter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Part 2: Test in Jupyter
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1470,21 +1459,7 @@
 <li>Logging at INFO and ERROR levels</li>
 <li>Raising exceptions (don't hide errors!)</li>
 <li>Docstring format (Google style)</li>
-</ul>
-<h2 id="part-2-test-in-jupyter">Part 2: Test in Jupyter</h2>
-<p>Create a new Jupyter notebook in the <code>notebooks</code> folder and run:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">data_processing.ingestion</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_csv</span><span class="p">,</span> <span class="n">load_json</span>
-
-<span class="c1"># Test CSV loading</span>
-<span class="n">df_circ</span> <span class="o">=</span> <span class="n">load_csv</span><span class="p">(</span><span class="s1">'../data/circulation_data.csv'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_circ</span><span class="p">)</span><span class="si">}</span><span class="s2"> circulation records"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_circ</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="c1"># Test JSON loading</span>
-<span class="n">df_events</span> <span class="o">=</span> <span class="n">load_json</span><span class="p">(</span><span class="s1">'../data/events_data.json'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Loaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df_events</span><span class="p">)</span><span class="si">}</span><span class="s2"> events"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df_events</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</code></pre></div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+</ul><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>
