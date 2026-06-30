@@ -155,15 +155,6 @@ def test_handle_missing_invalid_strategy(sample_df_with_missing):
         handle_missing_values(sample_df_with_missing, strategy='invalid')
 ```
 
-**Run the tests**:
-```powershell
-# Run all tests
-pytest tests/test_cleaning.py -v
-
-# Run with coverage
-pytest tests/test_cleaning.py -v --cov=src
-```
-
 ---
 
 ## Key Points
@@ -174,3 +165,4 @@ pytest tests/test_cleaning.py -v --cov=src
 - Test edge cases (empty, no changes needed)
 - Test error cases with `pytest.raises()`
 - Descriptive test names: `test_<function>_<scenario>`
+- Use `@pytest.mark.skip(reason="not implemented yet")` to skip a test you haven't implemented yet - keeps the test suite running cleanly
