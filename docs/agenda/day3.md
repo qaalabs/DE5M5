@@ -3,21 +3,23 @@
 ## Session 1
 
 - 🌅 Welcome to Day 3 of DE5 Module 5
-- 🖥️ VM Setup
 - [GitHub Actions](../day3/github-actions.md)
 - [GitHub Actions ~ Trigger Workflow](../day3/github-workflow.md)
+- [Explore GitHub History & Logs](../day3/github-explore.md)
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- **Demo**: [Pull Request Workflow](../day3/github-branch.md)
-- **Activity**: [Complete Your Own PR Workflow](../day3/pull-request.md)
+- **Activity**: Run the Pipeline Runner
+- Create Database in SSMS
+- Run PowerBi in the VM
 
 ## 🥪🥤 Lunch Break
 
 ## Session 3
 
+- 
 - **Practice**: [01 Create Fabric Lakehouse](../labs/01-lakehouse.md)
 - **Activity**: [Run pipeline in MS Fabric](../day3/fabric-integration.md)
 

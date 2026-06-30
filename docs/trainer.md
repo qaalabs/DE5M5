@@ -69,13 +69,15 @@
 
 ### Session 1
 
-- `09:50` [GitHub Actions](day3/github-actions.md) (20 mins)
-- `10:10` [GitHub Actions ~ Trigger Workflow](day3/github-workflow.md) (20 mins)
+- `09:40` [GitHub Actions](day3/github-actions.md) (20 mins)
+- `10:00` [GitHub Actions ~ Trigger Workflow](day3/github-workflow.md) (10 mins)
+- `10:10` [Explore GitHub History & Logs](day3/github-explore.md) (20 mins)
 
 ### Session 2
 
-- `10:50` **Demo**: [Pull Request Workflow](day3/github-branch.md) (20 mins)
-- `11:10` **Activity**: [Complete Your Own PR Workflow](day3/pull-request.md) (60 mins)
+- `10:50` **Activity**: Run the Pipeline Runner (50 mins)
+- `11:40` Create Database in SSMS (20 mins)
+- `12:00` Run PowerBi in the VM (20 mins)
 
 ### Session 3
 
