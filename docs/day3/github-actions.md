@@ -1,80 +1,72 @@
-# GitHub Actions
+# Demo: GitHub Actions
 
-## Learning Objectives
-- Understand what CI/CD means for data products
-- See GitHub Actions in action
-- Set up automated testing workflow
-- Understand the value of automation
-
-## Part 1: What is CI/CD?
+## What is CI/CD?
 
 ```
 WITHOUT CI/CD:
-Developer writes code → Forgets to run tests → Pushes to main → Production breaks 💥
+Developer writes code -> pushes to main -> production breaks
 
 WITH CI/CD:
-Developer writes code → Pushes to GitHub → Tests run automatically → 
-  ✅ Pass: Can deploy
-  ❌ Fail: Can't deploy (you're protected!)
+Developer opens PR -> tests run automatically ->
+  Pass: allowed to merge
+  Fail: blocked until fixed
 ```
 
-### Key points
-- **CI** (Continuous Integration): Automatically test every change
-- **CD** (Continuous Delivery/Deployment): Automatically deploy when tests pass
-- **Why?** Catch bugs early, deploy confidently, collaborate safely
+- **CI** (Continuous Integration): every PR is tested automatically
+- **CD** (Continuous Delivery): deploy automatically when tests pass
+- The team's main branch is always in a working state
 
-## Part 2: GitHub Actions Overview
+## The workflows
 
-### What it is
-- Built into GitHub
-- Runs workflows on events (push, pull request, schedule)
-- Free for public repos
-- YAML configuration files
+Show the two files already in the repo under `.github/workflows/`.
 
-### GitHub File
+### ci.yml
 
-Show the **template workflow** (already in repo): `.github/workflows/ci.txt`
-
-- `on: push/pull_request` - When it triggers
-- `runs-on: ubuntu-latest` - Where it runs (GitHub's servers)
-- `steps` - What it does (checkout, setup Python, install, test)
-
-**Rename the file to**: `.github/workflows/ci.yml`
-
-**Change the coverage failure limit to 90%**
-
-## Part 3: Live Demo - Trigger a Workflow
-
-### 1. Show existing workflow
-- Navigate to repo → Actions tab
-- Show previous runs (if any)
-
-### 2. Make a small change
-
-```bash
-# In ingestion.py - add a comment
-# Better logging for CSV loading
-   
-git add src/data_processing/ingestion.py
-git commit -m "Add documentation comment"
-git push origin main
+```yaml
+on:
+  pull_request:
+    branches: [ main ]
 ```
 
-### 3. Watch it fail
-- Refresh Actions tab
-- Click on the running workflow
-- Expand steps - see real-time logs
-- Watch tests run
-- Watch it fail ❌
-- Show the error logs
+Only runs on PRs targeting main - not on every push. Walk through the steps: checkout, set up Python, install dependencies, run pytest with coverage.
 
-### 4. Show success
-- Edit `ci.yml` to a low coverage
-- Commit and push
-- Watch it pass ✅
+The coverage threshold line is commented out - you will uncomment it in a moment.
 
-!!! success "How this works:"
-    - We didn't run tests manually.
-    - GitHub ran them for us.
-    - If they failed, we'd know immediately.
-    - This is how teams work safely!
+### lint.yml
+
+Same trigger - runs on every PR to main. Installs ruff and runs `ruff check .` against the whole repo. If there are linting errors the PR is blocked. They fixed all their linting issues yesterday - this should pass cleanly.
+
+## Demo: open a PR and watch CI run
+
+On your (trainer) repo:
+
+1. Go to GitHub -> **Pull requests** -> **New pull request**
+2. Base: `main` | Compare: `dev`
+3. Title: `Merge dev into main` -> **Create pull request**
+4. Show the two CI checks appearing automatically
+
+## Set a high coverage threshold
+
+In GitHub, navigate to `.github/workflows/ci.yml` on the `dev` branch. Click the pencil icon to edit.
+
+Uncomment the coverage line and set it to 90:
+
+```yaml
+pytest --cov=src --cov-fail-under=90
+```
+
+Click **Commit changes** -> commit directly to `dev`.
+
+Go back to the PR - watch CI re-run. It fails ❌. Show the error output - the coverage is below 90%.
+
+## Lower the threshold - watch it pass
+
+Edit `ci.yml` in GitHub again, change to 40:
+
+```yaml
+pytest --cov=src --cov-fail-under=40
+```
+
+Commit directly to `dev`. CI re-runs - passes ✅. Both checks green. Click **Merge pull request**.
+
+Dev is now on main, and CI confirmed it was working before it got there.
