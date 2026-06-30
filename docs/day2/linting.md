@@ -14,7 +14,25 @@ A clean result looks like this:
 All checks passed!
 ```
 
-If there are issues, ruff tells you exactly where:
+Silence is the passing state - there is nothing wrong.
+
+## Watch it catch a problem
+
+Open `src/data_processing/cleaning.py` and add this line after the existing imports:
+
+```python
+import os
+```
+
+Save the file, then run `ruff check src/` again. Ruff finds it immediately:
+
+```
+src/data_processing/cleaning.py:3:1: F401 `os` imported but unused
+```
+
+Now delete the `import os` line, save, and run again - silence.
+
+If there are other issues, ruff tells you exactly where:
 
 ```
 src/data_processing/cleaning.py:12:1: F401 'pandas as pd' imported but unused
