@@ -8,31 +8,6 @@ Add these functions to `cleaning.py` - all three were shown in the demo:
 2. `handle_missing_values()`
 3. `standardize_dates()`
 
-## Task 2: Test in Jupyter
-
-Add another cell to the notebook you used earlier:
-
-```python
-from data_processing.cleaning import (
-    remove_duplicates,
-    handle_missing_values,
-    standardize_dates
-)
-
-# Load data
-df = load_csv('../data/circulation_data.csv')
-
-# Apply cleaning pipeline
-df_clean = remove_duplicates(df, subset=['transaction_id'])
-df_clean = handle_missing_values(df_clean, strategy='drop')
-df_clean = standardize_dates(df_clean, ['checkout_date', 'return_date'])
-
-# Check results
-print(f"Original rows: {len(df)}")
-print(f"Clean rows: {len(df_clean)}")
-print(df_clean.info())
-```
-
 ## Task 2: Commit Your Work
 
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).

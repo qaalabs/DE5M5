@@ -5,7 +5,7 @@
 - Build functions to load CSV, JSON, and Excel files
 - Implement proper error handling and logging
 - Write clean, documented code
-- Test functions locally in Jupyter
+- Test functions with pytest
 
 ## Principles
 
