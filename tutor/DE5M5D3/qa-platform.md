@@ -1,0 +1,5 @@
+- Ask learners to open the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) and click **Start**
+- Provisioning takes a few minutes - warn them the 3-hour window starts now
+- Make a note of the allocated username and password
+- Once status shows **Ready**, log in to Azure then Fabric in an InPrivate/Incognito window
+- Do not move on until everyone has a green Fabric home page

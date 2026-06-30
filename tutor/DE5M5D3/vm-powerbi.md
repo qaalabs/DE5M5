@@ -1,0 +1,5 @@
+- Open Power BI Desktop on the VM
+- Get Data -> SQL Server -> Server: `localhost`, Database: `library_warehouse` -> Load
+- Build one simple visual - transactions by branch is a good starting point
+- Draw the connection: same data they just queried in SSMS, now in a report
+- This afternoon they will do the same thing in Fabric - same pattern, different platform

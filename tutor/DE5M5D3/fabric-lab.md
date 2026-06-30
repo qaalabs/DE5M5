@@ -1,0 +1,5 @@
+- This is a practice run - generic data, not their pipeline - goal is to get comfortable with the Fabric interface
+- Follow `labs/01-lakehouse` - introduces the lakehouse concept and Delta tables
+- Point out the structure: Files (raw data lands here), Tables (Delta tables appear here), Notebooks
+- Keep an eye on time - they need to finish by 14:10 when we switch to their own pipeline
+- If anyone finishes early, ask them to explore the SQL analytics endpoint

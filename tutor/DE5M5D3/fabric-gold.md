@@ -1,0 +1,5 @@
+- Learners should now be at Step 8 of `labs/33-library-pipeline`
+- Create the Silver to Gold notebook and run Cell 1 to build `gold_circulation_summary`
+- Check the Tables pane - the gold table should appear alongside the silver tables
+- Go to SQL analytics endpoint and run the query in Step 9 to verify the output
+- This block leads directly into FAB-POWERBI - the report is created from this table
