@@ -1,6 +1,12 @@
 # Activity: Query Your Data in SSMS
 
-Connect to `localhost` in SSMS and open the `library_warehouse` database. Try these queries.
+## Load to SQL Server
+
+```powershell
+python load_to_sql.py
+```
+
+Open SSMS and connect to `localhost`. Open the `library_warehouse` database. Try these queries.
 
 **Transactions per branch**
 

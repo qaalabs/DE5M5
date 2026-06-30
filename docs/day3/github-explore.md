@@ -1,6 +1,6 @@
 # Activity: Explore Your GitHub Repo
 
-Your dev branch is merged. Take 20 minutes to explore what GitHub is showing you about your project.
+Your dev branch is merged. Take some time to explore what GitHub is showing you about your project.
 
 ## Actions tab
 

@@ -110,6 +110,10 @@ print(f"After handling missing values: {len(df_clean)} rows")
 df_clean = standardize_dates(df_clean, ['checkout_date', 'return_date'])
 print("Dates standardized")
 
+# Force real datetime dtype regardless of how standardize_dates() formatted these
+df_clean['checkout_date'] = pd.to_datetime(df_clean['checkout_date'])
+df_clean['return_date'] = pd.to_datetime(df_clean['return_date'])
+
 print(f"\n✅ Cleaning complete! {len(df_raw)} → {len(df_clean)} rows")
 ```
 

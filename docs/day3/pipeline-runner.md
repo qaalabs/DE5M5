@@ -29,10 +29,3 @@ python -m data_processing.run_pipeline
 
 Cleaned files appear in `data/silver/`.
 
-## 5. Load to SQL Server
-
-```powershell
-python load_to_sql.py
-```
-
-Open SSMS, connect to `localhost`, and explore the `library_warehouse` database.
