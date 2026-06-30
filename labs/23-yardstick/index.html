@@ -1547,12 +1547,15 @@
 
 <h1 id="production-readiness-yardstick">Production Readiness Yardstick</h1>
 <p>These four checks are your measure of production-ready code. Run them now to see where you are, and again after each activity to see progress.</p>
-<p>Run all commands in the VS Code terminal.</p>
+<p><em>Run all commands either in a Windows Terminal or in a in the VS Code terminal.</em></p>
 <hr>
 <h2 id="check-1-tests-pass-and-coverage">Check 1: Tests pass and coverage</h2>
+<p></p><div class="highlight"><pre><span></span><code>pytest
+</code></pre></div>
+All tests should pass. A failing test means broken code.<p></p>
 <div class="highlight"><pre><span></span><code>pytest --cov=src
 </code></pre></div>
-<p>All tests should pass and coverage should be above 70%. A failing test means broken code - below 70% means you do not have enough tests to trust the code in production.</p>
+<p>Coverage should be above 70%. Below 70% means you do not have enough tests to trust the code in production.</p>
 <hr>
 <h2 id="check-2-code-quality">Check 2: Code quality</h2>
 <div class="highlight"><pre><span></span><code>ruff check src/
