@@ -11,6 +11,7 @@ nav:
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
   - "Day 1 - Foundation & Setup":
     - "Library Pipeline Scenario": day1/scenario.md

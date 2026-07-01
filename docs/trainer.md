@@ -97,14 +97,33 @@
 
 ### Session 1
 
+- `09:40` PLATFORM (10 mins)
+- `09:50` PIPELINE (50 mins)
 
 ### Session 2
 
+- `11:00` MKDOCS (30 mins)
+- `11:30` Introduce Afternoon Presentations Task (10 mins)
+- `11:40` Prepare for Presentations (40 mins)
 
 ### Session 3
 
+- `13:20` First Group Presents (20 mins)
 
 ### Session 4
 
+- `13:50` Second Group Presents (20 mins)
+
+### Session 5
+
+- `14:20` Third Group Presents (20 mins)
+
+### Session 6
+
+- `14:50` Fourth Group Presents (20 mins)
+
+### Session 7
+
+- `15:20` Fifth Group Presents (20 mins)
 
 ---
