@@ -88,11 +88,14 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 ## Step 6: Import the notebooks
 
-Rather than building the notebooks cell by cell like yesterday, you will import two ready-made ones from your own repo.
+!!! info "Rather than building the notebooks cell by cell like yesterday, you will import two ready-made ones from your own repo."
 
 1. In the left navigation bar, select your workspace name to return to the workspace view.
 
-2. On the toolbar select **Import** and choose **Notebook**. Then select **From this computer**.
+2. On the toolbar select **Import** and click **Notebook**. Then select **From this computer**.
+
+    !!! quote ""
+        ![Imported notebooks in workspace.](img/notebook-import.png)
 
 3. Browse to the `notebooks/fabric` folder in your `qa-library-pipeline` repo on the Desktop, and import both:
 
@@ -106,10 +109,11 @@ Rather than building the notebooks cell by cell like yesterday, you will import 
 
 1. In the left navigation bar, select your **library_pipeline** lakehouse.
 
-2. On the **Home** tab:
+2. Click the **Analyse data with** dropdown in the top right-hand corner (next to the Share button)
 
-    - Select **Open notebook** > **Existing notebook**
+    - Select **Notebook** > **Existing notebook**
     - Choose: `01_bronze_to_silver`
+    - Click **Open**
 
 3. In the **Notebook Explorer** on the left, select **Data Items**
 
@@ -124,12 +128,15 @@ Rather than building the notebooks cell by cell like yesterday, you will import 
 
     !!! note "This is the only line you need to change in either notebook."
 
-5. Save the notebook.
+    !!! tip "The notebook will save automatically"
+
 
 6. Return to the lakehouse and repeat for the second notebook:
 
-    - Select **Open notebook** > **Existing notebook**
+    - Click the **Analyse data with** dropdown
+    - Select **Notebook** > **Existing notebook**
     - Choose: `02_silver_to_gold`
+    - Click **Open**
 
 7. Select **Data Items** in the Notebook Explorer and confirm that **library_pipeline** appears under **OneLake**.
 
@@ -146,21 +153,36 @@ Rather than building the notebooks cell by cell like yesterday, you will import 
 
 3. Name the pipeline: `Library Pipeline`
 
-4. On the pipeline canvas, select **Pipeline activity** and choose **Notebook** (under the *Transform* heading).
+    - Click **Create**
+
+4. On the pipeline canvas start with a blank canvas:
+
+    - select **Pipeline activity** and choose **Notebook** (under the *Transform* heading).
+
+5. Update General & Settings for this activity:
 
     - Set the **Name** to: `Bronze to Silver`
     - On the **Settings** tab, configure:
         - **Workspace**: *select your workspace*
         - **Notebook**: select `01_bronze_to_silver`
 
-5. Add a second **Notebook** activity to the canvas.
+6. Allow the notebook to import your repo:
+
+    - Still on the **Settings** expand **Base parameters** and click *New*
+    - **Name**: `_inlineInstallationEnabled`
+    - **Type**: Bool
+    - **Value**: `True`
+
+7. Add a second **Notebook** activity to the canvas.
+
+    !!! tip "Look for Notebook on the tool bar or on the Activites tab"
 
     - Set the **Name** to: `Silver to Gold`
     - On the **Settings** tab, configure:
         - **Workspace**: *select your workspace*
         - **Notebook**: select `02_silver_to_gold`
 
-6. Connect the two activities:
+8. Connect the two activities:
 
     - Hover over **Bronze to Silver** until a green arrow appears.
     - Drag the arrow onto **Silver to Gold**.
@@ -169,7 +191,7 @@ Rather than building the notebooks cell by cell like yesterday, you will import 
         **Silver to Gold** only runs once **Bronze to Silver** has completed without errors.
 
 
-## Step 9: Run the pipeline
+## Step 9: Save and Run the pipeline
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
@@ -178,6 +200,7 @@ Rather than building the notebooks cell by cell like yesterday, you will import 
 3. Monitor progress in the **Output** pane below the canvas, using the :material-refresh: (*Refresh*) icon, until both activities show a green tick.
 
     !!! success "Both activities should show as **Succeeded**."
+        - You can also monitor progress by clicking "Monitor" on the left menu
 
 4. In the left navigation bar, return to your **library_pipeline** lakehouse.
 

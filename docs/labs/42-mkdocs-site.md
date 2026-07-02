@@ -3,13 +3,17 @@
 You've had `mkdocs` sitting in `requirements_dev.txt` since Day 1. Today you'll use it - and finally get your Day 1 architecture diagram rendering properly instead of sitting as a wall of Mermaid text.
 
 !!! note "Your VM has reset overnight"
-    Re-clone your repo and switch to `dev` as in [Day 2 Setup](21-setup.md) if you haven't already.
+    Re-clone your repo and switch to `dev` as in [Day 4 Setup](40-setup.md) if you haven't already.
 
 
 ## Step 1: Get on `dev` and up to date
 
 ```
 cd qa-library-pipeline
+```
+
+Make sure that your local repo has all the latest changes from GitHub:
+```
 git checkout dev
 git pull
 ```
@@ -19,10 +23,10 @@ git pull
 
 ```
 python -m venv venv
+```
+```
 venv\Scripts\activate
 ```
-
-!!! tip "On the exam VM this is `venv\Scripts\activate` (Windows). Adjust if you're on a different shell."
 
 
 ## Step 3: Install the dev requirements
@@ -99,7 +103,8 @@ git commit -m "Add docs site config and architecture diagram"
 git push origin dev
 ```
 
+---
 
-## Step 8 (optional): Merge into main
+## Optional: Merge into main
 
 If you have time, open a pull request from `dev` into `main` on GitHub, same as Day 3, and merge once CI passes.
