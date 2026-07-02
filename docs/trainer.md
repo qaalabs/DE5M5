@@ -97,12 +97,12 @@
 
 ### Session 1
 
-- `09:40` PLATFORM (10 mins)
-- `09:50` PIPELINE (50 mins)
+- `09:40` Start QA MS Fabric Platform (10 mins)
+- `09:50` [Lab: Run MS Fabric Pipeline](labs/41-fabric-pipeline.md) (50 mins)
 
 ### Session 2
 
-- `11:00` MKDOCS (30 mins)
+- `11:00` [Lab: Build MkDocs Site](labs/42-mkdocs-site.md) (30 mins)
 - `11:30` Introduce Afternoon Presentations Task (10 mins)
 - `11:40` Prepare for Presentations (40 mins)
 

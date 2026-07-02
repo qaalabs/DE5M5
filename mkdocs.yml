@@ -54,6 +54,10 @@ nav:
     - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
     - "Create Gold Layer Table": labs/33-library-pipeline.md
 
+  - "Day 4 - Polish & Present":
+    - "Lab: Run MS Fabric Pipeline": labs/41-fabric-pipeline.md
+    - "Lab: Build MkDocs Site": labs/42-mkdocs-site.md
+
   - Resources: resources.md
 
 not_in_nav: |

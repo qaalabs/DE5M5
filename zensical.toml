@@ -8,6 +8,7 @@ nav = [
     {"Day 1" = "agenda/day1.md"},
     {"Day 2" = "agenda/day2.md"},
     {"Day 3" = "agenda/day3.md"},
+    {"Day 4" = "agenda/day4.md"},
   ]},
   {"Day 1 - Foundation & Setup" = [
     {"Library Pipeline Scenario" = "day1/scenario.md"},
@@ -49,6 +50,10 @@ nav = [
     {"01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},
     {"Run pipeline in MS Fabric" = "labs/33-library-pipeline.md"},
     {"Create Gold Layer Table" = "labs/33-library-pipeline.md"},
+  ]},
+  {"Day 4 - Polish & Present" = [
+    {"Lab: Run MS Fabric Pipeline" = "labs/41-fabric-pipeline.md"},
+    {"Lab: Build MkDocs Site" = "labs/42-mkdocs-site.md"},
   ]},
   {"Resources" = "resources.md"},
 ]
