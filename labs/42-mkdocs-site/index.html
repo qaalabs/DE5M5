@@ -1781,10 +1781,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-8-optional-merge-into-main" class="md-nav__link">
+  <a href="#optional-merge-into-main" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 8 (optional): Merge into main
+        Optional: Merge into main
       
     </span>
   </a>
@@ -1855,20 +1855,20 @@
 <p>You've had <code>mkdocs</code> sitting in <code>requirements_dev.txt</code> since Day 1. Today you'll use it - and finally get your Day 1 architecture diagram rendering properly instead of sitting as a wall of Mermaid text.</p>
 <div class="admonition note">
 <p class="admonition-title">Your VM has reset overnight</p>
-<p>Re-clone your repo and switch to <code>dev</code> as in <a href="../21-setup/">Day 2 Setup</a> if you haven't already.</p>
+<p>Re-clone your repo and switch to <code>dev</code> as in <a href="../40-setup/">Day 4 Setup</a> if you haven't already.</p>
 </div>
 <h2 id="step-1-get-on-dev-and-up-to-date">Step 1: Get on <code>dev</code> and up to date</h2>
 <div class="highlight"><pre><span></span><code>cd qa-library-pipeline
-git checkout dev
+</code></pre></div>
+<p>Make sure that your local repo has all the latest changes from GitHub:
+</p><div class="highlight"><pre><span></span><code>git checkout dev
 git pull
-</code></pre></div>
+</code></pre></div><p></p>
 <h2 id="step-2-create-and-activate-a-virtual-environment">Step 2: Create and activate a virtual environment</h2>
-<div class="highlight"><pre><span></span><code>python -m venv venv
-venv\Scripts\activate
+<p></p><div class="highlight"><pre><span></span><code>python -m venv venv
 </code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">On the exam VM this is <code>venv\Scripts\activate</code> (Windows). Adjust if you're on a different shell.</p>
-</div>
+<div class="highlight"><pre><span></span><code>venv\Scripts\activate
+</code></pre></div><p></p>
 <h2 id="step-3-install-the-dev-requirements">Step 3: Install the dev requirements</h2>
 <div class="highlight"><pre><span></span><code>pip install -r requirements_dev.txt
 </code></pre></div>
@@ -1939,7 +1939,8 @@ flowchart LR
 git commit -m "Add docs site config and architecture diagram"
 git push origin dev
 </code></pre></div>
-<h2 id="step-8-optional-merge-into-main">Step 8 (optional): Merge into main</h2>
+<hr>
+<h2 id="optional-merge-into-main">Optional: Merge into main</h2>
 <p>If you have time, open a pull request from <code>dev</code> into <code>main</code> on GitHub, same as Day 3, and merge once CI passes.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
