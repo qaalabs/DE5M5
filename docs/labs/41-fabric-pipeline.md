@@ -2,10 +2,6 @@
 
 Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time. In this lab you will do the same job with a single click: a **pipeline** that runs both notebooks in sequence, on demand, as many times as you like.
 
-!!! note "Your VM and yesterday's Fabric workspace are both gone"
-    The VM resets overnight and the Fabric Playground only lasts 3 hours per session, so nothing from Day 3 is still there. If you haven't already, re-clone your repo as in [Day 2 Setup](21-setup.md) before continuing.
-
-
 ## Step 1: Start the Microsoft Fabric Playground
 
 1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
@@ -83,11 +79,11 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 3. Locate `circulation_data.csv` in the `data/` folder of your repo and upload it.
 
+    !!! note "This time you only need `circulation_data.csv` - the events data isn't part of this exercise."
+
 4. Select the `bronze` folder and confirm the file is visible.
 
     !!! tip "If the file does not automatically appear, select **Refresh** from the **...** menu."
-
-    !!! note "This time you only need `circulation_data.csv` - the events data isn't part of this exercise."
 
 
 ## Step 6: Import the notebooks
@@ -115,7 +111,9 @@ Rather than building the notebooks cell by cell like yesterday, you will import 
     - Select **Open notebook** > **Existing notebook**
     - Choose: `01_bronze_to_silver`
 
-3. In the **Notebook Explorer** on the left, select **Data Items** and confirm **library_pipeline** appears under **OneLake**.
+3. In the **Notebook Explorer** on the left, select **Data Items**
+
+    - Confirm **library_pipeline** appears under **OneLake**.
 
 4. In **Cell 1**, replace the placeholder URL with the address of your own GitHub repo:
 
