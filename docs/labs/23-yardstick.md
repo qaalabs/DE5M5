@@ -2,57 +2,67 @@
 
 These four checks are your measure of production-ready code. Run them now to see where you are, and again after each activity to see progress.
 
-*Run all commands either in a Windows Terminal or in a in the VS Code terminal.*
+!!! note "Run all commands either in a Windows Terminal or in a in the VS Code terminal."
 
 ---
 
-## Check 1: Tests pass and coverage
+## Step 1: Tests pass and coverage
 
-```
-pytest
-```
-All tests should pass. A failing test means broken code.
+1. Run PyTest:
 
-```
-pytest --cov=src
-```
+    ```
+    pytest
+    ```
 
-Coverage should be above 70%. Below 70% means you do not have enough tests to trust the code in production.
+    !!! success "All tests should pass. A failing test means broken code."
 
----
+    ```
+    pytest --cov=src
+    ```
 
-## Check 2: Code quality
+    !!! info "Coverage should be above 70%."
+        Below 70% means you do not have enough tests to trust the code in production.
 
-```
-ruff check src/
-```
 
-No errors. Any errors reported here need to be fixed before the code is production ready.
+## Step 2: Code quality
 
----
+1. Run the Ruff linter:
 
-## Check 4: Pipeline output
+    ```
+    ruff check src/
+    ```
 
-```
-python -m data_processing.run_pipeline > report.txt
-```
+    !!! success "There should be no issues reported"
+        Any issues reported here need to be fixed before the code is production ready.
 
-Open `report.txt` in VS Code. For each dataset, compare the **Raw data** numbers against the **Cleaned data** numbers:
 
-- **Duplicates** should be 0 after cleaning
-- **Missing values** should be 0 after cleaning
+## Step 3: Pipeline output
 
-If the numbers are the same before and after, the cleaning functions are not working.
+1. Save the output to a file. Run:
 
----
+    ```
+    python -m data_processing.run_pipeline > report.txt
+    ```
 
-## Commit your report
+2. Open `report.txt` in VS Code.
 
-In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
+    For each dataset, compare the **Raw data** numbers against the **Cleaned data** numbers:
 
-- Stage `report.txt`
-- Commit message: `Add pipeline report`
-- Click **Sync Changes**
+    - **Duplicates** should be 0 after cleaning
+    - **Missing values** should be 0 after cleaning
 
-You can now see the report in GitHub. Each time you run the pipeline and commit, GitHub shows the change - so you can track progress through the day.
+    !!! warning "If the numbers are the same before and after, then the cleaning functions are not working."
+
+
+## Step 4: Commit your report
+
+1. In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
+
+    - Stage: `report.txt`
+    - Commit message: `Add pipeline report`
+    - Click: Sync Changes
+
+    !!! success "You should now see the report in GitHub."
+        - Each time you run the pipeline and commit, GitHub shows the change.
+        - This will help you track your progress throughout the day.
 
