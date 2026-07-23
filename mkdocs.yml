@@ -8,6 +8,7 @@ nav:
   - Module KSBs: ksb.md
 
   - Agenda:
+    - Topics: agenda/index.md
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
@@ -121,7 +122,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
-      clickable_checkbox: false
+      clickable_checkbox: true
   - pymdownx.tilde
 
 plugins:
