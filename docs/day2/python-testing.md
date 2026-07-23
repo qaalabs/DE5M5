@@ -50,7 +50,7 @@ import pandas.testing as pdt
 from data_processing.cleaning import (
     remove_duplicates,
     handle_missing_values,
-    standardize_dates
+    standardise_dates
 )
 
 # ========================================

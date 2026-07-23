@@ -90,10 +90,10 @@ def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
     return df
 ```
 
-### def standardize_dates
+### def standardise_dates
 ```python
-def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
-    """Standardize date columns to consistent format.
+def standardise_dates(df, date_columns, date_format='%Y-%m-%d'):
+    """Standardise date columns to consistent format.
     
     Args:
         df (pd.DataFrame): Input DataFrame
@@ -101,10 +101,10 @@ def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
         date_format (str): Target date format
         
     Returns:
-        pd.DataFrame: DataFrame with standardized dates
+        pd.DataFrame: DataFrame with standardised dates
         
     Example:
-        >>> df_clean = standardize_dates(df, ['checkout_date', 'return_date'])
+        >>> df_clean = standardise_dates(df, ['checkout_date', 'return_date'])
     """
     df = df.copy()
     
@@ -115,9 +115,9 @@ def standardize_dates(df, date_columns, date_format='%Y-%m-%d'):
             
         try:
             df[col] = pd.to_datetime(df[col], errors='coerce')
-            logger.info(f"Standardized dates in column: {col}")
+            logger.info(f"Standardised dates in column: {col}")
         except Exception as e:
-            logger.error(f"Error standardizing dates in {col}: {e}")
+            logger.error(f"Error standardising dates in {col}: {e}")
             raise
     
     return df

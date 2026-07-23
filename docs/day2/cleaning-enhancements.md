@@ -6,7 +6,7 @@ Add these functions to `cleaning.py` - all three were shown in the demo:
 
 1. `remove_duplicates()`
 2. `handle_missing_values()`
-3. `standardize_dates()`
+3. `standardise_dates()`
 
 ## Task 2: Commit Your Work
 

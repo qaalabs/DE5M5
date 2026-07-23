@@ -122,7 +122,7 @@ from data_processing.ingestion import load_csv, load_json
 from data_processing.cleaning import (
     remove_duplicates,
     handle_missing_values,
-    standardize_dates,
+    standardise_dates,
 )
 
 print('Package installed and imported successfully')
@@ -148,9 +148,9 @@ Add a new cell and run it. This calls the same cleaning functions you wrote and 
 # Cell 4 - Clean
 df = remove_duplicates(df, subset=['transaction_id'])
 df = handle_missing_values(df, strategy='drop')
-df = standardize_dates(df, ['checkout_date', 'return_date'])
+df = standardise_dates(df, ['checkout_date', 'return_date'])
 
-# Force real datetime dtype, regardless of how standardize_dates() formatted these
+# Force real datetime dtype, regardless of how standardise_dates() formatted these
 df['checkout_date'] = pd.to_datetime(df['checkout_date'])
 df['return_date'] = pd.to_datetime(df['return_date'])
 
@@ -158,7 +158,7 @@ print(f'Silver: {len(df)} rows')
 ```
 
 !!! note "Why the explicit `pd.to_datetime` calls?"
-    `standardize_dates()` is a function you wrote on Day 2, so its output format may differ between students. Forcing both date columns to a real `datetime` dtype here guarantees they are saved as proper date columns in the Delta table, which the gold layer query in Step 9 depends on.
+    `standardise_dates()` is a function you wrote on Day 2, so its output format may differ between students. Forcing both date columns to a real `datetime` dtype here guarantees they are saved as proper date columns in the Delta table, which the gold layer query in Step 9 depends on.
 
 ### Cell 5 - Validate before saving
 

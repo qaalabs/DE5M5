@@ -524,7 +524,7 @@ from data_processing.ingestion import load_csv, load_json
 from data_processing.cleaning import (
     remove_duplicates, 
     handle_missing_values, 
-    standardize_dates
+    standardise_dates
 )
 
 print("✅ Package installed and imported successfully!")
@@ -550,9 +550,9 @@ print(f"After removing duplicates: {len(df_clean)} rows")
 df_clean = handle_missing_values(df_clean, strategy='drop')
 print(f"After handling missing values: {len(df_clean)} rows")
 
-# Standardize dates
-df_clean = standardize_dates(df_clean, ['checkout_date', 'return_date'])
-print("Dates standardized")
+# Standardise dates
+df_clean = standardise_dates(df_clean, ['checkout_date', 'return_date'])
+print("Dates standardised")
 
 print(f"\n✅ Cleaning complete! {len(df_raw)} → {len(df_clean)} rows")
 

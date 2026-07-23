@@ -13,7 +13,7 @@ import pandas.testing as pdt
 from data_processing.cleaning import (
     remove_duplicates,
     handle_missing_values,
-    standardize_dates
+    standardise_dates
 )
 
 @pytest.fixture
@@ -47,9 +47,9 @@ def test_handle_missing_fill(sample_with_missing):
     result = handle_missing_values(sample_with_missing, strategy='fill', fill_value=0)
     # TODO: assert result has 3 rows
 
-def test_standardize_dates():
+def test_standardise_dates():
     df = pd.DataFrame({'date': ['2024-01-01', '2024-06-15']})
-    result = standardize_dates(df, date_columns=['date'])
+    result = standardise_dates(df, date_columns=['date'])
     # TODO: assert the date column is datetime type
 ```
 

@@ -72,7 +72,7 @@ from data_processing.ingestion import load_csv, load_json
 from data_processing.cleaning import (
     remove_duplicates, 
     handle_missing_values, 
-    standardize_dates
+    standardise_dates
 )
 
 print("✅ Package installed and imported successfully!")
@@ -106,11 +106,11 @@ print(f"After removing duplicates: {len(df_clean)} rows")
 df_clean = handle_missing_values(df_clean, strategy='drop')
 print(f"After handling missing values: {len(df_clean)} rows")
 
-# Standardize dates
-df_clean = standardize_dates(df_clean, ['checkout_date', 'return_date'])
-print("Dates standardized")
+# Standardise dates
+df_clean = standardise_dates(df_clean, ['checkout_date', 'return_date'])
+print("Dates standardised")
 
-# Force real datetime dtype regardless of how standardize_dates() formatted these
+# Force real datetime dtype regardless of how standardise_dates() formatted these
 df_clean['checkout_date'] = pd.to_datetime(df_clean['checkout_date'])
 df_clean['return_date'] = pd.to_datetime(df_clean['return_date'])
 
