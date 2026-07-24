@@ -6,4 +6,4 @@
 
 ## Coming up in Session 4:
 
-- TBC
+- Finish coverage, then linting - clean up your code

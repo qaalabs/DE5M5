@@ -8,4 +8,4 @@
 
 ## Coming up in Session 3:
 
-- TBC
+- Set up your GitHub repo and Kanban board - template, branch protection, GitHub Projects

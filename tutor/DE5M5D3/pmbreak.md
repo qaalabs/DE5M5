@@ -6,4 +6,4 @@
 
 ## Coming up in Session 4:
 
-- TBC
+- Finish the Fabric pipeline - gold layer and PowerBI report

@@ -13,6 +13,6 @@
 - Day 1 plan it
 - Day 2 build it
 - Day 3 automate it
-- Day 4 present it
+- Day 4 evidence it
 
 

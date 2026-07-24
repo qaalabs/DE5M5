@@ -6,4 +6,4 @@
 
 ## Coming up in Session 4:
 
-- TBC
+- Clone your repo locally and write your first Python code

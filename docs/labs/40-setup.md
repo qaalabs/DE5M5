@@ -1,4 +1,4 @@
-# Day 2 Setup
+# Day 4 Setup
 
 Your VM has reset overnight. Everything is gone except your GitHub repo. This activity gets you back to a working environment.
 

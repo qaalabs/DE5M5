@@ -6,4 +6,4 @@
 
 ## Coming up in Session 3:
 
-- TBC
+- Into Microsoft Fabric - practice lakehouse, then run your own pipeline

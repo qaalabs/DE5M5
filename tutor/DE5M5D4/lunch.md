@@ -2,8 +2,10 @@
 
 **Remind learners to stretch and get something to eat**
 
+**At the start of lunch: confirm the presentation order with the group (informal, no uthisha slot)**
+
 <hr>
 
 ## Coming up in Session 3:
 
-- TBC
+- Presentations - groups of 3, ~10 min each, 10 min break between groups

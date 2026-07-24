@@ -8,4 +8,4 @@
 
 ## Coming up in Session 3:
 
-- TBC
+- Python testing and coverage - write tests, then aim for 70%

@@ -6,4 +6,4 @@
 
 ## Coming up in Session 2:
 
-- TBC
+- Build MkDocs site - render the Day 1 architecture diagram properly

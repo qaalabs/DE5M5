@@ -36,7 +36,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
@@ -51,7 +51,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
     - Leave all other options as the default values
     - Click **Apply**
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
@@ -59,13 +59,13 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
-    - Name the lakehouse: `library_pipeline`
+    - Name the lakehouse: `Library Pipeline`
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 
@@ -94,7 +94,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 2. On the toolbar select **Import** and click **Notebook**. Then select **From this computer**.
 
-    !!! quote ""
+    !!! abstract ""
         ![Imported notebooks in workspace.](img/notebook-import.png)
 
 3. Browse to the `notebooks/fabric` folder in your `qa-library-pipeline` repo on the Desktop, and import both:

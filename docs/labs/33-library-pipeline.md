@@ -35,7 +35,7 @@ In this lab, you will run a real Python package - the one you built and tested y
 
 6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
 
-    !!! quote ""
+    !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
 
 
@@ -50,7 +50,7 @@ In this lab, you will run a real Python package - the one you built and tested y
     - Leave all other options as the default values
     - Click **Apply**
 
-    !!! quote ""
+    !!! abstract ""
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
@@ -64,7 +64,7 @@ In this lab, you will run a real Python package - the one you built and tested y
 
     After a minute or so, a new empty lakehouse will be created.
 
-    !!! quote ""
+    !!! abstract ""
         ![New lakehouse.](img/new-lakehouse.png)
 
 

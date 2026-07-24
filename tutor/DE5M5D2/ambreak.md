@@ -6,4 +6,4 @@
 
 ## Coming up in Session 2:
 
-- TBC
+- Data cleaning functions - demo, then build your own, then validation
