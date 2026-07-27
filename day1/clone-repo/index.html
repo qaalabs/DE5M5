@@ -730,10 +730,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-git-config" class="md-nav__link">
+  <a href="#step-1-open-terminal-from-the-desktop" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Git config
+        Step 1: Open Terminal from the Desktop
       
     </span>
   </a>
@@ -741,10 +741,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-clone-your-repo" class="md-nav__link">
+  <a href="#step-2-git-config" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Clone your repo
+        Step 2: Git config
       
     </span>
   </a>
@@ -752,10 +752,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-switch-to-the-dev-branch" class="md-nav__link">
+  <a href="#step-3-clone-your-repo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Switch to the dev branch
+        Step 3: Clone your repo
       
     </span>
   </a>
@@ -763,10 +763,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-explore-the-structure" class="md-nav__link">
+  <a href="#step-4-confirm-the-connection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Explore the structure
+        Step 4: Confirm the connection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-switch-to-the-dev-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Switch to the dev branch
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-explore-the-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 6: Explore the structure
       
     </span>
   </a>
@@ -890,12 +912,26 @@
 
 
 <h1 id="clone-your-repository">Clone your Repository</h1>
-<p>Open <strong>Terminal</strong> from the Desktop.</p>
-<h2 id="step-1-git-config">Step 1: Git config</h2>
+<h2 id="step-1-open-terminal-from-the-desktop">Step 1: Open Terminal from the Desktop</h2>
+<p>This will get you to a command prompt:
+</p><div class="highlight"><pre><span></span><code>PS C:\Users\Admin
+</code></pre></div><p></p>
+<p>Type:
+</p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>Desktop
+</code></pre></div>
+Press Enter. You should now be in the Desktop directory:
+<div class="highlight"><pre><span></span><code>PS C:\Users\Admin\Desktop
+</code></pre></div><p></p>
+<h2 id="step-2-git-config">Step 2: Git config</h2>
+<p>Git tags every commit you make with an author - this is what shows up in <code>git log</code>, <code>git blame</code>, and your commit history on GitHub. Use your real GitHub email and name, replacing the placeholders below:</p>
+<div class="admonition note">
+<p class="admonition-title">Use the same email address as your GitHub account</p>
+<p>If it doesn't match, GitHub won't link the commits to your profile - they won't show on your contribution graph.</p>
+</div>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"you@example.com"</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Your Name"</span>
 </code></pre></div>
-<h2 id="step-2-clone-your-repo">Step 2: Clone your repo</h2>
+<h2 id="step-3-clone-your-repo">Step 3: Clone your repo</h2>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/YOUR_USERNAME/qa-library-pipeline.git
 </code></pre></div>
 <div class="admonition note">
@@ -906,10 +942,33 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 </div>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>qa-library-pipeline
 </code></pre></div>
-<h2 id="step-3-switch-to-the-dev-branch">Step 3: Switch to the dev branch</h2>
+<h2 id="step-4-confirm-the-connection">Step 4: Confirm the connection</h2>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>-v
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">You should see <code>origin</code> listed twice (fetch and push), both pointing at your repo.</p>
+</div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>--dry-run
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">A browser window may open asking you to sign in to GitHub</p>
+<p>This is Git checking you have permission to push. Sign in and allow access - you only need to do this once today. Nothing is actually pushed yet.</p>
+</div>
+<h2 id="step-5-switch-to-the-dev-branch">Step 5: Switch to the dev branch</h2>
+<div class="admonition note">
+<p class="admonition-title">Note: All development must be done on the <code>dev</code> branch because your <code>main</code> branch is protected.</p>
+</div>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>dev
 </code></pre></div>
-<h2 id="step-4-explore-the-structure">Step 4: Explore the structure</h2>
+<div class="admonition note">
+<p class="admonition-title">Run <code>git status</code> to confirm that there are no outstanding code changes need a commit.</p>
+</div>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">On branch dev, nothing to commit, working tree clean</p>
+</div>
+<h2 id="step-6-explore-the-structure">Step 6: Explore the structure</h2>
 <div class="highlight"><pre><span></span><code>dir
 </code></pre></div>
 <div class="admonition success">

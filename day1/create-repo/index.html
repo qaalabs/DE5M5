@@ -646,10 +646,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#step-1-create-your-repo" class="md-nav__link">
+  <a href="#step-1-log-in-to-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Create your repo
+        Step 1: Log in to GitHub
       
     </span>
   </a>
@@ -657,10 +657,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-explore-the-structure" class="md-nav__link">
+  <a href="#step-2-create-your-repo" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Explore the structure
+        Step 2: Create your repo
       
     </span>
   </a>
@@ -668,10 +668,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-dev-branch" class="md-nav__link">
+  <a href="#step-3-explore-the-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Create a dev branch
+        Step 3: Explore the structure
       
     </span>
   </a>
@@ -679,10 +679,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-protect-the-main-branch" class="md-nav__link">
+  <a href="#step-4-create-a-dev-branch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Protect the main branch
+        Step 4: Create a dev branch
       
     </span>
   </a>
@@ -690,10 +690,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-add-your-architecture-diagram" class="md-nav__link">
+  <a href="#step-5-protect-the-main-branch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Add your architecture diagram
+        Step 5: Protect the main branch
       
     </span>
   </a>
@@ -701,10 +701,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-add-your-adr" class="md-nav__link">
+  <a href="#step-6-add-your-architecture-diagram" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 6: Add your ADR
+        Step 6: Add your architecture diagram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-add-your-adr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 7: Add your ADR
       
     </span>
   </a>
@@ -912,8 +923,11 @@
 
 
 <h1 id="activity-set-up-your-repository">Activity: Set Up Your Repository</h1>
-<p>Everything in this session happens in GitHub - no cloning yet.</p>
-<h2 id="step-1-create-your-repo">Step 1: Create your repo</h2>
+<p>Everything in this session happens in GitHub.com - no cloning yet.</p>
+<h2 id="step-1-log-in-to-github">Step 1: Log in to GitHub</h2>
+<p>Open a browser and go to: <a href="https://github.com">github.com</a></p>
+<p>Sign in with your GitHub account.</p>
+<h2 id="step-2-create-your-repo">Step 2: Create your repo</h2>
 <p>Go to the template:</p>
 <ul>
 <li><a href="https://github.com/QAADE5/library-pipeline-template">https://github.com/QAADE5/library-pipeline-template</a></li>
@@ -925,20 +939,20 @@
 <li>Visibility: Public</li>
 <li>Click <strong>"Create repository"</strong></li>
 </ul>
-<h2 id="step-2-explore-the-structure">Step 2: Explore the structure</h2>
+<h2 id="step-3-explore-the-structure">Step 3: Explore the structure</h2>
 <p>Spend a few minutes clicking around your new repo. Find:</p>
 <ul>
 <li>Where the data files live</li>
 <li>Where your Python package will go</li>
 <li>The GitHub Actions workflows already set up</li>
 </ul>
-<h2 id="step-3-create-a-dev-branch">Step 3: Create a dev branch</h2>
+<h2 id="step-4-create-a-dev-branch">Step 4: Create a dev branch</h2>
 <ul>
 <li>Click the branch dropdown (shows <strong>main</strong>)</li>
 <li>Type <code>dev</code> and click <strong>"Create branch: dev from main"</strong></li>
 </ul>
 <p>This is the branch you'll work on.</p>
-<h2 id="step-4-protect-the-main-branch">Step 4: Protect the main branch</h2>
+<h2 id="step-5-protect-the-main-branch">Step 5: Protect the main branch</h2>
 <ul>
 <li>Go to <strong>Settings</strong> → <strong>Branches</strong> → <strong>"Add branch protection rule"</strong></li>
 <li>Branch name pattern: <code>main</code></li>
@@ -947,7 +961,7 @@
 <li>Click <strong>"Create"</strong></li>
 </ul>
 <p>If you accidentally edit a file on <code>main</code>, GitHub will create a branch and a PR - that is expected. Close the PR and delete the branch.</p>
-<h2 id="step-5-add-your-architecture-diagram">Step 5: Add your architecture diagram</h2>
+<h2 id="step-6-add-your-architecture-diagram">Step 6: Add your architecture diagram</h2>
 <p>First, make sure you're on the <code>dev</code> branch - check the branch dropdown shows <strong>dev</strong>, not <strong>main</strong>.</p>
 <ul>
 <li>Navigate to <code>docs/architecture/index.md</code></li>
@@ -956,7 +970,7 @@
 <li>Click <strong>"Commit changes"</strong> - in the dialog, confirm the branch is <strong>dev</strong></li>
 <li>Go back to the file - check the diagram renders correctly</li>
 </ul>
-<h2 id="step-6-add-your-adr">Step 6: Add your ADR</h2>
+<h2 id="step-7-add-your-adr">Step 7: Add your ADR</h2>
 <p>Stay on the <strong>dev</strong> branch.</p>
 <ul>
 <li>Click <strong>"Add file"</strong> → <strong>"Create new file"</strong></li>
