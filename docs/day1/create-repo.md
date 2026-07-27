@@ -1,8 +1,14 @@
 # Activity: Set Up Your Repository
 
-Everything in this session happens in GitHub - no cloning yet.
+Everything in this session happens in GitHub.com - no cloning yet.
 
-## Step 1: Create your repo
+## Step 1: Log in to GitHub
+
+Open a browser and go to: [github.com](https://github.com)
+
+Sign in with your GitHub account.
+
+## Step 2: Create your repo
 
 Go to the template:
 
@@ -15,7 +21,7 @@ Click **"Use this template"** → **"Create a new repository"**
 - Visibility: Public
 - Click **"Create repository"**
 
-## Step 2: Explore the structure
+## Step 3: Explore the structure
 
 Spend a few minutes clicking around your new repo. Find:
 
@@ -23,14 +29,14 @@ Spend a few minutes clicking around your new repo. Find:
 - Where your Python package will go
 - The GitHub Actions workflows already set up
 
-## Step 3: Create a dev branch
+## Step 4: Create a dev branch
 
 - Click the branch dropdown (shows **main**)
 - Type `dev` and click **"Create branch: dev from main"**
 
 This is the branch you'll work on.
 
-## Step 4: Protect the main branch
+## Step 5: Protect the main branch
 
 - Go to **Settings** → **Branches** → **"Add branch protection rule"**
 - Branch name pattern: `main`
@@ -40,7 +46,7 @@ This is the branch you'll work on.
 
 If you accidentally edit a file on `main`, GitHub will create a branch and a PR - that is expected. Close the PR and delete the branch.
 
-## Step 5: Add your architecture diagram
+## Step 6: Add your architecture diagram
 
 First, make sure you're on the `dev` branch - check the branch dropdown shows **dev**, not **main**.
 
@@ -50,7 +56,7 @@ First, make sure you're on the `dev` branch - check the branch dropdown shows **
 - Click **"Commit changes"** - in the dialog, confirm the branch is **dev**
 - Go back to the file - check the diagram renders correctly
 
-## Step 6: Add your ADR
+## Step 7: Add your ADR
 
 Stay on the **dev** branch.
 
