@@ -13,8 +13,11 @@ A pipeline that:
 
 ## How you'll build it
 
-```
-Local dev (VM)  →  GitHub  →  CI/CD  →  Microsoft Fabric
+```mermaid
+flowchart LR
+    DEV["Local development<br/>(VM)"] --> GH["GitHub"]
+    GH --> CICD["CI/CD"]
+    CICD --> FABRIC["Microsoft Fabric"]
 ```
 
 Over four days you'll move from writing the first function on your VM to a fully deployed, tested pipeline running in Fabric.
