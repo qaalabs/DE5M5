@@ -1,4 +1,4 @@
-# Day 4 - Polish & Present
+# Day 4 ~ Orchestrate & Present
 
 ## Session 1
 
@@ -11,7 +11,7 @@
 ## Session 2
 
 - [Lab: Build MkDocs Site](../labs/42-mkdocs-site.md)
-- Introduce Afternoon Presentations Task
+- Introduce Presentation Task
 - Prepare for Presentations
 
 ## 🥪🥤 Lunch Break

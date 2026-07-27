@@ -1,4 +1,4 @@
-# Day 1 - Foundation & Setup
+# Day 1 ~ Foundation & Setup
 
 ## Session 1
 

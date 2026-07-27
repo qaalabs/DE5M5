@@ -1,6 +1,6 @@
 # Trainer Notes
 
-## Day 1 - Foundation & Setup
+## Day 1 ~ Foundation & Setup
 
 ### Session 1
 
@@ -35,7 +35,7 @@
 
 ---
 
-## Day 2 - Build & Test Python Package
+## Day 2 ~ Build & Test Python Package
 
 ### Session 1
 
@@ -65,7 +65,7 @@
 
 ---
 
-## Day 3 - Automation & Integration
+## Day 3 ~ Automation & Integration
 
 ### Session 1
 
@@ -93,7 +93,7 @@
 
 ---
 
-## Day 4 - Polish & Present
+## Day 4 ~ Orchestrate & Present
 
 ### Session 1
 
@@ -103,7 +103,7 @@
 ### Session 2
 
 - `11:00` [Lab: Build MkDocs Site](labs/42-mkdocs-site.md) (30 mins)
-- `11:30` Introduce Afternoon Presentations Task (10 mins)
+- `11:30` Introduce Presentation Task (10 mins)
 - `11:40` Prepare for Presentations (40 mins)
 
 ### Session 3

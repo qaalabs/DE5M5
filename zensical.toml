@@ -1,5 +1,5 @@
 [project]
-site_name = "Module 5 - Data Engineering Product Development"
+site_name = "M5 - Data Engineering Product Development"
 dev_addr = "0.0.0.0:8000"
 
 nav = [
@@ -10,7 +10,7 @@ nav = [
     {"Day 3" = "agenda/day3.md"},
     {"Day 4" = "agenda/day4.md"},
   ]},
-  {"Day 1 - Foundation & Setup" = [
+  {"Day 1 ~ Foundation & Setup" = [
     {"Library Pipeline Scenario" = "day1/scenario.md"},
     {"Library Pipeline Sample Data" = "day1/sample-data.md"},
     {"Your Mission" = "day1/your-mission.md"},
@@ -24,7 +24,7 @@ nav = [
     {"Create local development env" = "day1/dev-environment.md"},
     {"Write first Python code" = "day1/write-code.md"},
   ]},
-  {"Day 2 - Build & Test Python Package" = [
+  {"Day 2 ~ Build & Test Python Package" = [
     {"🌅 Welcome to Day 2 of DE5 Module 5" = "labs/21-setup.md"},
     {"🖥️ VM Setup + LOD Setup" = "labs/22-python-setup.md"},
     {"Run Commands to see Status" = "labs/23-yardstick.md"},
@@ -41,7 +41,7 @@ nav = [
     {"Fix All Linting Issues" = "day2/linting-fixes.md"},
     {"Run Commands to see Status" = "labs/23-yardstick.md"},
   ]},
-  {"Day 3 - Automation & Integration" = [
+  {"Day 3 ~ Automation & Integration" = [
     {"GitHub Actions" = "day3/github-actions.md"},
     {"GitHub Actions ~ Trigger Workflow" = "day3/github-workflow.md"},
     {"Explore GitHub History & Logs" = "day3/github-explore.md"},
@@ -51,7 +51,7 @@ nav = [
     {"Run pipeline in MS Fabric" = "labs/33-library-pipeline.md"},
     {"Create Gold Layer Table" = "labs/33-library-pipeline.md"},
   ]},
-  {"Day 4 - Polish & Present" = [
+  {"Day 4 ~ Orchestrate & Present" = [
     {"Lab: Run MS Fabric Pipeline" = "labs/41-fabric-pipeline.md"},
     {"Lab: Build MkDocs Site" = "labs/42-mkdocs-site.md"},
   ]},

@@ -1,4 +1,4 @@
-# Day 2 - Build & Test Python Package
+# Day 2 ~ Build & Test Python Package
 
 ## Session 1
 

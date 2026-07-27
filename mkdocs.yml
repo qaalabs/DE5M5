@@ -1,5 +1,5 @@
 # Site name
-site_name: Module 5 - Data Engineering Product Development
+site_name: M5 - Data Engineering Product Development
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
@@ -10,11 +10,8 @@ nav:
   - Agenda:
     - Topics: agenda/index.md
     - Day 1: agenda/day1.md
-    - Day 2: agenda/day2.md
-    - Day 3: agenda/day3.md
-    - Day 4: agenda/day4.md
 
-  - "Day 1 - Foundation & Setup":
+  - "Day 1 ~ Foundation & Setup":
     - "Library Pipeline Scenario": day1/scenario.md
     - "Library Pipeline Sample Data": day1/sample-data.md
     - "Your Mission": day1/your-mission.md
@@ -27,37 +24,6 @@ nav:
     - "Local development": day1/clone-repo.md
     - "Create local development env": day1/dev-environment.md
     - "Write first Python code": day1/write-code.md
-
-  - "Day 2 - Build & Test Python Package":
-    - "🌅 Welcome to Day 2 of DE5 Module 5": labs/21-setup.md
-    - "🖥️ VM Setup + LOD Setup": labs/22-python-setup.md
-    - "Run Commands to see Status": labs/23-yardstick.md
-    - "Explain function - Data Ingestion": day2/ingestion.md
-    - "Run Commands to see Status": labs/23-yardstick.md
-    - "Explain function - Data Cleaning": day2/cleaning.md
-    - "Write function - Data Cleaning": day2/cleaning-enhancements.md
-    - "Validation Function": day2/validation.md
-    - "Python Testing": day2/python-testing.md
-    - "Write unit tests": day2/cleaning-tests.md
-    - "Python Test Coverage": day2/coverage.md
-    - "Achieve 70% Coverage": day2/coverage-goal.md
-    - "Explain Linting": day2/linting.md
-    - "Fix All Linting Issues": day2/linting-fixes.md
-    - "Run Commands to see Status": labs/23-yardstick.md
-
-  - "Day 3 - Automation & Integration":
-    - "GitHub Actions": day3/github-actions.md
-    - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
-    - "Explore GitHub History & Logs": day3/github-explore.md
-    - "Run the Pipeline Runner": day3/pipeline-runner.md
-    - "Create Database in SSMS": day3/ssms.md
-    - "01 Create Fabric Lakehouse": labs/01-lakehouse.md
-    - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
-    - "Create Gold Layer Table": labs/33-library-pipeline.md
-
-  - "Day 4 - Polish & Present":
-    - "Lab: Run MS Fabric Pipeline": labs/41-fabric-pipeline.md
-    - "Lab: Build MkDocs Site": labs/42-mkdocs-site.md
 
   - Resources: resources.md
 

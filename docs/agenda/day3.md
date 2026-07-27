@@ -1,4 +1,4 @@
-# Day 3 - Automation & Integration
+# Day 3 ~ Automation & Integration
 
 ## Session 1
 
