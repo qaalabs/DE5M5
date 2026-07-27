@@ -19,18 +19,28 @@ git clone https://github.com/YOUR_USERNAME/qa-library-pipeline.git
 
 !!! note "Replace `qa-library-pipeline` with what you called your repo."
 
+!!! info "A browser window may open asking you to sign in to GitHub"
+    This is Git asking permission to work with your GitHub account on this VM. Sign in and allow access - you only need to do this once today.
+
 ```bash
 cd qa-library-pipeline
 ```
 
+## Step 3: Confirm the connection
 
-## Step 3: Switch to the dev branch
+```bash
+git remote -v
+```
+
+!!! success "You should see `origin` listed twice (fetch and push), both pointing at your repo."
+
+## Step 4: Switch to the dev branch
 
 ```bash
 git checkout dev
 ```
 
-## Step 4: Explore the structure
+## Step 5: Explore the structure
 
 ```bash
 dir
