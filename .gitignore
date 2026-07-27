@@ -3,6 +3,7 @@ backup/
 zanyana/
 vault/
 .vault/
+docs/umfundi.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
