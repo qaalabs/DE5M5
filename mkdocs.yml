@@ -11,6 +11,7 @@ nav:
     - Topics: agenda/index.md
     - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
+    - Day 3: agenda/day3.md
 
   - "Day 1 ~ Foundation & Setup":
     - "Library Pipeline Scenario": day1/scenario.md
@@ -42,6 +43,16 @@ nav:
     - "Explain Linting": day2/linting.md
     - "Fix All Linting Issues": day2/linting-fixes.md
     - "Run Commands to see Status": labs/23-yardstick.md
+
+  - "Day 3 ~ Automation & Integration":
+    - "GitHub Actions": day3/github-actions.md
+    - "GitHub Actions ~ Trigger Workflow": day3/github-workflow.md
+    - "Explore GitHub History & Logs": day3/github-explore.md
+    - "Run the Pipeline Runner": day3/pipeline-runner.md
+    - "Create Database in SSMS": day3/ssms.md
+    - "01 Create Fabric Lakehouse": labs/01-lakehouse.md
+    - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
+    - "Create Gold Layer Table": labs/33-library-pipeline.md
 
   - Resources: resources.md
 
