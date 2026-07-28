@@ -34,7 +34,7 @@ The coverage threshold line is commented out - you will uncomment it in a moment
 
 ### lint.yml
 
-Same trigger - runs on every PR to main. Installs ruff and runs `ruff check .` against the whole repo. If there are linting errors the PR is blocked. They fixed all their linting issues yesterday - this should pass cleanly.
+Same trigger - runs on every PR to main. Installs ruff and runs `ruff check src/` - the same command and scope taught in `day2/linting.md`. If there are linting errors the PR is blocked. They fixed all their linting issues yesterday - this should pass cleanly.
 
 ## Demo: open a PR and watch CI run
 
