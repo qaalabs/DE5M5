@@ -1385,22 +1385,66 @@
 <p>Create a new notebook at <code>notebooks/sandbox.ipynb</code> and load each raw file to see what you're working with before writing any production code.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span><span class="o">,</span><span class="w"> </span><span class="nn">json</span>
 
-<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"data/circulation_data.csv"</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../data/circulation_data.csv"</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"data/events_data.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../data/events_data.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of records:"</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+<span class="n">data</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"data/catalogue.xlsx"</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"../data/catalogue.xlsx"</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <p>Note the shape, column names, and any obvious issues.</p>
 <h2 id="part-2-implement-the-loaders">Part 2 - Implement the loaders</h2>
-<p>Open <code>src/data_processing/ingestion.py</code>. Two functions need work:</p>
+<p>Open <code>src/data_processing/ingestion.py</code>. Two functions need work: <code>load_csv()</code> and <code>load_json()</code>. Both need the same three ingredients:</p>
+<ol>
+<li><strong>Check the file exists</strong> before reading it - raise <code>FileNotFoundError</code> with a clear message if it doesn't.</li>
+<li><strong>Wrap the read in try/except</strong> - log the problem with <code>logger.error(...)</code> and re-raise it, so callers see it and it shows up in the logs.</li>
+<li><strong>Log success</strong> with <code>logger.info(...)</code>, including the row count.</li>
+</ol>
+<p><code>load_excel()</code> is already complete and shows this pattern in real code - if you get stuck on the shape of the try/except, it's there to check against. But CSV and JSON fail in their own specific ways, covered below.</p>
+<h3 id="load_csv"><code>load_csv()</code></h3>
+<p>It currently just calls <code>pd.read_csv(filepath)</code> with no error handling. The specific things that go wrong with a CSV, and what pandas raises for each:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Exception</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File has no columns / is empty</td>
+<td><code>pd.errors.EmptyDataError</code></td>
+</tr>
+<tr>
+<td>Rows don't match up (inconsistent field count, broken quoting)</td>
+<td><code>pd.errors.ParserError</code></td>
+</tr>
+<tr>
+<td>File isn't valid UTF-8 (wrong encoding)</td>
+<td><code>UnicodeDecodeError</code></td>
+</tr>
+</tbody>
+</table>
+<p>All three of these are actually subclasses of <code>ValueError</code>, so one <code>except ValueError</code> catches all of them:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"...: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">raise</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">"...: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">raise</span>
+</code></pre></div>
+<h3 id="load_json"><code>load_json()</code></h3>
+<p>Two separate problems to handle here: the file might not be valid JSON, and even if it is, the structure might not "flatten" the way you expect.</p>
 <ul>
-<li><code>load_csv()</code> - runs but has no error handling or logging. Use <code>load_excel()</code> as your model and add the same pattern.</li>
-<li><code>load_json()</code> - has a basic body but needs the flattening tested. Try <code>pd.json_normalize()</code> in your notebook first to see what it produces, then commit to the implementation.</li>
+<li><strong>Invalid JSON</strong> - <code>json.load()</code> raises <code>json.JSONDecodeError</code> (also a <code>ValueError</code> subclass) if the file is malformed. Same <code>except ValueError</code> / <code>except Exception</code> shape as above works here too.</li>
+<li><strong>Flattening</strong> - <code>json.load()</code> gives you a Python list/dict. If any of those dicts have nested objects (e.g. <code>{"book": {"title": ..., "isbn": ...}}</code>), you get nested dicts, not flat columns. <code>pd.json_normalize()</code> turns each nested key into its own column (e.g. <code>book.title</code>, <code>book.isbn</code>).</li>
+<li>Before writing the real implementation, load <code>events_data.json</code> in your <code>sandbox.ipynb</code> and run <code>pd.json_normalize(data)</code> on it. Look at the columns it produces - any nested fields you expected? Anything come out as a list instead of a single value? Once you've seen what it actually does, write the error-handled version in <code>load_json()</code>.</li>
 </ul>
-<p><code>load_excel()</code> is already complete - read it, it shows the standard to follow.</p>
 <h2 id="part-3-test-and-commit">Part 3 - Test and commit</h2>
 <div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>tests/<span class="w"> </span>-v
 </code></pre></div>
