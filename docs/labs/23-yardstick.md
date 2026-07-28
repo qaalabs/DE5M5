@@ -8,17 +8,15 @@ These four checks are your measure of production-ready code. Run them now to see
 
 ## Step 1: Tests pass and coverage
 
-1. Run PyTest:
+1. Run PyTest with coverage, saving the result to a file:
 
     ```
-    pytest
+    pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
     ```
+
+    Open `pytest_result.txt` in VS Code.
 
     !!! success "All tests should pass. A failing test means broken code."
-
-    ```
-    pytest --cov=src
-    ```
 
     !!! info "Coverage should be above 70%."
         Below 70% means you do not have enough tests to trust the code in production.
@@ -58,7 +56,7 @@ These four checks are your measure of production-ready code. Run them now to see
 
 1. In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 
-    - Stage: `report.txt`
+    - Stage: `report.txt` and `pytest_result.txt`
     - Commit message: `Add pipeline report`
     - Click: Sync Changes
 
