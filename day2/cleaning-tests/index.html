@@ -1435,15 +1435,15 @@
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_valid_isbn</span><span class="p">():</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'9780306406157'</span><span class="p">)</span>
-    <span class="c1"># TODO: assert result is True</span>
+    <span class="c1"># TODO: assert result equals '9780306406157'</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_invalid_isbn</span><span class="p">():</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'not-an-isbn'</span><span class="p">)</span>
-    <span class="c1"># TODO: assert result is False</span>
+    <span class="c1"># TODO: assert result is None</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_wrong_length</span><span class="p">():</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">validate_isbn</span><span class="p">(</span><span class="s1">'123456789'</span><span class="p">)</span>
-    <span class="c1"># TODO: assert result is False</span>
+    <span class="c1"># TODO: assert result is None</span>
 </code></pre></div>
 <hr>
 <h2 id="run-your-tests">Run your tests</h2>

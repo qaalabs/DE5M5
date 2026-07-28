@@ -1319,7 +1319,7 @@ Developer opens PR -&gt; tests run automatically -&gt;
 <p>Only runs on PRs targeting main - not on every push. Walk through the steps: checkout, set up Python, install dependencies, run pytest with coverage.</p>
 <p>The coverage threshold line is commented out - you will uncomment it in a moment.</p>
 <h3 id="lintyml">lint.yml</h3>
-<p>Same trigger - runs on every PR to main. Installs ruff and runs <code>ruff check .</code> against the whole repo. If there are linting errors the PR is blocked. They fixed all their linting issues yesterday - this should pass cleanly.</p>
+<p>Same trigger - runs on every PR to main. Installs ruff and runs <code>ruff check src/</code> - the same command and scope taught in <code>day2/linting.md</code>. If there are linting errors the PR is blocked. They fixed all their linting issues yesterday - this should pass cleanly.</p>
 <h2 id="demo-open-a-pr-and-watch-ci-run">Demo: open a PR and watch CI run</h2>
 <p>On your (trainer) repo:</p>
 <ol>
