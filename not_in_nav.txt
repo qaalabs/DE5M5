@@ -1,1 +1,2 @@
 umfundi.md
+day2/validation-solution.md

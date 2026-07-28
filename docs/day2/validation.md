@@ -1,6 +1,6 @@
 # Activity: Implement ISBN Validation
 
-Open `src/data_processing/validation.py`. The `validate_isbn()` function currently returns `True` for everything - it needs real validation logic.
+Open `src/data_processing/validation.py`. The `validate_isbn()` function currently just returns whatever it was given - it needs real validation and cleaning logic.
 
 ## ISBN-13 rules
 
@@ -18,7 +18,7 @@ The 13th digit is a check digit calculated from the first 12:
 
 ## Your task
 
-Implement `validate_isbn()` so it returns `True` for a valid ISBN-13 and `False` for anything invalid.
+Implement `validate_isbn()` so it returns the cleaned ISBN-13 string (hyphens removed) if it's valid, or `None` if it's invalid. This is different from a plain `True`/`False` check - callers need the cleaned value back so it can be used as a join key later in the pipeline.
 
 ## Commit your work
 

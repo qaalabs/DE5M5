@@ -11,7 +11,18 @@ Your code is on `dev`. The goal is to get it onto `main` - with CI confirming it
 
 You will see two CI checks appear. Leave them running.
 
-## 2. Set a coverage threshold
+## 2. Require status checks before merging
+
+Now that the checks have run once, add real teeth to them:
+
+- Go to **Settings** -> **Branches** -> edit the `main` protection rule
+- Check **"Require status checks to pass before merging"**
+- Search for and select both: `test` and `ruff`
+- Leave **"Require branches to be up to date before merging"** unticked - nothing else is pushing to `main`, so it can never be out of date, and ticking it just adds an unnecessary extra step
+- Check **"Do not allow bypassing the above settings"** - without this, you're an admin on your own repo and can just click "Merge without waiting for requirements to be met (bypass rules)" regardless of whether checks pass
+- Click **Save changes**
+
+## 3. Set a coverage threshold
 
 In GitHub, navigate to `.github/workflows/ci.yml` on the `dev` branch. Click the pencil icon to edit.
 
@@ -23,13 +34,13 @@ pytest --cov=src --cov-fail-under=90
 
 Click **Commit changes** -> commit directly to `dev`.
 
-## 3. Watch it fail
+## 4. Watch it fail
 
 Go back to your pull request. Click **Details** on the CI check and watch it run.
 
 It will fail ❌. Read the output - what is it telling you?
 
-## 4. Lower the threshold and merge
+## 5. Lower the threshold and merge
 
 Edit `.github/workflows/ci.yml` in GitHub again. Change the threshold to 40:
 
