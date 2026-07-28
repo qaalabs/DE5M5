@@ -6,10 +6,6 @@
       
       
       
-        <link rel="prev" href="../cleaning-enhancements/">
-      
-      
-        <link rel="next" href="../python-testing/">
       
       
         
@@ -20,7 +16,7 @@
     
     
       
-        <title>Validation Function - M5 - Data Engineering Product Development</title>
+        <title>Solution: ISBN Validation - M5 - Data Engineering Product Development</title>
       
     
     
@@ -71,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activity-implement-isbn-validation" class="md-skip">
+        <a href="#solution-isbn-validation" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Validation Function
+              Solution: ISBN Validation
             
           </span>
         </div>
@@ -784,20 +780,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -818,7 +812,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1029,37 +1023,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Validation Function
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
         
   
   
@@ -1075,59 +1042,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#isbn-13-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ISBN-13 rules
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#your-task" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Your task
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commit-your-work" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commit your work
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1380,24 +1294,47 @@
 
 
 
-<h1 id="activity-implement-isbn-validation">Activity: Implement ISBN Validation</h1>
-<p>Open <code>src/data_processing/validation.py</code>. The <code>validate_isbn()</code> function currently just returns whatever it was given - it needs real validation and cleaning logic.</p>
-<h2 id="isbn-13-rules">ISBN-13 rules</h2>
+<h1 id="solution-isbn-validation">Solution: ISBN Validation</h1>
+<p><code>validate_isbn()</code> returns the cleaned ISBN-13 string if valid, or <code>None</code> if invalid - not <code>True</code>/<code>False</code>. This matters later: the cleaned value becomes the join key between catalogue and circulation data.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">validate_isbn</span><span class="p">(</span><span class="n">isbn</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">isbn</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">cleaned</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">isbn</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"-"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">13</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">cleaned</span><span class="p">:</span>
+        <span class="n">digits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">character</span><span class="p">))</span>
+
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+        <span class="n">digit</span> <span class="o">=</span> <span class="n">digits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">digit</span> <span class="o">*</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">digit</span> <span class="o">*</span> <span class="mi">3</span>
+
+    <span class="n">check_digit</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="p">(</span><span class="n">total</span> <span class="o">%</span> <span class="mi">10</span><span class="p">))</span> <span class="o">%</span> <span class="mi">10</span>
+
+    <span class="k">if</span> <span class="n">check_digit</span> <span class="o">!=</span> <span class="n">digits</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">cleaned</span>
+</code></pre></div>
+<p>Walking through it:</p>
 <ul>
-<li>Must be exactly 13 digits (hyphens may appear in the input - strip them first)</li>
-<li>All characters must be digits</li>
+<li><strong><code>None</code> in, <code>None</code> out</strong> - handle the missing-value case first, before any string operations.</li>
+<li><strong>Strip hyphens, then check shape</strong> - <code>cleaned.isdigit()</code> rejects anything with letters or other punctuation left in it; <code>len(cleaned) != 13</code> rejects anything the wrong length. Both checks combine into one early return.</li>
+<li><strong>Turn the string into a list of numbers</strong> - <code>cleaned</code> is a string like <code>"9783161484100"</code>. The loop goes through it one character at a time and builds up a list of actual integers, e.g. <code>[9, 7, 8, 3, ...]</code>, so they can be used in arithmetic.</li>
+<li><strong>Weight and sum the first 12 digits</strong> - loop over positions <code>0</code> to <code>11</code> (<code>range(12)</code>). <code>i % 2 == 0</code> is <code>True</code> for positions 0, 2, 4, ... (the 1<sup>st</sup>, 3<sup>rd</sup>, 5<sup>th</sup> digit, and so on, since counting starts at 0) - those get multiplied by 1. The rest get multiplied by 3. Add each result to a running <code>total</code>.</li>
+<li><strong>Work out the check digit</strong> - <code>total % 10</code> is the remainder when dividing by 10. <code>10 - that remainder</code> gives the check digit, except when the remainder is 0 - the second <code>% 10</code> handles that edge case so the result is always <code>0</code>-<code>9</code>.</li>
+<li><strong>Compare to the 13<sup>th</sup> digit</strong> - <code>digits[12]</code> is the last digit (position 12, since the list is 0-indexed and has 13 items). If it doesn't match the check digit you just calculated, the ISBN is invalid.</li>
+<li><strong>Return the cleaned string, not the original input</strong> - the caller shouldn't have to re-strip hyphens themselves.</li>
 </ul>
-<h3 id="stretch-addition">Stretch addition</h3>
-<p>The 13<sup>th</sup> digit is a check digit calculated from the first 12:</p>
-<ul>
-<li>Multiply each digit alternately by 1 and 3</li>
-<li>Sum the results</li>
-<li>Check digit = <code>(10 - (sum % 10)) % 10</code></li>
-<li>If your calculated check digit matches the 13<sup>th</sup> digit, the ISBN is valid</li>
-</ul>
-<h2 id="your-task">Your task</h2>
-<p>Implement <code>validate_isbn()</code> so it returns the cleaned ISBN-13 string (hyphens removed) if it's valid, or <code>None</code> if it's invalid. This is different from a plain <code>True</code>/<code>False</code> check - callers need the cleaned value back so it can be used as a join key later in the pipeline.</p>
-<h2 id="commit-your-work">Commit your work</h2>
+<h2 id="commit">Commit</h2>
 <p>In VS Code open the <strong>Source Control</strong> panel (<code>Ctrl+Shift+G</code>).</p>
 <ul>
 <li>Click <strong>+</strong> next to <code>src/data_processing/validation.py</code> to stage it</li>
