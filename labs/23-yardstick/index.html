@@ -9,7 +9,7 @@
         <link rel="prev" href="../../day2/linting-fixes/">
       
       
-        <link rel="next" href="../../resources/">
+        <link rel="next" href="../../day3/github-actions/">
       
       
         
@@ -370,6 +370,34 @@
     
   
     Day 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agenda/day3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3
   
 
     
@@ -1535,6 +1563,284 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3 ~ Automation &amp; Integration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Day 3 ~ Automation &amp; Integration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/github-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/github-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions ~ Trigger Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/github-explore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explore GitHub History &amp; Logs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/pipeline-runner/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run the Pipeline Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../day3/ssms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Create Database in SSMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-lakehouse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    01 Create Fabric Lakehouse
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33-library-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run pipeline in MS Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33-library-pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run pipeline in MS Fabric
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../resources/" class="md-nav__link">
         
@@ -1582,14 +1888,13 @@
 <h2 id="step-1-tests-pass-and-coverage">Step 1: Tests pass and coverage</h2>
 <ol>
 <li>
-<p>Run PyTest:</p>
-<div class="highlight"><pre><span></span><code>pytest
+<p>Run PyTest with coverage, saving the result to a file:</p>
+<div class="highlight"><pre><span></span><code>pytest --cov=src --cov-report=term-missing --color=no -q &gt; pytest_result.txt
 </code></pre></div>
+<p>Open <code>pytest_result.txt</code> in VS Code.</p>
 <div class="admonition success">
 <p class="admonition-title">All tests should pass. A failing test means broken code.</p>
 </div>
-<div class="highlight"><pre><span></span><code>pytest --cov=src
-</code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Coverage should be above 70%.</p>
 <p>Below 70% means you do not have enough tests to trust the code in production.</p>
@@ -1632,7 +1937,7 @@
 <li>
 <p>In VS Code open the <strong>Source Control</strong> panel (<code>Ctrl+Shift+G</code>).</p>
 <ul>
-<li>Stage: <code>report.txt</code></li>
+<li>Stage: <code>report.txt</code> and <code>pytest_result.txt</code></li>
 <li>Commit message: <code>Add pipeline report</code></li>
 <li>Click: Sync Changes</li>
 </ul>
