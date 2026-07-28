@@ -1,2 +1,3 @@
 umfundi.md
 day2/validation-solution.md
+day2/cleaning-tests-solution.md
