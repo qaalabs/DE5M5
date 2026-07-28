@@ -1302,7 +1302,10 @@
 
     <span class="n">cleaned</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">isbn</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"-"</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">13</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cleaned</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">13</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
 
     <span class="n">digits</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1327,7 +1330,8 @@
 <p>Walking through it:</p>
 <ul>
 <li><strong><code>None</code> in, <code>None</code> out</strong> - handle the missing-value case first, before any string operations.</li>
-<li><strong>Strip hyphens, then check shape</strong> - <code>cleaned.isdigit()</code> rejects anything with letters or other punctuation left in it; <code>len(cleaned) != 13</code> rejects anything the wrong length. Both checks combine into one early return.</li>
+<li><strong>Check it's all digits</strong> - <code>cleaned.isdigit()</code> is <code>True</code> only if every character in the string is a digit. If there's a letter, a stray space, or any other punctuation left over after stripping hyphens, this catches it.</li>
+<li><strong>Check it's the right length</strong> - a valid ISBN-13 is exactly 13 digits, so anything shorter or longer is rejected here.</li>
 <li><strong>Turn the string into a list of numbers</strong> - <code>cleaned</code> is a string like <code>"9783161484100"</code>. The loop goes through it one character at a time and builds up a list of actual integers, e.g. <code>[9, 7, 8, 3, ...]</code>, so they can be used in arithmetic.</li>
 <li><strong>Weight and sum the first 12 digits</strong> - loop over positions <code>0</code> to <code>11</code> (<code>range(12)</code>). <code>i % 2 == 0</code> is <code>True</code> for positions 0, 2, 4, ... (the 1<sup>st</sup>, 3<sup>rd</sup>, 5<sup>th</sup> digit, and so on, since counting starts at 0) - those get multiplied by 1. The rest get multiplied by 3. Add each result to a running <code>total</code>.</li>
 <li><strong>Work out the check digit</strong> - <code>total % 10</code> is the remainder when dividing by 10. <code>10 - that remainder</code> gives the check digit, except when the remainder is 0 - the second <code>% 10</code> handles that edge case so the result is always <code>0</code>-<code>9</code>.</li>
