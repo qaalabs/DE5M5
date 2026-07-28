@@ -50,7 +50,7 @@ If you accidentally edit a file on `main`, GitHub will create a branch and a PR 
 
 First, make sure you're on the `dev` branch - check the branch dropdown shows **dev**, not **main**.
 
-- Navigate to `docs/architecture/index.md`
+- Navigate to `docs/architecture/design-pipeline.md` - already in your repo, from the template
 - Click the pencil icon to edit
 - Paste your Mermaid diagram from the design activity
 - Click **"Commit changes"** - in the dialog, confirm the branch is **dev**
@@ -60,8 +60,8 @@ First, make sure you're on the `dev` branch - check the branch dropdown shows **
 
 Stay on the **dev** branch.
 
-- Click **"Add file"** → **"Create new file"**
-- Name it: `docs/architecture/ADR-001.md`
+- Navigate to `docs/architecture/ADR-001.md` - already in your repo, from the template
+- Click the pencil icon to edit
 - Paste your ADR from Notepad
 - Click **"Commit changes"** - confirm the branch is **dev**
 
