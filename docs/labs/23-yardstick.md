@@ -8,18 +8,22 @@ These four checks are your measure of production-ready code. Run them now to see
 
 ## Step 1: Tests pass and coverage
 
-1. Run PyTest with coverage, saving the result to a file:
+1. Run PyTest with coverage:
+
+    ```
+    pytest --cov=src
+    ```
+
+2. Run PyTest with coverage, saving the result to a file:
 
     ```
     pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
     ```
 
-    Open `pytest_result.txt` in VS Code.
+!!! success "All tests should pass. A failing test means broken code."
 
-    !!! success "All tests should pass. A failing test means broken code."
-
-    !!! info "Coverage should be above 70%."
-        Below 70% means you do not have enough tests to trust the code in production.
+!!! info "Coverage should be above 70%."
+    Below 70% means you do not have enough tests to trust the code in production.
 
 
 ## Step 2: Code quality
@@ -36,13 +40,19 @@ These four checks are your measure of production-ready code. Run them now to see
 
 ## Step 3: Pipeline output
 
-1. Save the output to a file. Run:
+1. Run your pipeline:
+
+    ```
+    python -m data_processing.run_pipeline
+    ```
+
+2. Run and Save the output to a file:
 
     ```
     python -m data_processing.run_pipeline > report.txt
     ```
 
-2. Open `report.txt` in VS Code.
+3. Open `report.txt` in VS Code.
 
     For each dataset, compare the **Raw data** numbers against the **Cleaned data** numbers:
 
