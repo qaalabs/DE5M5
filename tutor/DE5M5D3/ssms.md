@@ -1,0 +1,4 @@
+- `python load_to_sql.py` loads the just-cleaned data into the local SQL Server instance first
+- Six queries are provided - the join at the end is the one to explain: it joins on `ISBN_Clean`, not raw `isbn`/`ISBN`, because catalogue ISBNs inconsistently lose their hyphens
+- Last task is open-ended ("write your own query") - leave a couple of minutes for it, don't cut straight to VM-POWERBI
+- Leads straight into VM-POWERBI - same data, same SQL Server connection, now in a report

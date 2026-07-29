@@ -1,0 +1,6 @@
+- Explain CI/CD with the before/after contrast in `day3/github-actions.md` before showing any code
+- Walk through the two files in `.github/workflows/`: `ci.yml` (PR-triggered, installs + runs pytest with coverage) and `lint.yml` (runs the same `ruff check src/` from Day 2)
+- The coverage line in `ci.yml` is commented out - leave it for now, you'll toggle it live in a moment
+- Demo on your own (trainer) repo: open a PR from `dev` into `main`, show both checks appear automatically
+- Set the coverage threshold to 90, commit to `dev`, watch the PR check fail - then drop it to 40, watch it pass, merge
+- Ruff should pass cleanly - they fixed all their linting issues in yesterday's LINTING-FIX block

@@ -1,0 +1,5 @@
+- Self-directed - `day3/github-explore.md` is a checklist, not a demo; let them click around
+- Steer them to the Actions tab first - the full pytest output and coverage summary are buried in the logs there
+- Insights -> Network is worth pointing out if no one finds it themselves - shows the dev branch and merge point visually
+- Not everyone will have a failed run to inspect - that bullet is optional, don't make it a requirement
+- Good moment to circulate 1:1 rather than run this from the front

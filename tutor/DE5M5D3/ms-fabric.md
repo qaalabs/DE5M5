@@ -1,0 +1,5 @@
+- Follow `labs/33-library-pipeline` Steps 1-5 - their own package running for real this time, not this morning's practice data
+- Cell 1 installs from their own GitHub repo URL - same pattern as RUNNER, same place learners get it wrong
+- Cell 4's explicit `pd.to_datetime` calls matter - forces a real datetime dtype regardless of how each learner's own `standardise_dates()` formatted it, and Step 7's gold query depends on it
+- Spans the PM break - Cell 6 (silver_circulation saved) is a natural pause point; events data and Step 5 exploration pick up after
+- Stop the Spark session before the break and before starting the Silver to Gold notebook, or they'll hit `TooManyRequestsForCapacity` - that's exactly where FABRIC-GOLD picks up
