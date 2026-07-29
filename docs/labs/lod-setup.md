@@ -1,8 +1,8 @@
-# Day 2 Setup
+# VM / LOD Setup
 
-Your VM has reset overnight. Everything is gone except your GitHub repo. This activity gets you back to a working environment.
+Use this whenever you land on a fresh environment - your VM has reset overnight, or your LOD lab session has expired. Everything is gone except your GitHub repo. These steps get you back to a working environment.
 
-!!! note "Do all the step below in your Virtual Machine"
+!!! note "Do all the steps below in your Virtual Machine"
 
 ## Start your Virtual Machine
 
@@ -78,4 +78,3 @@ Your VM has reset overnight. Everything is gone except your GitHub repo. This ac
         - Signin to complete the authentication process.
 
     !!! success "If you are not prompted, your credentials are already cached and you are good to go."
-

@@ -2,8 +2,8 @@
 
 You've had `mkdocs` sitting in `requirements_dev.txt` since Day 1. Today you'll use it - and finally get your Day 1 architecture diagram rendering properly instead of sitting as a wall of Mermaid text.
 
-!!! note "Your VM has reset overnight"
-    Re-clone your repo and switch to `dev` as in [Day 4 Setup](40-setup.md) if you haven't already.
+!!! note "Your VM has reset, or your LOD session has expired"
+    Re-clone your repo and switch to `dev` as in [VM / LOD Setup](lod-setup.md) if you haven't already.
 
 
 ## Step 1: Get on `dev` and up to date
