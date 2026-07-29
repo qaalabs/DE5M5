@@ -11,7 +11,7 @@
 ## Session 2
 
 - [Lab: Build MkDocs Site](../labs/43-mkdocs-site.md)
-- Introduce Presentation Task
+- [Introduce Presentation Task](../day4/presentations.md)
 - Prepare for Presentations
 
 ## 🥪🥤 Lunch Break

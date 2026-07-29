@@ -103,7 +103,7 @@
 ### Session 2
 
 - `11:00` [Lab: Build MkDocs Site](labs/43-mkdocs-site.md) (30 mins)
-- `11:30` Introduce Presentation Task (10 mins)
+- `11:30` [Introduce Presentation Task](day4/presentations.md) (10 mins)
 - `11:40` Prepare for Presentations (40 mins)
 
 ### Session 3

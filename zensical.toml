@@ -56,6 +56,7 @@ nav = [
     {"Start QA MS Fabric Platform" = "labs/41-fabric-setup.md"},
     {"Lab: Run MS Fabric Pipeline" = "labs/42-fabric-pipeline.md"},
     {"Lab: Build MkDocs Site" = "labs/43-mkdocs-site.md"},
+    {"Introduce Presentation Task" = "day4/presentations.md"},
   ]},
   {"Resources" = "resources.md"},
 ]
