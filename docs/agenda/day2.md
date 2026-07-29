@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- [🌅 Welcome to Day 2 of DE5 Module 5](../labs/21-setup.md)
+- 🌅 Welcome to Day 2 of DE5 Module 5
 - [🖥️ VM Setup + LOD Setup](../labs/22-python-setup.md)
 - [Run Commands to see Status](../labs/yardstick.md)
 - **Demo**: [Explain function - Data Ingestion](../day2/ingestion.md)
