@@ -20,10 +20,10 @@ These four checks are your measure of production-ready code. Run them now to see
     pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
     ```
 
-!!! success "All tests should pass. A failing test means broken code."
+    !!! success "All tests should pass. A failing test means broken code."
 
-!!! info "Coverage should be above 70%."
-    Below 70% means you do not have enough tests to trust the code in production.
+    !!! info "Coverage should be above 70%."
+        Below 70% means you do not have enough tests to trust the code in production.
 
 
 ## Step 2: Code quality

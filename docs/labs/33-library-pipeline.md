@@ -2,6 +2,7 @@
 
 In this lab, you will run a real Python package - the one you built and tested yourself - inside Microsoft Fabric. You will land raw library data in **bronze**, clean it with your own package code to produce **silver**, then build a **gold** table that answers a business question.
 
+
 ## Step 1: Start the Microsoft Fabric Playground
 
 1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
@@ -13,6 +14,7 @@ In this lab, you will run a real Python package - the one you built and tested y
 !!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
 
 !!! tip "Switch to your Virtual Machine to complete the steps listed below."
+
 
 ## Step 2: Logon to Azure and Microsoft Fabric
 
@@ -93,9 +95,12 @@ The bronze layer holds raw data exactly as it arrived - no modifications.
 
 ## Step 6: Create the Bronze to Silver notebook
 
-Silver is where raw data becomes trusted - using the same package you built and tested locally, now running in the cloud.
+*Silver is where raw data becomes trusted - using the same package you built and tested locally, now running in the cloud.*
 
-1. On the **Home** tab of the lakehouse, select **Open notebook** > **New notebook**.
+1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
+
+    !!! quote ""
+        ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
 
 2. Select the notebook name at the top of the page and rename it to `Library Pipeline - Bronze to Silver`.
 

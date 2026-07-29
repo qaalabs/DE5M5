@@ -31,7 +31,7 @@ ORDER BY titles DESC;
 ```sql
 SELECT ISBN, Title, Author
 FROM catalogue_clean
-WHERE ISBN_valid = 0;
+WHERE ISBN_Clean IS NULL;
 ```
 
 **Average event feedback score by branch**
@@ -50,5 +50,16 @@ SELECT branch, rating, count
 FROM feedback_summary
 ORDER BY branch, rating;
 ```
+
+**Join circulation to catalogue**
+
+```sql
+SELECT c.transaction_id, c.checkout_date, cat.Title, cat.Author
+FROM circulation_clean c
+JOIN catalogue_clean cat
+  ON c.ISBN_Clean = cat.ISBN_Clean;
+```
+
+This joins on `ISBN_Clean`, not the raw `isbn`/`ISBN` columns - the raw values have inconsistent formatting (some catalogue ISBNs lose their hyphens and become plain numbers), so the join only works cleanly once `validate_isbn()` normalises both sides.
 
 Write your own query - find something interesting in the data.
