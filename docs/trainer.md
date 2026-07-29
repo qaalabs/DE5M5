@@ -81,8 +81,8 @@
 
 ### Session 3
 
-- `13:20` Start the QA Fabric Playground (10 mins)
-- `13:30` **Practice**: [01 Create Fabric Lakehouse](labs/01-lakehouse.md) (40 mins)
+- `13:20` **Activity**: [Start the QA Fabric Playground](labs/31-fabric-setup.md) (10 mins)
+- `13:30` **Practice**: [01 Create Fabric Lakehouse](labs/32-lakehouse.md) (40 mins)
 - `14:10` **Activity**: [Run pipeline in MS Fabric](labs/33-library-pipeline.md) (20 mins)
 
 ### Session 4
@@ -97,12 +97,12 @@
 
 ### Session 1
 
-- `09:40` Start QA MS Fabric Platform (10 mins)
-- `09:50` [Lab: Run MS Fabric Pipeline](labs/41-fabric-pipeline.md) (50 mins)
+- `09:40` [Start QA MS Fabric Platform](labs/41-fabric-setup.md) (10 mins)
+- `09:50` [Lab: Run MS Fabric Pipeline](labs/42-fabric-pipeline.md) (50 mins)
 
 ### Session 2
 
-- `11:00` [Lab: Build MkDocs Site](labs/42-mkdocs-site.md) (30 mins)
+- `11:00` [Lab: Build MkDocs Site](labs/43-mkdocs-site.md) (30 mins)
 - `11:30` Introduce Presentation Task (10 mins)
 - `11:40` Prepare for Presentations (40 mins)
 

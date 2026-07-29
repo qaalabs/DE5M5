@@ -47,13 +47,15 @@ nav = [
     {"Explore GitHub History & Logs" = "day3/github-explore.md"},
     {"Run the Pipeline Runner" = "day3/pipeline-runner.md"},
     {"Create Database in SSMS" = "day3/ssms.md"},
-    {"01 Create Fabric Lakehouse" = "labs/01-lakehouse.md"},
+    {"Start the QA Fabric Playground" = "labs/31-fabric-setup.md"},
+    {"01 Create Fabric Lakehouse" = "labs/32-lakehouse.md"},
     {"Run pipeline in MS Fabric" = "labs/33-library-pipeline.md"},
     {"Create Gold Layer Table" = "labs/33-library-pipeline.md"},
   ]},
   {"Day 4 ~ Orchestrate & Present" = [
-    {"Lab: Run MS Fabric Pipeline" = "labs/41-fabric-pipeline.md"},
-    {"Lab: Build MkDocs Site" = "labs/42-mkdocs-site.md"},
+    {"Start QA MS Fabric Platform" = "labs/41-fabric-setup.md"},
+    {"Lab: Run MS Fabric Pipeline" = "labs/42-fabric-pipeline.md"},
+    {"Lab: Build MkDocs Site" = "labs/43-mkdocs-site.md"},
   ]},
   {"Resources" = "resources.md"},
 ]

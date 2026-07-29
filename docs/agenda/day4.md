@@ -3,14 +3,14 @@
 ## Session 1
 
 - 🌅 Welcome to Day 4 of DE5 Module 5
-- Start QA MS Fabric Platform
-- [Lab: Run MS Fabric Pipeline](../labs/41-fabric-pipeline.md)
+- [Start QA MS Fabric Platform](../labs/41-fabric-setup.md)
+- [Lab: Run MS Fabric Pipeline](../labs/42-fabric-pipeline.md)
 
 ## ☕ Morning Break
 
 ## Session 2
 
-- [Lab: Build MkDocs Site](../labs/42-mkdocs-site.md)
+- [Lab: Build MkDocs Site](../labs/43-mkdocs-site.md)
 - Introduce Presentation Task
 - Prepare for Presentations
 

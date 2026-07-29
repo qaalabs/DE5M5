@@ -19,8 +19,8 @@
 
 ## Session 3
 
-- Start the QA Fabric Playground
-- **Practice**: [01 Create Fabric Lakehouse](../labs/01-lakehouse.md)
+- **Activity**: [Start the QA Fabric Playground](../labs/31-fabric-setup.md)
+- **Practice**: [01 Create Fabric Lakehouse](../labs/32-lakehouse.md)
 - **Activity**: [Run pipeline in MS Fabric](../labs/33-library-pipeline.md)
 
 ## ☕ Afternoon Break
