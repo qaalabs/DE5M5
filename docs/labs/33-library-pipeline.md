@@ -2,46 +2,10 @@
 
 In this lab, you will run a real Python package - the one you built and tested yourself - inside Microsoft Fabric. You will land raw library data in **bronze**, clean it with your own package code to produce **silver**, then build a **gold** table that answers a business question.
 
-
-## Step 1: Start the Microsoft Fabric Playground
-
-1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
-
-2. Click **Start** to start the lab.
-
-3. Make a note of your allocated **username** and **password**.
-
-!!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
-
-!!! tip "Switch to your Virtual Machine to complete the steps listed below."
+!!! info "This lab continues from [32 Create Fabric Lakehouse](32-lakehouse.md). You should already be logged on to the Microsoft Fabric Playground."
 
 
-## Step 2: Logon to Azure and Microsoft Fabric
-
-1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
-
-    !!! abstract ""
-        ![Fabric home page](img/qa-fabric-home.png)
-
-
-## Step 3: Create a workspace
+## Step 1: Create a workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -56,7 +20,7 @@ In this lab, you will run a real Python package - the one you built and tested y
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 4: Create a lakehouse
+## Step 2: Create a lakehouse
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
@@ -70,7 +34,7 @@ In this lab, you will run a real Python package - the one you built and tested y
         ![New lakehouse.](img/new-lakehouse.png)
 
 
-## Step 5: Create the bronze layer
+## Step 3: Create the bronze layer
 
 The bronze layer holds raw data exactly as it arrived - no modifications.
 
@@ -93,14 +57,14 @@ The bronze layer holds raw data exactly as it arrived - no modifications.
         Never write transformed data into the bronze folder. If you need to re-run the pipeline from scratch, bronze is your guaranteed clean starting point.
 
 
-## Step 6: Create the Bronze to Silver notebook
+## Step 4: Create the Bronze to Silver notebook
 
 *Silver is where raw data becomes trusted - using the same package you built and tested locally, now running in the cloud.*
 
 1. At the top-right of the Lakehouse page, select the **Analyze data with** dropdown and choose: **Notebook** > **New notebook**.
 
     !!! quote ""
-        ![Lakehouse new notebook](../img/qa-lakehouse-notebook.png)
+        ![Lakehouse new notebook](img/qa-lakehouse-notebook.png)
 
 2. Select the notebook name at the top of the page and rename it to `Library Pipeline - Bronze to Silver`.
 
@@ -163,7 +127,7 @@ print(f'Silver: {len(df)} rows')
 ```
 
 !!! note "Why the explicit `pd.to_datetime` calls?"
-    `standardise_dates()` is a function you wrote on Day 2, so its output format may differ between students. Forcing both date columns to a real `datetime` dtype here guarantees they are saved as proper date columns in the Delta table, which the gold layer query in Step 9 depends on.
+    `standardise_dates()` is a function you wrote on Day 2, so its output format may differ between students. Forcing both date columns to a real `datetime` dtype here guarantees they are saved as proper date columns in the Delta table, which the gold layer query in Step 7 depends on.
 
 ### Cell 5 - Validate before saving
 
@@ -220,7 +184,7 @@ print('Saved: silver_events')
 After running all eight cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
 
 
-## Step 7: Explore the silver layer
+## Step 5: Explore the silver layer
 
 Silver is the trust boundary - anyone querying these tables knows the data has been cleaned and validated.
 
@@ -245,7 +209,7 @@ Silver is the trust boundary - anyone querying these tables knows the data has b
     ```
 
 
-## Step 8: Create the Silver to Gold notebook
+## Step 6: Create the Silver to Gold notebook
 
 Gold answers a specific business question. It is always built from silver - never from bronze directly.
 
@@ -280,7 +244,7 @@ ORDER BY month, branch_id
 !!! success "Refresh the **Tables** pane - `gold_circulation_summary` should now be listed."
 
 
-## Step 9: Answer the business question
+## Step 7: Answer the business question
 
 1. In the left navigation bar, select your **library_pipeline** lakehouse.
 

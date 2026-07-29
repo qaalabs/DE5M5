@@ -2,45 +2,9 @@
 
 Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time. In this lab you will do the same job with a single click: a **pipeline** that runs both notebooks in sequence, on demand, as many times as you like.
 
-## Step 1: Start the Microsoft Fabric Playground
+!!! info "This lab continues from [Start the QA Fabric Playground](41-fabric-setup.md). You should already be logged on to Azure and Microsoft Fabric."
 
-1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
-
-2. Click **Start** to start the lab.
-
-3. Make a note of your allocated **username** and **password**.
-
-!!! warning "Wait until the lab status shows **Ready**, before continuing with the next step!"
-
-!!! tip "Switch to your Virtual Machine to complete the steps listed below."
-
-
-## Step 2: Logon to Azure and Microsoft Fabric
-
-1. In your VM open a **private browsing window** (InPrivate in Edge, Incognito in Chrome).
-
-2. Navigate to the [Microsoft Azure home page](https://portal.azure.com/) at: https://portal.azure.com
-
-3. When prompted, sign in using:
-
-    - **Username** from the QA Platform (used as the email address)
-    - **Password** from the QA Platform (used as a Temporary Access Pass)
-
-    - If prompted to "Stay signed in?", select **No**.
-
-    !!! success "You are now signed in to the **Azure portal**. This confirms your lab account is active."
-
-4. In the same private browsing window, **open a new tab**.
-
-5. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric-developer) at: https://app.fabric.microsoft.com/home?experience=fabric-developer
-
-6. If prompted, **re-enter your email address** to confirm access to Microsoft Fabric.
-
-    !!! abstract ""
-        ![Fabric home page](img/qa-fabric-home.png)
-
-
-## Step 3: Create a workspace
+## Step 1: Create a workspace
 
 1. In the navigation pane on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
@@ -55,7 +19,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
         ![Empty workspace in Fabric.](img/new-workspace.png)
 
 
-## Step 4: Create a lakehouse
+## Step 2: Create a lakehouse
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
@@ -69,7 +33,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
         ![New lakehouse.](img/new-lakehouse.png)
 
 
-## Step 5: Create the bronze layer
+## Step 3: Create the bronze layer
 
 1. In the **Explorer** pane, click the **...** menu for the **Files** folder and select **New subfolder**.
 
@@ -86,7 +50,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
     !!! tip "If the file does not automatically appear, select **Refresh** from the **...** menu."
 
 
-## Step 6: Import the notebooks
+## Step 4: Import the notebooks
 
 !!! info "Rather than building the notebooks cell by cell like yesterday, you will import two ready-made ones from your own repo."
 
@@ -105,7 +69,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
     !!! success "Both notebooks should now appear as items in your workspace."
 
 
-## Step 7: Attach the lakehouse and edit Cell 1
+## Step 5: Attach the lakehouse and edit Cell 1
 
 1. In the left navigation bar, select your **library_pipeline** lakehouse.
 
@@ -142,10 +106,10 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
     !!! success "Both notebooks are now connected to the library_pipeline lakehouse."
 
-    !!! tip "You don't need to run either notebook yourself - the pipeline will do that in Step 9."
+    !!! tip "You don't need to run either notebook yourself - the pipeline will do that in Step 7."
 
 
-## Step 8: Build the pipeline
+## Step 6: Build the pipeline
 
 1. Return to your workspace view.
 
@@ -191,7 +155,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
         **Silver to Gold** only runs once **Bronze to Silver** has completed without errors.
 
 
-## Step 9: Save and Run the pipeline
+## Step 7: Save and Run the pipeline
 
 1. On the **Home** tab, use the :material-content-save: (*Save*) icon to save the pipeline.
 
@@ -215,7 +179,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
     !!! success "The pipeline built this table on its own - no cells, no manual steps."
 
 
-## Step 10: Run it again
+## Step 8: Run it again
 
 1. Return to the `Library Pipeline` pipeline.
 

@@ -1,4 +1,4 @@
-- Still in the lab at Step 9 of `labs/33-library-pipeline`
+- Still in the lab at Step 7 of `labs/33-library-pipeline`
 - Right-click `gold_circulation_summary` -> **New report**
 - Drag `month` to X axis, `total_loans` as a bar or line chart
 - Draw the comparison: this morning they built the same visual from SQL Server on the VM - same data, same question, cloud platform
