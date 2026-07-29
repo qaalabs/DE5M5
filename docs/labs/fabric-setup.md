@@ -38,3 +38,6 @@
 
     !!! abstract ""
         ![Fabric home page](img/qa-fabric-home.png)
+
+!!! success "You are now ready to do the allocated lab!"
+
