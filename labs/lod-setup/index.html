@@ -5,13 +5,9 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M5/labs/21-setup/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M5/labs/lod-setup/">
       
       
-        <link rel="prev" href="../../day1/write-code/">
-      
-      
-        <link rel="next" href="../22-python-setup/">
       
       
         
@@ -22,7 +18,7 @@
     
     
       
-        <title>🌅 Welcome to Day 2 of DE5 Module 5 - M5 - Data Engineering Product Development</title>
+        <title>VM / LOD Setup - M5 - Data Engineering Product Development</title>
       
     
     
@@ -73,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-2-setup" class="md-skip">
+        <a href="#vm-lod-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🌅 Welcome to Day 2 of DE5 Module 5
+              VM / LOD Setup
             
           </span>
         </div>
@@ -842,20 +838,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -876,7 +870,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -886,158 +880,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🌅 Welcome to Day 2 of DE5 Module 5
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    🌅 Welcome to Day 2 of DE5 Module 5
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-      
-        <li class="md-nav__item">
-  <a href="#start-your-virtual-machine" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Start your Virtual Machine
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-log-in-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 1: Log in to GitHub
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-open-terminal" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 2: Open Terminal
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-git-config" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Git config
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-clone-your-repo" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 4: Clone your repo
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-switch-to-the-dev-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 5: Switch to the dev branch
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-6-authenticate-with-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 6: Authenticate with GitHub
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
             
               
                 
@@ -1954,10 +1796,10 @@
 
 
 
-<h1 id="day-2-setup">Day 2 Setup</h1>
-<p>Your VM has reset overnight. Everything is gone except your GitHub repo. This activity gets you back to a working environment.</p>
+<h1 id="vm-lod-setup">VM / LOD Setup</h1>
+<p>Use this whenever you land on a fresh environment - your VM has reset overnight, or your LOD lab session has expired. Everything is gone except your GitHub repo. These steps get you back to a working environment.</p>
 <div class="admonition note">
-<p class="admonition-title">Do all the step below in your Virtual Machine</p>
+<p class="admonition-title">Do all the steps below in your Virtual Machine</p>
 </div>
 <h2 id="start-your-virtual-machine">Start your Virtual Machine</h2>
 <h2 id="step-1-log-in-to-github">Step 1: Log in to GitHub</h2>

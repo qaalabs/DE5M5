@@ -181,10 +181,6 @@
          <lastmod>2026-07-29</lastmod>
     </url>
     <url>
-         <loc>https://qaalabs.github.io/DE5M5/labs/21-setup/</loc>
-         <lastmod>2026-07-29</lastmod>
-    </url>
-    <url>
          <loc>https://qaalabs.github.io/DE5M5/labs/22-python-setup/</loc>
          <lastmod>2026-07-29</lastmod>
     </url>
@@ -197,10 +193,6 @@
          <lastmod>2026-07-29</lastmod>
     </url>
     <url>
-         <loc>https://qaalabs.github.io/DE5M5/labs/40-setup/</loc>
-         <lastmod>2026-07-29</lastmod>
-    </url>
-    <url>
          <loc>https://qaalabs.github.io/DE5M5/labs/42-fabric-pipeline/</loc>
          <lastmod>2026-07-29</lastmod>
     </url>
@@ -210,6 +202,10 @@
     </url>
     <url>
          <loc>https://qaalabs.github.io/DE5M5/labs/fabric-setup/</loc>
+         <lastmod>2026-07-29</lastmod>
+    </url>
+    <url>
+         <loc>https://qaalabs.github.io/DE5M5/labs/lod-setup/</loc>
          <lastmod>2026-07-29</lastmod>
     </url>
     <url>
