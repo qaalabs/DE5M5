@@ -9,23 +9,8 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
     - Day 3: agenda/day3.md
-
-  - "Day 1 ~ Foundation & Setup":
-    - "Library Pipeline Scenario": day1/scenario.md
-    - "Library Pipeline Sample Data": day1/sample-data.md
-    - "Your Mission": day1/your-mission.md
-    - "Creating Architecture Diagrams": day1/create-diagram.md
-    - "Design your pipeline architecture": day1/design-pipeline.md
-    - "Writeup Architecture Decision Record": day1/adr.md
-    - "Create a GitHub repository": day1/create-repo.md
-    - "Introduce GitHub Projects": day1/create-project.md
-    - "Set up Kanban Board": day1/project-tasks.md
-    - "Local development": day1/clone-repo.md
-    - "Create local development env": day1/dev-environment.md
-    - "Write first Python code": day1/write-code.md
 
   - "Day 2 ~ Build & Test Python Package":
     - "🌅 Welcome to Day 2 of DE5 Module 5": labs/21-setup.md
@@ -67,6 +52,7 @@ not_in_nav: |
   labs/40-setup.md
   umfundi.md
   day2/validation-solution.md
+  day2/cleaning-tests-solution.md
 
 
 # Theme
