@@ -1,5 +1,6 @@
 # Site name
 site_name: M5 - Data Engineering Product Development
+site_url: https://qaalabs.github.io/DE5M5/
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
