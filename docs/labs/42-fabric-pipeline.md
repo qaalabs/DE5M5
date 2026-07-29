@@ -2,7 +2,7 @@
 
 Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time. In this lab you will do the same job with a single click: a **pipeline** that runs both notebooks in sequence, on demand, as many times as you like.
 
-!!! info "This lab continues from [Start the QA Fabric Playground](41-fabric-setup.md). You should already be logged on to Azure and Microsoft Fabric."
+!!! info "This lab continues from [Start the QA Fabric Playground](fabric-setup.md). You should already be logged on to Azure and Microsoft Fabric."
 
 ## Step 1: Create a workspace
 

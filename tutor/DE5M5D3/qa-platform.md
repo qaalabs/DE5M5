@@ -1,3 +1,3 @@
-- Follow `labs/31-fabric-setup` - start the playground, then log in to Azure and Fabric
+- Follow `labs/fabric-setup` - start the playground, then log in to Azure and Fabric
 - Provisioning takes a few minutes - warn them the 3-hour window starts now
 - Do not move on until everyone has a green Fabric home page

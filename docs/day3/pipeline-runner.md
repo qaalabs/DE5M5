@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ## 3. Install your package
 
 ```powershell
-pip install git+https://github.com/YOUR_ORG/YOUR_REPO.git
+pip install git+https://github.com/YOUR_USERNAME/YOUR_REPO.git
 ```
 
 ## 4. Run the pipeline
