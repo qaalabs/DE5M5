@@ -1,5 +1,7 @@
 # Activity: Fix Linting Errors
 
+!!! abstract "S17: Apply and advocate for software development best practice when working with other data professionals throughout the business. Contribute to standards and ways of working that support software development principles."
+
 ## Step 1: Run the linter
 
 ```

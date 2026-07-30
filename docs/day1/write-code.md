@@ -1,5 +1,7 @@
 # Activity: Write Your First Functions
 
+!!! abstract "S16: Develop algorithms and processes to extract structured data from unstructured sources."
+
 ## Part 1 - Look at the raw data
 
 Before writing any code, open each file directly and see what you're working with:

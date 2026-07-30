@@ -1,5 +1,7 @@
 # Activity: Run Your Package on New Data
 
+!!! abstract "S24: Evaluate the strengths and weaknesses of prototype data products and how these integrate within an organisation's overarching data infrastructure."
+
 A second library network has data that needs cleaning. Your package will do it.
 
 ## 1. Clone the runner repo

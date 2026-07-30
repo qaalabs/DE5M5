@@ -1,5 +1,7 @@
 # Library Pipeline Orchestration
 
+!!! abstract "K24: Processes for evaluating prototypes and taking them to implementation within a production environment."
+
 Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time. In this lab you will do the same job with a single click: a **pipeline** that runs both notebooks in sequence, on demand, as many times as you like.
 
 !!! info "Make sure that you are logged into Microsoft Fabric before continuing."

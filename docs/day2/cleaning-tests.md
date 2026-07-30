@@ -1,5 +1,7 @@
 # Activity: Write Python Tests
 
+!!! abstract "S8: Identify and troubleshoot issues with data processing pipelines."
+
 Create two test files using the templates below. For each `# TODO` line, write the assertion.
 
 ---

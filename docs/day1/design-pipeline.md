@@ -1,5 +1,9 @@
 # Activity: Design your Pipeline Architecture
 
+!!! abstract "S3: Design a data product to serve multiple needs and with scalability, efficiency, and security in mind."
+
+!!! abstract "K26: Data development frameworks and approved organisational architectures."
+
 Work as a group to create a Mermaid diagram of your pipeline architecture. Your trainer will share a HedgeDoc link for your group.
 
 ## Include

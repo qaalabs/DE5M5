@@ -1,5 +1,7 @@
 # Activity: Implement ISBN Validation
 
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
 Open `src/data_processing/validation.py`. The `validate_isbn()` function currently just returns whatever it was given - it needs real validation and cleaning logic.
 
 ## ISBN-13 rules

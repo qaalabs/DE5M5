@@ -1,5 +1,7 @@
 # Architecture Decision Record
 
+!!! abstract "S5: Produce and maintain technical documentation explaining the data product, that meets organisational, technical and non-technical user requirements, retaining critical information."
+
 An ADR is a short document that captures an important decision, why you made it, and what the consequences are. One page, plain language.
 
 ---

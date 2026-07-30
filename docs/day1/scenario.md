@@ -80,7 +80,7 @@ They collect data from multiple sources:
 
 1. Build Python package for data processing:
 
-    - Extract data from CSV, JSON, Excel sources (S16)
+    - Extract data from CSV, JSON, Excel sources
     - Clean data using Pandas
     - Implement validation rules
     - Handle errors gracefully

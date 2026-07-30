@@ -1,5 +1,7 @@
 # Activity: Set Up Your Repository
 
+!!! abstract "S17: Apply and advocate for software development best practice when working with other data professionals throughout the business. Contribute to standards and ways of working that support software development principles."
+
 Everything in this session happens in GitHub.com - no cloning yet.
 
 ## Step 1: Log in to GitHub

@@ -1,5 +1,7 @@
 # Activity: Complete and improve the Cleaning function
 
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
 ## Task 1: Build `cleaning.py`
 
 Add these functions to `cleaning.py` - all three were shown in the demo:

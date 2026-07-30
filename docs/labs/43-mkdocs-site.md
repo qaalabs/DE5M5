@@ -1,5 +1,7 @@
 # Build Your Docs Site
 
+!!! abstract "S5: Produce and maintain technical documentation explaining the data product, that meets organisational, technical and non-technical user requirements, retaining critical information."
+
 You've had `mkdocs` sitting in `requirements_dev.txt` since Day 1. Today you'll use it - and finally get your Day 1 architecture diagram rendering properly instead of sitting as a wall of Mermaid text.
 
 !!! note "Your VM has reset, or your LOD session has expired"

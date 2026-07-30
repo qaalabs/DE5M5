@@ -1,5 +1,7 @@
 # Activity: Achieve Test Coverage
 
+!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
+
 ## Task 1: Test ingestion module
 
 Create `tests/test_ingestion.py`:

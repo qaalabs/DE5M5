@@ -1,5 +1,9 @@
 # Library Pipeline in Fabric
 
+!!! abstract "K24: Processes for evaluating prototypes and taking them to implementation within a production environment."
+
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
 In this lab, you will run a real Python package - the one you built and tested yourself - inside Microsoft Fabric. You will land raw library data in **bronze**, clean it with your own package code to produce **silver**, then build a **gold** table that answers a business question.
 
 !!! info "This lab continues from [32 Create Fabric Lakehouse](32-lakehouse.md). You should already be logged on to the Microsoft Fabric Playground."

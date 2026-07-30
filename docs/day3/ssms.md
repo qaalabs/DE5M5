@@ -1,5 +1,7 @@
 # Activity: Query Your Data in SSMS
 
+!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+
 ## Load to SQL Server
 
 ```powershell

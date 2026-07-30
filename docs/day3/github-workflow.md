@@ -1,5 +1,9 @@
 # Activity: Merge Your Dev Branch
 
+!!! abstract "K24: Processes for evaluating prototypes and taking them to implementation within a production environment."
+
+!!! abstract "S17: Apply and advocate for software development best practice when working with other data professionals throughout the business. Contribute to standards and ways of working that support software development principles."
+
 Your code is on `dev`. The goal is to get it onto `main` - with CI confirming it works first. Everything happens in GitHub - no command line needed.
 
 ## 1. Create a pull request

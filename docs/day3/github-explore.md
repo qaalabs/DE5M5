@@ -1,5 +1,7 @@
 # Activity: Explore Your GitHub Repo
 
+!!! abstract "K28: Continuous improvement including how to: capture good practice and lessons learned."
+
 Your dev branch is merged. Take some time to explore what GitHub is showing you about your project.
 
 ## Actions tab

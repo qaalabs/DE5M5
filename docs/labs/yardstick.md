@@ -1,5 +1,9 @@
 # Production Readiness Yardstick
 
+!!! abstract "K24: Processes for evaluating prototypes and taking them to implementation within a production environment."
+
+!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
+
 These four checks are your measure of production-ready code. Run them now to see where you are, and again after each activity to see progress.
 
 !!! note "Run all commands either in a Windows Terminal or in a in the VS Code terminal."
