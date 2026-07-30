@@ -2,7 +2,7 @@
 
 Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time. In this lab you will do the same job with a single click: a **pipeline** that runs both notebooks in sequence, on demand, as many times as you like.
 
-!!! info "This lab continues from [Start the QA Fabric Playground](fabric-setup.md). You should already be logged on to Azure and Microsoft Fabric."
+!!! info "Make sure that you are logged into Microsoft Fabric before continuing."
 
 ## Step 1: Create a workspace
 
@@ -23,7 +23,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**.
 
-    - Name the lakehouse: `Library Pipeline`
+    - Name the lakehouse: `library_pipeline`
 
     !!! tip "If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first."
 
@@ -70,6 +70,8 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 
 ## Step 5: Attach the lakehouse and edit Cell 1
+
+!!! note "Yesterday we created a new notebook - today we will use the existing notebooks that you have just uploaded."
 
 1. In the left navigation bar, select your **library_pipeline** lakehouse.
 
@@ -119,7 +121,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
     - Click **Create**
 
-4. On the pipeline canvas start with a blank canvas:
+4. On the pipeline canvas **Start with a blank canvas**:
 
     - select **Pipeline activity** and choose **Notebook** (under the *Transform* heading).
 
@@ -130,9 +132,9 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
         - **Workspace**: *select your workspace*
         - **Notebook**: select `01_bronze_to_silver`
 
-6. Allow the notebook to import your repo:
+6. Still on the **Settings** expand **Base parameters**:
 
-    - Still on the **Settings** expand **Base parameters** and click *New*
+    - Click *New*
     - **Name**: `_inlineInstallationEnabled`
     - **Type**: Bool
     - **Value**: `True`
