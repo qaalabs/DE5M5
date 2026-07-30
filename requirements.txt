@@ -4,3 +4,4 @@ mkdocs-glightbox
 zensical
 mkdocs-quiz
 jupyter
+pandas
