@@ -36,6 +36,7 @@
 
 - [Local development](../day1/clone-repo.md)
 - [Create local development env](../day1/dev-environment.md)
+- **Activity**: Replace Template Placeholders
 - **Activity**: [Write first Python code](../day1/write-code.md)
 - Write first Pull Request
 

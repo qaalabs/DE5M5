@@ -30,7 +30,8 @@
 
 - `14:50` [Local development](day1/clone-repo.md) (10 mins)
 - `15:00` [Create local development env](day1/dev-environment.md) (10 mins)
-- `15:10` **Activity**: [Write first Python code](day1/write-code.md) (30 mins)
+- `15:10` **Activity**: Replace Template Placeholders (10 mins)
+- `15:20` **Activity**: [Write first Python code](day1/write-code.md) (20 mins)
 - `15:40` [Write first Pull Request](day1/dev-commit.md) (10 mins)
 
 ---
@@ -81,7 +82,7 @@
 
 ### Session 3
 
-- `13:20` **Activity**: [Start the QA Fabric Playground](labs/fabric-setup.md) (10 mins)
+- `13:20` **Activity**: [Start the QA Fabric Playground](https://qaalabs.github.io/fabric/run-inside-vm/) (10 mins)
 - `13:30` **Practice**: [01 Create Fabric Lakehouse](labs/32-lakehouse.md) (40 mins)
 - `14:10` **Activity**: [Run pipeline in MS Fabric](labs/33-library-pipeline.md) (20 mins)
 
@@ -97,7 +98,7 @@
 
 ### Session 1
 
-- `09:40` [Start QA MS Fabric Platform](labs/fabric-setup.md) (10 mins)
+- `09:40` [Start QA MS Fabric Platform](https://qaalabs.github.io/fabric/run-inside-vm/) (10 mins)
 - `09:50` [Lab: Run MS Fabric Pipeline](labs/42-fabric-pipeline.md) (50 mins)
 
 ### Session 2
