@@ -61,7 +61,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
     !!! abstract ""
         ![Imported notebooks in workspace.](img/notebook-import.png)
 
-3. Browse to the `notebooks/fabric` folder in your `qa-library-pipeline` repo on the Desktop, and import both:
+3. Browse to the `notebooks` folder in your `qa-library-pipeline` repo on the Desktop, and import both:
 
     - `01_bronze_to_silver.ipynb`
     - `02_silver_to_gold.ipynb`
@@ -85,16 +85,14 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
     - Confirm **library_pipeline** appears under **OneLake**.
 
-4. In **Cell 1**, replace the placeholder URL with the address of your own GitHub repo:
+4. Check **Cell 1** - it should already have the address of your own GitHub repo, since you updated it on Day 1:
 
     ```python
     # Cell 1 - Install
     %pip install "git+https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git"
     ```
 
-    !!! note "This is the only line you need to change in either notebook."
-
-    !!! tip "The notebook will save automatically"
+    !!! note "Still showing YOUR_USERNAME/YOUR_REPO_NAME? Replace it now with your own details and re-import."
 
 
 6. Return to the lakehouse and repeat for the second notebook:

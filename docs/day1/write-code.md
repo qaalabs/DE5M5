@@ -1,28 +1,14 @@
 # Activity: Write Your First Functions
 
-## Part 1 - Explore the data
+## Part 1 - Look at the raw data
 
-Create a new notebook at `notebooks/sandbox.ipynb` and load each raw file to see what you're working with before writing any production code.
+Before writing any code, open each file directly and see what you're working with:
 
-```python
-import pandas as pd, json
+- `data/circulation_data.csv` - open in VS Code and check the column headers and a few rows.
+- `data/catalogue.xlsx` - open in Excel and check the column headers and sheet.
+- `data/events_data.json` - open in VS Code and look at the structure. Is it a flat list, or are there nested objects?
 
-pd.read_csv("../data/circulation_data.csv").head()
-```
-
-```python
-with open("../data/events_data.json") as f:
-    data = json.load(f)
-print("Number of records:",len(data))
-
-data
-```
-
-```python
-pd.read_excel("../data/catalogue.xlsx", sheet_name=0).head()
-```
-
-Note the shape, column names, and any obvious issues.
+Note anything that looks like it'll need cleaning.
 
 
 ## Part 2 - Implement the loaders
@@ -64,7 +50,20 @@ Two separate problems to handle here: the file might not be valid JSON, and even
 
 - **Invalid JSON** - `json.load()` raises `json.JSONDecodeError` (also a `ValueError` subclass) if the file is malformed. Same `except ValueError` / `except Exception` shape as above works here too.
 - **Flattening** - `json.load()` gives you a Python list/dict. If any of those dicts have nested objects (e.g. `{"book": {"title": ..., "isbn": ...}}`), you get nested dicts, not flat columns. `pd.json_normalize()` turns each nested key into its own column (e.g. `book.title`, `book.isbn`).
-- Before writing the real implementation, load `events_data.json` in your `sandbox.ipynb` and run `pd.json_normalize(data)` on it. Look at the columns it produces - any nested fields you expected? Anything come out as a list instead of a single value? Once you've seen what it actually does, write the error-handled version in `load_json()`.
+- Before writing the real implementation, check this for yourself in the terminal:
+
+    ```bash
+    python
+    ```
+
+    ```python
+    import pandas as pd, json
+    with open("data/events_data.json") as f:
+        data = json.load(f)
+    pd.json_normalize(data)
+    ```
+
+    Look at the columns it produces - any nested fields you expected? Anything come out as a list instead of a single value? Once you've seen what it actually does, `exit()` the REPL and write the error-handled version in `load_json()`.
 
 
 ## Part 3 - Test and commit
@@ -79,4 +78,24 @@ In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 - Type a commit message: `Implement load_csv and load_json`
 - Click **Commit**
 - Click **Sync Changes** to push to GitHub
+
+
+## Part 4 - Update your placeholders
+
+Your repo has two files still using placeholder text from the template. Update both now, while your repo details are fresh in your mind.
+
+1. Open `README.md`.
+    - Find and replace `YOUR_USERNAME` with your GitHub username.
+    - Find and replace `YOUR_REPO` with the name of your repo.
+
+2. Open `notebooks/01_bronze_to_silver.ipynb` in VS Code.
+    - In Cell 1, replace `YOUR_USERNAME` and `YOUR_REPO_NAME` with the same details:
+
+        ```python
+        %pip install "git+https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git"
+        ```
+
+3. In the **Source Control** panel, stage both files, commit with a message like `Update README and notebook with repo details`, and click **Sync Changes**.
+
+!!! success "You'll import this notebook into Fabric on Day 4 - since it already has your details, there's nothing to edit there."
 
