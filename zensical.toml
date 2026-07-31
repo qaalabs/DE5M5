@@ -27,10 +27,12 @@ nav = [
   ]},
   {"Day 2 ~ Build & Test Python Package" = [
     {"Data Ingestion" = "day2/ingestion.md"},
+    {"Write Code for Data Ingestion" = "day2/ingestion-code.md"},
     {"Run Production Readiness Yardstick" = "labs/yardstick.md"},
     {"Data Cleaning" = "day2/cleaning.md"},
-    {"Write function - Data Cleaning" = "day2/cleaning-enhancements.md"},
+    {"Write Code for Data Cleaning" = "day2/cleaning-code.md"},
     {"Validation Function" = "day2/validation.md"},
+    {"Run Production Readiness Yardstick" = "labs/yardstick.md"},
     {"Python Testing" = "day2/python-testing.md"},
     {"Write unit tests" = "day2/cleaning-tests.md"},
     {"Python Test Coverage" = "day2/coverage.md"},

@@ -3,8 +3,9 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 5
-- 
 - **Demo**: [Data Ingestion](../day2/ingestion.md)
+- **Activity**: [Write Code for Data Ingestion](../day2/ingestion-code.md)
+- 
 - [Run Production Readiness Yardstick](../labs/yardstick.md)
 
 ## ☕ Morning Break
@@ -12,8 +13,9 @@
 ## Session 2
 
 - **Demo**: [Data Cleaning](../day2/cleaning.md)
-- **Activity**: [Write function - Data Cleaning](../day2/cleaning-enhancements.md)
+- **Activity**: [Write Code for Data Cleaning](../day2/cleaning-code.md)
 - [Validation Function](../day2/validation.md)
+- [Run Production Readiness Yardstick](../labs/yardstick.md)
 
 ## 🥪🥤 Lunch Break
 
