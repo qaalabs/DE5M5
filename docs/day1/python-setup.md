@@ -1,37 +1,19 @@
 # Python Environment Setup
 
-!!! info "If you are using Learn on Demand - make sure that you have already run: [LOD setup](lod-setup.md)"
+!!! note "Before you start"
+    You should already have your repo cloned, on the `dev` branch, with Terminal open in your `qa-library-pipeline` folder. If not, run [Clone your Repository](clone-repo.md) first.
 
-## Step 1: Open Terminal and navigate to your repo
-
-Open **Terminal**. Navigate to your `qa-library-pipeline` folder:
-
-```
-cd Desktop
-cd qa-library-pipeline
-```
-
----
-
-## Step 2: Switch to the dev branch
-
-```
-git checkout dev
-```
-
----
-
-## Step 3: Install dependencies
+## Step 1: Install dependencies
 
 Run:
 
-```
+```bash
 pip install -r requirements_dev.txt
 ```
 
 Then run:
 
-```
+```bash
 pip install -e .
 ```
 
@@ -41,12 +23,12 @@ pip install -e .
 
 ---
 
-## Step 4: Open VS Code
+## Step 2: Open VS Code
 
 !!! note "There's a space between `code` and `.`"
     The `.` means "this folder" - `code .` opens the current directory in VS Code.
 
-```
+```bash
 code .
 ```
 
@@ -57,13 +39,12 @@ code .
 
 ---
 
-## Step 5: Run `pytest` to make sure all tests pass
+## Step 3: Verify the setup
 
 In the original **Terminal window**, run:
 
-```
+```bash
 python -m pytest
 ```
 
-!!! success "All tests should pass!"
-
+!!! success "All tests should pass! If they do, your environment is working correctly."

@@ -2,7 +2,7 @@
 
 Point learners to the setup labs:
 
-- **VM wiped overnight, or LOD session expired** - start at **lod-setup**, then continue to Lab 22
-- **VM still running** - go straight to **22-python-setup**
+- **VM wiped overnight, or LOD session expired** - run **lod-setup** (covers everything, start to finish)
+- **VM still running** - nothing to do, already set up from Day 1
 
-Everyone ends up on the `dev` branch with dependencies installed and VS Code open.
+Learners who need it end up on the `dev` branch with dependencies installed and VS Code open.

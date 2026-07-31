@@ -16,6 +16,7 @@ Press Enter. You should now be in the Desktop directory:
 PS C:\Users\Admin\Desktop
 ```
 
+
 ## Step 2: Git config
 
 Git tags every commit you make with an author - this is what shows up in `git log`, `git blame`, and your commit history on GitHub. Use your real GitHub email and name, replacing the placeholders below:
@@ -28,6 +29,7 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
+
 ## Step 3: Clone your repo
 
 ```bash
@@ -38,17 +40,16 @@ git clone https://github.com/YOUR_USERNAME/qa-library-pipeline.git
 
 !!! note "Replace `qa-library-pipeline` with what you called your repo."
 
+For example:
+
 ```bash
 cd qa-library-pipeline
 ```
 
+
 ## Step 4: Confirm the connection
 
-```bash
-git remote -v
-```
-
-!!! success "You should see `origin` listed twice (fetch and push), both pointing at your repo."
+We need to give this local clone permission to push to GitHub. Run:
 
 ```bash
 git push --dry-run
@@ -56,6 +57,7 @@ git push --dry-run
 
 !!! info "A browser window may open asking you to sign in to GitHub"
     This is Git checking you have permission to push. Sign in and allow access - you only need to do this once today. Nothing is actually pushed yet.
+
 
 ## Step 5: Switch to the dev branch
 
@@ -65,19 +67,9 @@ git push --dry-run
 git checkout dev
 ```
 
-!!! note "Run `git status` to confirm that there are no outstanding code changes need a commit."
-
 ```bash
 git status
 ```
 
-!!! success "On branch dev, nothing to commit, working tree clean"
-
-## Step 6: Explore the structure
-
-```bash
-dir
-```
-
-!!! success "You should see the same folders you explored on GitHub earlier."
+!!! success "You should see `On branch dev`"
 

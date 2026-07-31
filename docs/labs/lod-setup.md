@@ -78,3 +78,50 @@ Use this whenever you land on a fresh environment - your VM has reset overnight,
         - Signin to complete the authentication process.
 
     !!! success "If you are not prompted, your credentials are already cached and you are good to go."
+
+
+## Step 7: Install dependencies
+
+1. In the same Terminal window, run:
+
+    ```
+    pip install -r requirements_dev.txt
+    ```
+
+2. Then run:
+
+    ```
+    pip install -e .
+    ```
+
+    !!! note "This installs your package in editable mode"
+        - This allows Python to import your code directly from the `src` folder
+        - Any changes you make take effect immediately without reinstalling.
+
+
+## Step 8: Open VS Code
+
+1. In the same Terminal window, run:
+
+    ```
+    code .
+    ```
+
+    !!! note "There's a space between `code` and `.`"
+        The `.` means "this folder" - `code .` opens the current directory in VS Code.
+
+    !!! info "If you see a 'Do you trust the authors of the files in this folder?' prompt"
+        Click **Yes, I trust the authors** - this is your own cloned repo.
+
+    !!! success "VS Code will open with the project loaded."
+
+
+## Step 9: Verify the setup
+
+1. In the original **Terminal window**, run:
+
+    ```
+    python -m pytest
+    ```
+
+    !!! success "All tests should pass! If they do, your environment is working correctly."
