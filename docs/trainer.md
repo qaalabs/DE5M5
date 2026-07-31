@@ -29,7 +29,7 @@
 ### Session 4
 
 - `14:50` **Activity**: [Clone Library Pipeline Repo](day1/clone-repo.md) (10 mins)
-- `15:00` [Setup Development Environment](day1/dev-environment.md) (10 mins)
+- `15:00` [Setup Development Environment](day1/python-setup.md) (10 mins)
 - `15:10` **Activity**: [Replace Template Placeholders](day1/placeholders.md) (10 mins)
 - `15:20` **Activity**: [Write first Python code](day1/write-code.md) (20 mins)
 - `15:40` [Write first Pull Request](day1/dev-commit.md) (10 mins)
