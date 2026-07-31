@@ -1,6 +1,7 @@
 # Activity: Complete and improve the Cleaning function
 
-!!! abstract "S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks."
+!!! abstract "S9: Query and manipulate data using tools and programming such as Python. Implement automated validation checks."
+
 
 ## Task 1: Build `cleaning.py`
 
@@ -10,6 +11,7 @@ Add these functions to `cleaning.py` - all three were shown in the demo:
 2. `handle_missing_values()`
 3. `standardise_dates()`
 
+
 ## Task 2: Commit Your Work
 
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
@@ -18,3 +20,4 @@ In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 - Type a commit message: `Implement data cleaning functions`
 - Click **Commit**
 - Click **Sync Changes** to push to GitHub
+
