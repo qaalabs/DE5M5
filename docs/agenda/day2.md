@@ -6,7 +6,7 @@
 - **Demo**: [Part 1 ~ Data Ingestion](../day2/ingestion.md)
 - **Activity**: [Write Code for Data Ingestion](../day2/ingestion-code.md)
 - 
-- [✅ Production Readiness Check](../labs/yardstick.md)
+- [✅ Production Readiness](../labs/yardstick.md)
 
 ## ☕ Morning Break
 
@@ -15,7 +15,7 @@
 - **Demo**: [Part 2 ~ Data Cleaning](../day2/cleaning.md)
 - **Activity**: [Write Code for Data Cleaning](../day2/cleaning-code.md)
 - [Part 3 ~ Data Validation](../day2/validation.md)
-- [✅ Production Readiness Check](../labs/yardstick.md)
+- [✅ Production Readiness](../labs/yardstick.md)
 
 ## 🥪🥤 Lunch Break
 
@@ -33,7 +33,7 @@
 - **Activity**: [Achieve 70% Coverage](../day2/coverage-goal.md)
 - [Explain Linting](../day2/linting.md)
 - [Fix All Linting Issues](../day2/linting-fixes.md)
-- [✅ Production Readiness Check](../labs/yardstick.md)
+- [✅ Production Readiness](../labs/yardstick.md)
 
 ## 🎁 Wrap
 
