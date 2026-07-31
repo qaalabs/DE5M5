@@ -21,7 +21,7 @@ nav = [
     {"Introduce GitHub Projects" = "day1/create-project.md"},
     {"Set up Kanban Board" = "day1/project-tasks.md"},
     {"Clone Library Pipeline Repo" = "day1/clone-repo.md"},
-    {"Create local development env" = "day1/dev-environment.md"},
+    {"Setup Development Environment" = "day1/dev-environment.md"},
     {"Replace Template Placeholders" = "day1/placeholders.md"},
     {"Write first Python code" = "day1/write-code.md"},
   ]},

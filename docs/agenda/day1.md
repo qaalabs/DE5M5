@@ -35,7 +35,7 @@
 ## Session 4
 
 - **Activity**: [Clone Library Pipeline Repo](../day1/clone-repo.md)
-- [Create local development env](../day1/dev-environment.md)
+- [Setup Development Environment](../day1/dev-environment.md)
 - **Activity**: [Replace Template Placeholders](../day1/placeholders.md)
 - **Activity**: [Write first Python code](../day1/write-code.md)
 - Write first Pull Request
