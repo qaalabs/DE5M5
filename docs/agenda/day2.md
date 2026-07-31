@@ -4,9 +4,9 @@
 
 - 🌅 Welcome to Day 2 of DE5 Module 5
 - [🖥️ VM Setup + LOD Setup](../labs/22-python-setup.md)
-- **Activity**: [Production Readiness Yardstick](../labs/yardstick.md)
+- [Production Readiness Yardstick](../labs/yardstick.md)
 - **Demo**: [Data Ingestion](../day2/ingestion.md)
-- **Activity**: [Production Readiness Yardstick](../labs/yardstick.md)
+- [Production Readiness Yardstick](../labs/yardstick.md)
 
 ## ☕ Morning Break
 
@@ -32,7 +32,7 @@
 - **Activity**: [Achieve 70% Coverage](../day2/coverage-goal.md)
 - [Explain Linting](../day2/linting.md)
 - [Fix All Linting Issues](../day2/linting-fixes.md)
-- **Activity**: [Production Readiness Yardstick](../labs/yardstick.md)
+- [Production Readiness Yardstick](../labs/yardstick.md)
 
 ## 🎁 Wrap
 
