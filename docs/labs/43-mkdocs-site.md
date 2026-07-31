@@ -47,7 +47,7 @@ code .
 ## Step 4: Preview the site
 
 ```
-mkdocs serve
+python -m mkdocs serve
 ```
 
 1. Open a browser and enter: `http://127.0.0.1:8000`
@@ -56,7 +56,7 @@ mkdocs serve
 
     !!! success "Your diagram should render as an actual flowchart, not a code block."
 
-3. Leave `mkdocs serve` running - it live-reloads as you edit.
+3. Leave `python -m mkdocs serve` running - it live-reloads as you edit.
 
 
 ## Step 5: Change the site colours
@@ -67,7 +67,7 @@ mkdocs serve
 
     !!! tip "Full list of colours and other theme options in the [mkdocs-material reference](https://squidfunk.github.io/mkdocs-material/reference/)"
 
-3. Save the file and check your browser - `mkdocs serve` should live-reload with the new colours.
+3. Save the file and check your browser - `python -m mkdocs serve` should live-reload with the new colours.
 
 
 ## Step 6: Commit and push
@@ -82,7 +82,7 @@ git push origin dev
 ## Step 7: Publish to GitHub Pages
 
 ```
-mkdocs gh-deploy
+python -m mkdocs gh-deploy
 ```
 
 1. This builds the site and pushes it to a `gh-pages` branch on GitHub.
