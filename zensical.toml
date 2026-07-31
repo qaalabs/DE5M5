@@ -23,6 +23,7 @@ nav = [
     {"Clone Library Pipeline Repo" = "day1/clone-repo.md"},
     {"Setup Development Environment" = "day1/python-setup.md"},
     {"Replace Template Placeholders" = "day1/placeholders.md"},
+    {"Run Production Readiness Yardstick" = "labs/yardstick.md"},
     {"Write first Python code" = "day1/write-code.md"},
   ]},
   {"Day 2 ~ Build & Test Python Package" = [

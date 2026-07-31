@@ -35,8 +35,9 @@
 ## Session 4
 
 - **Activity**: [Clone Library Pipeline Repo](../day1/clone-repo.md)
-- [Setup Development Environment](../day1/python-setup.md)
+- **Activity**: [Setup Development Environment](../day1/python-setup.md)
 - **Activity**: [Replace Template Placeholders](../day1/placeholders.md)
+- [Run Production Readiness Yardstick](../labs/yardstick.md)
 - **Activity**: [Write first Python code](../day1/write-code.md)
 - Write first Pull Request
 
