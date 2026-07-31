@@ -31,7 +31,7 @@
 - `14:50` **Activity**: [Clone Library Pipeline Repo](day1/clone-repo.md) (10 mins)
 - `15:00` **Activity**: [Setup Development Environment](day1/python-setup.md) (10 mins)
 - `15:10` **Activity**: [Replace Template Placeholders](day1/placeholders.md) (10 mins)
-- `15:20` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
+- `15:20` [Production Readiness Check](labs/yardstick.md) (10 mins)
 - `15:30` Trainer Checks Each Repo (20 mins)
 
 ---
@@ -42,14 +42,14 @@
 
 - `09:40` **Demo**: [Part 1 ~ Data Ingestion](day2/ingestion.md) (10 mins)
 - `09:50` **Activity**: [Write Code for Data Ingestion](day2/ingestion-code.md) (10 mins)
-- `10:30` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
+- `10:30` [Production Readiness Check](labs/yardstick.md) (10 mins)
 
 ### Session 2
 
 - `11:00` **Demo**: [Part 2 ~ Data Cleaning](day2/cleaning.md) (30 mins)
 - `11:30` **Activity**: [Write Code for Data Cleaning](day2/cleaning-code.md) (20 mins)
 - `11:50` [Part 3 ~ Data Validation](day2/validation.md) (20 mins)
-- `12:10` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
+- `12:10` [Production Readiness Check](labs/yardstick.md) (10 mins)
 
 ### Session 3
 
@@ -63,7 +63,7 @@
 - `15:00` **Activity**: [Achieve 70% Coverage](day2/coverage-goal.md) (20 mins)
 - `15:20` [Explain Linting](day2/linting.md) (10 mins)
 - `15:30` [Fix All Linting Issues](day2/linting-fixes.md) (10 mins)
-- `15:40` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
+- `15:40` [Production Readiness Check](labs/yardstick.md) (10 mins)
 
 ---
 

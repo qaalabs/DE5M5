@@ -37,7 +37,7 @@
 - **Activity**: [Clone Library Pipeline Repo](../day1/clone-repo.md)
 - **Activity**: [Setup Development Environment](../day1/python-setup.md)
 - **Activity**: [Replace Template Placeholders](../day1/placeholders.md)
-- [Run Production Readiness Yardstick](../labs/yardstick.md)
+- [Production Readiness Check](../labs/yardstick.md)
 - Trainer Checks Each Repo
 
 ## 🎁 Wrap
