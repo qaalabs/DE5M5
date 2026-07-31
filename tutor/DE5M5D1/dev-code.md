@@ -9,6 +9,6 @@
 - load_json(): check json_normalize flattening in a terminal python REPL first (not a notebook)
 
 ### Part 3 - Test and commit (5 min)
-- pytest tests/ -v
+- python -m pytest tests/ -v
 
 

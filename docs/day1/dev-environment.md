@@ -19,7 +19,7 @@ This installs your package in editable mode - changes you make to the code take 
 ## Step 3: Verify the setup
 
 ```sh
-pytest
+python -m pytest
 ```
 
 All tests should pass. If they do, your environment is working correctly.

@@ -71,7 +71,7 @@ Two separate problems to handle here: the file might not be valid JSON, and even
 ## Part 3 - Test and commit
 
 ```bash
-pytest tests/ -v
+python -m pytest tests/ -v
 ```
 
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).

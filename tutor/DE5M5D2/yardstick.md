@@ -1,8 +1,8 @@
 ## Production Readiness Yardstick
 
 Three commands:
-- `pytest --cov=src`
-- `ruff check src/`
+- `python -m pytest --cov=src`
+- `python -m ruff check src/`
 - `python -m data_processing.run_pipeline > report.txt`
 
 Run at the start of the day to show the baseline 

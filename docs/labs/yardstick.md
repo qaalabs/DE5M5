@@ -15,13 +15,13 @@ These four checks are your measure of production-ready code. Run them now to see
 1. Run PyTest with coverage:
 
     ```
-    pytest --cov=src
+    python -m pytest --cov=src
     ```
 
 2. Run PyTest with coverage, saving the result to a file:
 
     ```
-    pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
+    python -m pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
     ```
 
     !!! success "All tests should pass. A failing test means broken code."
@@ -35,7 +35,7 @@ These four checks are your measure of production-ready code. Run them now to see
 1. Run the Ruff linter:
 
     ```
-    ruff check src/
+    python -m ruff check src/
     ```
 
     !!! success "There should be no issues reported"

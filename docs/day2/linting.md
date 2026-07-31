@@ -5,7 +5,7 @@ Linting checks your code for errors and bad patterns before you run it. In a pro
 ## Run the linter
 
 ```
-ruff check src/
+python -m ruff check src/
 ```
 
 A clean result looks like this:
@@ -24,7 +24,7 @@ Open `src/data_processing/cleaning.py` and add this line after the existing impo
 import os
 ```
 
-Save the file, then run `ruff check src/` again. Ruff finds it immediately:
+Save the file, then run `python -m ruff check src/` again. Ruff finds it immediately:
 
 ```
 src/data_processing/cleaning.py:3:1: F401 `os` imported but unused
@@ -51,13 +51,13 @@ Common errors you will see:
 ## Check formatting
 
 ```
-ruff format --check src/
+python -m ruff format --check src/
 ```
 
 This checks whether your code is consistently formatted - spacing, quotes, line breaks. Unlike `ruff check`, formatting issues are not errors in your logic. You can auto-fix all of them in one command:
 
 ```
-ruff format src/
+python -m ruff format src/
 ```
 
 ## What about flake8?

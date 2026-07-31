@@ -28,11 +28,11 @@ Coverage:      70%
 
 ### Full coverage report
 
-`pytest --cov=src`
+`python -m pytest --cov=src`
 
 ### See which lines aren't covered
 
-`pytest --cov=src --cov-report=html`
+`python -m pytest --cov=src --cov-report=html`
 
 Then open `htmlcov/index.html` in a browser.
 

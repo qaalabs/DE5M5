@@ -86,5 +86,5 @@ See [Solution: ISBN Validation](validation-solution.md) for the `validate_isbn` 
 ## Run your tests
 
 ```
-pytest --cov=src
+python -m pytest --cov=src
 ```

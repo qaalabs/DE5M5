@@ -43,7 +43,7 @@ code .
 VS Code will open with the project loaded. Open the built-in terminal with **View → Terminal** (or `` Ctrl+` ``). Run:
 
 ```
-pytest
+python -m pytest
 ```
 
 All tests should pass. You are ready for Day 2.

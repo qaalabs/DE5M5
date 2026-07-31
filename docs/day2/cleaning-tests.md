@@ -80,5 +80,5 @@ def test_wrong_length():
 ## Run your tests
 
 ```
-pytest --cov=src
+python -m pytest --cov=src
 ```

@@ -60,13 +60,13 @@ def test_load_json_invalid(tmp_path):
 ## Task 2: Run coverage report
 
 ```
-pytest --cov=src
+python -m pytest --cov=src
 ```
 
 To see which lines are not covered:
 
 ```
-pytest --cov=src --cov-report=html
+python -m pytest --cov=src --cov-report=html
 ```
 
 Open `htmlcov/index.html` in a browser.
