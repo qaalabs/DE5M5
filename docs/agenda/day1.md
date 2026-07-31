@@ -38,8 +38,7 @@
 - **Activity**: [Setup Development Environment](../day1/python-setup.md)
 - **Activity**: [Replace Template Placeholders](../day1/placeholders.md)
 - [Run Production Readiness Yardstick](../labs/yardstick.md)
-- **Activity**: [Write first Python code](../day1/write-code.md)
-- Write first Pull Request
+- Trainer Checks Each Repo
 
 ## 🎁 Wrap
 

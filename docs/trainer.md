@@ -32,8 +32,7 @@
 - `15:00` **Activity**: [Setup Development Environment](day1/python-setup.md) (10 mins)
 - `15:10` **Activity**: [Replace Template Placeholders](day1/placeholders.md) (10 mins)
 - `15:20` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
-- `15:30` **Activity**: [Write first Python code](day1/write-code.md) (10 mins)
-- `15:40` [Write first Pull Request](day1/dev-commit.md) (10 mins)
+- `15:30` Trainer Checks Each Repo (20 mins)
 
 ---
 
@@ -41,7 +40,6 @@
 
 ### Session 1
 
-- `09:50` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
 - `10:00` **Demo**: [Data Ingestion](day2/ingestion.md) (30 mins)
 - `10:30` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
 

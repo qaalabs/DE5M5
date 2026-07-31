@@ -3,8 +3,7 @@
 ## Session 1
 
 - 🌅 Welcome to Day 2 of DE5 Module 5
-- [🖥️ VM Setup + LOD Setup](../labs/22-python-setup.md)
-- [Run Production Readiness Yardstick](../labs/yardstick.md)
+- 
 - **Demo**: [Data Ingestion](../day2/ingestion.md)
 - [Run Production Readiness Yardstick](../labs/yardstick.md)
 
