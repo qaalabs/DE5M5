@@ -41,6 +41,9 @@ pip install -r requirements_dev.txt
 code .
 ```
 
+!!! note "There's a space between `code` and `.`"
+    The `.` means "this folder" - `code .` opens the current directory in VS Code.
+
 2. Navigate to `docs/architecture/design-pipeline.md` and confirm that your Mermaid diagram from Day 1 is there.
 
 

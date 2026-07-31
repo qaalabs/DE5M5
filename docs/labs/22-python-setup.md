@@ -1,12 +1,15 @@
 # Python Environment Setup
 
-Everyone does this lab - whether your VM wiped overnight or not.
-
----
+!!! info "If you are using Learn on Demand - make sure that you have already run: [LOD setup](lod-setup.md)"
 
 ## Step 1: Open Terminal and navigate to your repo
 
-Open **Terminal** and navigate to your `qa-library-pipeline` folder.
+Open **Terminal**. Navigate to your `qa-library-pipeline` folder:
+
+```
+cd Desktop
+cd qa-library-pipeline
+```
 
 ---
 
@@ -20,9 +23,13 @@ git checkout dev
 
 ## Step 3: Install dependencies
 
+Run:
+
 ```
 pip install -r requirements_dev.txt
 ```
+
+Then run:
 
 ```
 pip install -e .
@@ -36,14 +43,27 @@ pip install -e .
 
 ## Step 4: Open VS Code
 
+!!! note "There's a space between `code` and `.`"
+    The `.` means "this folder" - `code .` opens the current directory in VS Code.
+
 ```
 code .
 ```
 
-VS Code will open with the project loaded. Open the built-in terminal with **View → Terminal** (or `` Ctrl+` ``). Run:
+!!! info "If you see a 'Do you trust the authors of the files in this folder?' prompt"
+    Click **Yes, I trust the authors** - this is your own cloned repo.
+
+!!! success "VS Code will open with the project loaded."
+
+---
+
+## Step 5: Run `pytest` to make sure all tests pass
+
+In the original **Terminal window**, run:
 
 ```
 python -m pytest
 ```
 
-All tests should pass. You are ready for Day 2.
+!!! success "All tests should pass!"
+
