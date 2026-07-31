@@ -40,15 +40,15 @@
 
 ### Session 1
 
-- `09:40` **Demo**: [Data Ingestion](day2/ingestion.md) (10 mins)
+- `09:40` **Demo**: [Part 1 ~ Data Ingestion](day2/ingestion.md) (10 mins)
 - `09:50` **Activity**: [Write Code for Data Ingestion](day2/ingestion-code.md) (10 mins)
 - `10:30` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
 
 ### Session 2
 
-- `11:00` **Demo**: [Data Cleaning](day2/cleaning.md) (30 mins)
+- `11:00` **Demo**: [Part 2 ~ Data Cleaning](day2/cleaning.md) (30 mins)
 - `11:30` **Activity**: [Write Code for Data Cleaning](day2/cleaning-code.md) (20 mins)
-- `11:50` [Validation Function](day2/validation.md) (20 mins)
+- `11:50` [Part 3 ~ Data Validation](day2/validation.md) (20 mins)
 - `12:10` [Run Production Readiness Yardstick](labs/yardstick.md) (10 mins)
 
 ### Session 3
