@@ -28,7 +28,7 @@
 
 ### Session 4
 
-- `14:50` [Local development](day1/clone-repo.md) (10 mins)
+- `14:50` **Activity**: [Clone Library Pipeline Repo](day1/clone-repo.md) (10 mins)
 - `15:00` [Create local development env](day1/dev-environment.md) (10 mins)
 - `15:10` **Activity**: [Replace Template Placeholders](day1/placeholders.md) (10 mins)
 - `15:20` **Activity**: [Write first Python code](day1/write-code.md) (20 mins)
