@@ -1,80 +1,74 @@
 # Production Readiness Yardstick
 
-!!! abstract "K24: Processes for evaluating prototypes and taking them to implementation within a production environment."
+These four checks are your measure of production-ready code. Run them now to see where you are, and again after each activity to see your progress.
 
-!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
-
-These four checks are your measure of production-ready code. Run them now to see where you are, and again after each activity to see progress.
-
-!!! note "Run all commands either in a Windows Terminal or in a in the VS Code terminal."
+!!! note "Run all commands either in a Windows Terminal or in the VS Code terminal."
 
 ---
 
-## Step 1: Tests pass and coverage
+## Check 1: Run the pipeline
 
-1. Run PyTest with coverage:
+Run your pipeline:
 
-    ```
-    python -m pytest --cov=src
-    ```
+```
+python -m data_processing.run_pipeline
+```
 
-2. Run PyTest with coverage, saving the result to a file:
+!!! success "The pipeline should run successfully. There should be no syntax errors."
 
-    ```
-    python -m pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
-    ```
+---
 
-    !!! success "All tests should pass. A failing test means broken code."
+## Check 2: Run pytest
 
-    !!! info "Coverage should be above 70%."
-        Below 70% means you do not have enough tests to trust the code in production.
+Run PyTest with coverage:
 
+```
+python -m pytest --cov=src
+```
 
-## Step 2: Code quality
+!!! success "All tests should pass. A failing test means broken code."
 
-1. Run the Ruff linter:
+!!! success "Coverage should be over 70%"
 
-    ```
-    python -m ruff check src/
-    ```
+---
 
-    !!! success "There should be no issues reported"
-        Any issues reported here need to be fixed before the code is production ready.
+## Check 3: Inspect code quality
 
+Run the Ruff linter:
 
-## Step 3: Pipeline output
+```
+python -m ruff check src/
+```
 
-1. Run your pipeline:
+!!! success "There should be no issues reported. Any issues reported here need to be fixed before the code is production ready."
 
-    ```
-    python -m data_processing.run_pipeline
-    ```
+---
 
-2. Run and Save the output to a file:
+## Final steps: Write the output to a file
 
-    ```
-    python -m data_processing.run_pipeline > report.txt
-    ```
+## 1. Run the Pipeline and save to a file:
 
-3. Open `report.txt` in VS Code.
+```
+python -m data_processing.run_pipeline > report.txt
+```
 
-    For each dataset, compare the **Raw data** numbers against the **Cleaned data** numbers:
+### 2. Run pytest and coverage and save to a file:
 
-    - **Duplicates** should be 0 after cleaning
-    - **Missing values** should be 0 after cleaning
+```
+python -m pytest --cov=src --cov-report=term-missing --color=no -q > pytest_result.txt
+```
 
-    !!! warning "If the numbers are the same before and after, then the cleaning functions are not working."
+### 3. Push the report files to GitHub:
 
+```
+git add *.txt
+git commit -m "Add pipeline reports"
+git push
+```
 
-## Step 4: Commit your report
+---
 
-1. In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
+!!! abstract "S26: Identify data quality metrics and track them to ensure the quality, accuracy and reliability of the data product."
 
-    - Stage: `report.txt` and `pytest_result.txt`
-    - Commit message: `Add pipeline report`
-    - Click: Sync Changes
-
-    !!! success "You should now see the report in GitHub."
-        - Each time you run the pipeline and commit, GitHub shows the change.
-        - This will help you track your progress throughout the day.
+!!! abstract "K24: Processes for evaluating prototypes and taking them to implementation within a production environment."
 
