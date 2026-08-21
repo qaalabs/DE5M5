@@ -1,10 +1,10 @@
 # The Data Engineering Programme
 
-## Module 1: Fundamentals of Data Engineering
+### Module 1: Fundamentals of Data Engineering
 
-## Module 2: Data Storage and Management
+### Module 2: Data Storage and Management
 
-## Module 3: Data Processing, Transformation & ETL
+### Module 3: Data Processing, Transformation & ETL
 
 ## Module 4: Planning a Data Engineering Product
 
