@@ -1,6 +1,7 @@
 mkdocs-material
 mkdocs
 mkdocs-glightbox
+mkdocs-print-site-plugin
 zensical
 mkdocs-quiz
 jupyter
