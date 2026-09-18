@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 2 of DE5 Module 5
+- **Slides**: 🌅 Welcome to Day 2 of DE5 Module 5
 - **Demo**: [Part 1 ~ Data Ingestion](../day2/ingestion.md)
 - **Activity**: [Write Code for Data Ingestion](../day2/ingestion-code.md)
 - 

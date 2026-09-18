@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 1 of DE5 Module 5
+- **Slides**: 🌅 Welcome to Day 1 of DE5 Module 5
 - **Slides**: 🖥️ VM Setup
 - **Slides**: Define 'Production Ready'
 - [Library Pipeline Scenario](../day1/scenario.md)

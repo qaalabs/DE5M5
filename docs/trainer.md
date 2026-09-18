@@ -4,6 +4,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: 🌅 Welcome to Day 1 of DE5 Module 5 (10 mins)
 - `10:00` **Slides**: [Define 'Production Ready'](day1/prod-ready.md) (10 mins)
 - `10:10` [Library Pipeline Scenario](day1/scenario.md) (10 mins)
 - `10:20` **Activity**: [Library Pipeline Sample Data](day1/sample-data.md) (10 mins)
@@ -40,6 +41,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: [🌅 Welcome to Day 2 of DE5 Module 5](labs/lod-setup.md) (10 mins)
 - `09:40` **Demo**: [Part 1 ~ Data Ingestion](day2/ingestion.md) (10 mins)
 - `09:50` **Activity**: [Write Code for Data Ingestion](day2/ingestion-code.md) (10 mins)
 - `10:30` [✅ Production Readiness](labs/yardstick.md) (10 mins)
@@ -71,6 +73,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: [🌅 Welcome to Day 3 of DE5 Module 5](labs/lod-setup.md) (10 mins)
 - `09:40` [GitHub Actions](day3/github-actions.md) (20 mins)
 - `10:00` [GitHub Actions ~ Trigger Workflow](day3/github-workflow.md) (10 mins)
 - `10:10` [Explore GitHub History & Logs](day3/github-explore.md) (20 mins)
@@ -99,6 +102,7 @@
 
 ### Session 1
 
+- `09:30` **Slides**: [🌅 Welcome to Day 4 of DE5 Module 5](labs/lod-setup.md) (10 mins)
 - `09:40` [Start QA MS Fabric Platform](https://qaalabs.github.io/fabric/run-inside-vm/) (10 mins)
 - `09:50` [Lab: Run MS Fabric Pipeline](labs/42-fabric-pipeline.md) (50 mins)
 

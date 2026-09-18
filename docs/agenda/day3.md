@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 3 of DE5 Module 5
+- **Slides**: 🌅 Welcome to Day 3 of DE5 Module 5
 - [GitHub Actions](../day3/github-actions.md)
 - [GitHub Actions ~ Trigger Workflow](../day3/github-workflow.md)
 - [Explore GitHub History & Logs](../day3/github-explore.md)

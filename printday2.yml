@@ -1,0 +1,75 @@
+# Site name
+site_name: M5 - Data Engineering Product Development
+dev_addr: '0.0.0.0:8000'
+
+# Navigation menu
+nav:
+  - "Day 2 ~ Build & Test Python Package":
+    - "Part 1 ~ Data Ingestion": day2/ingestion.md
+    - "Write Code for Data Ingestion": day2/ingestion-code.md
+    - "✅ Production Readiness": labs/yardstick.md
+    - "Part 2 ~ Data Cleaning": day2/cleaning.md
+    - "Write Code for Data Cleaning": day2/cleaning-code.md
+    - "Part 3 ~ Data Validation": day2/validation.md
+    - "✅ Production Readiness": labs/yardstick.md
+    - "Python Testing": day2/python-testing.md
+    - "Write unit tests": day2/cleaning-tests.md
+    - "Python Test Coverage": day2/coverage.md
+    - "Achieve 70% Coverage": day2/coverage-goal.md
+    - "Explain Linting": day2/linting.md
+    - "Fix All Linting Issues": day2/linting-fixes.md
+    - "✅ Production Readiness": labs/yardstick.md
+
+# Theme
+theme:
+    name: material
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - toc:
+      permalink: false
+      toc_depth: 2
+
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - print-site:
+      enumerate_headings: false
+      add_table_of_contents: false
+

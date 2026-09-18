@@ -2,7 +2,7 @@
 
 ## Session 1
 
-- 🌅 Welcome to Day 4 of DE5 Module 5
+- **Slides**: 🌅 Welcome to Day 4 of DE5 Module 5
 - [Start QA MS Fabric Platform](https://qaalabs.github.io/fabric/run-inside-vm/)
 - [Lab: Run MS Fabric Pipeline](../labs/42-fabric-pipeline.md)
 
