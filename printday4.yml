@@ -1,5 +1,6 @@
 # Site name
 site_name: M5 - Data Engineering Product Development
+use_directory_urls: false
 dev_addr: '0.0.0.0:8000'
 
 # Navigation menu
@@ -62,4 +63,6 @@ plugins:
   - print-site:
       enumerate_headings: false
       add_table_of_contents: false
+      add_cover_page: true
+      cover_page_template: printday_cover.tpl
 
