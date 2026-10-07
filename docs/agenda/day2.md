@@ -36,5 +36,4 @@
 - [✅ Production Readiness](../labs/yardstick.md)
 
 ## 🎁 Wrap
-- 
 

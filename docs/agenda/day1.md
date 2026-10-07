@@ -3,7 +3,7 @@
 ## Session 1
 
 - **Slides**: 🌅 Welcome to Day 1 of DE5 Module 5
-- **Slides**: 🖥️ VM Setup
+- **Setup**: 🖥️ VM Setup
 - **Slides**: Define 'Production Ready'
 - [Library Pipeline Scenario](../day1/scenario.md)
 - **Activity**: [Library Pipeline Sample Data](../day1/sample-data.md)
@@ -41,5 +41,4 @@
 - Trainer Checks Each Repo
 
 ## 🎁 Wrap
-- 
 

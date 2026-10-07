@@ -32,5 +32,4 @@
 - Create PowerBi Report in Fabric
 
 ## 🎁 Wrap
-- 
 
