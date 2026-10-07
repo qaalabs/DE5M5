@@ -2,34 +2,34 @@
 
 ## Session 1
 
-- **Slides**: 🌅 Welcome to Day 3 of DE5 Module 5
+- **Slides**: 🌅 Welcome to day 3 of module 5
 - **Demo**: [GitHub Actions](../day3/github-actions.md)
-- **Activity**: [GitHub Actions ~ Trigger Workflow](../day3/github-workflow.md)
-- **Activity**: [Explore GitHub History & Logs](../day3/github-explore.md)
+- **Activity**: [GitHub Actions - Trigger workflow](../day3/github-workflow.md)
+- **Activity**: [Explore GitHub history & logs](../day3/github-explore.md)
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
-- **Activity**: [Run the Pipeline Runner](../day3/pipeline-runner.md)
-- **Activity**: [Create Database in SSMS](../day3/ssms.md)
+- **Activity**: [Run the pipeline runner](../day3/pipeline-runner.md)
+- **Activity**: [Create database in SSMS](../day3/ssms.md)
 - **Demo**: [Run PowerBi in the VM](../day3/vm-powerbi.md)
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
-- **Setup**: [Start the QA Fabric Playground](https://qaalabs.github.io/fabric/run-inside-vm/)
-- **Practice**: [01 Create Fabric Lakehouse](../labs/32-lakehouse.md)
+- **Setup**: [Start the QA Fabric playground](https://qaalabs.github.io/fabric/run-inside-vm/)
+- **Practice**: [01 Create Fabric lakehouse](../labs/32-lakehouse.md)
 - **Activity**: [Run pipeline in MS Fabric](../labs/33-library-pipeline.md)
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
 - **Activity**: [Run pipeline in MS Fabric](../labs/33-library-pipeline.md)
-- **Activity**: [Create Gold Layer Table](../labs/33-library-pipeline.md)
-- **Activity**: Create PowerBi Report in Fabric
+- **Activity**: [Create gold layer table](../labs/33-library-pipeline.md)
+- **Activity**: Create PowerBi report in Fabric
 
 ## 🎁 Wrap
 

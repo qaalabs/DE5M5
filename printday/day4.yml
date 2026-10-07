@@ -6,10 +6,10 @@ dev_addr: '0.0.0.0:8000'
 # Navigation menu
 nav:
   - "Day 4 ~ Orchestrate & Present":
-    - "Start QA MS Fabric Platform": https://qaalabs.github.io/fabric/run-inside-vm/
-    - "Lab: Run MS Fabric Pipeline": labs/42-fabric-pipeline.md
-    - "Lab: Build MkDocs Site": labs/43-mkdocs-site.md
-    - "EPA Presentation Briefing": day4/presentation.md
+    - "Start QA MS Fabric platform": https://qaalabs.github.io/fabric/run-inside-vm/
+    - "Lab: Run MS Fabric pipeline": labs/42-fabric-pipeline.md
+    - "Lab: Build MkDocs site": labs/43-mkdocs-site.md
+    - "EPA presentation briefing": day4/presentation.md
 
 # Theme
 theme:

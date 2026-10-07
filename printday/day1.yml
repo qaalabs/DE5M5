@@ -6,19 +6,19 @@ dev_addr: '0.0.0.0:8000'
 # Navigation menu
 nav:
   - "Day 1 ~ Foundation & Setup":
-    - "Library Pipeline Scenario": day1/scenario.md
-    - "Library Pipeline Sample Data": day1/sample-data.md
-    - "Your Mission": day1/your-mission.md
-    - "Creating Architecture Diagrams": day1/create-diagram.md
-    - "Design your pipeline architecture": day1/design-pipeline.md
-    - "Writeup Architecture Decision Record": day1/adr.md
+    - "Library pipeline scenario": day1/scenario.md
+    - "Library pipeline sample data": day1/sample-data.md
+    - "Your mission": day1/your-mission.md
+    - "Creating architecture diagrams": day1/create-diagram.md
+    - "👥 Design your pipeline architecture": day1/design-pipeline.md
+    - "Writeup architecture decision record": day1/adr.md
     - "Create a GitHub repository": day1/create-repo.md
-    - "Introduce GitHub Projects": day1/create-project.md
-    - "Set up Kanban Board": day1/project-tasks.md
-    - "Clone Library Pipeline Repo": day1/clone-repo.md
-    - "Setup Development Environment": day1/python-setup.md
-    - "Replace Template Placeholders": day1/placeholders.md
-    - "Production Readiness Check": labs/yardstick.md
+    - "Introduce GitHub projects": day1/create-project.md
+    - "Set up kanban board": day1/project-tasks.md
+    - "Clone library pipeline repo": day1/clone-repo.md
+    - "Setup development environment": day1/python-setup.md
+    - "Replace template placeholders": day1/placeholders.md
+    - "Production readiness check": labs/yardstick.md
 
 # Theme
 theme:

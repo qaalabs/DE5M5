@@ -2,43 +2,43 @@
 
 ## Session 1
 
-- **Slides**: 🌅 Welcome to Day 4 of DE5 Module 5
-- **Setup**: [Start QA MS Fabric Platform](https://qaalabs.github.io/fabric/run-inside-vm/)
-- **Practice**: [Lab: Run MS Fabric Pipeline](../labs/42-fabric-pipeline.md)
+- **Slides**: 🌅 Welcome to day 4 of module 5
+- **Setup**: [Start QA MS Fabric platform](https://qaalabs.github.io/fabric/run-inside-vm/)
+- **Practice**: [Lab: Run MS Fabric pipeline](../labs/42-fabric-pipeline.md)
 
-## ☕ Morning Break
+## ☕ Morning break
 
 ## Session 2
 
-- **Practice**: [Lab: Build MkDocs Site](../labs/43-mkdocs-site.md)
-- [EPA Presentation Briefing](../day4/presentation.md)
-- **Activity**: Presentation Prep
+- **Practice**: [Lab: Build MkDocs site](../labs/43-mkdocs-site.md)
+- [EPA presentation briefing](../day4/presentation.md)
+- **Activity**: Presentation prep
 
-## 🥪🥤 Lunch Break
+## 🥪🥤 Lunch break
 
 ## Session 3
 
 - **Report-Back**: Presentations ~ Group 1
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 4
 
 - **Report-Back**: Presentations ~ Group 2
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 5
 
 - **Report-Back**: Presentations ~ Group 3
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 6
 
 - **Report-Back**: Presentations ~ Group 4
 
-## ☕ Afternoon Break
+## ☕ Afternoon break
 
 ## Session 7
 
