@@ -16,8 +16,8 @@
 - **Slides**: Architecture Principles
 - **Demo**: [Creating Architecture Diagrams](../day1/create-diagram.md)
 - **Breakout**: [Design your pipeline architecture](../day1/design-pipeline.md)
-- Review the diagrams created
-- [Writeup Architecture Decision Record](../day1/adr.md)
+- **Report-Back**: Review the diagrams created
+- **Activity**: [Writeup Architecture Decision Record](../day1/adr.md)
 
 ## 🥪🥤 Lunch Break
 
@@ -28,7 +28,7 @@
 - **Slides**: What is a Kanban Board?
 - **Activity**: [Introduce GitHub Projects](../day1/create-project.md)
 - **Activity**: [Set up Kanban Board](../day1/project-tasks.md)
-- Review the GitHub Repositories
+- **Report-Back**: Review the GitHub Repositories
 
 ## ☕ Afternoon Break
 
@@ -37,8 +37,8 @@
 - **Activity**: [Clone Library Pipeline Repo](../day1/clone-repo.md)
 - **Activity**: [Setup Development Environment](../day1/python-setup.md)
 - **Activity**: [Replace Template Placeholders](../day1/placeholders.md)
-- [Production Readiness Check](../labs/yardstick.md)
-- Trainer Checks Each Repo
+- **Activity**: [Production Readiness Check](../labs/yardstick.md)
+- **Activity**: Trainer Checks Each Repo
 
 ## 🎁 Wrap
 

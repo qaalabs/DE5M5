@@ -9,7 +9,7 @@ nav:
     - "Start QA MS Fabric Platform": https://qaalabs.github.io/fabric/run-inside-vm/
     - "Lab: Run MS Fabric Pipeline": labs/42-fabric-pipeline.md
     - "Lab: Build MkDocs Site": labs/43-mkdocs-site.md
-    - "Introduce Presentation Task": day4/presentations.md
+    - "EPA Presentation Briefing": day4/presentation.md
 
 # Theme
 theme:

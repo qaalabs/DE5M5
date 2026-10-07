@@ -5,8 +5,7 @@
 - **Slides**: 🌅 Welcome to Day 2 of DE5 Module 5
 - **Demo**: [Part 1 ~ Data Ingestion](../day2/ingestion.md)
 - **Activity**: [Write Code for Data Ingestion](../day2/ingestion-code.md)
-- 
-- [✅ Production Readiness](../labs/yardstick.md)
+- **Activity**: [✅ Production Readiness](../labs/yardstick.md)
 
 ## ☕ Morning Break
 
@@ -14,8 +13,8 @@
 
 - **Demo**: [Part 2 ~ Data Cleaning](../day2/cleaning.md)
 - **Activity**: [Write Code for Data Cleaning](../day2/cleaning-code.md)
-- [Part 3 ~ Data Validation](../day2/validation.md)
-- [✅ Production Readiness](../labs/yardstick.md)
+- **Activity**: [Part 3 ~ Data Validation](../day2/validation.md)
+- **Activity**: [✅ Production Readiness](../labs/yardstick.md)
 
 ## 🥪🥤 Lunch Break
 
@@ -31,9 +30,9 @@
 ## Session 4
 
 - **Activity**: [Achieve 70% Coverage](../day2/coverage-goal.md)
-- [Explain Linting](../day2/linting.md)
-- [Fix All Linting Issues](../day2/linting-fixes.md)
-- [✅ Production Readiness](../labs/yardstick.md)
+- **Demo**: [Explain Linting](../day2/linting.md)
+- **Activity**: [Fix All Linting Issues](../day2/linting-fixes.md)
+- **Activity**: [✅ Production Readiness](../labs/yardstick.md)
 
 ## 🎁 Wrap
 

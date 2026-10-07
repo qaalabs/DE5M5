@@ -11,6 +11,7 @@ nav:
     - "Explore GitHub History & Logs": day3/github-explore.md
     - "Run the Pipeline Runner": day3/pipeline-runner.md
     - "Create Database in SSMS": day3/ssms.md
+    - "Run PowerBi in the VM": day3/vm-powerbi.md
     - "Start the QA Fabric Playground": https://qaalabs.github.io/fabric/run-inside-vm/
     - "01 Create Fabric Lakehouse": labs/32-lakehouse.md
     - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
