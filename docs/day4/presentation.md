@@ -25,6 +25,6 @@ For your chosen KSB(s):
 
 ## Step 3: Present
 
-- Presentations run in groups of 3, with a short break between groups
-- Aim for around 5 minutes each - some will run longer, that is fine
+- Presentations run in groups of 4, with a short break between groups
+- At least 5 minutes each, maximum of 10 - your trainer will confirm the time per person before lunch
 

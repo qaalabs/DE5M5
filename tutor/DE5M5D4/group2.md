@@ -1,3 +1,3 @@
-## Second Group Presents
+## Presentations ~ Group 2
 
-- Same format as PRESENT-1 (see tutor/DE5M5D4/present-1.md)
+- Same format as Group 1 (see group1.md)

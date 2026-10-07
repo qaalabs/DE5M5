@@ -8,4 +8,4 @@
 
 ## Coming up in Session 3:
 
-- Presentations - groups of 3, ~10 min each, 10 min break between groups
+- Presentations - groups of 4, 5 to 10 min each, 10 min break between groups

@@ -1,6 +1,6 @@
-## First Group Presents
+## Presentations ~ Group 1
 
-- Groups of 3, then a 10 min break - repeat for remaining groups
-- ~10 min per presenter as a rough guide - some go faster, some slower
+- Groups of 4, then a 10 minute break - repeat for the remaining groups
+- 5 to 10 minutes per presenter, as agreed at the briefing - a group of 4 can take 20 to 40 minutes
 - As each learner presents, post the formal KSB text + EPA topic in chat as a shared reference
-- uthisha's PRESENT-1..5 slots are a guide only, not literal - adjust live to cohort size and pace
+- The GROUP1-5 slots are a guide only - with a small cohort use fewer of them, and adjust live to pace
