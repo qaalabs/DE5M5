@@ -2,5 +2,5 @@
 - Add branch protection on `main` requiring both status checks (`test` and `ruff`) before merging
 - Leave "Require branches to be up to date" unticked - nothing else pushes to `main`, so it can't go stale
 - Tick "Do not allow bypassing" too, or they can just click through as repo admin
-- Set the coverage threshold to 90 on `dev`, watch it fail, drop to 40, watch it pass, merge
+- Their PR fails first time - the template sets coverage to 90. They read the failure, drop it to 40 on `dev`, watch it pass, merge
 - Fast finishers can move straight into GITHUB (next block) rather than wait

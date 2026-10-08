@@ -13,7 +13,7 @@ Your code is on `dev`. The goal is to get it onto `main` - with CI confirming it
 - Title: `Merge dev into main`
 - Click **Create pull request**
 
-You will see two CI checks appear. Leave them running.
+You will see two CI checks appear. Leave them running - one of them is going to fail, and that is expected.
 
 ## 2. Require status checks before merging
 
@@ -26,34 +26,35 @@ Now that the checks have run once, add real teeth to them:
 - Check **"Do not allow bypassing the above settings"** - without this, you're an admin on your own repo and can just click "Merge without waiting for requirements to be met (bypass rules)" regardless of whether checks pass
 - Click **Save changes**
 
-## 3. Set a coverage threshold
+## 3. Find the coverage threshold
 
-In GitHub, navigate to `.github/workflows/ci.yml` on the `dev` branch. Click the pencil icon to edit.
-
-Uncomment the coverage line and set it to 90:
+In GitHub, navigate to `.github/workflows/ci.yml` on the `dev` branch and find this line:
 
 ```yaml
-pytest --cov=src --cov-fail-under=90
+pytest --cov=src --cov-report=term-missing --cov-fail-under=90
 ```
 
-Click **Commit changes** -> commit directly to `dev`.
+Note that `--cov-fail-under=90` makes the check fail if test coverage is under 90%. Nothing to change yet.
 
-## 4. Watch it fail
+## 4. See why it failed
 
-Go back to your pull request. Click **Details** on the CI check and watch it run.
+Go back to your pull request. The `test` check has failed ❌ - your tests all passed, but your coverage is below the 90% threshold.
 
-It will fail ❌. Read the output - what is it telling you?
+Click **Details** on the failed check and read the output - what is it telling you?
 
 ## 5. Lower the threshold and merge
 
-Edit `.github/workflows/ci.yml` in GitHub again. Change the threshold to 40:
+Back in `.github/workflows/ci.yml` on the `dev` branch, click the pencil icon to edit. Change `90` to `40`:
 
 ```yaml
-pytest --cov=src --cov-fail-under=40
+pytest --cov=src --cov-report=term-missing --cov-fail-under=40
 ```
 
-Commit directly to `dev`. Both checks pass ✅.
+Click **Commit changes** -> commit directly to `dev`. CI re-runs on your pull request and both checks pass ✅.
 
 Click **Merge pull request** -> **Confirm merge**.
 
 Your `dev` branch is now on `main`.
+
+
+!!! success "Finished early? Carry on to [Explore Your GitHub Repo](github-explore.md)."

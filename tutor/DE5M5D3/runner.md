@@ -1,4 +1,4 @@
-- Clone `library-pipeline-runner`, then `pip install` straight from their own GitHub repo URL - the pay-off for having pushed working code yesterday
+- `library-pipeline-runner` is already cloned from PYTHON-SQL - learners `pip install` straight from their own GitHub repo URL, the pay-off for having pushed working code yesterday
 - Easy mistake: leaving `YOUR_USERNAME/YOUR_REPO` unedited in the install command - watch for it while circulating
 - If `pip install` fails, first check the repo is public, not private
 - Cleaned output lands in `data/silver/` - that's the proof their package works on data it has never seen

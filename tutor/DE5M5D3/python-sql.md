@@ -1,0 +1,6 @@
+- Learners clone `library-pipeline-runner` and `pip install -r requirements.txt` first - the notebook lives in that repo, and RUNNER reuses the same clone straight after
+- Notebook is `notebooks/python_sql_server_intro.ipynb`, opened in Jupyter Notebook with SSMS alongside - help anyone who cannot get Jupyter started - point to land: Python and SSMS are both clients of the same SQL Server
+- Demo Part 1 up to Step 7 only, then hand over - learners run the same cells themselves, so a full run-through is the same content twice
+- The Step 6-7 pause is the highlight: the SSMS `SELECT` hangs until Python commits. Ask "why is SSMS waiting?" before running Step 7
+- Three checkpoints, posted in chat as "1 done" / "2 done" / "3 done" - Part 3 (their own scenario) is stretch, most will stop at 2
+- Part 2 asks if the CSV matches SSMS: `in_stock` is `True`/`False` in the CSV but `1`/`0` in SSMS - worth naming

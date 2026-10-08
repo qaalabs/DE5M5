@@ -4,30 +4,18 @@
 
 A second library network has data that needs cleaning. Your package will do it.
 
-## 1. Clone the runner repo
+You cloned `library-pipeline-runner` and installed its dependencies in the last activity. Carry on in the same Terminal window - it is already in the `library-pipeline-runner` folder.
 
-```powershell
-git clone https://github.com/QAADE5/library-pipeline-runner.git
-cd library-pipeline-runner
-```
-
-## 2. Install dependencies
-
-```powershell
-pip install -r requirements.txt
-```
-
-## 3. Install your package
+## 1. Install your package
 
 ```powershell
 pip install git+https://github.com/YOUR_USERNAME/YOUR_REPO.git
 ```
 
-## 4. Run the pipeline
+## 2. Run the pipeline
 
 ```powershell
 python -m data_processing.run_pipeline
 ```
 
 Cleaned files appear in `data/silver/`.
-
