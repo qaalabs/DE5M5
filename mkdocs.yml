@@ -1,5 +1,5 @@
 # Site name
-site_name: M5 - Data Engineering Product Development
+site_name: DE5M5 - Apprenticeship Materials
 site_url: https://qaalabs.github.io/DE5M5/
 dev_addr: '0.0.0.0:8000'
 
@@ -10,59 +10,6 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 1: agenda/day1.md
-    - Day 2: agenda/day2.md
-    - Day 3: agenda/day3.md
-    - Day 4: agenda/day4.md
-
-  - "Day 1 ~ Foundation & Setup":
-    - "Library pipeline scenario": day1/scenario.md
-    - "Library pipeline sample data": day1/sample-data.md
-    - "Your mission": day1/your-mission.md
-    - "Creating architecture diagrams": day1/create-diagram.md
-    - "👥 Design your pipeline architecture": day1/design-pipeline.md
-    - "Writeup architecture decision record": day1/adr.md
-    - "Create a GitHub repository": day1/create-repo.md
-    - "Introduce GitHub projects": day1/create-project.md
-    - "Set up kanban board": day1/project-tasks.md
-    - "Clone library pipeline repo": day1/clone-repo.md
-    - "Setup development environment": day1/python-setup.md
-    - "Replace template placeholders": day1/placeholders.md
-    - "Production readiness check": labs/yardstick.md
-
-  - "Day 2 ~ Create Python Package":
-    - "Part 1 - Data ingestion": day2/ingestion.md
-    - "Write code for data ingestion": day2/ingestion-code.md
-    - "✅ Production readiness": labs/yardstick.md
-    - "Part 2 - Data cleaning": day2/cleaning.md
-    - "Write code for data cleaning": day2/cleaning-code.md
-    - "Part 3 - Data validation": day2/validation.md
-    - "✅ Production readiness": labs/yardstick.md
-    - "Python testing": day2/python-testing.md
-    - "Write unit tests": day2/cleaning-tests.md
-    - "Python test coverage": day2/coverage.md
-    - "Achieve 70% coverage": day2/coverage-goal.md
-    - "Explain linting": day2/linting.md
-    - "Fix all linting issues": day2/linting-fixes.md
-    - "✅ Production readiness": labs/yardstick.md
-
-  - "Day 3 ~ Automation & Integration":
-    - "GitHub Actions": day3/github-actions.md
-    - "GitHub Actions - Trigger workflow": day3/github-workflow.md
-    - "Explore GitHub history & logs": day3/github-explore.md
-    - "Run the pipeline runner": day3/pipeline-runner.md
-    - "Create database in SSMS": day3/ssms.md
-    - "Run PowerBi in the VM": day3/vm-powerbi.md
-    - "Start the QA Fabric playground": https://qaalabs.github.io/fabric/run-inside-vm/
-    - "01 Create Fabric lakehouse": labs/32-lakehouse.md
-    - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
-    - "Create gold layer table": labs/33-library-pipeline.md
-
-  - "Day 4 ~ Orchestrate & Present":
-    - "Start QA MS Fabric platform": https://qaalabs.github.io/fabric/run-inside-vm/
-    - "Lab: Run MS Fabric pipeline": labs/42-fabric-pipeline.md
-    - "Lab: Build MkDocs site": labs/43-mkdocs-site.md
-    - "EPA presentation briefing": day4/presentation.md
 
   - Resources: resources.md
 
