@@ -1,4 +1,6 @@
-## Agenda
+## Welcome to Day 4
+
+Share the holding slide from 9:20.
 
 Everyone logs onto their VM here. The lod-setup link is not on the learner agenda - share it with whoever needs it:
 
