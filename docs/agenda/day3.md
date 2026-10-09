@@ -3,7 +3,7 @@
 ## Session 1
 
 - **Slides**: 🌅 Welcome to day 3 of module 5
-- **Demo**: [GitHub Actions](../day3/github-actions.md)
+- **Demo**: GitHub Actions
 - **Activity**: [GitHub Actions - Trigger workflow](../day3/github-workflow.md)
 - **Activity**: [Explore GitHub history & logs](../day3/github-explore.md)
 
@@ -11,6 +11,7 @@
 
 ## Session 2
 
+- **Activity**: [Python meets SQL Server](../day3/python-sql.md)
 - **Activity**: [Run the pipeline runner](../day3/pipeline-runner.md)
 - **Activity**: [Create database in SSMS](../day3/ssms.md)
 - **Demo**: [Run PowerBi in the VM](../day3/vm-powerbi.md)

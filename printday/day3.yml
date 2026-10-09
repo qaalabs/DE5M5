@@ -6,9 +6,9 @@ dev_addr: '0.0.0.0:8000'
 # Navigation menu
 nav:
   - "Day 3 ~ Automation & Integration":
-    - "GitHub Actions": day3/github-actions.md
     - "GitHub Actions - Trigger workflow": day3/github-workflow.md
     - "Explore GitHub history & logs": day3/github-explore.md
+    - "Python meets SQL Server": day3/python-sql.md
     - "Run the pipeline runner": day3/pipeline-runner.md
     - "Create database in SSMS": day3/ssms.md
     - "Run PowerBi in the VM": day3/vm-powerbi.md

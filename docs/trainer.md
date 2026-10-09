@@ -75,12 +75,13 @@
 
 - `09:30` **Slides**: [🌅 Welcome to day 3 of module 5](labs/lod-setup.md) (10 mins)
 - `09:40` **Demo**: [GitHub Actions](day3/github-actions.md) (20 mins)
-- `10:00` **Activity**: [GitHub Actions - Trigger workflow](day3/github-workflow.md) (10 mins)
-- `10:10` **Activity**: [Explore GitHub history & logs](day3/github-explore.md) (20 mins)
+- `10:00` **Activity**: [GitHub Actions - Trigger workflow](day3/github-workflow.md) (20 mins)
+- `10:20` **Activity**: [Explore GitHub history & logs](day3/github-explore.md) (10 mins)
 
 ### Session 2
 
-- `10:50` **Activity**: [Run the pipeline runner](day3/pipeline-runner.md) (50 mins)
+- `10:50` **Activity**: [Python meets SQL Server](day3/python-sql.md) (30 mins)
+- `11:20` **Activity**: [Run the pipeline runner](day3/pipeline-runner.md) (20 mins)
 - `11:40` **Activity**: [Create database in SSMS](day3/ssms.md) (20 mins)
 - `12:00` **Demo**: [Run PowerBi in the VM](day3/vm-powerbi.md) (20 mins)
 

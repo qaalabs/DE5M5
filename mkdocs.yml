@@ -21,6 +21,7 @@ not_in_nav: |
   day1/review-diagram.md
   day1/github-template.md
   labs/lod-setup.md
+  day3/github-actions.md
   umfundi.md
   day2/ingestion-solution.md
   day2/validation-solution.md
