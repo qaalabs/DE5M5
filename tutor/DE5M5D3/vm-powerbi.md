@@ -2,5 +2,6 @@
 - Open Power BI Desktop on the VM
 - Select a data source -> SQL Server -> Server: `localhost`, Database: `library_warehouse` -> Load
 - Build one visual: transactions by branch (`branch_id` against a count of `transaction_id`) - it matches the first SSMS query
+- The screenshot on the learner page was taken from the template's uncleaned output, so it shows about 25 columns (each branch twice) - a learner whose cleaning works will likely see 15, so their chart will not match the picture
 - Draw the connection: same data they just queried in SSMS, now in a report
 - This afternoon they will do the same thing in Fabric - same pattern, different platform
