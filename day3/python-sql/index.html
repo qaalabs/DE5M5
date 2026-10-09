@@ -5,7 +5,7 @@
       
       
       
-        <link rel="canonical" href="https://qaalabs.github.io/DE5M5/agenda/day3/">
+        <link rel="canonical" href="https://qaalabs.github.io/DE5M5/day3/python-sql/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Day 3 ~ Automation &amp; Integration - DE5M5 - Apprenticeship Materials</title>
+        <title>Activity: Python Meets SQL Server - DE5M5 - Apprenticeship Materials</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#day-3-automation-integration" class="md-skip">
+        <a href="#activity-python-meets-sql-server" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 3 ~ Automation &amp; Integration
+              Activity: Python Meets SQL Server
             
           </span>
         </div>
@@ -304,7 +304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../agenda/" class="md-nav__link">
         
   
   
@@ -376,37 +376,67 @@
 
 
 
-<h1 id="day-3-automation-integration">Day 3 ~ Automation &amp; Integration</h1>
-<h2 id="session-1">Session 1</h2>
-<ul>
-<li><strong>Slides</strong>: 🌅 Welcome to day 3 of module 5</li>
-<li><strong>Demo</strong>: GitHub Actions</li>
-<li><strong>Activity</strong>: <a href="../../day3/github-workflow/">GitHub Actions - Trigger workflow</a></li>
-<li><strong>Activity</strong>: <a href="../../day3/github-explore/">Explore GitHub history &amp; logs</a></li>
-</ul>
-<h2 id="morning-break">☕ Morning break</h2>
-<h2 id="session-2">Session 2</h2>
-<ul>
-<li><strong>Activity</strong>: <a href="../../day3/python-sql/">Python meets SQL Server</a></li>
-<li><strong>Activity</strong>: <a href="../../day3/pipeline-runner/">Run the pipeline runner</a></li>
-<li><strong>Activity</strong>: <a href="../../day3/ssms/">Create database in SSMS</a></li>
-<li><strong>Demo</strong>: <a href="../../day3/vm-powerbi/">Run PowerBi in the VM</a></li>
-</ul>
-<h2 id="lunch-break">🥪🥤 Lunch break</h2>
-<h2 id="session-3">Session 3</h2>
-<ul>
-<li><strong>Setup</strong>: <a href="https://qaalabs.github.io/fabric/run-inside-vm/">Start the QA Fabric playground</a></li>
-<li><strong>Practice</strong>: <a href="../../labs/32-lakehouse/">01 Create Fabric lakehouse</a></li>
-<li><strong>Activity</strong>: <a href="../../labs/33-library-pipeline/">Run pipeline in MS Fabric</a></li>
-</ul>
-<h2 id="afternoon-break">☕ Afternoon break</h2>
-<h2 id="session-4">Session 4</h2>
-<ul>
-<li><strong>Activity</strong>: <a href="../../labs/33-library-pipeline/">Run pipeline in MS Fabric</a></li>
-<li><strong>Activity</strong>: <a href="../../labs/33-library-pipeline/">Create gold layer table</a></li>
-<li><strong>Activity</strong>: Create PowerBi report in Fabric</li>
-</ul>
-<h2 id="wrap">🎁 Wrap</h2><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<h1 id="activity-python-meets-sql-server">Activity: Python Meets SQL Server</h1>
+<div class="admonition abstract">
+<p class="admonition-title">S9: Query and manipulate data using tools and programming such as SQL and Python. Manage database access, and implement automated validation checks.</p>
+</div>
+<p>In Module 2 you worked with SQL Server through SSMS. Now Python talks to the same server.</p>
+<p>The notebook for this activity lives in a second repo, <code>library-pipeline-runner</code>. You will use the same repo again in the next activity.</p>
+<h2 id="1-clone-the-runner-repo">1. Clone the runner repo</h2>
+<p>Open a new Terminal window, then:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="n">Desktop</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">QAADE5</span><span class="p">/</span><span class="n">library-pipeline-runner</span><span class="p">.</span><span class="n">git</span>
+<span class="nb">cd </span><span class="n">library-pipeline-runner</span>
+</code></pre></div>
+<h2 id="2-install-dependencies">2. Install dependencies</h2>
+<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</code></pre></div>
+<h2 id="3-open-ssms">3. Open SSMS</h2>
+<p>Open SSMS and connect to <code>localhost</code> with <strong>Windows Authentication</strong>.</p>
+<p>Keep it open next to the notebook - you will check SSMS after each step.</p>
+<h2 id="4-open-the-notebook">4. Open the notebook</h2>
+<p>Run Jupyter Notebook in your Virtual Machine.</p>
+<p>Find the <code>library-pipeline-runner</code> folder on the Desktop, then open <code>notebooks/python_sql_server_intro.ipynb</code>.</p>
+<h2 id="5-work-through-the-notebook">5. Work through the notebook</h2>
+<p>The notebook has three parts. Work through them at your own pace, running each cell with <strong>Shift + Enter</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">At each checkpoint</p>
+<ol>
+<li>Check the result in SSMS</li>
+<li>Post the checkpoint number in the chat, e.g. <strong>1 done</strong></li>
+<li>Carry straight on to the next part - do not wait</li>
+</ol>
+</div>
+<table>
+<thead>
+<tr>
+<th>Checkpoint</th>
+<th>Notebook</th>
+<th>You are done when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Part 1 - Follow along</td>
+<td>SSMS shows 5 rows in <code>py_sandbox</code> &gt; <code>products</code>, and <code>products.csv</code> exists</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Part 2 - Make it yours</td>
+<td>Your new product and your new column both show in SSMS</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Part 3 - On your own</td>
+<td>Your own database, table and CSV exist</td>
+</tr>
+</tbody>
+</table>
+<p>Checkpoint 3 is a stretch task. Not everyone will reach it, and that is fine.</p>
+<div class="admonition success">
+<p class="admonition-title">Leave your Terminal window open - it is already in the right folder for the next two activities.</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

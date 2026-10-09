@@ -399,10 +399,10 @@ Developer opens PR -&gt; tests run automatically -&gt;
 <span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="w"> </span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <p>Only runs on PRs targeting main - not on every push. Walk through the steps: checkout, set up Python, install dependencies, run pytest with coverage.</p>
-<p>The coverage threshold line is commented out - you will uncomment it in a moment.</p>
+<p>The pytest line ends with <code>--cov-fail-under=90</code> - the check fails if coverage is under 90%. The template ships with it set that high on purpose.</p>
 <h3 id="lintyml">lint.yml</h3>
 <p>Same trigger - runs on every PR to main. Installs ruff and runs <code>ruff check src/</code> - the same command and scope taught in <code>day2/linting.md</code>. If there are linting errors the PR is blocked. They fixed all their linting issues yesterday - this should pass cleanly.</p>
-<h2 id="demo-open-a-pr-and-watch-ci-run">Demo: open a PR and watch CI run</h2>
+<h2 id="demo-open-a-pr-and-watch-ci-fail">Demo: open a PR and watch CI fail</h2>
 <p>On your (trainer) repo:</p>
 <ol>
 <li>Go to GitHub -&gt; <strong>Pull requests</strong> -&gt; <strong>New pull request</strong></li>
@@ -410,17 +410,16 @@ Developer opens PR -&gt; tests run automatically -&gt;
 <li>Title: <code>Merge dev into main</code> -&gt; <strong>Create pull request</strong></li>
 <li>Show the two CI checks appearing automatically</li>
 </ol>
-<h2 id="set-a-high-coverage-threshold">Set a high coverage threshold</h2>
-<p>In GitHub, navigate to <code>.github/workflows/ci.yml</code> on the <code>dev</code> branch. Click the pencil icon to edit.</p>
-<p>Uncomment the coverage line and set it to 90:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-fail-under=90</span>
-</code></pre></div>
-<p>Click <strong>Commit changes</strong> -&gt; commit directly to <code>dev</code>.</p>
-<p>Go back to the PR - watch CI re-run. It fails ❌. Show the error output - the coverage is below 90%.</p>
+<p>The <code>ruff</code> check passes ✅. The <code>test</code> check fails ❌ - and it is meant to. Yesterday's target was 70% coverage, so nobody is above 90%.</p>
+<p>Click <strong>Details</strong> on the failed check and show the output: every test passed, but coverage is below the threshold. CI has blocked the merge, which is exactly its job.</p>
 <h2 id="lower-the-threshold-watch-it-pass">Lower the threshold - watch it pass</h2>
-<p>Edit <code>ci.yml</code> in GitHub again, change to 40:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-fail-under=40</span>
+<p>The PR cannot merge until the check passes. In GitHub, navigate to <code>.github/workflows/ci.yml</code> on the <code>dev</code> branch and find the line that caused the fail:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-report=term-missing --cov-fail-under=90</span>
 </code></pre></div>
+<p>Click the pencil icon to edit and change <code>90</code> to <code>40</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-report=term-missing --cov-fail-under=40</span>
+</code></pre></div>
+<p>40 is deliberately low - everyone clears it, whatever coverage they reached yesterday.</p>
 <p>Commit directly to <code>dev</code>. CI re-runs - passes ✅. Both checks green. Click <strong>Merge pull request</strong>.</p>
 <p>Dev is now on main, and CI confirmed it was working before it got there.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->

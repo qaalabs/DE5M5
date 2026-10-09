@@ -391,7 +391,7 @@
 <li>Title: <code>Merge dev into main</code></li>
 <li>Click <strong>Create pull request</strong></li>
 </ul>
-<p>You will see two CI checks appear. Leave them running.</p>
+<p>You will see two CI checks appear. Leave them running - one of them is going to fail, and that is expected.</p>
 <h2 id="2-require-status-checks-before-merging">2. Require status checks before merging</h2>
 <p>Now that the checks have run once, add real teeth to them:</p>
 <ul>
@@ -402,22 +402,24 @@
 <li>Check <strong>"Do not allow bypassing the above settings"</strong> - without this, you're an admin on your own repo and can just click "Merge without waiting for requirements to be met (bypass rules)" regardless of whether checks pass</li>
 <li>Click <strong>Save changes</strong></li>
 </ul>
-<h2 id="3-set-a-coverage-threshold">3. Set a coverage threshold</h2>
-<p>In GitHub, navigate to <code>.github/workflows/ci.yml</code> on the <code>dev</code> branch. Click the pencil icon to edit.</p>
-<p>Uncomment the coverage line and set it to 90:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-fail-under=90</span>
+<h2 id="3-find-the-coverage-threshold">3. Find the coverage threshold</h2>
+<p>In GitHub, navigate to <code>.github/workflows/ci.yml</code> on the <code>dev</code> branch and find this line:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-report=term-missing --cov-fail-under=90</span>
 </code></pre></div>
-<p>Click <strong>Commit changes</strong> -&gt; commit directly to <code>dev</code>.</p>
-<h2 id="4-watch-it-fail">4. Watch it fail</h2>
-<p>Go back to your pull request. Click <strong>Details</strong> on the CI check and watch it run.</p>
-<p>It will fail ❌. Read the output - what is it telling you?</p>
+<p>Note that <code>--cov-fail-under=90</code> makes the check fail if test coverage is under 90%. Nothing to change yet.</p>
+<h2 id="4-see-why-it-failed">4. See why it failed</h2>
+<p>Go back to your pull request. The <code>test</code> check has failed ❌ - your tests all passed, but your coverage is below the 90% threshold.</p>
+<p>Click <strong>Details</strong> on the failed check and read the output - what is it telling you?</p>
 <h2 id="5-lower-the-threshold-and-merge">5. Lower the threshold and merge</h2>
-<p>Edit <code>.github/workflows/ci.yml</code> in GitHub again. Change the threshold to 40:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-fail-under=40</span>
+<p>Back in <code>.github/workflows/ci.yml</code> on the <code>dev</code> branch, click the pencil icon to edit. Change <code>90</code> to <code>40</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">pytest --cov=src --cov-report=term-missing --cov-fail-under=40</span>
 </code></pre></div>
-<p>Commit directly to <code>dev</code>. Both checks pass ✅.</p>
+<p>Click <strong>Commit changes</strong> -&gt; commit directly to <code>dev</code>. CI re-runs on your pull request and both checks pass ✅.</p>
 <p>Click <strong>Merge pull request</strong> -&gt; <strong>Confirm merge</strong>.</p>
-<p>Your <code>dev</code> branch is now on <code>main</code>.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+<p>Your <code>dev</code> branch is now on <code>main</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Finished early? Carry on to <a href="../github-explore/">Explore Your GitHub Repo</a>.</p>
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
   <!-- mkdocs-quiz progress sidebar (desktop) -->
   <label class="md-nav__title">
     <span class="md-nav__icon md-icon"></span>

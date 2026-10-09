@@ -381,17 +381,11 @@
 <p class="admonition-title">S24: Evaluate the strengths and weaknesses of prototype data products and how these integrate within an organisation's overarching data infrastructure.</p>
 </div>
 <p>A second library network has data that needs cleaning. Your package will do it.</p>
-<h2 id="1-clone-the-runner-repo">1. Clone the runner repo</h2>
-<div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">QAADE5</span><span class="p">/</span><span class="n">library-pipeline-runner</span><span class="p">.</span><span class="n">git</span>
-<span class="nb">cd </span><span class="n">library-pipeline-runner</span>
-</code></pre></div>
-<h2 id="2-install-dependencies">2. Install dependencies</h2>
-<div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
-</code></pre></div>
-<h2 id="3-install-your-package">3. Install your package</h2>
+<p>You cloned <code>library-pipeline-runner</code> and installed its dependencies in the last activity. Carry on in the same Terminal window - it is already in the <code>library-pipeline-runner</code> folder.</p>
+<h2 id="1-install-your-package">1. Install your package</h2>
 <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="p">+</span><span class="n">https</span><span class="p">://</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">/</span><span class="n">YOUR_USERNAME</span><span class="p">/</span><span class="n">YOUR_REPO</span><span class="p">.</span><span class="n">git</span>
 </code></pre></div>
-<h2 id="4-run-the-pipeline">4. Run the pipeline</h2>
+<h2 id="2-run-the-pipeline">2. Run the pipeline</h2>
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">data_processing</span><span class="p">.</span><span class="n">run_pipeline</span>
 </code></pre></div>
 <p>Cleaned files appear in <code>data/silver/</code>.</p><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
