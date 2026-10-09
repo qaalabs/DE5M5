@@ -6,6 +6,7 @@ In Module 2 you worked with SQL Server through SSMS. Now Python talks to the sam
 
 The notebook for this activity lives in a second repo, `library-pipeline-runner`. You will use the same repo again in the next activity.
 
+
 ## 1. Clone the runner repo
 
 Open a new Terminal window, then:
@@ -16,23 +17,31 @@ git clone https://github.com/QAADE5/library-pipeline-runner.git
 cd library-pipeline-runner
 ```
 
+
 ## 2. Install dependencies
 
 ```powershell
 pip install -r requirements.txt
 ```
 
+
 ## 3. Open SSMS
 
 Open SSMS and connect to `localhost` with **Windows Authentication**.
 
-Keep it open next to the notebook - you will check SSMS after each step.
+!!! note "Make sure that you change **Encryption** to `Optional` before you click **Connect**"
+
+!!! info "Keep SSMS open next to the notebook - you will check SSMS after each step."
+
 
 ## 4. Open the notebook
 
 Run Jupyter Notebook in your Virtual Machine.
 
-Find the `library-pipeline-runner` folder on the Desktop, then open `notebooks/python_sql_server_intro.ipynb`.
+!!! note "If asked to select an app to open this .html file then select Microsoft Edge and click `Always`"
+
+Find the `library-pipeline-runner/notebooks` folder on the Desktop, then open: `python_sql_server_intro.ipynb`
+
 
 ## 5. Work through the notebook
 

@@ -1,6 +1,6 @@
 - Guided demo: you build it first while they watch, then they repeat it from `day3/vm-powerbi.md` - Power BI is not taught in DE5, so keep it to this one visual
 - Open Power BI Desktop on the VM
-- Get Data -> SQL Server -> Server: `localhost`, Database: `library_warehouse` -> Load
+- Select a data source -> SQL Server -> Server: `localhost`, Database: `library_warehouse` -> Load
 - Build one visual: transactions by branch (`branch_id` against a count of `transaction_id`) - it matches the first SSMS query
 - Draw the connection: same data they just queried in SSMS, now in a report
 - This afternoon they will do the same thing in Fabric - same pattern, different platform

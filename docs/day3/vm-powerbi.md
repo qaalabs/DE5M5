@@ -8,7 +8,7 @@ Watch the demo first, then repeat these steps on your own VM. You only need one 
 
 1. Open **Power BI Desktop** on the VM.
 
-2. On the **Home** ribbon, select **Get data** and choose **SQL Server**.
+2. Power BI opens on a **Select a data source** screen. Choose **SQL Server**.
 
 3. Enter the connection details:
 
@@ -55,6 +55,9 @@ ORDER BY transactions DESC;
 ```
 
 Hover over a column in your chart. Does the count match the query result for that branch?
+
+!!! abstract ""
+    ![Power BI column chart of count of transaction_id by branch_id, with the tooltip for one branch showing its count.](img/powerbi-report.png)
 
 ## Discussion
 
