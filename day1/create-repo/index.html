@@ -987,13 +987,23 @@
 <p>This is the branch you'll work on.</p>
 <h2 id="step-5-protect-the-main-branch">Step 5: Protect the main branch</h2>
 <ul>
-<li>Go to <strong>Settings</strong> → <strong>Branches</strong> → <strong>"Add branch protection rule"</strong></li>
+<li>Go to <strong>Settings</strong> → <strong>Branches</strong> → <strong>"Add classic branch protection rule"</strong></li>
 <li>Branch name pattern: <code>main</code></li>
-<li>Check <strong>"Require a pull request before merging"</strong></li>
+<li>Check ✅ <strong>"Require a pull request before merging"</strong></li>
 <li>Uncheck <strong>"Require approvals"</strong> - the default is on, which means you cannot merge your own PRs</li>
+</ul>
+<p>Scroll down then:</p>
+<ul>
+<li>Check ✅ <strong>"Do not allow bypassing the above settings"</strong></li>
 <li>Click <strong>"Create"</strong></li>
 </ul>
-<p>If you accidentally edit a file on <code>main</code>, GitHub will create a branch and a PR - that is expected. Close the PR and delete the branch.</p>
+<div class="admonition note">
+<p class="admonition-title">From now on if you accidentally edit a file on <code>main</code>, GitHub will create a branch and a PR</p>
+<ul>
+<li>That is expected</li>
+<li>If this happens you can just close the PR and delete the branch.</li>
+</ul>
+</div>
 <h2 id="step-6-add-your-architecture-diagram">Step 6: Add your architecture diagram</h2>
 <p>First, make sure you're on the <code>dev</code> branch - check the branch dropdown shows <strong>dev</strong>, not <strong>main</strong>.</p>
 <ul>
