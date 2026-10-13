@@ -10,7 +10,23 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
+    - Day 1: agenda/day1.md
     - Day 2: agenda/day2.md
+
+  - "Day 1 ~ Foundation & Setup":
+    - "Library pipeline scenario": day1/scenario.md
+    - "Library pipeline sample data": day1/sample-data.md
+    - "Your mission": day1/your-mission.md
+    - "Creating architecture diagrams": day1/create-diagram.md
+    - "👥 Design your pipeline architecture": day1/design-pipeline.md
+    - "Writeup architecture decision record": day1/adr.md
+    - "Create a GitHub repository": day1/create-repo.md
+    - "Introduce GitHub projects": day1/create-project.md
+    - "Set up kanban board": day1/project-tasks.md
+    - "Clone library pipeline repo": day1/clone-repo.md
+    - "Setup development environment": day1/python-setup.md
+    - "Replace template placeholders": day1/placeholders.md
+    - "Production readiness check": labs/yardstick.md
 
   - "Day 2 ~ Create Python Package":
     - "Part 1 - Data ingestion": day2/ingestion.md
