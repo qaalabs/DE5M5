@@ -28,7 +28,7 @@ python -m pytest --cov=src
 
 !!! success "All tests should pass. A failing test means broken code."
 
-!!! success "Coverage should be over 70%"
+!!! note "Coverage *should* be over 70% ~ but won't be at this stage."
 
 ---
 
