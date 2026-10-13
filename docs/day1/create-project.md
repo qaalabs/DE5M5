@@ -2,7 +2,7 @@
 
 Go to YOUR repository on GitHub
 
-## Step 1: Create Project (Screen share)
+## Step 1: Create Project
 
 - Go to your repo (that you create from the template)
 - Click "Projects" tab

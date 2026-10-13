@@ -1,5 +1,8 @@
 # Clone your Repository
 
+!!! note "The following steps are all done on your Virtual Machine"
+
+
 ## Step 1: Open Terminal app from Windows
 
 This will get you to a command prompt:
@@ -44,6 +47,10 @@ git clone https://github.com/YOUR_USERNAME/qa-library-pipeline.git
 
 !!! note "Replace `qa-library-pipeline` with what you called your repo."
 
+!!! warning "If there is a popup asking you to logon - they don't yet!"
+    - If you are asked to logon then it normally means that you have entered the wrong URL.
+    - Check your spelling and try again.
+
 Change to your repo directory. For example:
 
 ```
@@ -75,5 +82,7 @@ git push --dry-run
 ```
 
 !!! info "A browser window may open asking you to sign in to GitHub"
-    This is Git checking you have permission to push. Sign in and allow access - you only need to do this once today. Nothing is actually pushed yet.
+    - This is Git checking you have permission to push.
+    - Sign in and allow access - you only need to do this once today. 
+    - Nothing is actually pushed yet.
 

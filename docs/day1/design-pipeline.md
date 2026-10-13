@@ -4,7 +4,7 @@
 
 !!! abstract "K26: Data development frameworks and approved organisational architectures."
 
-Work as a group to create a Mermaid diagram of your pipeline architecture. Your trainer will share a HedgeDoc link for your group.
+Work as a group to create a Mermaid diagram of your pipeline architecture.
 
 ## Include
 

@@ -4,11 +4,13 @@
 
 Everything in this session happens in GitHub.com - no cloning yet.
 
+
 ## Step 1: Log in to GitHub
 
 Open a browser and go to: [github.com](https://github.com)
 
 Sign in with your GitHub account.
+
 
 ## Step 2: Create your repo
 
@@ -23,6 +25,7 @@ Click **"Use this template"** → **"Create a new repository"**
 - Visibility: Public
 - Click **"Create repository"**
 
+
 ## Step 3: Explore the structure
 
 Spend a few minutes clicking around your new repo. Find:
@@ -31,6 +34,7 @@ Spend a few minutes clicking around your new repo. Find:
 - Where your Python package will go
 - The GitHub Actions workflows already set up
 
+
 ## Step 4: Create a dev branch
 
 - Click the branch dropdown (shows **main**)
@@ -38,15 +42,23 @@ Spend a few minutes clicking around your new repo. Find:
 
 This is the branch you'll work on.
 
+
 ## Step 5: Protect the main branch
 
-- Go to **Settings** → **Branches** → **"Add branch protection rule"**
+- Go to **Settings** → **Branches** → **"Add classic branch protection rule"**
 - Branch name pattern: `main`
-- Check **"Require a pull request before merging"**
+- Check ✅ **"Require a pull request before merging"**
 - Uncheck **"Require approvals"** - the default is on, which means you cannot merge your own PRs
+
+Scroll down then:
+
+- Check ✅ **"Do not allow bypassing the above settings"**
 - Click **"Create"**
 
-If you accidentally edit a file on `main`, GitHub will create a branch and a PR - that is expected. Close the PR and delete the branch.
+!!! note "From now on if you accidentally edit a file on `main`, GitHub will create a branch and a PR"
+    - That is expected
+    - If this happens you can just close the PR and delete the branch.
+
 
 ## Step 6: Add your architecture diagram
 

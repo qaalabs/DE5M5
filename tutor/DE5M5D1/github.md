@@ -7,3 +7,34 @@
 - Add Mermaid diagram to docs/architecture/design-pipeline.md (already in repo, from template) - check it renders before moving on
 - Edit docs/architecture/ADR-001.md (already in repo, from template) - paste ADR from Notepad
 - They now have two artefacts committed - diagram and ADR
+
+### <mark>Ask them to share their repo URL with you in the chat</mark>
+
+---
+
+**1. Add the GitHub URL to the .csv file (once per cohort):**
+
+```bash
+cd /mnt/ssd/PROJECTS/ingwaneorg/umfundi
+```
+
+```bash
+vi /mnt/ssd/data/okubona/groups/<group_id>.csv
+```
+
+**2. Clone learner repos (Learners with no GitHub URL are skipped)**
+
+```bash
+./clone.sh <group_id>
+```
+
+- Reads csv and clones each learner's repo into: `/mnt/ssd/data/umfundi/<group_id>/<name>/`
+
+**3. Fetch and analyse:**
+
+```bash
+./umfundi.sh <group_id>
+```
+
+- Pulls the `dev` branch & writes to: `/mnt/ssd/data/umfundi/<group_id>/lines_<ts>.csv`
+
