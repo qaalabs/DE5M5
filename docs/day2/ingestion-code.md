@@ -5,7 +5,7 @@
 This activity has three checkpoints. Work through them at your own pace.
 
 !!! note "At each checkpoint"
-    1. Run the check and compare it with the expected output
+    1. Run the check in your notebook and compare it with the expected output
     2. Commit and push your work
     3. Post the checkpoint number in the chat, e.g. **1 done**
     4. Carry straight on to the next checkpoint - do not wait
@@ -30,13 +30,12 @@ Note anything that looks like it'll need cleaning.
 
 ### Implement it
 
-`load_csv()` currently just calls `pd.read_csv(filepath)` with no error handling. It needs three ingredients:
+`load_csv()` currently just calls `pd.read_csv(filepath)` with no error handling. It needs the same two steps as `load_excel()`:
 
 1. **Check the file exists** before reading it - raise `FileNotFoundError` with a clear message if it doesn't.
-2. **Wrap the read in try/except** - log the problem with `logger.error(...)` and re-raise it, so callers see it and it shows up in the logs.
-3. **Log success** with `logger.info(...)`, including the row count.
+2. **Read the file** and return the DataFrame.
 
-The specific things that go wrong with a CSV, and what pandas raises for each:
+A missing file is not the only thing that can go wrong with a CSV. These errors come straight from pandas, and your function should let them through:
 
 | Problem | Exception |
 |---|---|
@@ -44,36 +43,47 @@ The specific things that go wrong with a CSV, and what pandas raises for each:
 | Rows don't match up (inconsistent field count, broken quoting) | `pd.errors.ParserError` |
 | File isn't valid UTF-8 (wrong encoding) | `UnicodeDecodeError` |
 
-All three of these are actually subclasses of `ValueError`, so one `except ValueError` catches all of them:
-
-```python
-try:
-    ...
-except ValueError as e:
-    logger.error(f"...: {e}")
-    raise
-except Exception as e:
-    logger.error(f"...: {e}")
-    raise
-```
-
 ### Check it
 
-Load the real file:
+The checks run in a Jupyter notebook, so you can see the data your function returns.
 
+Run Jupyter Notebook in your Virtual Machine.
+
+Find the `notebooks` folder inside your repo, create a new Python 3 notebook there and rename it `sandbox`. You will keep using this notebook for the rest of the day.
+
+Put this in a cell and run it with **Shift + Enter**:
+
+```python
+%load_ext autoreload
+%autoreload 2
+
+from data_processing.ingestion import load_csv, load_json
+
+df = load_csv('../data/circulation_data.csv')
+df.head()
 ```
-python -c "from data_processing.ingestion import load_csv; df = load_csv('data/circulation_data.csv'); print(len(df))"
-```
 
-!!! success "You should see your own log line with the row count, something like `INFO:data_processing.ingestion:Successfully loaded 5100 rows ...`"
+!!! success "You should see the first five rows of the circulation data. Run `len(df)` in a new cell - it should be `5100`."
 
-Now ask for a file that does not exist:
+!!! info "The two `%autoreload` lines mean the notebook picks up your changes each time you save `ingestion.py` - no need to restart anything. If a check still shows old behaviour, use **Kernel > Restart** and run the cells again."
 
-```
-python -c "from data_processing.ingestion import load_csv; load_csv('data/nope.csv')"
+!!! note "If you get `ModuleNotFoundError: No module named 'data_processing'`, add `import sys; sys.path.insert(0, '../src')` as the first line of the cell and run it again."
+
+Now, in a new cell, ask for a file that does not exist:
+
+```python
+load_csv('../data/nope.csv')
 ```
 
 !!! success "The last line should be a `FileNotFoundError` with **your** message. If it says `[Errno 2] No such file or directory`, the error is still coming from pandas, not from your check."
+
+Finally, give it a file that exists but is not a CSV:
+
+```python
+load_csv('../data/catalogue.xlsx')
+```
+
+!!! success "The last line should be a `UnicodeDecodeError`. This one is from pandas, not from you - it is the third row of the table above."
 
 ### Commit and flag
 
@@ -84,53 +94,52 @@ In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).
 - Click **Commit**
 - Click **Sync Changes** to push to GitHub
 
+Leave `notebooks/sandbox.ipynb` unstaged - it is your scratchpad, not part of the package.
+
 Post **1 done** in the chat, then carry on.
 
 ---
 
 ## Checkpoint 2 - `load_json()`
 
-`load_json()` needs the same three ingredients as `load_csv()`. There are two separate problems to handle here: the file might not be valid JSON, and even if it is, the structure might not "flatten" the way you expect.
+`load_json()` needs the same file check as `load_csv()`. There are two more things to know about here: the file might not be valid JSON, and even if it is, the structure might not "flatten" the way you expect.
 
-- **Invalid JSON** - `json.load()` raises `json.JSONDecodeError` (also a `ValueError` subclass) if the file is malformed. Same `except ValueError` / `except Exception` shape as above works here too.
+- **Invalid JSON** - `json.load()` raises `json.JSONDecodeError` if the file is malformed. Let it through, the same as the pandas errors above.
 - **Flattening** - `json.load()` gives you a Python list/dict. If any of those dicts have nested objects (e.g. `{"book": {"title": ..., "isbn": ...}}`), you get nested dicts, not flat columns. `pd.json_normalize()` turns each nested key into its own column (e.g. `book.title`, `book.isbn`).
 
 ### See the flattening for yourself
 
-Before writing the real implementation, check this in the terminal:
-
-```bash
-python
-```
+Before writing the real implementation, run this in a new cell in your notebook:
 
 ```python
 import pandas as pd, json
-with open("data/events_data.json") as f:
+with open("../data/events_data.json") as f:
     data = json.load(f)
 pd.json_normalize(data)
 ```
 
-Look at the columns it produces - any nested fields you expected? Anything come out as a list instead of a single value? Once you've seen what it actually does, `exit()` the REPL and write the error-handled version in `load_json()`.
+Look at the columns it produces - any nested fields you expected? Anything come out as a list instead of a single value? Once you've seen what it actually does, write the real version in `load_json()`.
 
 ### Check it
 
-Load the real file:
+Load the real file in your notebook:
 
-```
-python -c "from data_processing.ingestion import load_json; df = load_json('data/events_data.json'); print(len(df))"
+```python
+df_events = load_json('../data/events_data.json')
+df_events.head()
 ```
 
-!!! success "You should see your own log line with the row count, something like `INFO:data_processing.ingestion:Successfully loaded 500 rows ...`"
+!!! success "You should see the first five rows, with the nested fields as their own columns. `len(df_events)` should be `500`."
 
 Now ask for a file that does not exist:
 
-```
-python -c "from data_processing.ingestion import load_json; load_json('data/nope.json')"
+```python
+load_json('../data/nope.json')
 ```
 
 !!! success "The last line should be a `FileNotFoundError` with **your** message."
 
-Finally, confirm nothing else is broken:
+Finally, confirm nothing else is broken. In the VS Code terminal:
 
 ```
 python -m pytest tests/ -v
@@ -148,24 +157,37 @@ Post **2 done** in the chat, then carry on.
 
 ## Checkpoint 3 - Stretch: `load_text()`
 
-The library has four data sources, but `ingestion.py` only has three loaders. The fourth source, `data/feedback.txt`, is read directly inside the pipeline with a bare `open()` - no file check, no error handling, no logging.
+The library has four data sources, but `ingestion.py` only has three loaders. The fourth source, `data/feedback.txt`, is read directly inside the pipeline with a bare `open()` - no file check and no clear error message.
 
 Open `src/data_processing/run_pipeline.py` and find `process_feedback_data()` to see it.
 
 ### Your task
 
-1. **Write `load_text(filepath)`** in `ingestion.py`. It returns the contents of the file as a single string, and has the same three ingredients as the other loaders. Decide for yourself what is worth logging on success - there are no rows in a text file.
+1. **Write `load_text(filepath)`** in `ingestion.py`. It returns the contents of the file as a single string, and checks the file exists in the same way as the other loaders.
 2. **Use it in the pipeline.** In `run_pipeline.py`, import `load_text` and replace the bare `open()` in `process_feedback_data()` with a call to it.
 
 There is no model answer to copy this time - `load_excel()` reads a different kind of file. Work out what can go wrong when reading text. Hint: the file is opened as UTF-8.
 
 ### Check it
 
+In your notebook:
+
+```python
+from data_processing.ingestion import load_text
+
+text = load_text('../data/feedback.txt')
+text.count('Feedback #')
+```
+
+!!! success "You should see `200`. Then try `load_text('../data/nope.txt')` - the last line should be a `FileNotFoundError` with **your** message."
+
+Then, in the VS Code terminal:
+
 ```
 python -m data_processing.run_pipeline
 ```
 
-!!! success "The pipeline should still report `Found 200 feedback entries`, and your new log line for `data/feedback.txt` should appear alongside the other three loaders."
+!!! success "The pipeline should still report `Found 200 feedback entries`."
 
 ### Commit and flag
 

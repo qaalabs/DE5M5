@@ -31,14 +31,9 @@ def remove_duplicates(df, subset=None):
         >>> df_clean = remove_duplicates(df, subset=['transaction_id'])
     """
     df = df.copy()  # Work on a copy!
-    
-    initial_rows = len(df)
+
     df = df.drop_duplicates(subset=subset, keep='first')
-    removed = initial_rows - len(df)
-    
-    if removed > 0:
-        logger.info(f"Removed {removed} duplicate rows")
-    
+
     return df
 
 ```
@@ -68,22 +63,17 @@ def handle_missing_values(df, strategy='drop', fill_value=None, columns=None):
     else:
         target_cols = df.columns
     
-    initial_rows = len(df)
-    
     if strategy == 'drop':
         df = df.dropna(subset=target_cols)
-        logger.info(f"Dropped {initial_rows - len(df)} rows with missing values")
-        
+
     elif strategy == 'fill':
         if fill_value is None:
             raise ValueError("fill_value must be provided when strategy='fill'")
         df[target_cols] = df[target_cols].fillna(fill_value)
-        logger.info(f"Filled missing values with {fill_value}")
-        
+
     elif strategy == 'forward_fill':
         df[target_cols] = df[target_cols].ffill()
-        logger.info("Forward filled missing values")
-        
+
     else:
         raise ValueError(f"Unknown strategy: {strategy}")
     
@@ -110,23 +100,16 @@ def standardise_dates(df, date_columns, date_format='%Y-%m-%d'):
     
     for col in date_columns:
         if col not in df.columns:
-            logger.warning(f"Column {col} not found in DataFrame")
-            continue
-            
-        try:
-            df[col] = pd.to_datetime(df[col], errors='coerce')
-            logger.info(f"Standardised dates in column: {col}")
-        except Exception as e:
-            logger.error(f"Error standardising dates in {col}: {e}")
-            raise
-    
+            raise KeyError(f"Column {col} not found in DataFrame")
+
+        df[col] = pd.to_datetime(df[col], errors='coerce')
+
     return df
 ```
 
 ## Key Points
 - Always `df = df.copy()` at start
-- Log what you did
 - Return new DataFrame
-- Handle edge cases (column doesn't exist)
+- Fail loudly on bad input (unknown strategy, column doesn't exist)
 - Type hints in docstrings
 

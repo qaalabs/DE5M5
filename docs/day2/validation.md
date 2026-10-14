@@ -22,6 +22,29 @@ The 13th digit is a check digit calculated from the first 12:
 
 Implement `validate_isbn()` so it returns the cleaned ISBN-13 string (hyphens removed) if it's valid, or `None` if it's invalid. This is different from a plain `True`/`False` check - callers need the cleaned value back so it can be used as a join key later in the pipeline.
 
+## Check it
+
+Open your `sandbox` notebook in Jupyter Notebook and run this in a new cell:
+
+```python
+from data_processing.validation import validate_isbn
+
+print(validate_isbn('978-0-551-16436-9'))
+print(validate_isbn('978-0-551-1643'))
+print(validate_isbn('97A-0-551-16436-9'))
+```
+
+!!! success "You should see `9780551164369`, then `None` (too short), then `None` (not all digits)."
+
+If you did the stretch addition, these two should also pass:
+
+```python
+print(validate_isbn('978-0-551-16436-0'))
+print(validate_isbn(None))
+```
+
+!!! success "You should see `None` (wrong check digit), then `None` again - without an error. 258 loans in the circulation data have no ISBN at all."
+
 ## Commit your work
 
 In VS Code open the **Source Control** panel (`Ctrl+Shift+G`).

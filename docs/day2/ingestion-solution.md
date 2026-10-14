@@ -1,6 +1,6 @@
 # Solution: Ingestion Functions
 
-The pattern to follow is `load_excel()` - check the file exists, log what you're doing, wrap the read in a try/except, log success with row count.
+The pattern to follow is `load_excel()` - check the file exists, raise a clear error if it doesn't, then read it.
 
 ## load_csv
 
@@ -9,17 +9,9 @@ def load_csv(filepath):
     filepath = Path(filepath)
 
     if not filepath.exists():
-        logger.error(f"CSV file not found: {filepath}")
         raise FileNotFoundError(f"CSV file not found: {filepath}")
 
-    try:
-        logger.info(f"Loading CSV from {filepath}")
-        df = pd.read_csv(filepath)
-        logger.info(f"Successfully loaded {len(df)} rows from {filepath}")
-        return df
-    except Exception as e:
-        logger.error(f"Error loading CSV {filepath}: {e}")
-        raise
+    return pd.read_csv(filepath)
 ```
 
 ## load_json
@@ -29,19 +21,12 @@ def load_json(filepath):
     filepath = Path(filepath)
 
     if not filepath.exists():
-        logger.error(f"JSON file not found: {filepath}")
         raise FileNotFoundError(f"JSON file not found: {filepath}")
 
-    try:
-        logger.info(f"Loading JSON from {filepath}")
-        with open(filepath, 'r') as f:
-            data = json.load(f)
-        df = pd.json_normalize(data)
-        logger.info(f"Successfully loaded {len(df)} rows from {filepath}")
-        return df
-    except Exception as e:
-        logger.error(f"Error loading JSON {filepath}: {e}")
-        raise
+    with open(filepath, 'r') as f:
+        data = json.load(f)
+
+    return pd.json_normalize(data)
 ```
 
 ## Commit

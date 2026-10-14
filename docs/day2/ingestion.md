@@ -2,7 +2,7 @@
 
 ## Learning Objectives
 
-- Understand the check-exists / try-except / log pattern used across the pipeline
+- Understand the check-first, fail-clearly pattern used by the loaders
 - See why raw data needs cleaning before it's usable
 
 ## Part 1: Walk through `load_excel()`
@@ -15,31 +15,15 @@ def load_excel(filepath, sheet_name=0, **kwargs):
 
     # Check file exists
     if not filepath.exists():
-        logger.error(f"Excel File not found: {filepath}")
         raise FileNotFoundError(f"Excel File not found: {filepath}")
 
-    try:
-        logger.info(f"Loading Excel from {filepath} (sheet_name={sheet_name})")
-        df = pd.read_excel(filepath, sheet_name=sheet_name, **kwargs)
-        logger.info(f"Successfully loaded {len(df)} rows from {filepath}")
-        return df
-
-    except ValueError as e:
-        logger.error(f"Value error loading Excel {filepath}: {e}")
-        raise
-    except ImportError as e:
-        logger.error(f"Missing Excel engine for {filepath}: {e}")
-        raise
-    except Exception as e:
-        logger.error(f"Error loading Excel {filepath}: {e}")
-        raise
+    return pd.read_excel(filepath, sheet_name=sheet_name, **kwargs)
 ```
 
-Three things happening, in order:
+Two things happening, in order:
 
-1. **Check the file exists** before trying to read it
-2. **Wrap the read in try/except** - specific exceptions first, generic `Exception` last as a catch-all
-3. **Log**, both on success (`logger.info`) and failure (`logger.error`)
+1. **Check the file exists** before trying to read it, and raise an error with a clear message if it doesn't
+2. **Read the file** and return the DataFrame - if pandas cannot read it, its own error is allowed through
 
 ## Part 2: Run the pipeline
 
@@ -47,11 +31,11 @@ Three things happening, in order:
 python -m data_processing.run_pipeline
 ```
 
-Watch the terminal output for **Processing Catalogue Data** - that's `load_excel()` running, and its `INFO` log lines are what you're seeing.
+Watch the terminal output for **Processing Catalogue Data** - that's `load_excel()` running.
 
 Open `report.txt`. Compare **Raw data** and **Cleaned data** for each dataset - the numbers are the same. `load_csv()` and `load_json()` are still TODO stubs, and `cleaning.py`'s functions don't clean anything yet either. Nothing is broken - this is the starting point the rest of the day builds on.
 
 ## Key Points
 
-- Check exists, try/except, log - the pattern every load/clean/validate function in this pipeline follows
+- Check first, fail with a clear message, then do the work - the pattern every loader in this pipeline follows
 - `load_excel()` is done. `load_csv()` and `load_json()` are next, in the activity.
