@@ -11,6 +11,7 @@ nav:
   - Agenda:
     - Topics: agenda/index.md
     - Day 3: agenda/day3.md
+    - Day 4: agenda/day4.md
 
   - "Day 3 ~ Automation & Integration":
     - "GitHub Actions - Trigger workflow": day3/github-workflow.md
@@ -23,6 +24,12 @@ nav:
     - "01 Create Fabric lakehouse": labs/32-lakehouse.md
     - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
     - "Create gold layer table": labs/33-library-pipeline.md
+
+  - "Day 4 ~ Orchestrate & Present":
+    - "Start QA MS Fabric platform": https://qaalabs.github.io/fabric/run-inside-vm/
+    - "Lab: Run MS Fabric pipeline": labs/42-fabric-pipeline.md
+    - "Lab: Build MkDocs site": labs/43-mkdocs-site.md
+    - "EPA presentation briefing": day4/presentation.md
 
   - Resources: resources.md
 
