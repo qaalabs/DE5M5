@@ -2,4 +2,4 @@
 
 - Follow the [VM Logon Instructions](labs/run-inside-vm.md) - start the playground, then log in to Azure and Fabric
 - Provisioning takes a few minutes - warn them the window starts now
-- Once everyone's in, move straight into `labs/42-fabric-pipeline.md`
+- Once everyone's in, move straight into `labs/41-fabric-pipeline.md`

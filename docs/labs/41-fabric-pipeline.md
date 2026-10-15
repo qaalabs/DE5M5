@@ -43,7 +43,9 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 2. Click the **...** menu for the `bronze` folder and select **Upload** > **Upload files**.
 
-3. Locate `circulation_data.csv` in the `data/` folder of your repo and upload it.
+3. Locate `circulation_data.csv` in the `data/` folder of your library pipeline repo
+
+    - Click: **Upload**
 
     !!! note "This time you only need `circulation_data.csv` - the events data isn't part of this exercise."
 
@@ -56,14 +58,16 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 !!! info "Rather than building the notebooks cell by cell like yesterday, you will import two ready-made ones from your own repo."
 
-1. In the left navigation bar, select your workspace name to return to the workspace view.
+1. In the left navigation bar, select your workspace to return to the workspace view.
 
 2. On the toolbar select **Import** and click **Notebook**. Then select **From this computer**.
 
     !!! abstract ""
-        ![Imported notebooks in workspace.](img/notebook-import.png)
+        ![Imported notebooks in workspace.](img/notebook-import-library.png)
 
-3. Browse to the `notebooks` folder in your `qa-library-pipeline` repo on the Desktop, and import both:
+3. Click: **Upload**
+
+4. Browse to the `notebooks` folder in your `qa-library-pipeline` repo on the Desktop, and import both:
 
     - `01_bronze_to_silver.ipynb`
     - `02_silver_to_gold.ipynb`
@@ -79,9 +83,9 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 2. Click the **Analyse data with** dropdown in the top right-hand corner (next to the Share button)
 
-    - Select **Notebook** > **Existing notebook**
+    - Select: **Notebook** > **Existing notebook**
     - Choose: `01_bronze_to_silver`
-    - Click **Open**
+    - Click: **Open**
 
 3. In the **Notebook Explorer** on the left, select **Data Items**
 
@@ -96,13 +100,12 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
     !!! note "Still showing YOUR_USERNAME/YOUR_REPO_NAME? Replace it now with your own details and re-import."
 
-
 6. Return to the lakehouse and repeat for the second notebook:
 
     - Click the **Analyse data with** dropdown
-    - Select **Notebook** > **Existing notebook**
+    - Select: **Notebook** > **Existing notebook**
     - Choose: `02_silver_to_gold`
-    - Click **Open**
+    - Click: **Open**
 
 7. Select **Data Items** in the Notebook Explorer and confirm that **library_pipeline** appears under **OneLake**.
 
@@ -117,9 +120,12 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 2. Select **New item**, then search for and select **Pipeline**.
 
+    !!! abstract ""
+        ![New Item - Pipeline.](img/new-item-pipeline.png)
+
 3. Name the pipeline: `Library Pipeline`
 
-    - Click **Create**
+    - Click: **Create**
 
 4. On the pipeline canvas **Start with a blank canvas**:
 
@@ -130,7 +136,7 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
     - Set the **Name** to: `Bronze to Silver`
     - On the **Settings** tab, configure:
         - **Workspace**: *select your workspace*
-        - **Notebook**: select `01_bronze_to_silver`
+        - **Notebook**: `01_bronze_to_silver`
 
 6. Still on the **Settings** expand **Base parameters**:
 
@@ -141,12 +147,12 @@ Yesterday you ran two notebooks by hand in Microsoft Fabric - one cell at a time
 
 7. Add a second **Notebook** activity to the canvas.
 
-    !!! tip "Look for Notebook on the tool bar or on the Activites tab"
+    !!! tip "Look for Notebook on the toolbar ... or on the Activites tab"
 
     - Set the **Name** to: `Silver to Gold`
     - On the **Settings** tab, configure:
         - **Workspace**: *select your workspace*
-        - **Notebook**: select `02_silver_to_gold`
+        - **Notebook**: `02_silver_to_gold`
 
 8. Connect the two activities:
 
