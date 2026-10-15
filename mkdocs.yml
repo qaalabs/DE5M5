@@ -10,20 +10,7 @@ nav:
 
   - Agenda:
     - Topics: agenda/index.md
-    - Day 3: agenda/day3.md
     - Day 4: agenda/day4.md
-
-  - "Day 3 ~ Automation & Integration":
-    - "GitHub Actions - Trigger workflow": day3/github-workflow.md
-    - "Explore GitHub history & logs": day3/github-explore.md
-    - "Python meets SQL Server": day3/python-sql.md
-    - "Run the pipeline runner": day3/pipeline-runner.md
-    - "Create database in SSMS": day3/ssms.md
-    - "Run PowerBi in the VM": day3/vm-powerbi.md
-    - "Start the QA Fabric playground": https://qaalabs.github.io/fabric/run-inside-vm/
-    - "01 Create Fabric lakehouse": labs/32-lakehouse.md
-    - "Run pipeline in MS Fabric": labs/33-library-pipeline.md
-    - "Create gold layer table": labs/33-library-pipeline.md
 
   - "Day 4 ~ Orchestrate & Present":
     - "Start QA MS Fabric platform": https://qaalabs.github.io/fabric/run-inside-vm/
