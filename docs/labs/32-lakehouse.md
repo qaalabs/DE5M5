@@ -6,8 +6,11 @@ Large-scale data analytics solutions have traditionally been built around a *dat
 
 In Microsoft Fabric, a lakehouse provides highly scalable file storage in a *OneLake* store (built on Azure Data Lake Store Gen2) with a metastore for relational objects such as tables and views based on the open source *Delta Lake* table format. Delta Lake enables you to define a schema of tables in your lakehouse that you can query using SQL.
 
-!!! info "This lab continues from the [VM Logon Instructions](run-inside-vm.md). You should already be logged on to Azure and Microsoft Fabric."
+!!! info "This lab continues from the [VM Logon Instructions](run-inside-vm.md). You should already be logged on to Microsoft Fabric."
 
 ## Lab instructions
 
-- https://qaalabs.github.io/fabric/01-lakehouse/
+- https://qaalabs.github.io/fabric/fabric-warmup/
+
+!!! note "Where is `sales.csv`?"
+    In Step 3, the instructions mention a `day1` directory. For this course, use the `data/` folder of the `library-pipeline-runner` repo you cloned this morning instead.
