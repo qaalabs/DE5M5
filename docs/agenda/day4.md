@@ -3,7 +3,7 @@
 ## Session 1
 
 - **Slides**: 🌅 Welcome to day 4 of module 5
-- **Setup**: [Start QA MS Fabric platform](https://qaalabs.github.io/fabric/run-inside-vm/)
+- **Setup**: [Start QA MS Fabric platform](../labs/run-inside-vm.md)
 - **Practice**: [Lab: Run MS Fabric pipeline](../labs/42-fabric-pipeline.md)
 
 ## ☕ Morning break

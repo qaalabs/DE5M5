@@ -104,7 +104,7 @@
 ### Session 1
 
 - `09:30` **Slides**: [🌅 Welcome to day 4 of module 5](labs/lod-setup.md) (10 mins)
-- `09:40` **Setup**: [Start QA MS Fabric platform](https://qaalabs.github.io/fabric/run-inside-vm/) (10 mins)
+- `09:40` **Setup**: [Start QA MS Fabric platform](labs/run-inside-vm.md) (10 mins)
 - `09:50` **Practice**: [Lab: Run MS Fabric pipeline](labs/42-fabric-pipeline.md) (50 mins)
 
 ### Session 2

@@ -54,7 +54,7 @@ nav = [
     {"Create gold layer table" = "labs/33-library-pipeline.md"},
   ]},
   {"Day 4 ~ Orchestrate & Present" = [
-    {"Start QA MS Fabric platform" = "https://qaalabs.github.io/fabric/run-inside-vm/"},
+    {"Start QA MS Fabric platform" = "labs/run-inside-vm.md"},
     {"Lab: Run MS Fabric pipeline" = "labs/42-fabric-pipeline.md"},
     {"Lab: Build MkDocs site" = "labs/43-mkdocs-site.md"},
     {"EPA presentation briefing" = "day4/presentation.md"},
