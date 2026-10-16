@@ -105,11 +105,11 @@
 
 - `09:30` **Slides**: [🌅 Welcome to day 4 of module 5](labs/lod-setup.md) (10 mins)
 - `09:40` **Setup**: [Start QA MS Fabric platform](labs/run-inside-vm.md) (10 mins)
-- `09:50` **Practice**: [Lab: Run MS Fabric pipeline](labs/42-fabric-pipeline.md) (50 mins)
+- `09:50` **Practice**: [Lab: Run MS Fabric pipeline](labs/41-fabric-pipeline.md) (50 mins)
 
 ### Session 2
 
-- `11:00` **Practice**: [Lab: Build MkDocs site](labs/43-mkdocs-site.md) (30 mins)
+- `11:00` **Practice**: [Lab: Build MkDocs site](labs/42-mkdocs-site.md) (30 mins)
 - `11:30` [EPA presentation briefing](day4/presentation.md) (10 mins)
 - `11:40` **Activity**: Presentation prep (40 mins)
 

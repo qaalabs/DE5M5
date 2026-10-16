@@ -4,13 +4,13 @@
 
 - **Slides**: 🌅 Welcome to day 4 of module 5
 - **Setup**: [Start QA MS Fabric platform](../labs/run-inside-vm.md)
-- **Practice**: [Lab: Run MS Fabric pipeline](../labs/42-fabric-pipeline.md)
+- **Practice**: [Lab: Run MS Fabric pipeline](../labs/41-fabric-pipeline.md)
 
 ## ☕ Morning break
 
 ## Session 2
 
-- **Practice**: [Lab: Build MkDocs site](../labs/43-mkdocs-site.md)
+- **Practice**: [Lab: Build MkDocs site](../labs/42-mkdocs-site.md)
 - [EPA presentation briefing](../day4/presentation.md)
 - **Activity**: Presentation prep
 

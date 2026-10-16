@@ -7,8 +7,8 @@ dev_addr: '0.0.0.0:8000'
 nav:
   - "Day 4 ~ Orchestrate & Present":
     - "Start QA MS Fabric platform": labs/run-inside-vm.md
-    - "Lab: Run MS Fabric pipeline": labs/42-fabric-pipeline.md
-    - "Lab: Build MkDocs site": labs/43-mkdocs-site.md
+    - "Lab: Run MS Fabric pipeline": labs/41-fabric-pipeline.md
+    - "Lab: Build MkDocs site": labs/42-mkdocs-site.md
     - "EPA presentation briefing": day4/presentation.md
 
 # Theme
