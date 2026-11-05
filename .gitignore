@@ -5,6 +5,7 @@ zanyana/
 vault/
 .vault/
 docs/umfundi.md
+printday/site/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
