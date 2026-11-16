@@ -3,6 +3,9 @@ site_name: M5 - Data Engineering Product Development
 use_directory_urls: false
 dev_addr: '0.0.0.0:8000'
 
+# This file lives in printday/, and mkdocs resolves paths relative to it
+docs_dir: ../docs
+
 # Navigation menu
 nav:
   - "Day 2 ~ Create Python Package":
@@ -74,5 +77,5 @@ plugins:
       enumerate_headings: false
       add_table_of_contents: false
       add_cover_page: true
-      cover_page_template: printday_cover.tpl
+      cover_page_template: ../printday_cover.tpl
 
