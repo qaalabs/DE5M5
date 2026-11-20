@@ -1,10 +1,12 @@
+# MS Fabric Playground ~ Local Login Instructions
+
 ```mermaid
-flowchart TD
+flowchart LR
     S["QA Platform:<br/>Click: ▶ Start lab"]
     A["Wait for status Ready"]
-    B["Open a private/incognito<br/>browser window"]
-    C["Logon to Microsoft Azure<br/>portal.azure.com"]
-    D["New tab:<br/>Logon to Microsoft Fabric<br/>app.fabric.microsoft.com"]
+    B["Open a private<br/>browser window"]
+    C["Logon to MS Azure<br/>portal.azure.com"]
+    D["New tab:<br/>Logon to Fabric<br/>fabric.microsoft.com"]
 
     S --> A --> B --> C --> D
 ```
@@ -12,9 +14,6 @@ flowchart TD
 ## Step 1: Access Microsoft Fabric
 
 In this lab, you will access Microsoft Fabric using a temporary lab account provided by the QA Platform.
-
-!!! note
-    The **Open** button in the QA Platform opens the Azure portal in a normal browser window. Do not use it - sign in from a private browsing window instead, as shown below.
 
 1. Navigate to the [QA Platform](https://bud.sso.app.qa.com/lab/microsoft-fabric-playground/) to access the **Microsoft Fabric Playground**.
 
@@ -28,6 +27,8 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
 4. Make a note of your allocated **Username** and **Password**.
 
+!!! note
+    The **Open** button in the QA Platform opens the Azure portal in a normal browser window. Do not use it - sign in from a private browsing window instead, as shown below.
 
 ## Step 2: Logon to Microsoft Azure
 
@@ -38,7 +39,8 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 3. When asked to sign in, paste the **Username** from the QA Platform into the email box and select **Next**.
 
     !!! warning "If you see an error saying your username is invalid:"
-        - Check that you copied the **Username** exactly as shown on the QA Platform. If it still fails, please let your trainer know.
+        - Check that you copied the **Username** exactly as shown on the QA Platform
+        - If it still fails, please let your trainer know
 
 4. When prompted for a **Temporary Access Pass**, use the **Password** from the QA Platform.
 
@@ -68,3 +70,4 @@ In this lab, you will access Microsoft Fabric using a temporary lab account prov
 
     !!! tip "If Microsoft Fabric opens in the Power BI view instead:"
         - Select the icon at the bottom-left of the screen and choose **Fabric**.
+
